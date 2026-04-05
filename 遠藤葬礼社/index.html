@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>札幌の家族葬・葬儀なら｜株式会社遠藤葬礼社</title>
+  <meta name="description" content="札幌市東区の葬儀社・遠藤葬礼社。家族葬104,500円〜、24時間365日対応。明朗会計・追加費用なし。北34条アクセスホール完備。まずはお電話ください。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;900&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ===== RESET ===== */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #333;
+      background: #fff;
+      line-height: 1.9;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    img { max-width: 100%; height: auto; display: block; }
+    button { font-family: inherit; }
+
+    /* ===== VARIABLES ===== */
+    :root {
+      --primary: #4a3560;
+      --primary-dark: #362548;
+      --primary-light: #f0ecf4;
+      --primary-ultra-light: #f8f6fa;
+      --accent: #b8972e;
+      --accent-hover: #a07e1f;
+      --accent-light: #fdf8ec;
+      --white: #ffffff;
+      --text: #2c2433;
+      --text-light: #5a5065;
+      --text-muted: #8a8295;
+      --bg: #fff;
+      --bg-light: #f8f6fa;
+      --bg-warm: #fdfcfe;
+      --border: #e8e3ed;
+      --shadow-sm: 0 1px 3px rgba(74,53,96,0.06);
+      --shadow: 0 4px 20px rgba(74,53,96,0.08);
+      --shadow-lg: 0 12px 40px rgba(74,53,96,0.12);
+      --shadow-xl: 0 20px 60px rgba(74,53,96,0.15);
+      --radius: 16px;
+      --radius-sm: 10px;
+      --radius-xs: 6px;
+      --gold: #b8972e;
+      --gold-light: #d4bc6a;
+    }
+
+    /* ===== UTILITY ===== */
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+    .section { padding: 72px 0; }
+    .section-label {
+      text-align: center;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 12px;
+      line-height: 1.4;
+      font-family: 'Noto Serif JP', serif;
+    }
+    .section-subtitle {
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--text-light);
+      margin-bottom: 44px;
+      line-height: 1.7;
+    }
+    .bg-light { background: var(--bg-light); }
+    .bg-warm { background: var(--bg-warm); }
+    .highlight { color: var(--primary); font-weight: 700; }
+    .highlight-accent { color: var(--accent); font-weight: 700; }
+
+    /* ===== HEADER ===== */
+    .header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(74,53,96,0.06);
+      transition: box-shadow 0.3s;
+    }
+    .header.scrolled { box-shadow: 0 2px 20px rgba(74,53,96,0.1); }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo img {
+      height: 40px;
+      width: auto;
+    }
+    .logo-text {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+    }
+    .logo-text small {
+      display: block;
+      font-size: 0.65rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+    }
+    .header-right { display: flex; align-items: center; gap: 12px; }
+    .header-tel {
+      display: none;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .header-tel svg { width: 16px; height: 16px; fill: var(--primary); }
+    .header-tel small { font-size: 0.65rem; font-weight: 500; color: var(--text-muted); }
+    .header-cta {
+      display: none;
+      padding: 10px 24px;
+      background: var(--primary);
+      color: white;
+      font-size: 0.8rem;
+      font-weight: 700;
+      border-radius: 50px;
+      transition: background 0.2s;
+    }
+    .header-cta:hover { background: var(--primary-dark); }
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      background: none;
+      border: none;
+    }
+    .hamburger span {
+      width: 22px; height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    @media (min-width: 768px) {
+      .header-tel { display: flex; }
+      .header-cta { display: inline-flex; }
+      .hamburger { display: none; }
+    }
+
+    /* ===== TOP BAR ===== */
+    .top-bar {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 8px 16px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      margin-top: 68px;
+    }
+    .top-bar a {
+      color: var(--gold-light);
+      font-weight: 700;
+      margin-left: 8px;
+    }
+    .top-bar svg {
+      width: 14px; height: 14px;
+      fill: white;
+      vertical-align: -2px;
+      margin-right: 4px;
+    }
+
+    /* ===== MOBILE NAV ===== */
+    .mobile-nav {
+      position: fixed;
+      top: 0; right: -100%;
+      width: 280px;
+      height: 100vh;
+      background: white;
+      z-index: 1100;
+      transition: right 0.3s;
+      padding: 80px 28px 40px;
+      box-shadow: -4px 0 30px rgba(0,0,0,0.1);
+    }
+    .mobile-nav.open { right: 0; }
+    .mobile-nav-close {
+      position: absolute;
+      top: 20px; right: 20px;
+      background: none; border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--text);
+    }
+    .mobile-nav a {
+      display: block;
+      padding: 14px 0;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+      border-bottom: 1px solid var(--border);
+    }
+    .mobile-nav-tel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 24px;
+      padding: 14px;
+      background: var(--primary);
+      color: white;
+      border-radius: var(--radius-sm);
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      z-index: 1050;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+    .overlay.show { opacity: 1; pointer-events: auto; }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      background: linear-gradient(135deg, #362548 0%, #4a3560 40%, #5c4575 100%);
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('https://endo-sourei.com/images/top4.jpg') center/cover no-repeat;
+      opacity: 0.15;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 120px;
+      background: linear-gradient(transparent, rgba(54,37,72,0.6));
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 60px 20px;
+      max-width: 720px;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(184,151,46,0.2);
+      border: 1px solid rgba(184,151,46,0.4);
+      color: var(--gold-light);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 6px 18px;
+      border-radius: 50px;
+      margin-bottom: 20px;
+      letter-spacing: 0.08em;
+    }
+    .hero h1 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: white;
+      line-height: 1.6;
+      margin-bottom: 16px;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+    .hero h1 span {
+      color: var(--gold-light);
+      font-size: 1.1em;
+    }
+    .hero-sub {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 32px;
+      line-height: 1.8;
+    }
+    .hero-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-hero {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      background: var(--accent);
+      color: white;
+      font-size: 0.95rem;
+      font-weight: 700;
+      border-radius: 50px;
+      box-shadow: 0 4px 20px rgba(184,151,46,0.4);
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-hero:hover { background: var(--accent-hover); transform: translateY(-1px); }
+    .btn-hero svg { width: 18px; height: 18px; fill: white; }
+    .btn-hero-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      background: transparent;
+      color: white;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border: 2px solid rgba(255,255,255,0.4);
+      border-radius: 50px;
+      transition: 0.2s;
+    }
+    .btn-hero-outline:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.6); }
+
+    @media (min-width: 768px) {
+      .hero { min-height: 600px; }
+      .hero h1 { font-size: 2.6rem; }
+    }
+
+    /* ===== 24H STRIP ===== */
+    .strip-24h {
+      background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+      padding: 18px 0;
+      text-align: center;
+    }
+    .strip-24h-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      color: white;
+    }
+    .strip-24h-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .strip-24h-item svg { width: 20px; height: 20px; fill: var(--gold-light); }
+
+    /* ===== FEATURES ===== */
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    @media (min-width: 768px) {
+      .features-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .feature-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px 28px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    .feature-icon {
+      width: 64px; height: 64px;
+      margin: 0 auto 16px;
+      background: var(--primary-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .feature-icon svg { width: 28px; height: 28px; fill: var(--primary); }
+    .feature-card h3 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .feature-card p {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    /* ===== PLANS ===== */
+    .plans-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    @media (min-width: 600px) {
+      .plans-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 900px) {
+      .plans-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .plan-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .plan-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    .plan-card.popular {
+      border: 2px solid var(--accent);
+      position: relative;
+    }
+    .plan-popular-badge {
+      position: absolute;
+      top: -1px; right: 20px;
+      background: var(--accent);
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 0 0 8px 8px;
+    }
+    .plan-img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .plan-body {
+      padding: 24px;
+    }
+    .plan-name {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .plan-price {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+    .plan-price small { font-size: 0.7rem; font-weight: 500; color: var(--text-muted); }
+    .plan-desc {
+      font-size: 0.82rem;
+      color: var(--text-light);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .plan-features {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .plan-features li {
+      font-size: 0.8rem;
+      color: var(--text-light);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .plan-features li::before {
+      content: '';
+      width: 16px; height: 16px;
+      background: var(--primary-light);
+      border-radius: 50%;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234a3560'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z'/%3E%3C/svg%3E");
+      background-size: 10px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    /* ===== HALL ===== */
+    .hall-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    @media (min-width: 768px) {
+      .hall-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .hall-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .hall-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .hall-card-body { padding: 24px; }
+    .hall-card h3 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+    .hall-card p {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    /* ===== VOICE ===== */
+    .voice-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    @media (min-width: 768px) {
+      .voice-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .voice-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+    }
+    .voice-stars {
+      color: var(--accent);
+      font-size: 0.85rem;
+      margin-bottom: 12px;
+      letter-spacing: 2px;
+    }
+    .voice-text {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      line-height: 1.8;
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+    .voice-author {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+    .voice-note {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 20px;
+    }
+
+    /* ===== CTA ===== */
+    .cta {
+      background: linear-gradient(135deg, #362548, #4a3560, #5c4575);
+      padding: 64px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 30% 50%, rgba(184,151,46,0.1) 0%, transparent 60%);
+    }
+    .cta-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .cta h2 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+    .cta p {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 28px;
+      line-height: 1.7;
+    }
+    .cta-tel {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--accent);
+      color: white;
+      padding: 18px 40px;
+      border-radius: 60px;
+      font-size: 1.6rem;
+      font-weight: 900;
+      box-shadow: 0 6px 30px rgba(184,151,46,0.4);
+      transition: transform 0.2s, background 0.2s;
+      margin-bottom: 12px;
+    }
+    .cta-tel:hover { background: var(--accent-hover); transform: translateY(-2px); }
+    .cta-tel svg { width: 28px; height: 28px; fill: white; }
+    .cta-sub {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.6);
+      margin-top: 8px;
+    }
+
+    /* ===== COMPANY ===== */
+    .company-table {
+      width: 100%;
+      border-collapse: collapse;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .company-table th,
+    .company-table td {
+      padding: 14px 16px;
+      font-size: 0.85rem;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+    .company-table th {
+      font-weight: 600;
+      color: var(--primary);
+      width: 140px;
+      background: var(--primary-ultra-light);
+    }
+    .company-table td {
+      color: var(--text);
+    }
+
+    /* ===== DEMO BANNER ===== */
+    .demo-banner {
+      background: linear-gradient(90deg, #FFF3CD, #FFF8E1);
+      border: 2px solid #F0C040;
+      border-radius: var(--radius-sm);
+      padding: 20px 28px;
+      margin: 40px auto;
+      max-width: 1080px;
+      font-size: 0.9rem;
+      color: #856404;
+      line-height: 1.8;
+    }
+    .demo-banner strong {
+      display: block;
+      font-size: 0.95rem;
+      margin-bottom: 4px;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: #1a1224;
+      color: rgba(255,255,255,0.6);
+      padding: 48px 0 24px;
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    @media (min-width: 768px) {
+      .footer-inner { grid-template-columns: 2fr 1fr 1fr; }
+    }
+    .footer-brand h3 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.1rem;
+      color: white;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .footer-brand p {
+      font-size: 0.8rem;
+      line-height: 1.8;
+    }
+    .footer-links h4 {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 12px;
+      letter-spacing: 0.05em;
+    }
+    .footer-links a {
+      display: block;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.5);
+      padding: 4px 0;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--gold-light); }
+    .footer-bottom {
+      text-align: center;
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.3);
+      padding-top: 32px;
+      margin-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    /* ===== FADE ANIMATION ===== */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s, transform 0.6s;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== FLOATING TEL (MOBILE) ===== */
+    .floating-tel {
+      display: flex;
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      z-index: 900;
+      background: var(--primary);
+      padding: 12px 16px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: white;
+      font-weight: 700;
+      font-size: 1.1rem;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+    }
+    .floating-tel svg { width: 22px; height: 22px; fill: white; }
+    .floating-tel small { font-size: 0.7rem; font-weight: 500; opacity: 0.8; margin-left: 8px; }
+    @media (min-width: 768px) {
+      .floating-tel { display: none; }
+    }
+
+    /* ===== PROCESS ===== */
+    .process-steps {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    @media (min-width: 600px) {
+      .process-steps { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 900px) {
+      .process-steps { grid-template-columns: repeat(4, 1fr); }
+    }
+    .process-step {
+      text-align: center;
+      padding: 24px 16px;
+    }
+    .process-num {
+      width: 40px; height: 40px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin: 0 auto 12px;
+    }
+    .process-step h4 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    .process-step p {
+      font-size: 0.78rem;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <img src="https://endo-sourei.com/images/sp_logo.png" alt="遠藤葬礼社ロゴ">
+      <div class="logo-text">
+        遠藤葬礼社
+        <small>24時間365日対応</small>
+      </div>
+    </a>
+    <div class="header-right">
+      <a href="tel:0120376756" class="header-tel">
+        <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        0120-376-756
+        <small>24時間対応</small>
+      </a>
+      <a href="tel:0120376756" class="header-cta">今すぐ電話相談</a>
+      <button class="hamburger" id="menuOpen" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE NAV -->
+<div class="overlay" id="overlay"></div>
+<nav class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-close" id="menuClose">&times;</button>
+  <a href="#features">遠藤葬礼社の特徴</a>
+  <a href="#plans">葬儀プラン</a>
+  <a href="#hall">式場のご案内</a>
+  <a href="#flow">ご葬儀の流れ</a>
+  <a href="#voice">お客様の声</a>
+  <a href="#company">会社概要</a>
+  <a href="tel:0120376756" class="mobile-nav-tel">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+    0120-376-756
+  </a>
+</nav>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+  急なご不幸でお急ぎの方 ―
+  <a href="tel:0120376756">0120-376-756（24時間・年中無休）</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge fade-up">札幌市東区の葬儀社 ― 創業以来、地域に寄り添い続けて</div>
+    <h1 class="fade-up">ご家族の想いに寄り添い、<br><span>心を込めて。</span></h1>
+    <p class="hero-sub fade-up">大切な方とのお別れの時間を、ご家族のお気持ちに寄り添いながら<br>誠心誠意お手伝いいたします。24時間365日、まずはお電話ください。</p>
+    <div class="hero-buttons fade-up">
+      <a href="tel:0120376756" class="btn-hero">
+        <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        0120-376-756
+      </a>
+      <a href="#plans" class="btn-hero-outline">葬儀プランを見る</a>
+    </div>
+  </div>
+</section>
+
+<!-- 24H STRIP -->
+<div class="strip-24h">
+  <div class="strip-24h-inner">
+    <div class="strip-24h-item">
+      <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+      24時間365日対応
+    </div>
+    <div class="strip-24h-item">
+      <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      札幌市東区・自社ホール完備
+    </div>
+    <div class="strip-24h-item">
+      <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+      明朗会計・追加費用なし
+    </div>
+    <div class="strip-24h-item">
+      <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+      家族葬専門
+    </div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<section class="section" id="features">
+  <div class="container">
+    <p class="section-label fade-up">FEATURES</p>
+    <h2 class="section-title fade-up">遠藤葬礼社が選ばれる理由</h2>
+    <p class="section-subtitle fade-up">ご遺族のお気持ちに寄り添い、心のこもったお別れの時間をお届けいたします。</p>
+    <div class="features-grid">
+      <div class="feature-card fade-up">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+        </div>
+        <h3>24時間365日対応</h3>
+        <p>突然のご不幸にも迅速に対応。深夜・早朝を問わず、専任スタッフがお電話をお受けし、すぐにお迎えに伺います。</p>
+      </div>
+      <div class="feature-card fade-up">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        </div>
+        <h3>家族葬に特化</h3>
+        <p>少人数で温かくお見送りしたい方へ。家族葬の専門ノウハウで、故人とご遺族にとって最良のお別れを実現いたします。</p>
+      </div>
+      <div class="feature-card fade-up">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        </div>
+        <h3>地域密着・自社ホール</h3>
+        <p>北34条アクセスホールを自社運営。札幌市東区を中心に、地域に根ざした葬儀サービスで安心をお届けいたします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANS -->
+<section class="section bg-light" id="plans">
+  <div class="container">
+    <p class="section-label fade-up">PLAN</p>
+    <h2 class="section-title fade-up">葬儀プランのご案内</h2>
+    <p class="section-subtitle fade-up">ご要望・ご予算に合わせた最適なプランをご用意しております。<br>すべて税込表示・追加費用はございません。</p>
+    <div class="plans-grid">
+      <div class="plan-card fade-up">
+        <img src="https://endo-sourei.com/images/chokusoh.jpg" alt="直葬プラン" class="plan-img">
+        <div class="plan-body">
+          <div class="plan-name">直葬プラン</div>
+          <div class="plan-price">104,500<small>円（税込）</small></div>
+          <p class="plan-desc">式を行わず火葬のみ。費用を抑えたい方、故人の遺志でシンプルにお見送りしたい方に。</p>
+          <ul class="plan-features">
+            <li>お迎え・安置・納棺</li>
+            <li>火葬場手続き代行</li>
+            <li>必要最低限のお花</li>
+          </ul>
+        </div>
+      </div>
+      <div class="plan-card fade-up">
+        <img src="https://endo-sourei.com/images/kasoh.jpg" alt="火葬プラン" class="plan-img">
+        <div class="plan-body">
+          <div class="plan-name">火葬プラン</div>
+          <div class="plan-price">165,000<small>円（税込）</small></div>
+          <p class="plan-desc">火葬前に簡単なお別れの時間を。直葬より少しゆとりを持ちたい方におすすめです。</p>
+          <ul class="plan-features">
+            <li>お迎え・安置・納棺</li>
+            <li>お別れの儀式</li>
+            <li>火葬場手続き代行</li>
+          </ul>
+        </div>
+      </div>
+      <div class="plan-card fade-up">
+        <img src="https://endo-sourei.com/images/ichinichi.jpg" alt="一日葬プラン" class="plan-img">
+        <div class="plan-body">
+          <div class="plan-name">一日葬プラン</div>
+          <div class="plan-price">308,000<small>円（税込）</small></div>
+          <p class="plan-desc">通夜を行わず告別式のみの1日完結型。お忙しい方や遠方のご親族にも配慮できます。</p>
+          <ul class="plan-features">
+            <li>告別式・火葬</li>
+            <li>祭壇・供花一式</li>
+            <li>スタッフ全面サポート</li>
+          </ul>
+        </div>
+      </div>
+      <div class="plan-card popular fade-up">
+        <div class="plan-popular-badge">人気No.1</div>
+        <img src="https://endo-sourei.com/images/kazoku.jpg" alt="家族葬38プラン" class="plan-img">
+        <div class="plan-body">
+          <div class="plan-name">家族葬38プラン</div>
+          <div class="plan-price">418,000<small>円（税込）</small></div>
+          <p class="plan-desc">通夜・告別式を行う標準的な家族葬。少人数で心のこもったお別れを。</p>
+          <ul class="plan-features">
+            <li>通夜・告別式・火葬</li>
+            <li>祭壇・供花・遺影</li>
+            <li>会葬礼状・返礼品</li>
+          </ul>
+        </div>
+      </div>
+      <div class="plan-card fade-up">
+        <img src="https://endo-sourei.com/images/kazoku58.jpg" alt="家族葬58プラン" class="plan-img">
+        <div class="plan-body">
+          <div class="plan-name">家族葬58プラン</div>
+          <div class="plan-price">638,000<small>円（税込）</small></div>
+          <p class="plan-desc">より充実した内容の家族葬。生花祭壇やお料理など、故人にふさわしい華やかなお別れを。</p>
+          <ul class="plan-features">
+            <li>通夜・告別式・火葬</li>
+            <li>生花祭壇・遺影額</li>
+            <li>お料理・返礼品一式</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HALL -->
+<section class="section" id="hall">
+  <div class="container">
+    <p class="section-label fade-up">HALL</p>
+    <h2 class="section-title fade-up">式場のご案内</h2>
+    <p class="section-subtitle fade-up">自社運営のホールで、安心してお任せいただけます。</p>
+    <div class="hall-grid">
+      <div class="hall-card fade-up">
+        <img src="https://endo-sourei.com/images/top30.jpg" alt="北34条アクセスホール">
+        <div class="hall-card-body">
+          <h3>北34条アクセスホール</h3>
+          <p>〒007-0834 札幌市東区北34条東1丁目2-26<br>地下鉄南北線「北34条」駅より徒歩圏内。駐車場完備でお車でのアクセスも便利です。少人数の家族葬から一般葬まで対応可能。</p>
+        </div>
+      </div>
+      <div class="hall-card fade-up">
+        <img src="https://endo-sourei.com/images/top31.jpg" alt="さくらセレモニーホール">
+        <div class="hall-card-body">
+          <h3>さくらセレモニーホール</h3>
+          <p>小樽市にある提携ホール。小樽エリアでの葬儀にも対応しております。落ち着いた雰囲気の中、大切な方とのお別れの時間をお過ごしいただけます。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section class="section bg-light" id="flow">
+  <div class="container">
+    <p class="section-label fade-up">FLOW</p>
+    <h2 class="section-title fade-up">ご葬儀の流れ</h2>
+    <p class="section-subtitle fade-up">初めての方でも安心。お電話一本でスタッフがすべてご案内いたします。</p>
+    <div class="process-steps">
+      <div class="process-step fade-up">
+        <div class="process-num">1</div>
+        <h4>お電話</h4>
+        <p>24時間対応。ご状況をお伺いし、すぐにお迎えの手配をいたします。</p>
+      </div>
+      <div class="process-step fade-up">
+        <div class="process-num">2</div>
+        <h4>お迎え・ご安置</h4>
+        <p>専用車両で故人様をお迎えし、ご希望の場所へご安置いたします。</p>
+      </div>
+      <div class="process-step fade-up">
+        <div class="process-num">3</div>
+        <h4>打ち合わせ</h4>
+        <p>ご予算・ご要望に合わせて最適なプランをご提案。明朗会計で安心です。</p>
+      </div>
+      <div class="process-step fade-up">
+        <div class="process-num">4</div>
+        <h4>ご葬儀・お見送り</h4>
+        <p>心を込めたセレモニーで、大切な方との最後のお時間をお手伝いいたします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VOICE -->
+<section class="section" id="voice">
+  <div class="container">
+    <p class="section-label fade-up">VOICE</p>
+    <h2 class="section-title fade-up">お客様の声</h2>
+    <p class="section-subtitle fade-up">ご利用いただいたご遺族からのお言葉をご紹介いたします。</p>
+    <div class="voice-grid">
+      <div class="voice-card fade-up">
+        <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="voice-text">「深夜の電話にもすぐに対応していただき、不安な気持ちが救われました。スタッフの方がとても親身で、最後まで安心してお任せできました。」</p>
+        <p class="voice-author">札幌市東区 T様ご遺族</p>
+      </div>
+      <div class="voice-card fade-up">
+        <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="voice-text">「家族だけで静かに見送りたいという希望を丁寧に叶えていただきました。料金も明確で、追加費用がなかったのも安心でした。」</p>
+        <p class="voice-author">札幌市北区 M様ご遺族</p>
+      </div>
+      <div class="voice-card fade-up">
+        <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="voice-text">「初めての葬儀で何もわからない中、一つひとつ丁寧に説明してくださり感謝しています。温かい雰囲気のホールも素敵でした。」</p>
+        <p class="voice-author">小樽市 K様ご遺族</p>
+      </div>
+    </div>
+    <p class="voice-note fade-up">※ デモ用のサンプルレビューです。実際のお客様の声を掲載予定です。</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <div class="cta-inner">
+    <h2 class="fade-up">まずは、お気軽にお電話ください</h2>
+    <p class="fade-up">ご葬儀のご相談・事前相談・お見積りなど、<br>どんなことでもお気軽にお問い合わせください。</p>
+    <a href="tel:0120376756" class="cta-tel fade-up">
+      <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+      0120-376-756
+    </a>
+    <p class="cta-sub fade-up">通話無料 ・ 24時間365日対応 ・ 相談だけでもOK</p>
+  </div>
+</section>
+
+<!-- COMPANY -->
+<section class="section" id="company">
+  <div class="container">
+    <p class="section-label fade-up">COMPANY</p>
+    <h2 class="section-title fade-up">会社概要</h2>
+    <p class="section-subtitle fade-up"></p>
+    <table class="company-table fade-up">
+      <tr><th>会社名</th><td>株式会社遠藤葬礼社</td></tr>
+      <tr><th>所在地</th><td>〒007-0834 札幌市東区北34条東1丁目2-26</td></tr>
+      <tr><th>電話番号</th><td>0120-376-756（24時間対応）</td></tr>
+      <tr><th>事業内容</th><td>葬儀全般（家族葬・一日葬・直葬・火葬・一般葬）、遺品整理・清掃サービス、寺院紹介</td></tr>
+      <tr><th>施設</th><td>北34条アクセスホール（札幌市東区）<br>さくらセレモニーホール（小樽市）</td></tr>
+      <tr><th>お支払い</th><td>現金・クレジットカード対応</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- DEMO BANNER -->
+<div style="padding: 0 24px;">
+  <div class="demo-banner">
+    <strong>※ デモサイトのご案内</strong>
+    本ページはリニューアルのイメージサンプルです。本番では実際のお写真・正式な情報を使用し、より完成度の高いサイトに仕上げます。
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>遠藤葬礼社</h3>
+      <p>〒007-0834 札幌市東区北34条東1丁目2-26<br>TEL: 0120-376-756（24時間対応）</p>
+    </div>
+    <div class="footer-links">
+      <h4>メニュー</h4>
+      <a href="#features">遠藤葬礼社の特徴</a>
+      <a href="#plans">葬儀プラン</a>
+      <a href="#hall">式場のご案内</a>
+      <a href="#flow">ご葬儀の流れ</a>
+    </div>
+    <div class="footer-links">
+      <h4>お問い合わせ</h4>
+      <a href="tel:0120376756">0120-376-756</a>
+      <a href="#voice">お客様の声</a>
+      <a href="#company">会社概要</a>
+    </div>
+  </div>
+  <p class="footer-bottom">&copy; 2026 株式会社遠藤葬礼社 All rights reserved.</p>
+</footer>
+
+<!-- FLOATING TEL (MOBILE) -->
+<a href="tel:0120376756" class="floating-tel">
+  <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+  0120-376-756
+  <small>24時間対応・通話無料</small>
+</a>
+
+<script>
+  // Mobile menu
+  const menuOpen = document.getElementById('menuOpen');
+  const menuClose = document.getElementById('menuClose');
+  const mobileNav = document.getElementById('mobileNav');
+  const overlay = document.getElementById('overlay');
+  function openMenu() { mobileNav.classList.add('open'); overlay.classList.add('show'); }
+  function closeMenu() { mobileNav.classList.remove('open'); overlay.classList.remove('show'); }
+  menuOpen.addEventListener('click', openMenu);
+  menuClose.addEventListener('click', closeMenu);
+  overlay.addEventListener('click', closeMenu);
+  mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+  // Header scroll
+  window.addEventListener('scroll', () => {
+    document.getElementById('header').classList.toggle('scrolled', window.scrollY > 30);
+  });
+
+  // Fade-up on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

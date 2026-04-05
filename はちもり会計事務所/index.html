@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>はちもり会計事務所 | 八森恵一税理士・行政書士事務所</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1a2744;
+  --navy-dark: #0f1a2e;
+  --navy-light: #2a3f6a;
+  --gold: #c5a55a;
+  --gold-light: #d4bb7a;
+  --gold-pale: #f5edda;
+  --white: #ffffff;
+  --off-white: #f8f9fc;
+  --gray-light: #e8ecf2;
+  --gray: #8a95a7;
+  --text-dark: #1a1a2e;
+  --text-body: #3d4555;
+  --text-light: #6b7280;
+  --shadow-sm: 0 2px 8px rgba(26,39,68,0.08);
+  --shadow-md: 0 4px 20px rgba(26,39,68,0.12);
+  --shadow-lg: 0 8px 40px rgba(26,39,68,0.16);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: var(--text-body);
+  line-height: 1.8;
+  background: var(--white);
+}
+img { max-width: 100%; height: auto; }
+a { text-decoration: none; color: inherit; }
+
+/* ===== HEADER ===== */
+.header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--gray-light);
+  box-shadow: var(--shadow-sm);
+}
+.header-inner {
+  max-width: 1200px; margin: 0 auto;
+  padding: 0 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 80px;
+}
+.header-logo img {
+  height: 50px; width: auto;
+}
+.header-logo span {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.1rem; font-weight: 700;
+  color: var(--navy);
+  margin-left: 12px;
+  vertical-align: middle;
+}
+.header-right { display: flex; align-items: center; gap: 20px; }
+.header-tel {
+  font-size: 1.2rem; font-weight: 700; color: var(--navy);
+  display: flex; align-items: center; gap: 6px;
+}
+.header-tel svg { width: 20px; height: 20px; fill: var(--gold); }
+.header-tel small { font-size: 0.7rem; font-weight: 400; color: var(--text-light); display: block; }
+.btn-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  color: var(--white);
+  font-weight: 700; font-size: 0.95rem;
+  border-radius: 50px; border: none; cursor: pointer;
+  box-shadow: 0 4px 15px rgba(197,165,90,0.4);
+  transition: var(--transition);
+}
+.btn-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(197,165,90,0.5);
+}
+.btn-cta svg { width: 18px; height: 18px; fill: var(--white); }
+
+/* ===== NAV ===== */
+.nav {
+  background: var(--navy);
+}
+.nav-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; justify-content: center; gap: 0;
+}
+.nav a {
+  color: rgba(255,255,255,0.85);
+  padding: 14px 22px;
+  font-size: 0.88rem; font-weight: 500;
+  transition: var(--transition);
+  position: relative;
+}
+.nav a::after {
+  content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 0; height: 2px; background: var(--gold);
+  transition: var(--transition);
+}
+.nav a:hover { color: var(--white); }
+.nav a:hover::after { width: 80%; }
+
+/* ===== HAMBURGER ===== */
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.hamburger span {
+  display: block; width: 24px; height: 2px; background: var(--navy);
+  margin: 6px 0; transition: var(--transition);
+}
+
+/* ===== HERO ===== */
+.hero {
+  margin-top: 80px;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 50%, #3a5a9a 100%);
+  position: relative; overflow: hidden;
+  padding: 100px 24px 80px;
+  text-align: center; color: var(--white);
+}
+.hero::before {
+  content: '';
+  position: absolute; top: -50%; right: -20%; width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(197,165,90,0.15) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.hero::after {
+  content: '';
+  position: absolute; bottom: -30%; left: -10%; width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(197,165,90,0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.hero-content { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; }
+.hero-sub {
+  font-size: 0.95rem; font-weight: 500; color: var(--gold-light);
+  letter-spacing: 3px; margin-bottom: 20px;
+}
+.hero h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 2.6rem; font-weight: 700;
+  line-height: 1.5; margin-bottom: 20px;
+}
+.hero p {
+  font-size: 1.05rem; line-height: 1.9;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 40px;
+}
+.hero-stats {
+  display: flex; justify-content: center; gap: 50px;
+  flex-wrap: wrap;
+}
+.hero-stat { text-align: center; }
+.hero-stat .num {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 2.8rem; font-weight: 700; color: var(--gold);
+  display: block;
+}
+.hero-stat .num span { font-size: 1rem; font-weight: 400; }
+.hero-stat .label {
+  font-size: 0.85rem; color: rgba(255,255,255,0.7);
+  margin-top: 4px;
+}
+
+/* ===== SECTION COMMON ===== */
+.section { padding: 90px 24px; }
+.section-bg { background: var(--off-white); }
+.section-header {
+  text-align: center; margin-bottom: 60px;
+}
+.section-header .en {
+  font-size: 0.8rem; font-weight: 700; color: var(--gold);
+  letter-spacing: 3px; text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.section-header h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 2rem; font-weight: 700; color: var(--navy);
+  margin-bottom: 16px;
+}
+.section-header .line {
+  width: 50px; height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  margin: 0 auto; border-radius: 2px;
+}
+.container { max-width: 1100px; margin: 0 auto; }
+
+/* ===== FEATURES ===== */
+.features-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;
+}
+.feature-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  border: 1px solid transparent;
+}
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--gold-pale);
+}
+.feature-icon {
+  width: 70px; height: 70px;
+  background: linear-gradient(135deg, var(--navy), var(--navy-light));
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 24px;
+}
+.feature-icon svg { width: 32px; height: 32px; fill: var(--gold); }
+.feature-card h3 {
+  font-size: 1.15rem; font-weight: 700; color: var(--navy);
+  margin-bottom: 14px;
+}
+.feature-card p {
+  font-size: 0.92rem; line-height: 1.8;
+  color: var(--text-light);
+}
+
+/* ===== SERVICES ===== */
+.services-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+}
+.service-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 32px 24px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  border-left: 4px solid var(--gold);
+  position: relative; overflow: hidden;
+}
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+.service-card::after {
+  content: '';
+  position: absolute; top: 0; right: 0;
+  width: 60px; height: 60px;
+  background: linear-gradient(135deg, transparent 50%, var(--gold-pale) 50%);
+  border-radius: 0 var(--radius) 0 0;
+}
+.service-card-icon {
+  width: 50px; height: 50px;
+  background: var(--gold-pale);
+  border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 18px;
+}
+.service-card-icon svg { width: 26px; height: 26px; fill: var(--navy); }
+.service-card h3 {
+  font-size: 1.05rem; font-weight: 700; color: var(--navy);
+  margin-bottom: 10px;
+}
+.service-card p {
+  font-size: 0.88rem; line-height: 1.8;
+  color: var(--text-light);
+}
+
+/* ===== PROFILE ===== */
+.profile-box {
+  display: flex; gap: 50px; align-items: center;
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 50px;
+  box-shadow: var(--shadow-md);
+}
+.profile-photo {
+  flex-shrink: 0;
+  width: 220px; height: 220px;
+  background: linear-gradient(135deg, var(--navy), var(--navy-light));
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+}
+.profile-photo::after {
+  content: '';
+  position: absolute; inset: -6px;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+}
+.profile-photo svg { width: 80px; height: 80px; fill: rgba(255,255,255,0.3); }
+.profile-info { flex: 1; }
+.profile-title {
+  font-size: 0.85rem; color: var(--gold);
+  font-weight: 700; margin-bottom: 6px;
+}
+.profile-name {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.8rem; font-weight: 700;
+  color: var(--navy); margin-bottom: 20px;
+}
+.profile-name small {
+  font-size: 0.85rem; font-weight: 400;
+  color: var(--text-light); margin-left: 12px;
+}
+.profile-text {
+  font-size: 0.95rem; line-height: 2;
+  color: var(--text-body);
+  margin-bottom: 20px;
+}
+.profile-quals {
+  display: flex; flex-wrap: wrap; gap: 10px;
+}
+.profile-qual {
+  padding: 6px 16px;
+  background: var(--gold-pale);
+  color: var(--navy);
+  font-size: 0.82rem; font-weight: 500;
+  border-radius: 50px;
+}
+
+/* ===== VOICE ===== */
+.voices-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;
+}
+.voice-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 36px 28px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  position: relative;
+}
+.voice-card:hover {
+  box-shadow: var(--shadow-md);
+}
+.voice-card::before {
+  content: '\201C';
+  position: absolute; top: 16px; left: 20px;
+  font-size: 4rem; line-height: 1;
+  color: var(--gold-pale);
+  font-family: serif;
+}
+.voice-text {
+  font-size: 0.92rem; line-height: 1.9;
+  color: var(--text-body);
+  margin-bottom: 20px;
+  position: relative; z-index: 1;
+}
+.voice-author {
+  display: flex; align-items: center; gap: 12px;
+}
+.voice-avatar {
+  width: 44px; height: 44px;
+  background: var(--navy);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
+.voice-avatar svg { width: 22px; height: 22px; fill: var(--gold); }
+.voice-meta strong {
+  display: block;
+  font-size: 0.88rem; color: var(--navy);
+}
+.voice-meta span {
+  font-size: 0.78rem; color: var(--text-light);
+}
+.voice-stars {
+  color: var(--gold); font-size: 0.85rem; margin-bottom: 14px;
+}
+
+/* ===== CTA ===== */
+.cta-section {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  padding: 70px 24px;
+  text-align: center; color: var(--white);
+}
+.cta-section h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.8rem; font-weight: 700;
+  margin-bottom: 12px;
+}
+.cta-section p {
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 36px;
+  font-size: 1rem;
+}
+.cta-buttons {
+  display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;
+}
+.btn-cta-large {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 18px 40px;
+  border-radius: 50px; font-size: 1.05rem; font-weight: 700;
+  transition: var(--transition); cursor: pointer; border: none;
+}
+.btn-cta-gold {
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  color: var(--white);
+  box-shadow: 0 4px 20px rgba(197,165,90,0.4);
+}
+.btn-cta-gold:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(197,165,90,0.5);
+}
+.btn-cta-outline {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255,255,255,0.4);
+}
+.btn-cta-outline:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: translateY(-3px);
+}
+.btn-cta-large svg { width: 22px; height: 22px; fill: currentColor; }
+
+/* ===== OVERVIEW TABLE ===== */
+.overview-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.overview-table th,
+.overview-table td {
+  padding: 18px 24px;
+  text-align: left;
+  font-size: 0.92rem;
+  border-bottom: 1px solid var(--gray-light);
+}
+.overview-table th {
+  background: var(--navy);
+  color: var(--white);
+  font-weight: 500;
+  width: 180px;
+  white-space: nowrap;
+}
+.overview-table td {
+  color: var(--text-body);
+}
+.overview-table tr:last-child th,
+.overview-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* ===== DEMO BANNER ===== */
+.demo-banner {
+  background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+  border: 2px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 24px 32px;
+  text-align: center;
+  max-width: 900px; margin: 0 auto 0;
+  font-size: 0.92rem; color: #856404;
+  font-weight: 500;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--navy-dark);
+  color: rgba(255,255,255,0.7);
+  padding: 50px 24px 30px;
+}
+.footer-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: flex-start;
+  gap: 40px; flex-wrap: wrap;
+}
+.footer-info h3 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.2rem; color: var(--white);
+  margin-bottom: 12px;
+}
+.footer-info p {
+  font-size: 0.85rem; line-height: 1.9;
+}
+.footer-links { display: flex; gap: 40px; }
+.footer-links ul { list-style: none; }
+.footer-links li { margin-bottom: 8px; }
+.footer-links a {
+  font-size: 0.85rem; color: rgba(255,255,255,0.6);
+  transition: var(--transition);
+}
+.footer-links a:hover { color: var(--gold); }
+.footer-copy {
+  text-align: center;
+  padding-top: 30px; margin-top: 30px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.78rem; color: rgba(255,255,255,0.4);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 968px) {
+  .features-grid, .services-grid, .voices-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .profile-box { flex-direction: column; text-align: center; padding: 36px 28px; }
+  .profile-photo { width: 160px; height: 160px; }
+  .profile-quals { justify-content: center; }
+  .hero h1 { font-size: 2rem; }
+  .nav-inner { flex-wrap: wrap; }
+  .nav a { padding: 10px 14px; font-size: 0.82rem; }
+}
+@media (max-width: 640px) {
+  .header-inner { height: 66px; }
+  .header-logo img { height: 36px; }
+  .header-logo span { font-size: 0.9rem; }
+  .header-tel { display: none; }
+  .hamburger { display: block; }
+  .nav { display: none; }
+  .nav.open { display: block; position: fixed; top: 66px; left: 0; right: 0; z-index: 999; }
+  .nav.open .nav-inner { flex-direction: column; }
+  .nav.open a { padding: 14px 24px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .hero { padding: 70px 20px 60px; margin-top: 66px; }
+  .hero h1 { font-size: 1.5rem; }
+  .hero-stats { gap: 30px; }
+  .hero-stat .num { font-size: 2rem; }
+  .features-grid, .services-grid, .voices-grid {
+    grid-template-columns: 1fr;
+  }
+  .section { padding: 60px 16px; }
+  .cta-buttons { flex-direction: column; align-items: center; }
+  .footer-inner { flex-direction: column; }
+  .footer-links { flex-direction: column; gap: 20px; }
+  .overview-table th { width: 120px; padding: 14px 16px; }
+  .overview-table td { padding: 14px 16px; }
+  .profile-box { gap: 30px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <a href="#" class="header-logo">
+      <img src="https://hachimori-tax.tkcnf.com/library/57304904107f708a40176b6e/201406100847_ZQWAS.jpg" alt="はちもり会計事務所ロゴ">
+      <span>はちもり会計事務所</span>
+    </a>
+    <div class="header-right">
+      <div class="header-tel">
+        <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+        <div>
+          <small>お気軽にお電話ください</small>
+          011-213-1008
+        </div>
+      </div>
+      <a href="#contact" class="btn-cta">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        無料相談はこちら
+      </a>
+      <button class="hamburger" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#hero">HOME</a>
+    <a href="#features">事務所の特徴</a>
+    <a href="#services">サービス一覧</a>
+    <a href="#profile">代表紹介</a>
+    <a href="#voices">お客様の声</a>
+    <a href="#overview">事務所概要</a>
+    <a href="#contact">お問い合わせ</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <p class="hero-sub">HACHIMORI TAX &amp; ACCOUNTING OFFICE</p>
+    <h1>経営者の想いに寄り添う、<br>頼れる会計パートナー。</h1>
+    <p>税務・会計・行政書士業務をワンストップで。<br>多言語対応で札幌から全国の経営者を支えます。</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="num">250<span>社+</span></div>
+        <div class="label">法人顧問先</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num">50<span>名+</span></div>
+        <div class="label">個人事業主顧問先</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num">3<span>言語</span></div>
+        <div class="label">多言語対応</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section section-bg" id="features">
+  <div class="container">
+    <div class="section-header">
+      <p class="en">FEATURES</p>
+      <h2>選ばれる3つの理由</h2>
+      <div class="line"></div>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        </div>
+        <h3>TKC全国会会員の信頼性</h3>
+        <p>全国約1万2千の会計事務所が加盟するTKC全国会の会員として、正確な税務・会計処理と経営助言を提供。巡回監査を徹底し、信頼性の高いサービスをお届けします。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+        </div>
+        <h3>税理士×行政書士のワンストップ</h3>
+        <p>税務顧問・確定申告から会社設立・各種許認可まで、税理士と行政書士の両資格で幅広い業務にワンストップ対応。お客様の手間を最小限に抑えます。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95a15.65 15.65 0 00-1.38-3.56A8.03 8.03 0 0118.92 8zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56A7.987 7.987 0 015.08 16zm2.95-8H5.08a7.987 7.987 0 014.33-3.56A15.65 15.65 0 008.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2s.07-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 01-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/></svg>
+        </div>
+        <h3>多言語対応で海外経営者も安心</h3>
+        <p>広東語・中国語・英語に対応し、外国人経営者・納税者の皆様もスムーズにご相談いただけます。札幌から北海道全域、さらに全国のお客様をサポートします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-header">
+      <p class="en">SERVICES</p>
+      <h2>サービス一覧</h2>
+      <div class="line"></div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+        </div>
+        <h3>税務・会計・決算申告</h3>
+        <p>法人・個人の記帳代行から月次監査、決算申告まで。正確かつ迅速な処理で経営判断をサポートします。</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
+        </div>
+        <h3>法人設立・独立開業支援</h3>
+        <p>会社設立の手続きから事業計画の策定、開業届の提出まで、起業をトータルでバックアップします。</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z"/></svg>
+        </div>
+        <h3>財務診断・経営コンサルティング</h3>
+        <p>経営数値の分析に基づく的確なアドバイスで、企業の成長と安定経営を実現します。</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+        </div>
+        <h3>相続・贈与の相談・申告</h3>
+        <p>相続税・贈与税の申告、生前対策、事業承継など、大切な資産を守るための最適なプランをご提案します。</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+        </div>
+        <h3>融資・補助金の相談・支援</h3>
+        <p>融資申請や各種補助金・助成金の申請をサポート。資金調達の成功率を高め、事業拡大を後押しします。</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95a15.65 15.65 0 00-1.38-3.56A8.03 8.03 0 0118.92 8zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56A7.987 7.987 0 015.08 16zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2s.07-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2z"/></svg>
+        </div>
+        <h3>外国人経営者・納税者支援</h3>
+        <p>広東語・中国語・英語での対応が可能。外国人経営者の税務・会計・ビザ関連業務をワンストップでサポートします。</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+        </div>
+        <h3>行政書士業務</h3>
+        <p>各種許認可申請、契約書作成、政治資金監査など、行政書士としての専門業務にも対応いたします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROFILE -->
+<section class="section section-bg" id="profile">
+  <div class="container">
+    <div class="section-header">
+      <p class="en">REPRESENTATIVE</p>
+      <h2>代表紹介</h2>
+      <div class="line"></div>
+    </div>
+    <div class="profile-box">
+      <div class="profile-photo">
+        <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+      </div>
+      <div class="profile-info">
+        <p class="profile-title">代表 / 税理士・行政書士</p>
+        <h3 class="profile-name">八森 恵一<small>Keiichi Hachimori</small></h3>
+        <p class="profile-text">
+          札幌市中央区を拠点に、法人250社以上・個人事業主50名以上の顧問先を持ち、税務・会計から行政書士業務まで幅広くサポート。TKC全国会会員として巡回監査を徹底し、お客様の経営に真摯に向き合い続けています。広東語・中国語・英語にも対応し、外国人経営者の皆様にも安心してご相談いただける事務所づくりを心がけています。
+        </p>
+        <p class="profile-text" style="font-size:0.9rem; color:var(--text-light);">
+          ※本番サイトでは代表のお写真・詳細な経歴を掲載いたします。
+        </p>
+        <div class="profile-quals">
+          <span class="profile-qual">税理士</span>
+          <span class="profile-qual">行政書士</span>
+          <span class="profile-qual">TKC全国会会員</span>
+          <span class="profile-qual">多言語対応</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VOICES -->
+<section class="section" id="voices">
+  <div class="container">
+    <div class="section-header">
+      <p class="en">TESTIMONIALS</p>
+      <h2>お客様の声</h2>
+      <div class="line"></div>
+    </div>
+    <div class="voices-grid">
+      <div class="voice-card">
+        <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="voice-text">会社設立から税務顧問まですべてお任せしています。税理士と行政書士の両方の資格をお持ちなので、一つの窓口で全て対応してもらえるのが本当に助かります。</p>
+        <div class="voice-author">
+          <div class="voice-avatar">
+            <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          </div>
+          <div class="voice-meta">
+            <strong>A社 代表取締役 様</strong>
+            <span>IT業 / 札幌市</span>
+          </div>
+        </div>
+      </div>
+      <div class="voice-card">
+        <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="voice-text">中国語で相談できる税理士事務所はなかなかありません。母国語でやり取りできるので細かいニュアンスも伝わり、安心して経営に集中できています。</p>
+        <div class="voice-author">
+          <div class="voice-avatar">
+            <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          </div>
+          <div class="voice-meta">
+            <strong>B社 代表 様</strong>
+            <span>飲食業 / 札幌市</span>
+          </div>
+        </div>
+      </div>
+      <div class="voice-card">
+        <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="voice-text">相続の相談でお世話になりました。複雑な案件でしたが、とても丁寧に説明してくださり、最適な方法で申告していただけました。紹介してくれた知人に感謝です。</p>
+        <div class="voice-author">
+          <div class="voice-avatar">
+            <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          </div>
+          <div class="voice-meta">
+            <strong>C様（個人）</strong>
+            <span>相続相談 / 北海道</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <h2>まずはお気軽にご相談ください</h2>
+  <p>初回のご相談は無料です。税務・会計・行政書士業務に関することなら何でもお問い合わせください。</p>
+  <div class="cta-buttons">
+    <a href="tel:011-213-1008" class="btn-cta-large btn-cta-gold">
+      <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+      011-213-1008
+    </a>
+    <a href="mailto:info@hachimori-tax.com" class="btn-cta-large btn-cta-outline">
+      <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      メールで相談する
+    </a>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section class="section section-bg" id="overview">
+  <div class="container">
+    <div class="section-header">
+      <p class="en">OFFICE INFO</p>
+      <h2>事務所概要</h2>
+      <div class="line"></div>
+    </div>
+    <table class="overview-table">
+      <tr><th>事務所名</th><td>はちもり会計事務所（八森恵一税理士・行政書士事務所）</td></tr>
+      <tr><th>代表者</th><td>八森 恵一（税理士・行政書士）</td></tr>
+      <tr><th>所在地</th><td>〒060-0061 札幌市中央区南1条西11丁目327-6 ワンズ南一条ビル3F</td></tr>
+      <tr><th>電話番号</th><td>011-213-1008</td></tr>
+      <tr><th>FAX</th><td>011-213-1009</td></tr>
+      <tr><th>メール</th><td>info@hachimori-tax.com</td></tr>
+      <tr><th>従業員数</th><td>11名（男性5名・女性6名）</td></tr>
+      <tr><th>対応言語</th><td>日本語・広東語・中国語・英語</td></tr>
+      <tr><th>所属団体</th><td>TKC全国会</td></tr>
+      <tr><th>主な業務</th><td>税務・会計・決算申告 / 法人設立・開業支援 / 財務診断・経営コンサルティング / 相続・贈与 / 融資・補助金支援 / 外国人経営者支援 / 行政書士業務 / 政治資金監査</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- DEMO BANNER -->
+<section class="section" style="padding: 40px 24px;">
+  <div class="demo-banner">
+    ※ 本ページはリニューアルのイメージサンプルです。本番では実際のお写真・正式な情報を使用し、より完成度の高いサイトに仕上げます。
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-info">
+      <h3>はちもり会計事務所</h3>
+      <p>
+        〒060-0061<br>
+        札幌市中央区南1条西11丁目327-6<br>
+        ワンズ南一条ビル3F<br>
+        TEL: 011-213-1008 / FAX: 011-213-1009
+      </p>
+    </div>
+    <div class="footer-links">
+      <ul>
+        <li><a href="#hero">HOME</a></li>
+        <li><a href="#features">事務所の特徴</a></li>
+        <li><a href="#services">サービス一覧</a></li>
+        <li><a href="#profile">代表紹介</a></li>
+      </ul>
+      <ul>
+        <li><a href="#voices">お客様の声</a></li>
+        <li><a href="#overview">事務所概要</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+        <li><a href="#">プライバシーポリシー</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="footer-copy">&copy; 2026 はちもり会計事務所 All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

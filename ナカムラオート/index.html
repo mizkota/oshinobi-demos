@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>有限会社ナカムラオート | 札幌市西区の自動車整備・板金塗装・車検</title>
+<meta name="description" content="札幌市西区発寒の自動車整備工場。車検・一般整備・板金塗装・パーツ取付。創業1995年、認証工場第1-2707号。お客様評価4.98/5.0の信頼と実績。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #0a1f3f;
+  --primary-light: #13325e;
+  --primary-dark: #06142a;
+  --accent: #e8491d;
+  --accent-light: #ff6b3d;
+  --accent-dark: #c13a12;
+  --gold: #d4a843;
+  --gold-light: #f0cc6b;
+  --white: #ffffff;
+  --gray-50: #f8f9fa;
+  --gray-100: #f0f1f3;
+  --gray-200: #e2e4e8;
+  --gray-300: #c8ccd2;
+  --gray-500: #6b7280;
+  --gray-700: #374151;
+  --gray-900: #111827;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+  --shadow-lg: 0 8px 30px rgba(0,0,0,0.12);
+  --shadow-xl: 0 16px 50px rgba(0,0,0,0.15);
+  --radius: 8px;
+  --radius-lg: 16px;
+  --transition: 0.3s ease;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: var(--gray-900);
+  line-height: 1.8;
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ========== HEADER ========== */
+.header {
+  position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+  background: rgba(10,31,63,0.97);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  transition: var(--transition);
+}
+
+.header-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 24px; height: 76px;
+}
+
+.logo {
+  display: flex; align-items: center; gap: 12px;
+  text-decoration: none; color: var(--white);
+}
+
+.logo-icon {
+  width: 44px; height: 44px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-light));
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 900; font-size: 18px; color: var(--white);
+}
+
+.logo-text { display: flex; flex-direction: column; line-height: 1.2; }
+.logo-text .main { font-weight: 700; font-size: 18px; letter-spacing: 0.05em; }
+.logo-text .sub { font-size: 10px; color: var(--gray-300); letter-spacing: 0.15em; }
+
+.header-right { display: flex; align-items: center; gap: 20px; }
+
+.header-phone {
+  display: flex; align-items: center; gap: 8px;
+  color: var(--white); text-decoration: none;
+}
+.header-phone svg { width: 20px; height: 20px; fill: var(--accent-light); }
+.header-phone .num { font-weight: 700; font-size: 20px; letter-spacing: 0.05em; }
+.header-phone .time { font-size: 11px; color: var(--gray-300); }
+
+.header-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-light));
+  color: var(--white); text-decoration: none;
+  padding: 10px 24px; border-radius: 50px;
+  font-weight: 700; font-size: 14px;
+  box-shadow: 0 4px 15px rgba(232,73,29,0.4);
+  transition: var(--transition);
+}
+.header-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(232,73,29,0.5); }
+
+/* ========== NAV ========== */
+.nav {
+  background: var(--primary-dark);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.nav-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: center;
+  gap: 0; padding: 0 24px;
+}
+.nav a {
+  color: var(--gray-300); text-decoration: none;
+  padding: 12px 20px; font-size: 13px; font-weight: 500;
+  letter-spacing: 0.05em; transition: var(--transition);
+  position: relative;
+}
+.nav a::after {
+  content: ''; position: absolute; bottom: 0; left: 50%; width: 0;
+  height: 2px; background: var(--accent);
+  transform: translateX(-50%); transition: var(--transition);
+}
+.nav a:hover { color: var(--white); }
+.nav a:hover::after { width: 60%; }
+
+/* ========== HAMBURGER ========== */
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.hamburger span {
+  display: block; width: 24px; height: 2px;
+  background: var(--white); margin: 5px 0; transition: var(--transition);
+}
+
+/* ========== HERO ========== */
+.hero {
+  margin-top: 112px;
+  background: linear-gradient(135deg, var(--primary) 0%, #0e2a50 40%, #162d4f 60%, var(--primary-dark) 100%);
+  position: relative; overflow: hidden;
+  padding: 100px 24px 80px;
+}
+.hero::before {
+  content: ''; position: absolute; top: -50%; right: -20%;
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(232,73,29,0.08) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.hero::after {
+  content: ''; position: absolute; bottom: -30%; left: -10%;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(212,168,67,0.06) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.hero-inner {
+  max-width: 1200px; margin: 0 auto; position: relative; z-index: 1;
+}
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(232,73,29,0.15); border: 1px solid rgba(232,73,29,0.3);
+  padding: 6px 16px; border-radius: 50px; margin-bottom: 24px;
+  color: var(--accent-light); font-size: 13px; font-weight: 500;
+}
+
+.hero h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 48px; line-height: 1.3; color: var(--white);
+  margin-bottom: 20px;
+}
+.hero h1 span { color: var(--accent-light); }
+
+.hero-sub {
+  font-size: 18px; color: var(--gray-300);
+  margin-bottom: 40px; max-width: 600px; line-height: 1.8;
+}
+
+.hero-stats {
+  display: flex; gap: 40px; flex-wrap: wrap;
+}
+.hero-stat {
+  text-align: center;
+}
+.hero-stat .num {
+  font-size: 48px; font-weight: 900; color: var(--accent-light);
+  line-height: 1;
+}
+.hero-stat .num small { font-size: 20px; font-weight: 700; }
+.hero-stat .label {
+  font-size: 13px; color: var(--gray-300); margin-top: 4px;
+}
+
+/* ========== SECTIONS ========== */
+.section {
+  padding: 80px 24px;
+}
+.section--gray { background: var(--gray-50); }
+.section--dark {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: var(--white);
+}
+
+.section-header {
+  text-align: center; margin-bottom: 60px;
+}
+.section-header .en {
+  font-size: 12px; font-weight: 700; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--accent);
+  margin-bottom: 8px;
+}
+.section--dark .section-header .en { color: var(--accent-light); }
+.section-header h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 32px; margin-bottom: 16px;
+}
+.section-header .line {
+  width: 60px; height: 3px; margin: 0 auto;
+  background: linear-gradient(90deg, var(--accent), var(--gold));
+  border-radius: 2px;
+}
+
+.container { max-width: 1200px; margin: 0 auto; }
+
+/* ========== STRENGTHS ========== */
+.strengths-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;
+}
+.strength-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 40px 32px;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  position: relative; overflow: hidden;
+}
+.strength-card::before {
+  content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px;
+  background: linear-gradient(90deg, var(--accent), var(--gold));
+}
+.strength-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-xl); }
+
+.strength-icon {
+  width: 72px; height: 72px; margin: 0 auto 20px;
+  background: linear-gradient(135deg, rgba(232,73,29,0.08), rgba(212,168,67,0.08));
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+}
+.strength-icon svg { width: 36px; height: 36px; fill: var(--accent); }
+
+.strength-card h3 { font-size: 20px; margin-bottom: 12px; color: var(--primary); }
+.strength-card p { font-size: 14px; color: var(--gray-500); line-height: 1.8; }
+
+/* ========== SERVICES ========== */
+.services-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
+}
+.service-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  display: flex; gap: 24px; align-items: flex-start;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+  transition: var(--transition);
+}
+.service-card:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+.service-icon {
+  flex-shrink: 0; width: 56px; height: 56px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+}
+.service-icon svg { width: 28px; height: 28px; fill: var(--white); }
+.service-card h3 { font-size: 18px; color: var(--primary); margin-bottom: 8px; }
+.service-card p { font-size: 13px; color: var(--gray-500); line-height: 1.7; }
+.service-price {
+  display: inline-block; margin-top: 10px;
+  background: var(--gray-50); padding: 4px 12px; border-radius: 50px;
+  font-size: 12px; font-weight: 700; color: var(--accent);
+}
+
+/* ========== REVIEWS ========== */
+.reviews-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;
+}
+.review-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  position: relative;
+}
+.review-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.review-card::before {
+  content: '\201C'; position: absolute; top: 16px; left: 24px;
+  font-size: 60px; color: var(--gray-200); font-family: serif; line-height: 1;
+}
+.review-stars { display: flex; gap: 2px; margin-bottom: 16px; }
+.review-stars svg { width: 18px; height: 18px; fill: var(--gold); }
+.review-text { font-size: 14px; color: var(--gray-700); line-height: 1.8; margin-bottom: 20px; padding-top: 8px; }
+.review-author { display: flex; align-items: center; gap: 12px; }
+.review-avatar {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  display: flex; align-items: center; justify-content: center;
+  color: var(--white); font-weight: 700; font-size: 16px;
+}
+.review-author .name { font-size: 14px; font-weight: 700; }
+.review-author .meta { font-size: 12px; color: var(--gray-500); }
+
+/* ========== REVIEW SCORE ========== */
+.review-score-section {
+  text-align: center; margin-bottom: 50px;
+  padding: 30px; background: var(--white);
+  border-radius: var(--radius-lg); box-shadow: var(--shadow-md);
+  max-width: 500px; margin-left: auto; margin-right: auto; margin-bottom: 50px;
+}
+.review-score-big {
+  font-size: 56px; font-weight: 900; color: var(--accent);
+  line-height: 1;
+}
+.review-score-big small { font-size: 24px; color: var(--gray-500); }
+.review-score-label { font-size: 14px; color: var(--gray-500); margin-top: 4px; }
+.review-score-count { font-size: 13px; color: var(--gray-300); margin-top: 2px; }
+
+/* ========== CTA ========== */
+.cta-section {
+  padding: 80px 24px;
+  background: linear-gradient(135deg, var(--accent-dark), var(--accent), var(--accent-light));
+  text-align: center; color: var(--white);
+  position: relative; overflow: hidden;
+}
+.cta-section::before {
+  content: ''; position: absolute; top: -50%; right: -20%;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(255,255,255,0.08), transparent);
+  border-radius: 50%;
+}
+.cta-section h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 32px; margin-bottom: 16px; position: relative;
+}
+.cta-section p { font-size: 16px; opacity: 0.9; margin-bottom: 40px; position: relative; }
+
+.cta-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; position: relative; }
+.cta-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 16px 36px; border-radius: 50px;
+  text-decoration: none; font-weight: 700; font-size: 16px;
+  transition: var(--transition);
+}
+.cta-btn--phone {
+  background: var(--white); color: var(--accent);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.cta-btn--phone:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.3); }
+.cta-btn--phone svg { width: 22px; height: 22px; fill: var(--accent); }
+.cta-btn--mail {
+  background: transparent; color: var(--white);
+  border: 2px solid var(--white);
+}
+.cta-btn--mail:hover { background: var(--white); color: var(--accent); }
+.cta-btn--mail:hover svg { fill: var(--accent); }
+.cta-btn--mail svg { width: 22px; height: 22px; fill: var(--white); transition: var(--transition); }
+
+/* ========== COMPANY ========== */
+.company-table {
+  width: 100%; max-width: 800px; margin: 0 auto;
+  border-collapse: collapse;
+}
+.company-table th, .company-table td {
+  padding: 16px 20px; text-align: left; font-size: 14px;
+  border-bottom: 1px solid var(--gray-200);
+}
+.company-table th {
+  width: 160px; font-weight: 700; color: var(--primary);
+  background: var(--gray-50);
+}
+.company-table td { color: var(--gray-700); }
+
+/* ========== MAP PLACEHOLDER ========== */
+.map-placeholder {
+  max-width: 800px; margin: 40px auto 0;
+  background: linear-gradient(135deg, var(--gray-100), var(--gray-200));
+  border-radius: var(--radius-lg);
+  height: 300px; display: flex; align-items: center; justify-content: center;
+  color: var(--gray-500); font-size: 14px;
+}
+
+/* ========== DEMO BANNER ========== */
+.demo-banner {
+  background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+  border: 2px solid #ffb74d;
+  border-radius: var(--radius-lg);
+  padding: 24px 32px;
+  max-width: 900px; margin: 0 auto;
+  text-align: center;
+  font-size: 14px; color: #e65100;
+  font-weight: 500;
+  line-height: 1.8;
+}
+.demo-banner strong { font-weight: 700; }
+
+.demo-banner-wrapper {
+  padding: 40px 24px;
+  background: var(--white);
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  background: var(--primary-dark); color: var(--gray-300);
+  padding: 60px 24px 30px;
+}
+.footer-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 40px;
+  margin-bottom: 40px;
+}
+.footer-logo .main { font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+.footer-logo .sub { font-size: 11px; color: var(--gray-500); letter-spacing: 0.1em; margin-bottom: 16px; }
+.footer-logo p { font-size: 13px; line-height: 1.8; }
+
+.footer h4 {
+  font-size: 14px; color: var(--white); margin-bottom: 16px;
+  padding-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.footer ul { list-style: none; }
+.footer ul li { margin-bottom: 8px; }
+.footer ul a { color: var(--gray-300); text-decoration: none; font-size: 13px; transition: var(--transition); }
+.footer ul a:hover { color: var(--accent-light); }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 24px;
+  display: flex; justify-content: space-between; align-items: center;
+  max-width: 1200px; margin: 0 auto;
+}
+.footer-bottom p { font-size: 12px; color: var(--gray-500); }
+.footer-consadole {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 12px; color: var(--gray-500);
+}
+
+/* ========== MOBILE ========== */
+@media (max-width: 1024px) {
+  .nav { display: none; }
+  .nav.active {
+    display: flex; flex-direction: column; position: absolute;
+    top: 76px; left: 0; width: 100%;
+    background: var(--primary-dark);
+  }
+  .nav.active .nav-inner { flex-direction: column; }
+  .hamburger { display: block; }
+  .strengths-grid, .reviews-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 32px; }
+  .hero-stats { gap: 24px; }
+  .hero-stat .num { font-size: 36px; }
+  .footer-inner { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .header-inner { height: 64px; }
+  .header-phone .num { font-size: 16px; }
+  .header-cta { display: none; }
+  .hero { margin-top: 100px; padding: 60px 24px 50px; }
+  .hero h1 { font-size: 26px; }
+  .hero-sub { font-size: 15px; }
+  .section { padding: 60px 16px; }
+  .section-header h2 { font-size: 24px; }
+  .strength-card { padding: 32px 24px; }
+  .company-table th { width: 120px; }
+  .cta-buttons { flex-direction: column; align-items: center; }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 22px; }
+  .hero-stats { flex-direction: column; gap: 16px; align-items: flex-start; }
+  .logo-text .main { font-size: 15px; }
+  .header-phone { display: none; }
+  .header-cta { display: inline-flex; font-size: 12px; padding: 8px 16px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">NA</div>
+      <div class="logo-text">
+        <span class="main">ナカムラオート</span>
+        <span class="sub">NAKAMURA AUTO</span>
+      </div>
+    </a>
+    <div class="header-right">
+      <a href="tel:011-666-0102" class="header-phone">
+        <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z"/></svg>
+        <div>
+          <div class="num">011-666-0102</div>
+          <div class="time">平日 8:30-17:30 / 土 8:30-12:00</div>
+        </div>
+      </a>
+      <a href="#contact" class="header-cta">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="white"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        無料相談はこちら
+      </a>
+      <button class="hamburger" onclick="document.querySelector('.nav').classList.toggle('active')" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#">HOME</a>
+    <a href="#strengths">当社の強み</a>
+    <a href="#services">サービス一覧</a>
+    <a href="#reviews">お客様の声</a>
+    <a href="#company">会社概要</a>
+    <a href="#contact">お問い合わせ</a>
+  </div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+      認証工場 第1-2707号 / 創業1995年
+    </div>
+    <h1>なんでも直す。<br>まずは<span>やってみる</span>。<br>札幌・発寒の頼れる整備工場</h1>
+    <p class="hero-sub">
+      創業以来、地域の皆さまのカーライフを支え続けて約30年。<br>
+      小さなキズの修理からエンジン載せ換えまで、お車のことなら何でもご相談ください。
+    </p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="num">30<small>年</small></div>
+        <div class="label">整備実績</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num">4.98<small>/5.0</small></div>
+        <div class="label">お客様評価</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num">62<small>件+</small></div>
+        <div class="label">レビュー数</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== STRENGTHS ========== -->
+<section class="section" id="strengths">
+  <div class="container">
+    <div class="section-header">
+      <div class="en">OUR STRENGTHS</div>
+      <h2>当社の強み</h2>
+      <div class="line"></div>
+    </div>
+    <div class="strengths-grid">
+      <div class="strength-card">
+        <div class="strength-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        </div>
+        <h3>認証工場の安心品質</h3>
+        <p>北海道運輸局認証工場（第1-2707号）として、国家資格を持つ整備士が確かな技術でお車を整備。コンピューター診断機も完備し、最新車種にも対応しています。</p>
+      </div>
+      <div class="strength-card">
+        <div class="strength-icon">
+          <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+        </div>
+        <h3>予算に合わせた柔軟な提案</h3>
+        <p>リビルト・リサイクルパーツの活用や、部品交換不要な修復方法のご提案など、お客様の予算に寄り添った最適なプランをご提案。パーツの持込みも大歓迎です。</p>
+      </div>
+      <div class="strength-card">
+        <div class="strength-icon">
+          <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+        </div>
+        <h3>迅速・丁寧な対応</h3>
+        <p>「車好き」のスタッフが親身に対応。バッテリー交換は最短10分、代車も無料でご用意。お客様評価4.98/5.0の高評価が信頼の証です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SERVICES ========== -->
+<section class="section section--gray" id="services">
+  <div class="container">
+    <div class="section-header">
+      <div class="en">SERVICES</div>
+      <h2>サービス一覧</h2>
+      <div class="line"></div>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+        </div>
+        <div>
+          <h3>車検・法定点検</h3>
+          <p>認証工場ならではの確かな検査体制。車検前の無料見積もりで安心。必要最小限の整備をご提案し、過剰整備はいたしません。</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
+        </div>
+        <div>
+          <h3>一般整備・修理</h3>
+          <p>オイル交換からエンジン載せ換え、クラッチO/Hまで幅広く対応。「なんでも直す。まずはやってみる。」がモットーです。</p>
+          <span class="service-price">オイル交換 880円/L〜</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M18 4V3c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V6h1v4H9v11c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-9h8V4h-3z"/></svg>
+        </div>
+        <div>
+          <h3>板金塗装</h3>
+          <p>小さなキズやヘコミから事故車のフル修復まで対応。保険修理にも対応しておりますので、まずはお見積もりからお気軽にどうぞ。</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/></svg>
+        </div>
+        <div>
+          <h3>パーツ取付・交換</h3>
+          <p>タイヤ・ホイール、ETC、カーナビ、ドラレコ、マフラー、サスペンションなど。パーツの直送・持込みも大歓迎です。</p>
+          <span class="service-price">タイヤ組換え 2,090円/本〜</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+        </div>
+        <div>
+          <h3>電装系・診断</h3>
+          <p>コンピューター診断機を使用した故障診断。エンジン警告灯の原因特定から電装系パーツの修理・交換まで幅広くサポートします。</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        </div>
+        <div>
+          <h3>各種キャッシュレス対応</h3>
+          <p>VISA・MasterCardなどのクレジットカードに加え、PayPay・メルペイ・楽天ペイにも対応。各種ローンのご利用も可能です。</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== REVIEWS ========== -->
+<section class="section" id="reviews">
+  <div class="container">
+    <div class="section-header">
+      <div class="en">CUSTOMER VOICE</div>
+      <h2>お客様の声</h2>
+      <div class="line"></div>
+    </div>
+
+    <div class="review-score-section">
+      <div style="display:flex;justify-content:center;gap:4px;margin-bottom:8px">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="#d4a843"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="#d4a843"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="#d4a843"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="#d4a843"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="#d4a843"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+      </div>
+      <div class="review-score-big">4.98<small> / 5.0</small></div>
+      <div class="review-score-label">グーネットピット総合評価</div>
+      <div class="review-score-count">62件のレビュー</div>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+        </div>
+        <p class="review-text">バッテリー交換でお世話になりました。到着から10分程度で完了し、素早い対応に感謝しています。スタッフさんが車好きで、話が弾みました。</p>
+        <div class="review-author">
+          <div class="review-avatar">T</div>
+          <div>
+            <div class="name">T.K 様</div>
+            <div class="meta">バッテリー交換</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+        </div>
+        <p class="review-text">ネットで買ったパーツの取付をお願いしました。持ち込みでも嫌な顔ひとつせず、丁寧に作業していただけました。仕上がりも完璧で、今後もお願いしたいです。</p>
+        <div class="review-author">
+          <div class="review-avatar">S</div>
+          <div>
+            <div class="name">S.M 様</div>
+            <div class="meta">パーツ持込み取付</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+        </div>
+        <p class="review-text">車検でお世話になりました。必要な整備だけを丁寧に説明してくれて、見積もりよりも安く済みました。リビルトパーツの提案もありがたかったです。無料の代車も助かりました。</p>
+        <div class="review-author">
+          <div class="review-avatar">Y</div>
+          <div>
+            <div class="name">Y.H 様</div>
+            <div class="meta">車検</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CTA ========== -->
+<section class="cta-section" id="contact">
+  <h2>お車のお悩み、お気軽にご相談ください</h2>
+  <p>車検・整備・板金塗装・パーツ取付、何でもまずはお電話を。<br>無料見積もり・代車無料でお待ちしております。</p>
+  <div class="cta-buttons">
+    <a href="tel:011-666-0102" class="cta-btn cta-btn--phone">
+      <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z"/></svg>
+      011-666-0102
+    </a>
+    <a href="mailto:info@nakamura-auto.net" class="cta-btn cta-btn--mail">
+      <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      メールで問い合わせ
+    </a>
+  </div>
+</section>
+
+<!-- ========== COMPANY ========== -->
+<section class="section section--gray" id="company">
+  <div class="container">
+    <div class="section-header">
+      <div class="en">COMPANY</div>
+      <h2>会社概要</h2>
+      <div class="line"></div>
+    </div>
+    <table class="company-table">
+      <tr><th>会社名</th><td>有限会社ナカムラオート</td></tr>
+      <tr><th>代表取締役</th><td>中村 正志</td></tr>
+      <tr><th>所在地</th><td>〒063-0834 北海道札幌市西区発寒十四条3丁目6-19<br>（下手稲通り ベガスベガス発寒店 裏手）</td></tr>
+      <tr><th>電話番号</th><td>011-666-0102</td></tr>
+      <tr><th>FAX</th><td>011-666-0103</td></tr>
+      <tr><th>認証番号</th><td>北海道運輸局認証工場 第1-2707号</td></tr>
+      <tr><th>創業</th><td>平成7年（1995年）</td></tr>
+      <tr><th>事業内容</th><td>自動車整備・車検・板金塗装・パーツ取付・電装品取付</td></tr>
+      <tr><th>営業時間</th><td>平日 8:30〜17:30 / 土曜 8:30〜12:00<br>（第2・第4土曜日は休業）</td></tr>
+      <tr><th>定休日</th><td>日曜日・祝祭日・第2第4土曜日</td></tr>
+      <tr><th>お支払い</th><td>現金・クレジットカード・PayPay・メルペイ・楽天ペイ・ローン</td></tr>
+      <tr><th>パートナー</th><td>北海道コンサドーレ札幌 リレーションシップパートナー</td></tr>
+    </table>
+
+    <div class="map-placeholder">
+      <div style="text-align:center">
+        <svg viewBox="0 0 24 24" width="40" height="40" fill="#c8ccd2" style="margin-bottom:8px"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+        <div>※ 本番ではGoogleマップを埋め込みます</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== DEMO BANNER ========== -->
+<div class="demo-banner-wrapper">
+  <div class="demo-banner">
+    <strong>※ デモサイトのご案内</strong><br>
+    本ページはリニューアルのイメージサンプルです。本番では実際のお写真・正式な情報を使用し、より完成度の高いサイトに仕上げます。
+  </div>
+</div>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <div class="main">ナカムラオート</div>
+      <div class="sub">NAKAMURA AUTO</div>
+      <p>札幌市西区発寒の自動車整備工場。<br>創業1995年、地域の皆さまのカーライフを<br>支え続けて約30年。</p>
+    </div>
+    <div>
+      <h4>サービス</h4>
+      <ul>
+        <li><a href="#services">車検・法定点検</a></li>
+        <li><a href="#services">一般整備・修理</a></li>
+        <li><a href="#services">板金塗装</a></li>
+        <li><a href="#services">パーツ取付・交換</a></li>
+        <li><a href="#services">電装系・診断</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>アクセス</h4>
+      <ul>
+        <li><a href="#">〒063-0834</a></li>
+        <li><a href="#">札幌市西区発寒十四条3-6-19</a></li>
+        <li><a href="tel:011-666-0102">TEL: 011-666-0102</a></li>
+        <li><a href="#">平日 8:30-17:30</a></li>
+        <li><a href="#">土曜 8:30-12:00</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 有限会社ナカムラオート All Rights Reserved.</p>
+    <div class="footer-consadole">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="#6b7280"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+      北海道コンサドーレ札幌 リレーションシップパートナー
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

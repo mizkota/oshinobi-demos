@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOZAWA GROUP | 昭和5年創業 札幌の理美容グループ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:wght@400;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --pink-dark: #8B5E6B;
+  --pink-main: #C4929E;
+  --pink-light: #E8C8CF;
+  --pink-pale: #F5E6EA;
+  --pink-bg: #FDF5F7;
+  --gray-dark: #2C2C2C;
+  --gray-main: #555555;
+  --gray-light: #8A8A8A;
+  --gray-border: #E0D6D8;
+  --white: #FFFFFF;
+  --cream: #FFFAF8;
+  --gold: #B8976A;
+  --gold-light: #D4B896;
+  --shadow-sm: 0 2px 8px rgba(139,94,107,0.08);
+  --shadow-md: 0 4px 20px rgba(139,94,107,0.12);
+  --shadow-lg: 0 8px 40px rgba(139,94,107,0.16);
+  --radius: 12px;
+  --radius-lg: 20px;
+  --transition: 0.3s ease;
+}
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; font-size:16px; }
+body { font-family:'Noto Sans JP',sans-serif; color:var(--gray-dark); background:var(--white); line-height:1.8; -webkit-font-smoothing:antialiased; }
+
+/* ===== Utility ===== */
+.container { max-width:1200px; margin:0 auto; padding:0 24px; }
+.section-label { font-family:'Cormorant Garamond',serif; font-size:0.85rem; letter-spacing:3px; text-transform:uppercase; color:var(--pink-main); margin-bottom:8px; }
+.section-title { font-family:'Playfair Display',serif; font-size:clamp(1.8rem,4vw,2.6rem); color:var(--gray-dark); margin-bottom:16px; }
+.section-sub { color:var(--gray-light); font-size:0.95rem; max-width:600px; margin:0 auto 48px; }
+.text-center { text-align:center; }
+.btn {
+  display:inline-block; padding:16px 40px; border-radius:50px; font-size:0.95rem; font-weight:500;
+  text-decoration:none; transition:var(--transition); cursor:pointer; letter-spacing:1px;
+}
+.btn-primary { background:var(--pink-main); color:var(--white); border:2px solid var(--pink-main); }
+.btn-primary:hover { background:var(--pink-dark); border-color:var(--pink-dark); transform:translateY(-2px); box-shadow:var(--shadow-md); }
+.btn-outline { background:transparent; color:var(--pink-main); border:2px solid var(--pink-main); }
+.btn-outline:hover { background:var(--pink-main); color:var(--white); }
+.btn-gold { background:var(--gold); color:var(--white); border:2px solid var(--gold); }
+.btn-gold:hover { background:var(--gold-light); border-color:var(--gold-light); }
+
+/* ===== Header ===== */
+.header {
+  position:fixed; top:0; left:0; width:100%; z-index:1000;
+  background:rgba(255,255,255,0.95); backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--gray-border); transition:var(--transition);
+}
+.header-inner { display:flex; align-items:center; justify-content:space-between; padding:12px 24px; max-width:1200px; margin:0 auto; }
+.header-logo img { height:40px; }
+.header-logo-text { font-family:'Playfair Display',serif; font-size:1.4rem; color:var(--gray-dark); text-decoration:none; font-weight:600; }
+.header-logo-sub { font-size:0.65rem; color:var(--gray-light); display:block; letter-spacing:2px; }
+.nav { display:flex; align-items:center; gap:28px; }
+.nav a { text-decoration:none; color:var(--gray-main); font-size:0.85rem; font-weight:400; letter-spacing:1px; transition:var(--transition); position:relative; }
+.nav a:hover { color:var(--pink-main); }
+.nav a::after { content:''; position:absolute; bottom:-4px; left:0; width:0; height:2px; background:var(--pink-main); transition:var(--transition); }
+.nav a:hover::after { width:100%; }
+.nav-cta { background:var(--pink-main); color:var(--white)!important; padding:10px 24px; border-radius:50px; font-weight:500; }
+.nav-cta::after { display:none!important; }
+.nav-cta:hover { background:var(--pink-dark); }
+.hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:8px; }
+.hamburger span { width:24px; height:2px; background:var(--gray-dark); transition:var(--transition); }
+
+/* ===== Hero ===== */
+.hero {
+  margin-top:65px; position:relative; min-height:85vh;
+  background:linear-gradient(135deg, var(--pink-pale) 0%, var(--cream) 50%, var(--pink-bg) 100%);
+  display:flex; align-items:center; overflow:hidden;
+}
+.hero::before {
+  content:''; position:absolute; top:-20%; right:-10%; width:500px; height:500px;
+  background:radial-gradient(circle, rgba(196,146,158,0.15) 0%, transparent 70%); border-radius:50%;
+}
+.hero::after {
+  content:''; position:absolute; bottom:-15%; left:-5%; width:400px; height:400px;
+  background:radial-gradient(circle, rgba(184,151,106,0.1) 0%, transparent 70%); border-radius:50%;
+}
+.hero-inner { position:relative; z-index:2; display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; padding:80px 24px; max-width:1200px; margin:0 auto; }
+.hero-content {}
+.hero-badge { display:inline-block; background:var(--white); border:1px solid var(--pink-light); border-radius:50px; padding:6px 20px; font-size:0.75rem; color:var(--pink-dark); letter-spacing:2px; margin-bottom:24px; }
+.hero h1 { font-family:'Playfair Display',serif; font-size:clamp(2rem,5vw,3.2rem); line-height:1.3; color:var(--gray-dark); margin-bottom:20px; }
+.hero h1 .accent { color:var(--pink-main); }
+.hero p { color:var(--gray-main); font-size:1.05rem; line-height:2; margin-bottom:36px; font-weight:300; }
+.hero-buttons { display:flex; gap:16px; flex-wrap:wrap; }
+.hero-visual { position:relative; }
+.hero-img-main {
+  width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-lg);
+}
+.hero-stat {
+  position:absolute; bottom:30px; left:-30px; background:var(--white); border-radius:var(--radius);
+  padding:20px 28px; box-shadow:var(--shadow-md); text-align:center;
+}
+.hero-stat .num { font-family:'Playfair Display',serif; font-size:2.2rem; color:var(--pink-dark); font-weight:700; }
+.hero-stat .label { font-size:0.75rem; color:var(--gray-light); margin-top:4px; }
+
+/* ===== Features ===== */
+.features { padding:100px 0; background:var(--white); }
+.features-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:32px; margin-top:48px; }
+.feature-card {
+  background:var(--pink-bg); border-radius:var(--radius-lg); padding:48px 36px; text-align:center;
+  transition:var(--transition); border:1px solid transparent;
+}
+.feature-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-md); border-color:var(--pink-light); }
+.feature-icon {
+  width:72px; height:72px; margin:0 auto 24px; border-radius:50%;
+  background:linear-gradient(135deg, var(--pink-light), var(--pink-main));
+  display:flex; align-items:center; justify-content:center; font-size:1.8rem; color:var(--white);
+}
+.feature-card h3 { font-size:1.15rem; font-weight:500; margin-bottom:12px; color:var(--gray-dark); }
+.feature-card p { font-size:0.9rem; color:var(--gray-light); line-height:1.8; }
+
+/* ===== Menu ===== */
+.menu { padding:100px 0; background:var(--cream); }
+.menu-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; margin-top:48px; }
+.menu-card {
+  background:var(--white); border-radius:var(--radius); padding:36px; display:flex; gap:24px; align-items:flex-start;
+  transition:var(--transition); border:1px solid var(--gray-border);
+}
+.menu-card:hover { box-shadow:var(--shadow-sm); border-color:var(--pink-light); }
+.menu-icon { flex-shrink:0; width:56px; height:56px; border-radius:var(--radius); background:var(--pink-pale); display:flex; align-items:center; justify-content:center; font-size:1.5rem; }
+.menu-info h3 { font-size:1.05rem; font-weight:500; margin-bottom:6px; }
+.menu-info p { font-size:0.85rem; color:var(--gray-light); line-height:1.7; }
+.menu-price { display:inline-block; margin-top:8px; font-family:'Playfair Display',serif; color:var(--pink-dark); font-weight:600; font-size:1rem; }
+
+/* ===== Shops ===== */
+.shops { padding:100px 0; background:var(--white); }
+.shops-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin-top:48px; }
+.shop-card {
+  background:var(--white); border-radius:var(--radius-lg); overflow:hidden;
+  box-shadow:var(--shadow-sm); transition:var(--transition); border:1px solid var(--gray-border);
+}
+.shop-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); }
+.shop-img {
+  width:100%; height:200px; object-fit:cover;
+  background:linear-gradient(135deg, var(--pink-pale), var(--pink-light));
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Playfair Display',serif; font-size:1.4rem; color:var(--pink-dark);
+}
+.shop-body { padding:28px; }
+.shop-tag { display:inline-block; background:var(--pink-pale); color:var(--pink-dark); font-size:0.7rem; padding:4px 12px; border-radius:50px; margin-bottom:12px; letter-spacing:1px; }
+.shop-body h3 { font-family:'Playfair Display',serif; font-size:1.2rem; margin-bottom:10px; }
+.shop-body .shop-address { font-size:0.82rem; color:var(--gray-light); margin-bottom:6px; display:flex; align-items:flex-start; gap:6px; }
+.shop-body .shop-tel { font-size:0.85rem; color:var(--gray-main); margin-bottom:6px; }
+.shop-body .shop-hours { font-size:0.8rem; color:var(--gray-light); }
+.shop-body .shop-btn { display:block; text-align:center; margin-top:16px; padding:10px; border-radius:50px; border:1px solid var(--pink-main); color:var(--pink-main); text-decoration:none; font-size:0.82rem; transition:var(--transition); }
+.shop-body .shop-btn:hover { background:var(--pink-main); color:var(--white); }
+
+/* ===== Testimonials ===== */
+.testimonials { padding:100px 0; background:var(--pink-bg); }
+.testimonials-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin-top:48px; }
+.testimonial-card {
+  background:var(--white); border-radius:var(--radius-lg); padding:36px;
+  box-shadow:var(--shadow-sm); position:relative;
+}
+.testimonial-card::before { content:'\201C'; position:absolute; top:16px; left:24px; font-family:'Playfair Display',serif; font-size:4rem; color:var(--pink-light); line-height:1; }
+.testimonial-stars { color:var(--gold); font-size:0.9rem; margin-bottom:12px; }
+.testimonial-text { font-size:0.9rem; color:var(--gray-main); line-height:1.9; margin-bottom:20px; padding-top:20px; }
+.testimonial-author { display:flex; align-items:center; gap:12px; }
+.testimonial-avatar { width:44px; height:44px; border-radius:50%; background:var(--pink-pale); display:flex; align-items:center; justify-content:center; font-size:0.85rem; color:var(--pink-dark); font-weight:500; }
+.testimonial-name { font-size:0.85rem; font-weight:500; }
+.testimonial-meta { font-size:0.75rem; color:var(--gray-light); }
+
+/* ===== CTA ===== */
+.cta {
+  padding:100px 0; text-align:center;
+  background:linear-gradient(135deg, var(--pink-dark) 0%, var(--pink-main) 50%, var(--gold) 100%);
+  color:var(--white); position:relative; overflow:hidden;
+}
+.cta::before { content:''; position:absolute; top:0; left:0; right:0; bottom:0; background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat; }
+.cta .container { position:relative; z-index:2; }
+.cta h2 { font-family:'Playfair Display',serif; font-size:clamp(1.8rem,4vw,2.8rem); margin-bottom:16px; }
+.cta p { font-size:1rem; opacity:0.9; margin-bottom:40px; font-weight:300; }
+.cta .btn { font-size:1.05rem; padding:18px 48px; }
+.cta-tel { margin-top:24px; font-size:1.6rem; font-family:'Playfair Display',serif; letter-spacing:2px; }
+.cta-tel a { color:var(--white); text-decoration:none; }
+.cta-tel-label { font-size:0.8rem; opacity:0.8; }
+
+/* ===== Company ===== */
+.company { padding:100px 0; background:var(--white); }
+.company-table { max-width:800px; margin:48px auto 0; }
+.company-table table { width:100%; border-collapse:collapse; }
+.company-table th, .company-table td { padding:18px 20px; text-align:left; border-bottom:1px solid var(--gray-border); font-size:0.9rem; }
+.company-table th { width:160px; color:var(--gray-light); font-weight:400; background:var(--pink-bg); }
+.company-table td { color:var(--gray-dark); }
+
+/* ===== Demo Banner ===== */
+.demo-banner {
+  background:linear-gradient(135deg, #1a1a2e, #16213e); color:var(--white);
+  padding:28px; text-align:center; font-size:0.9rem;
+}
+.demo-banner strong { color:#FFD700; }
+.demo-banner a { color:#87CEEB; }
+
+/* ===== Footer ===== */
+.footer { background:var(--gray-dark); color:rgba(255,255,255,0.6); padding:60px 0 30px; }
+.footer-grid { display:grid; grid-template-columns:1.5fr 1fr 1fr 1fr; gap:40px; margin-bottom:40px; }
+.footer-brand .footer-logo { font-family:'Playfair Display',serif; font-size:1.4rem; color:var(--white); margin-bottom:12px; }
+.footer-brand p { font-size:0.82rem; line-height:1.8; }
+.footer h4 { color:var(--white); font-size:0.85rem; margin-bottom:16px; letter-spacing:1px; }
+.footer ul { list-style:none; }
+.footer li { margin-bottom:10px; }
+.footer a { color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.82rem; transition:var(--transition); }
+.footer a:hover { color:var(--pink-light); }
+.footer-bottom { border-top:1px solid rgba(255,255,255,0.1); padding-top:24px; display:flex; justify-content:space-between; align-items:center; font-size:0.78rem; }
+.footer-sns { display:flex; gap:16px; }
+.footer-sns a { width:36px; height:36px; border-radius:50%; border:1px solid rgba(255,255,255,0.2); display:flex; align-items:center; justify-content:center; font-size:0.8rem; }
+.footer-sns a:hover { background:var(--pink-main); border-color:var(--pink-main); color:var(--white); }
+
+/* ===== Mobile Nav ===== */
+.mobile-nav {
+  display:none; position:fixed; top:65px; left:0; width:100%; height:calc(100vh - 65px);
+  background:rgba(255,255,255,0.98); backdrop-filter:blur(10px); z-index:999;
+  flex-direction:column; align-items:center; justify-content:center; gap:24px;
+}
+.mobile-nav.active { display:flex; }
+.mobile-nav a { font-size:1.1rem; text-decoration:none; color:var(--gray-dark); }
+
+/* ===== Responsive ===== */
+@media(max-width:1024px) {
+  .features-grid, .shops-grid, .testimonials-grid { grid-template-columns:repeat(2,1fr); }
+  .footer-grid { grid-template-columns:repeat(2,1fr); }
+}
+@media(max-width:768px) {
+  .nav { display:none; }
+  .hamburger { display:flex; }
+  .hero-inner { grid-template-columns:1fr; text-align:center; padding:60px 24px; }
+  .hero-buttons { justify-content:center; }
+  .hero-visual { order:-1; max-width:360px; margin:0 auto; }
+  .hero-stat { left:auto; right:10px; bottom:10px; padding:14px 20px; }
+  .features-grid, .testimonials-grid { grid-template-columns:1fr; }
+  .shops-grid { grid-template-columns:1fr; }
+  .menu-grid { grid-template-columns:1fr; }
+  .menu-card { flex-direction:column; align-items:center; text-align:center; }
+  .footer-grid { grid-template-columns:1fr; text-align:center; }
+  .footer-bottom { flex-direction:column; gap:16px; text-align:center; }
+  .company-table th { width:120px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header class="header">
+  <div class="header-inner">
+    <a href="#" class="header-logo-text">
+      <img src="https://www.nozawa.co.jp/img/logo.png" alt="NOZAWA" style="height:40px;" onerror="this.onerror=null;this.parentElement.innerHTML='<span style=\'font-family:Playfair Display,serif;font-size:1.4rem;color:#2C2C2C;\'>NOZAWA</span><span class=\'header-logo-sub\'>since 1930</span>';">
+    </a>
+    <nav class="nav">
+      <a href="#features">NOZAWAの魅力</a>
+      <a href="#menu">メニュー</a>
+      <a href="#shops">店舗一覧</a>
+      <a href="#testimonials">お客様の声</a>
+      <a href="#company">会社概要</a>
+      <a href="#cta" class="nav-cta">ご予約・お問い合わせ</a>
+    </nav>
+    <div class="hamburger" onclick="document.querySelector('.mobile-nav').classList.toggle('active')">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav">
+  <a href="#features" onclick="this.parentElement.classList.remove('active')">NOZAWAの魅力</a>
+  <a href="#menu" onclick="this.parentElement.classList.remove('active')">メニュー</a>
+  <a href="#shops" onclick="this.parentElement.classList.remove('active')">店舗一覧</a>
+  <a href="#testimonials" onclick="this.parentElement.classList.remove('active')">お客様の声</a>
+  <a href="#company" onclick="this.parentElement.classList.remove('active')">会社概要</a>
+  <a href="#cta" class="btn btn-primary" onclick="this.parentElement.classList.remove('active')" style="margin-top:8px;">ご予約・お問い合わせ</a>
+</div>
+
+<!-- ===== Hero ===== -->
+<section class="hero">
+  <div class="hero-inner container">
+    <div class="hero-content">
+      <span class="hero-badge">EST. 1930 SAPPORO</span>
+      <h1>昭和5年創業。<br><span class="accent">90年以上</span>の伝統と<br>最新のスタイル。</h1>
+      <p>どこにも似ていない、でも何だか懐かしい。<br>JAZZが微かに流れる札幌のヘアサロン。<br>6つの個性豊かな店舗で、あなたの"なりたい"を叶えます。</p>
+      <div class="hero-buttons">
+        <a href="#cta" class="btn btn-primary">ご予約はこちら</a>
+        <a href="#shops" class="btn btn-outline">店舗を見る</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-img-main" style="background:linear-gradient(135deg,var(--pink-pale),var(--pink-light),#E8D5C4);display:flex;align-items:center;justify-content:center;flex-direction:column;">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#8B5E6B" stroke-width="1" stroke-linecap="round"><circle cx="12" cy="8" r="5"/><path d="M3 21v-2a7 7 0 0 1 7-7h4a7 7 0 0 1 7 7v2"/><path d="M15 3c1 1 2 3 2 5s-1 4-2 5"/></svg>
+        <span style="font-family:'Playfair Display',serif;color:var(--pink-dark);font-size:1.1rem;margin-top:16px;">NOZAWA GROUP</span>
+        <span style="font-size:0.75rem;color:var(--gray-light);margin-top:4px;">Image Placeholder</span>
+      </div>
+      <div class="hero-stat">
+        <div class="num">96</div>
+        <div class="label">YEARS OF HISTORY</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Features ===== -->
+<section class="features" id="features">
+  <div class="container text-center">
+    <p class="section-label">Why NOZAWA</p>
+    <h2 class="section-title">NOZAWAが選ばれる理由</h2>
+    <p class="section-sub">昭和5年の創業から受け継がれる技術と心。札幌で一番居心地の良いサロンを目指しています。</p>
+  </div>
+  <div class="container">
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">&#9986;</div>
+        <h3>90年以上の確かな技術</h3>
+        <p>1930年の創業以来、三世代にわたり磨き続けた理美容の技術。伝統に裏打ちされた確かな腕をご体感ください。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#127983;</div>
+        <h3>札幌市内6店舗展開</h3>
+        <p>理容・美容・ブライダルまで、専門性の異なる6つのサロンを展開。あなたのニーズに合った最適な店舗が見つかります。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#128156;</div>
+        <h3>居心地の良い空間づくり</h3>
+        <p>JAZZが微かに流れる落ち着いた空間で、日常を忘れるリラックスタイムを。何度でも通いたくなるサロンです。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Menu ===== -->
+<section class="menu" id="menu">
+  <div class="container text-center">
+    <p class="section-label">Menu</p>
+    <h2 class="section-title">サービスメニュー</h2>
+    <p class="section-sub">各店舗の専門性を活かした多彩なメニューをご用意しています。</p>
+  </div>
+  <div class="container">
+    <div class="menu-grid">
+      <div class="menu-card">
+        <div class="menu-icon">&#9986;</div>
+        <div class="menu-info">
+          <h3>カット</h3>
+          <p>お客様の骨格・髪質・ライフスタイルに合わせた似合わせカット。メンズ・レディース対応。</p>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-icon">&#127912;</div>
+        <div class="menu-info">
+          <h3>カラーリング</h3>
+          <p>トレンドカラーからグレイカラーまで。ダメージを最小限に抑えた施術で理想の髪色を実現します。</p>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-icon">&#10024;</div>
+        <div class="menu-info">
+          <h3>パーマ・縮毛矯正</h3>
+          <p>ナチュラルなウェーブからしっかりパーマまで。髪に優しい薬剤を使用しています。</p>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-icon">&#128134;</div>
+        <div class="menu-info">
+          <h3>シェービング・フェイシャル</h3>
+          <p>理容師による本格シェービングとフェイシャルエステ。お肌のトーンアップを実感いただけます。</p>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-icon">&#128144;</div>
+        <div class="menu-info">
+          <h3>ブライダルエステ</h3>
+          <p>挙式前の花嫁様に。ブライダルシェービング＆フェイシャルで最高の一日を。</p>
+          <span class="menu-price">&yen;3,500〜&yen;33,000</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-icon">&#128136;</div>
+        <div class="menu-info">
+          <h3>ヘアセット・着付け</h3>
+          <p>結婚式・成人式・各種イベントに。プロのスタイリストが華やかなスタイルをご提案します。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Shops ===== -->
+<section class="shops" id="shops">
+  <div class="container text-center">
+    <p class="section-label">Salons</p>
+    <h2 class="section-title">店舗一覧</h2>
+    <p class="section-sub">札幌市内6つの個性豊かなサロン。それぞれの専門性で、あなたの理想を叶えます。</p>
+  </div>
+  <div class="container">
+    <div class="shops-grid">
+      <!-- CUT PLAZA -->
+      <div class="shop-card">
+        <div class="shop-img">CUT PLAZA</div>
+        <div class="shop-body">
+          <span class="shop-tag">理容室</span>
+          <h3>CUT PLAZA</h3>
+          <p class="shop-address">&#128205; 札幌市東区北12条東1丁目1-22</p>
+          <p class="shop-tel">&#9742; 011-722-5906</p>
+          <p class="shop-hours">営業 9:00〜19:00 ／ 定休：毎週火曜・第三月曜</p>
+          <a href="#cta" class="shop-btn">この店舗を予約する</a>
+        </div>
+      </div>
+      <!-- BEAUTY PARK -->
+      <div class="shop-card">
+        <div class="shop-img">BEAUTY PARK</div>
+        <div class="shop-body">
+          <span class="shop-tag">美容室</span>
+          <h3>BEAUTY PARK</h3>
+          <p class="shop-address">&#128205; 札幌市東区北12条東1丁目1-22</p>
+          <p class="shop-tel">&#9742; 011-711-9958</p>
+          <p class="shop-hours">営業 9:00〜19:00 ／ 定休：毎週火曜・第三月曜</p>
+          <a href="#cta" class="shop-btn">この店舗を予約する</a>
+        </div>
+      </div>
+      <!-- Bride's beauty Parfait -->
+      <div class="shop-card">
+        <div class="shop-img">Parfait</div>
+        <div class="shop-body">
+          <span class="shop-tag">ブライダル・レディースシェービング</span>
+          <h3>Bride's beauty Parfait</h3>
+          <p class="shop-address">&#128205; 札幌市中央区南2条西3丁目13-2 パレードビル1階</p>
+          <p class="shop-tel">&#9742; 011-768-7238</p>
+          <p class="shop-hours">完全予約制 ／ 年中無休</p>
+          <a href="#cta" class="shop-btn">この店舗を予約する</a>
+        </div>
+      </div>
+      <!-- THE BARBER CHOUCHOU -->
+      <div class="shop-card">
+        <div class="shop-img">CHOUCHOU</div>
+        <div class="shop-body">
+          <span class="shop-tag">理容室</span>
+          <h3>THE BARBER CHOUCHOU</h3>
+          <p class="shop-address">&#128205; 札幌市中央区南2条西3丁目13-2 パレードビル1階</p>
+          <p class="shop-tel">&#9742; 011-251-2325</p>
+          <p class="shop-hours">月水木金 10:30〜20:00 ／ 土日祝 10:00〜19:30 ／ 年中無休</p>
+          <a href="#cta" class="shop-btn">この店舗を予約する</a>
+        </div>
+      </div>
+      <!-- hair salon EMBLEM -->
+      <div class="shop-card">
+        <div class="shop-img">EMBLEM</div>
+        <div class="shop-body">
+          <span class="shop-tag">美容室</span>
+          <h3>hair salon EMBLEM</h3>
+          <p class="shop-address">&#128205; 札幌市内</p>
+          <p class="shop-tel">&#9742; お問い合わせください</p>
+          <p class="shop-hours">詳細はお電話にてご確認ください</p>
+          <a href="#cta" class="shop-btn">この店舗を予約する</a>
+        </div>
+      </div>
+      <!-- hair salon AL・CAPONE -->
+      <div class="shop-card">
+        <div class="shop-img">AL&middot;CAPONE</div>
+        <div class="shop-body">
+          <span class="shop-tag">美容室</span>
+          <h3>hair salon AL&middot;CAPONE</h3>
+          <p class="shop-address">&#128205; 札幌市内</p>
+          <p class="shop-tel">&#9742; お問い合わせください</p>
+          <p class="shop-hours">詳細はお電話にてご確認ください</p>
+          <a href="#cta" class="shop-btn">この店舗を予約する</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Testimonials ===== -->
+<section class="testimonials" id="testimonials">
+  <div class="container text-center">
+    <p class="section-label">Voice</p>
+    <h2 class="section-title">お客様の声</h2>
+    <p class="section-sub">NOZAWAグループにお寄せいただいた温かいお声をご紹介します。</p>
+  </div>
+  <div class="container">
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testimonial-text">もう20年以上通っています。引っ越しても電車に乗って通い続けるほど、NOZAWAさんの技術と居心地の良さは格別です。</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">T.S</div>
+          <div>
+            <div class="testimonial-name">T.S 様</div>
+            <div class="testimonial-meta">50代女性・BEAUTY PARK</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testimonial-text">結婚式前にパルフェさんでブライダルシェービングをお願いしました。お肌がワントーン明るくなって、当日は最高の仕上がりでした。</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">M.K</div>
+          <div>
+            <div class="testimonial-name">M.K 様</div>
+            <div class="testimonial-meta">30代女性・Parfait</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testimonial-text">シュシュのバーバースタイルは本物。JAZZが流れる空間で受けるシェービングは至福の時間です。男のこだわりを理解してくれる貴重なお店。</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">K.N</div>
+          <div>
+            <div class="testimonial-name">K.N 様</div>
+            <div class="testimonial-meta">40代男性・CHOUCHOU</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta" id="cta">
+  <div class="container">
+    <h2>まずはお気軽に<br>ご予約・お問い合わせください</h2>
+    <p>90年以上の信頼と実績。あなたの"なりたい"を、NOZAWAの技術で叶えます。</p>
+    <a href="mailto:info@nozawa.co.jp" class="btn" style="background:var(--white);color:var(--pink-dark);border-color:var(--white);font-weight:600;">メールでお問い合わせ</a>
+    <div class="cta-tel" style="margin-top:28px;">
+      <div class="cta-tel-label">お電話でのご予約</div>
+      <a href="tel:011-711-9958">011-711-9958</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Company ===== -->
+<section class="company" id="company">
+  <div class="container text-center">
+    <p class="section-label">Company</p>
+    <h2 class="section-title">会社概要</h2>
+  </div>
+  <div class="container">
+    <div class="company-table">
+      <table>
+        <tr><th>会社名</th><td>有限会社能澤理美容院</td></tr>
+        <tr><th>代表取締役</th><td>能澤 和博</td></tr>
+        <tr><th>創業</th><td>昭和5年（1930年）</td></tr>
+        <tr><th>設立</th><td>1966年（昭和41年）</td></tr>
+        <tr><th>所在地</th><td>〒065-0012 札幌市東区北12条東1丁目1-22</td></tr>
+        <tr><th>TEL</th><td>011-711-9958</td></tr>
+        <tr><th>E-mail</th><td>info@nozawa.co.jp</td></tr>
+        <tr><th>事業内容</th><td>理容業・美容業・ブライダルエステ</td></tr>
+        <tr><th>店舗数</th><td>6店舗（札幌市内）</td></tr>
+        <tr><th>URL</th><td><a href="https://www.nozawa.co.jp/" style="color:var(--pink-main);">https://www.nozawa.co.jp/</a></td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Demo Banner ===== -->
+<div class="demo-banner">
+  &#9888; <strong>これはデモサイトです。</strong>
+  実際のサイトは <a href="https://www.nozawa.co.jp/" target="_blank">https://www.nozawa.co.jp/</a> をご覧ください。
+  本デモは OSHINOBI（<a href="https://oshinobi-co.com" target="_blank">oshinobi-co.com</a>）が制作したリニューアルイメージです。
+</div>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">NOZAWA GROUP</div>
+        <p>昭和5年創業。札幌で一番居心地の良いサロンを目指して。<br>理容・美容・ブライダルまで、6店舗であなたの"なりたい"を叶えます。</p>
+      </div>
+      <div>
+        <h4>サロン</h4>
+        <ul>
+          <li><a href="#shops">CUT PLAZA</a></li>
+          <li><a href="#shops">BEAUTY PARK</a></li>
+          <li><a href="#shops">Bride's beauty Parfait</a></li>
+          <li><a href="#shops">THE BARBER CHOUCHOU</a></li>
+          <li><a href="#shops">hair salon EMBLEM</a></li>
+          <li><a href="#shops">hair salon AL&middot;CAPONE</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>メニュー</h4>
+        <ul>
+          <li><a href="#menu">カット</a></li>
+          <li><a href="#menu">カラーリング</a></li>
+          <li><a href="#menu">パーマ</a></li>
+          <li><a href="#menu">シェービング</a></li>
+          <li><a href="#menu">ブライダル</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>お問い合わせ</h4>
+        <ul>
+          <li><a href="tel:011-711-9958">&#9742; 011-711-9958</a></li>
+          <li><a href="mailto:info@nozawa.co.jp">&#9993; info@nozawa.co.jp</a></li>
+          <li><a href="#company">会社概要</a></li>
+          <li><a href="https://www.instagram.com/barber_beauty_nozawa/" target="_blank">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 有限会社能澤理美容院 All Rights Reserved.</span>
+      <div class="footer-sns">
+        <a href="https://www.instagram.com/barber_beauty_nozawa/" target="_blank" title="Instagram">IG</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

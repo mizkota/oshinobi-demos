@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>インテリア工房TR | 札幌のクロス張替え・内装リフォーム</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #6B4226;
+  --primary-light: #8B6914;
+  --primary-dark: #4A2E18;
+  --accent: #5B8C3E;
+  --accent-light: #7BAF5C;
+  --accent-bg: #EFF6E8;
+  --warm-cream: #FBF7F0;
+  --warm-beige: #F2EAD8;
+  --warm-light: #F9F4EC;
+  --text: #3A2D1E;
+  --text-light: #6B5D4F;
+  --text-muted: #9B8E7F;
+  --white: #FFFFFF;
+  --shadow: 0 4px 24px rgba(107,66,38,0.10);
+  --shadow-lg: 0 8px 40px rgba(107,66,38,0.15);
+  --radius: 12px;
+  --radius-lg: 20px;
+  --transition: 0.3s ease;
+}
+
+*, *::before, *::after {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: var(--text);
+  background: var(--warm-cream);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== HEADER ===== */
+.header {
+  background: var(--white);
+  box-shadow: 0 2px 12px rgba(107,66,38,0.08);
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-family: 'Zen Maru Gothic', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.logo small {
+  display: block;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.nav { display: flex; gap: 24px; align-items: center; }
+
+.nav a {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-light);
+  transition: color var(--transition);
+  position: relative;
+}
+
+.nav a:hover { color: var(--primary); }
+
+.nav-cta {
+  background: var(--accent) !important;
+  color: var(--white) !important;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-weight: 700 !important;
+  transition: background var(--transition), transform var(--transition) !important;
+}
+
+.nav-cta:hover {
+  background: var(--accent-light) !important;
+  transform: translateY(-1px);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--primary);
+  transition: var(--transition);
+}
+
+/* ===== HERO ===== */
+.hero {
+  margin-top: 70px;
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('https://duyn491kcolsw.cloudfront.net/files/0r/0rw/0rwyj8.jpg') center/cover;
+  opacity: 0.2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  color: var(--white);
+}
+
+.hero-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--white);
+  padding: 6px 18px;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 0.05em;
+}
+
+.hero h1 {
+  font-family: 'Zen Maru Gothic', serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+.hero p {
+  font-size: 1.1rem;
+  opacity: 0.92;
+  margin-bottom: 32px;
+  max-width: 560px;
+  line-height: 1.9;
+}
+
+.hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all var(--transition);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: var(--accent-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(91,140,62,0.3);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255,255,255,0.5);
+}
+
+.btn-outline:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: var(--white);
+}
+
+/* ===== FEATURES ===== */
+.features {
+  padding: 80px 0;
+  background: var(--white);
+}
+
+.section-label {
+  display: inline-block;
+  background: var(--accent-bg);
+  color: var(--accent);
+  padding: 4px 16px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: 'Zen Maru Gothic', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin-bottom: 48px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.feature-card {
+  background: var(--warm-light);
+  padding: 36px 28px;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.feature-icon {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 1.6rem;
+}
+
+.feature-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--primary-dark);
+}
+
+.feature-card p {
+  font-size: 0.88rem;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* ===== SERVICES ===== */
+.services {
+  padding: 80px 0;
+  background: var(--warm-cream);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.service-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.service-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.service-body {
+  padding: 28px;
+}
+
+.service-tag {
+  display: inline-block;
+  background: var(--accent-bg);
+  color: var(--accent);
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.service-body h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 8px;
+}
+
+.service-body p {
+  font-size: 0.88rem;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* ===== GALLERY ===== */
+.gallery {
+  padding: 80px 0;
+  background: var(--white);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.gallery-item {
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 4/3;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+.gallery-overlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 16px;
+  background: linear-gradient(transparent, rgba(74,46,24,0.8));
+  color: var(--white);
+  font-size: 0.82rem;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.gallery-item:hover .gallery-overlay { opacity: 1; }
+
+/* ===== VOICE ===== */
+.voice {
+  padding: 80px 0;
+  background: var(--warm-beige);
+}
+
+.voice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.voice-card {
+  background: var(--white);
+  padding: 32px 28px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.voice-stars {
+  color: #E8A838;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.voice-card p {
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.voice-author {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* ===== PRICE ===== */
+.price {
+  padding: 80px 0;
+  background: var(--white);
+}
+
+.price-table-wrap {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.price-table th {
+  background: var(--primary);
+  color: var(--white);
+  padding: 14px 20px;
+  text-align: left;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.price-table td {
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--warm-beige);
+  font-size: 0.9rem;
+}
+
+.price-table tr:last-child td { border-bottom: none; }
+
+.price-table .price-value {
+  color: var(--primary);
+  font-weight: 700;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.price-note {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+/* ===== CTA ===== */
+.cta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--accent) 100%);
+  text-align: center;
+  color: var(--white);
+}
+
+.cta h2 {
+  font-family: 'Zen Maru Gothic', serif;
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.cta p {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 32px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-phone {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 8px;
+  letter-spacing: 0.03em;
+}
+
+.cta-phone a { color: var(--white); }
+
+.cta-hours {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin-bottom: 28px;
+}
+
+/* ===== COMPANY ===== */
+.company {
+  padding: 80px 0;
+  background: var(--warm-cream);
+}
+
+.company-table {
+  max-width: 700px;
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.company-row {
+  display: flex;
+  border-bottom: 1px solid var(--warm-beige);
+}
+
+.company-row:last-child { border-bottom: none; }
+
+.company-label {
+  width: 160px;
+  flex-shrink: 0;
+  padding: 16px 24px;
+  background: var(--warm-light);
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--primary-dark);
+}
+
+.company-value {
+  padding: 16px 24px;
+  font-size: 0.9rem;
+  flex: 1;
+}
+
+/* ===== FAQ ===== */
+.faq {
+  padding: 80px 0;
+  background: var(--white);
+}
+
+.faq-list {
+  max-width: 740px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  background: var(--warm-light);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.faq-q {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 20px 24px;
+  text-align: left;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: inherit;
+}
+
+.faq-q::before {
+  content: 'Q';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--accent);
+  color: var(--white);
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+.faq-q::after {
+  content: '+';
+  margin-left: auto;
+  font-size: 1.3rem;
+  color: var(--text-muted);
+  transition: transform var(--transition);
+}
+
+.faq-item.open .faq-q::after {
+  transform: rotate(45deg);
+}
+
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.faq-item.open .faq-a {
+  max-height: 300px;
+}
+
+.faq-a-inner {
+  padding: 0 24px 20px 68px;
+  font-size: 0.88rem;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+/* ===== DEMO NOTICE ===== */
+.demo-notice {
+  background: #FFF3CD;
+  border: 2px dashed #E8A838;
+  border-radius: var(--radius);
+  padding: 20px 28px;
+  max-width: 700px;
+  margin: 0 auto 0;
+  text-align: center;
+}
+
+.demo-notice strong {
+  color: #B8860B;
+  font-size: 0.95rem;
+}
+
+.demo-notice p {
+  font-size: 0.82rem;
+  color: #8B6914;
+  margin-top: 6px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--primary-dark);
+  color: rgba(255,255,255,0.7);
+  padding: 48px 0 24px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.footer-logo {
+  font-family: 'Zen Maru Gothic', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.footer-info {
+  font-size: 0.82rem;
+  line-height: 1.9;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  font-size: 0.82rem;
+  transition: color var(--transition);
+}
+
+.footer-links a:hover { color: var(--white); }
+
+.footer-copy {
+  text-align: center;
+  font-size: 0.75rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 20px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .nav { display: none; }
+  .hamburger { display: flex; }
+  .nav.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0; right: 0;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: var(--shadow-lg);
+    gap: 16px;
+  }
+
+  .hero { min-height: 420px; }
+  .hero h1 { font-size: 1.7rem; }
+  .hero p { font-size: 0.95rem; }
+  .hero-buttons { flex-direction: column; }
+  .btn { justify-content: center; }
+
+  .features-grid,
+  .services-grid,
+  .gallery-grid,
+  .voice-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title { font-size: 1.4rem; }
+
+  .company-row { flex-direction: column; }
+  .company-label { width: 100%; }
+
+  .cta h2 { font-size: 1.5rem; }
+  .cta-phone { font-size: 1.5rem; }
+
+  .footer-inner { flex-direction: column; }
+}
+
+@media (max-width: 480px) {
+  .hero-content { padding: 50px 16px; }
+  .hero h1 { font-size: 1.45rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      インテリア工房TR
+      <small>札幌のクロス張替え・内装リフォーム</small>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#features">選ばれる理由</a>
+      <a href="#services">サービス</a>
+      <a href="#gallery">施工事例</a>
+      <a href="#price">料金</a>
+      <a href="#company">会社概要</a>
+      <a href="#contact" class="nav-cta">お問い合わせ</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-content">
+    <span class="hero-badge">札幌市南区の内装専門店</span>
+    <h1>おしゃれな空間は<br>壁紙から。</h1>
+    <p>クロス張替え・床工事・建具リフォームまで、下見からアフターまで自社の熟練職人が一貫対応。お部屋の雰囲気を驚くほど変えてみませんか。</p>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn btn-primary">&#9742; 無料相談・お見積り</a>
+      <a href="#services" class="btn btn-outline">サービスを見る &#8594;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURES ===== -->
+<section class="features" id="features">
+  <div class="container" style="text-align:center;">
+    <span class="section-label">REASON</span>
+    <h2 class="section-title">インテリア工房TRが選ばれる理由</h2>
+    <p class="section-subtitle">職人品質と安心価格で、札幌のお部屋を美しく。</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">&#128736;</div>
+        <h3>自社職人の一貫施工</h3>
+        <p>お見積りから施工・アフターまで、自社の熟練した職人が直接担当。中間マージンなしで高品質をお届けします。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#128176;</div>
+        <h3>明朗な料金体系</h3>
+        <p>プチリフォームプランは1帖8,000円〜。現地調査後に正確なお見積りをご提示、追加費用の心配がありません。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#128203;</div>
+        <h3>豊富なメーカー取扱い</h3>
+        <p>サンゲツ・リリカラ・トキワ・東リなど有名メーカーの見本帳から、お好みの壁紙をお選びいただけます。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#128170;</div>
+        <h3>床・建具もワンストップ</h3>
+        <p>壁紙だけでなくクッションフロア、フロアタイル、ドア・家具のシート貼りまで幅広く対応いたします。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#128197;</div>
+        <h3>施工後1年保証</h3>
+        <p>壁紙の剥がれやコーキング切れなど、施工後1年以内の不具合は無償で対応。安心のアフターサービスです。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#127968;</div>
+        <h3>多様な壁にも対応</h3>
+        <p>化粧ベニヤ、じゅらく壁、ペンキ面、砂壁など、ほとんどの壁に施工可能。下地調整もお任せください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="services" id="services">
+  <div class="container" style="text-align:center;">
+    <span class="section-label">SERVICE</span>
+    <h2 class="section-title">サービス一覧</h2>
+    <p class="section-subtitle">壁紙から床・建具まで、内装のことなら何でもご相談ください。</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="https://duyn491kcolsw.cloudfront.net/files/3w/3w9/3w9rs7.jpg" alt="クロス張替え" class="service-img">
+        <div class="service-body">
+          <span class="service-tag">人気No.1</span>
+          <h3>クロス（壁紙）張替え</h3>
+          <p>量産クロスからハイグレードクロスまで幅広く対応。プチリフォームプランなら部屋ごとの分かりやすい料金設定。アクセントクロスで1面だけ変えるおしゃれリフォームも人気です。</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://duyn491kcolsw.cloudfront.net/files/0m/0my/0mypjz.jpg" alt="床工事" class="service-img">
+        <div class="service-body">
+          <span class="service-tag">水回りに最適</span>
+          <h3>床工事（CF・フロアタイル）</h3>
+          <p>クッションフロアやフロアタイルの施工。フロアタイルはフローリングより水や油に強く傷もつきにくい優秀素材。キッチンや洗面所のリフォームに最適です。</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://duyn491kcolsw.cloudfront.net/files/0r/0rm/0rm2y9.jpg" alt="建具リフォーム" class="service-img">
+        <div class="service-body">
+          <span class="service-tag">イメージ一新</span>
+          <h3>ドア・家具・浴室パネル</h3>
+          <p>ダイノック・リアテックなど粘着剤付き化粧シートで、ドアや家具、浴室パネルをリフレッシュ。交換せず表面を貼り替えるだけで新品のような仕上がりに。</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://duyn491kcolsw.cloudfront.net/files/3d/3d0/3d01ee.jpg" alt="カーペット" class="service-img">
+        <div class="service-body">
+          <span class="service-tag">快適な足元へ</span>
+          <h3>カーペット・絨毯</h3>
+          <p>タイルカーペットや絨毯の施工も承ります。オフィスやマンションの共用部など、幅広い場面に対応いたします。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section class="gallery" id="gallery">
+  <div class="container" style="text-align:center;">
+    <span class="section-label">WORKS</span>
+    <h2 class="section-title">施工事例</h2>
+    <p class="section-subtitle">これまでの施工例をご紹介します。</p>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="https://duyn491kcolsw.cloudfront.net/files/0r/0rw/0rwyj8.jpg" alt="施工事例1">
+        <div class="gallery-overlay">壁紙張替え施工</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://duyn491kcolsw.cloudfront.net/files/4f/4fo/4fo5c1.jpg" alt="施工事例2">
+        <div class="gallery-overlay">アクセントクロス</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://8368cef0a1.cbaul-cdnwnd.com/2a2e310a593940f42a24411612c3c4fe/200000001-57c8758cce/RE7513_P01.jpg" alt="施工事例3">
+        <div class="gallery-overlay">クロスサンプル</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://duyn491kcolsw.cloudfront.net/files/0a/0ai/0ainnl.jpg" alt="施工事例4">
+        <div class="gallery-overlay">トイレリフォーム</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://duyn491kcolsw.cloudfront.net/files/0m/0my/0mypjz.jpg" alt="施工事例5">
+        <div class="gallery-overlay">床工事</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://8368cef0a1.cbaul-cdnwnd.com/2a2e310a593940f42a24411612c3c4fe/200000012-43803447c4/NT653_P01.jpg" alt="施工事例6">
+        <div class="gallery-overlay">フロアタイル</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VOICE ===== -->
+<section class="voice" id="voice">
+  <div class="container" style="text-align:center;">
+    <span class="section-label">VOICE</span>
+    <h2 class="section-title">お客様の声</h2>
+    <p class="section-subtitle">ご利用いただいたお客様からの嬉しいお声をご紹介します。</p>
+    <div class="voice-grid">
+      <div class="voice-card">
+        <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>「築20年の自宅の壁紙を全面張替えしていただきました。見積りから施工まで丁寧に説明してくださり、仕上がりも大満足です。料金も明朗で安心でした。」</p>
+        <span class="voice-author">&#8212; 札幌市南区 T様（戸建て全面張替え）</span>
+      </div>
+      <div class="voice-card">
+        <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>「リビングにアクセントクロスを入れていただきました。1面変えるだけでこんなに印象が変わるとは驚きです。職人さんの腕も確かで、とても丁寧な仕事でした。」</p>
+        <span class="voice-author">&#8212; 札幌市中央区 S様（アクセントクロス）</span>
+      </div>
+      <div class="voice-card">
+        <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>「キッチンの床をフロアタイルに張替えていただきました。水はねを気にしなくて良くなり、掃除も楽になって大助かりです。次は洗面所もお願いしたいです。」</p>
+        <span class="voice-author">&#8212; 札幌市豊平区 M様（床工事）</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICE ===== -->
+<section class="price" id="price">
+  <div class="container" style="text-align:center;">
+    <span class="section-label">PRICE</span>
+    <h2 class="section-title">料金表</h2>
+    <p class="section-subtitle">明朗な料金設定。まずはお気軽にお見積りをご依頼ください。</p>
+    <div class="price-table-wrap">
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th colspan="2" style="text-align:center;">プチリフォームプラン（税抜）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>部屋1帖あたり</td><td class="price-value">8,000円</td></tr>
+          <tr><td>6帖和室（天井・壁）</td><td class="price-value">48,000円</td></tr>
+          <tr><td>8帖洋室（天井・壁）</td><td class="price-value">64,000円</td></tr>
+          <tr><td>トイレプラン</td><td class="price-value">36,000円</td></tr>
+          <tr><td>アクセントリフォーム / 1面</td><td class="price-value">18,000円〜</td></tr>
+        </tbody>
+      </table>
+      <br>
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th colspan="2" style="text-align:center;">フリーカスタマイズプラン（税抜）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>量産クロス</td><td class="price-value">980円〜 / m</td></tr>
+          <tr><td>一般クロス（1000番）</td><td class="price-value">1,450円〜 / m</td></tr>
+          <tr><td>ハイグレードクロス</td><td class="price-value">1,650円〜 / m</td></tr>
+        </tbody>
+      </table>
+      <p class="price-note">※ 現地調査後に正確なお見積りをご提示いたします。お気軽にご相談ください。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta" id="contact">
+  <div class="container">
+    <h2>まずは無料相談・お見積りから</h2>
+    <p>壁紙1面の張替えから、お部屋まるごとリフォームまで。お気軽にお電話ください。</p>
+    <div class="cta-phone"><a href="tel:090-7467-7793">&#9742; 090-7467-7793</a></div>
+    <p class="cta-hours">営業時間 8:30〜18:00（日・祝定休）</p>
+    <a href="tel:090-7467-7793" class="btn btn-primary" style="font-size:1.05rem;">今すぐ電話で相談する</a>
+  </div>
+</section>
+
+<!-- ===== COMPANY ===== -->
+<section class="company" id="company">
+  <div class="container" style="text-align:center;">
+    <span class="section-label">COMPANY</span>
+    <h2 class="section-title">会社概要</h2>
+    <p class="section-subtitle">&nbsp;</p>
+    <div class="company-table">
+      <div class="company-row">
+        <div class="company-label">屋号</div>
+        <div class="company-value">インテリア工房TR（インテリアたるもと）</div>
+      </div>
+      <div class="company-row">
+        <div class="company-label">所在地</div>
+        <div class="company-value">〒005-0841 北海道札幌市南区石山一条6丁目15-14</div>
+      </div>
+      <div class="company-row">
+        <div class="company-label">携帯TEL</div>
+        <div class="company-value"><a href="tel:090-7467-7793">090-7467-7793</a></div>
+      </div>
+      <div class="company-row">
+        <div class="company-label">事務所TEL/FAX</div>
+        <div class="company-value">011-557-0044</div>
+      </div>
+      <div class="company-row">
+        <div class="company-label">業務内容</div>
+        <div class="company-value">クロス張替え・床工事・建具リフォーム・カーペット施工</div>
+      </div>
+      <div class="company-row">
+        <div class="company-label">営業時間</div>
+        <div class="company-value">8:30〜18:00</div>
+      </div>
+      <div class="company-row">
+        <div class="company-label">定休日</div>
+        <div class="company-value">日曜・祝日</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq" id="faq">
+  <div class="container" style="text-align:center;">
+    <span class="section-label">FAQ</span>
+    <h2 class="section-title">よくあるご質問</h2>
+    <p class="section-subtitle">&nbsp;</p>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">壁紙の種類はどのくらいから選べますか？</button>
+        <div class="faq-a"><div class="faq-a-inner">サンゲツ・リリカラ・トキワ・東リなど有名メーカーの豊富な見本帳からお選びいただけます。量産クロスからハイグレード品まで、ご予算やお好みに合わせてご提案いたします。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">部分的な壁紙の張替えは可能ですか？</button>
+        <div class="faq-a"><div class="faq-a-inner">可能ですが、美しい仕上がりのためには部屋の角から角までの面単位での張替えをおすすめしております。1面だけ変えるアクセントリフォームプランもございます。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">家具がある状態でも施工できますか？</button>
+        <div class="faq-a"><div class="faq-a-inner">テーブルや椅子、電化製品などは移動させながら作業いたします。小物類はお客様にて事前に移動いただけますとスムーズです。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">保証やアフターサービスはありますか？</button>
+        <div class="faq-a"><div class="faq-a-inner">壁紙の場合、施工から1年以内の剥がれやコーキング切れなどは無償で対応させていただきます。施工完了後には商品説明やメンテナンス方法もご説明いたします。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">砂壁やじゅらく壁にもクロスを貼れますか？</button>
+        <div class="faq-a"><div class="faq-a-inner">化粧ベニヤ・じゅらく壁・ペンキ面・砂壁など、ほとんどの壁に施工可能です。下地の状態により別途調整費用がかかる場合がございます。</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DEMO NOTICE ===== -->
+<section style="padding: 40px 0;">
+  <div class="container">
+    <div class="demo-notice">
+      <strong>&#9888; こちらはデモサイトです</strong>
+      <p>本サイトは OSHINOBI Co. が制作したデザイン提案用デモページです。実際の公開サイトではございません。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">インテリア工房TR</div>
+        <div class="footer-info">
+          〒005-0841 北海道札幌市南区石山一条6丁目15-14<br>
+          TEL: 090-7467-7793 / 011-557-0044<br>
+          営業時間: 8:30〜18:00（日・祝定休）
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="#features">選ばれる理由</a>
+        <a href="#services">サービス</a>
+        <a href="#gallery">施工事例</a>
+        <a href="#price">料金</a>
+        <a href="#faq">よくある質問</a>
+        <a href="#company">会社概要</a>
+      </div>
+    </div>
+    <div class="footer-copy">
+      &copy; 2026 インテリア工房TR All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+// Hamburger menu
+document.getElementById('hamburger').addEventListener('click', function() {
+  document.getElementById('nav').classList.toggle('open');
+});
+
+// Close menu on link click
+document.querySelectorAll('.nav a').forEach(function(link) {
+  link.addEventListener('click', function() {
+    document.getElementById('nav').classList.remove('open');
+  });
+});
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var item = this.parentElement;
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(el) { el.classList.remove('open'); });
+    if (!isOpen) item.classList.add('open');
+  });
+});
+</script>
+
+</body>
+</html>

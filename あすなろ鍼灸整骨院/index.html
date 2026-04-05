@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>あすなろ鍼灸整骨院｜札幌市豊平区の鍼灸・整骨・マッサージ</title>
+  <meta name="description" content="札幌市豊平区平岸の鍼灸整骨院。鍼灸治療・整骨・マッサージ・交通事故治療に対応。平日20時まで受付、予約制で時間外も対応。">
+  <meta property="og:title" content="あすなろ鍼灸整骨院｜札幌市豊平区の鍼灸・整骨・マッサージ">
+  <meta property="og:description" content="札幌市豊平区平岸の鍼灸整骨院。鍼灸治療・整骨・マッサージ・交通事故治療。平日20時まで受付。">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2d6a4f;
+      --primary-light: #40916c;
+      --primary-dark: #1b4332;
+      --accent: #e07b39;
+      --accent-light: #f4a261;
+      --accent-dark: #c45e1a;
+      --text: #2d2d2d;
+      --text-light: #666;
+      --bg: #faf9f6;
+      --white: #ffffff;
+      --section-bg: #f0f5f1;
+      --warm-bg: #fdf6ef;
+      --border: #dce8df;
+      --gradient: linear-gradient(135deg, #2d6a4f 0%, #40916c 50%, #52b788 100%);
+      --gradient-warm: linear-gradient(135deg, #e07b39 0%, #f4a261 100%);
+      --gradient-hero: linear-gradient(135deg, #1b4332 0%, #2d6a4f 40%, #40916c 100%);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: 'Noto Sans JP', sans-serif; color: var(--text); background: var(--bg); line-height: 1.8; }
+
+    /* ===== HEADER ===== */
+    header { background: var(--white); box-shadow: 0 2px 20px rgba(0,0,0,0.06); position: fixed; top: 0; left: 0; right: 0; z-index: 1000; }
+    .header-top { background: var(--primary); color: white; font-size: 0.75rem; padding: 5px 0; text-align: center; letter-spacing: 0.05em; }
+    .header-main { max-width: 1200px; margin: 0 auto; padding: 10px 24px; display: flex; justify-content: space-between; align-items: center; }
+    .logo-area { display: flex; align-items: center; gap: 12px; }
+    .logo-icon { width: 44px; height: 44px; background: var(--gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .logo-icon svg { width: 24px; height: 24px; fill: white; }
+    .logo-text { font-family: 'Noto Serif JP', serif; font-size: 1.15rem; font-weight: 700; color: var(--primary); line-height: 1.3; }
+    .logo-text small { display: block; font-family: 'Noto Sans JP', sans-serif; font-size: 0.65rem; font-weight: 400; color: var(--text-light); letter-spacing: 0.08em; }
+    .header-contact { display: flex; align-items: center; gap: 20px; }
+    .header-tel { text-align: right; }
+    .header-tel .number { font-size: 1.4rem; font-weight: 700; color: var(--primary); letter-spacing: 0.02em; text-decoration: none; }
+    .header-tel .hours { font-size: 0.68rem; color: var(--text-light); }
+    .btn-cta { background: var(--accent); color: white; padding: 10px 24px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: all 0.3s; border: none; cursor: pointer; display: inline-block; }
+    .btn-cta:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(224,123,57,0.35); }
+
+    /* ===== NAV ===== */
+    nav { background: var(--primary); }
+    nav ul { max-width: 1200px; margin: 0 auto; display: flex; list-style: none; justify-content: center; }
+    nav li a { color: rgba(255,255,255,0.9); text-decoration: none; padding: 12px 20px; font-size: 0.84rem; font-weight: 500; display: block; transition: all 0.3s; letter-spacing: 0.03em; }
+    nav li a:hover { background: rgba(255,255,255,0.12); color: white; }
+
+    /* ===== HERO ===== */
+    .hero { margin-top: 128px; background: var(--gradient-hero); position: relative; overflow: hidden; min-height: 540px; display: flex; align-items: center; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 80% 50%, rgba(82,183,136,0.3) 0%, transparent 60%), radial-gradient(circle at 20% 80%, rgba(224,123,57,0.15) 0%, transparent 50%); }
+    .hero::after { content: ''; position: absolute; right: -60px; top: -60px; width: 400px; height: 400px; border-radius: 50%; background: rgba(255,255,255,0.04); }
+    .hero-content { max-width: 1200px; margin: 0 auto; padding: 80px 40px; position: relative; z-index: 1; }
+    .hero-badge { display: inline-block; background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.95); padding: 6px 18px; border-radius: 50px; font-size: 0.78rem; font-weight: 500; margin-bottom: 20px; backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.2); }
+    .hero h1 { font-family: 'Noto Serif JP', serif; color: white; font-size: 2.5rem; font-weight: 700; line-height: 1.55; margin-bottom: 16px; text-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+    .hero h1 span { color: var(--accent-light); }
+    .hero-sub { color: rgba(255,255,255,0.88); font-size: 1rem; line-height: 1.9; max-width: 580px; margin-bottom: 36px; }
+    .hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 40px; }
+    .btn-hero { background: var(--accent); color: white; padding: 15px 36px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 0.95rem; transition: all 0.3s; display: inline-block; }
+    .btn-hero:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(224,123,57,0.4); }
+    .btn-hero-outline { background: transparent; color: white; padding: 14px 36px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: all 0.3s; display: inline-block; border: 2px solid rgba(255,255,255,0.5); }
+    .btn-hero-outline:hover { background: rgba(255,255,255,0.1); border-color: white; }
+    .hero-stats { display: flex; gap: 48px; }
+    .hero-stat { text-align: center; color: white; }
+    .hero-stat .num { font-size: 2.2rem; font-weight: 900; color: var(--accent-light); display: block; line-height: 1.2; }
+    .hero-stat .label { font-size: 0.78rem; opacity: 0.85; margin-top: 4px; }
+
+    /* ===== SECTIONS ===== */
+    .section { padding: 80px 24px; }
+    .section-alt { background: var(--section-bg); }
+    .section-warm { background: var(--warm-bg); }
+    .section-white { background: var(--white); }
+    .section-title { text-align: center; margin-bottom: 54px; }
+    .section-title .en { font-size: 0.72rem; color: var(--accent); font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; }
+    .section-title h2 { font-family: 'Noto Serif JP', serif; font-size: 1.95rem; color: var(--primary); margin-top: 8px; font-weight: 700; }
+    .section-title .line { width: 40px; height: 3px; background: var(--gradient-warm); margin: 16px auto 0; border-radius: 2px; }
+
+    /* ===== FEATURES ===== */
+    .features-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .feature-card { background: var(--white); border-radius: 18px; padding: 40px 28px; text-align: center; transition: all 0.3s; border: 1px solid var(--border); position: relative; overflow: hidden; }
+    .feature-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--gradient); }
+    .feature-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(45,106,79,0.1); }
+    .feature-num { width: 48px; height: 48px; background: var(--gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 900; font-size: 1.1rem; margin: 0 auto 20px; }
+    .feature-icon { width: 64px; height: 64px; background: var(--section-bg); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; }
+    .feature-icon svg { width: 32px; height: 32px; fill: var(--primary); }
+    .feature-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--primary); margin-bottom: 10px; }
+    .feature-card p { font-size: 0.87rem; color: var(--text-light); line-height: 1.75; }
+
+    /* ===== SERVICES ===== */
+    .services-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .service-card { background: var(--white); border-radius: 16px; padding: 36px 24px; text-align: center; transition: all 0.3s; border: 1px solid var(--border); }
+    .service-card:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(45,106,79,0.08); border-color: var(--primary-light); }
+    .service-icon { width: 60px; height: 60px; background: linear-gradient(135deg, #e8f5e9 0%, #f0f5f1 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; }
+    .service-icon svg { width: 30px; height: 30px; fill: var(--primary); }
+    .service-card h3 { font-size: 1rem; font-weight: 700; color: var(--primary); margin-bottom: 8px; }
+    .service-card p { font-size: 0.83rem; color: var(--text-light); line-height: 1.7; }
+    .service-tag { display: inline-block; background: var(--section-bg); color: var(--primary); font-size: 0.7rem; font-weight: 600; padding: 3px 10px; border-radius: 20px; margin-top: 12px; }
+
+    /* ===== TESTIMONIALS ===== */
+    .testimonials-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .testimonial-card { background: var(--white); border-radius: 18px; padding: 36px 28px; border: 1px solid var(--border); position: relative; transition: all 0.3s; }
+    .testimonial-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.06); }
+    .testimonial-card::before { content: '\201C'; position: absolute; top: 14px; left: 22px; font-size: 3.2rem; color: var(--primary); opacity: 0.15; font-family: serif; line-height: 1; }
+    .testimonial-stars { color: var(--accent); font-size: 0.9rem; margin-bottom: 12px; letter-spacing: 2px; }
+    .testimonial-text { font-size: 0.87rem; color: var(--text); line-height: 1.85; margin-bottom: 22px; padding-top: 8px; }
+    .testimonial-author { display: flex; align-items: center; gap: 12px; border-top: 1px solid var(--border); padding-top: 16px; }
+    .testimonial-avatar { width: 42px; height: 42px; background: var(--gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 0.85rem; }
+    .testimonial-name { font-size: 0.82rem; font-weight: 600; color: var(--primary); }
+    .testimonial-role { font-size: 0.72rem; color: var(--text-light); }
+
+    /* ===== CTA ===== */
+    .cta { padding: 80px 24px; background: var(--gradient-hero); text-align: center; position: relative; overflow: hidden; }
+    .cta::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 30% 50%, rgba(224,123,57,0.15) 0%, transparent 50%); }
+    .cta-inner { position: relative; z-index: 1; }
+    .cta h2 { font-family: 'Noto Serif JP', serif; color: white; font-size: 2rem; font-weight: 700; margin-bottom: 14px; }
+    .cta p { color: rgba(255,255,255,0.85); font-size: 1rem; margin-bottom: 36px; }
+    .cta-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .btn-cta-large { background: var(--accent); color: white; padding: 18px 44px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1.05rem; transition: all 0.3s; display: inline-block; }
+    .btn-cta-large:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(224,123,57,0.4); }
+    .btn-cta-outline { background: transparent; color: white; padding: 17px 44px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 1.05rem; transition: all 0.3s; display: inline-block; border: 2px solid rgba(255,255,255,0.5); }
+    .btn-cta-outline:hover { background: rgba(255,255,255,0.1); border-color: white; }
+    .cta-tel { color: white; font-size: 2rem; font-weight: 700; margin-top: 30px; text-decoration: none; display: inline-block; }
+    .cta-tel small { display: block; font-size: 0.8rem; font-weight: 400; opacity: 0.7; margin-top: 4px; }
+
+    /* ===== COMPANY INFO ===== */
+    .company-table { width: 100%; max-width: 750px; margin: 0 auto; border-collapse: collapse; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.04); }
+    .company-table th, .company-table td { padding: 18px 22px; text-align: left; font-size: 0.9rem; border-bottom: 1px solid var(--border); }
+    .company-table th { width: 150px; font-weight: 600; color: var(--primary); background: var(--section-bg); }
+    .company-table td { background: var(--white); }
+    .company-table tr:last-child th, .company-table tr:last-child td { border-bottom: none; }
+
+    /* ===== HOURS TABLE ===== */
+    .hours-table { width: 100%; max-width: 600px; margin: 20px auto 0; border-collapse: collapse; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+    .hours-table th, .hours-table td { padding: 12px 14px; text-align: center; font-size: 0.85rem; border: 1px solid var(--border); }
+    .hours-table thead th { background: var(--primary); color: white; font-weight: 600; }
+    .hours-table tbody th { background: var(--section-bg); color: var(--primary); font-weight: 600; }
+    .hours-table td { background: var(--white); }
+    .hours-table .closed { color: #e74c3c; font-weight: 600; }
+    .hours-table .open { color: var(--primary); font-weight: 500; }
+
+    /* ===== MAP PLACEHOLDER ===== */
+    .map-placeholder { max-width: 750px; margin: 30px auto 0; height: 240px; background: linear-gradient(135deg, #e8f5e9 0%, #f0f5f1 50%, #fdf6ef 100%); border-radius: 14px; display: flex; align-items: center; justify-content: center; color: var(--text-light); font-size: 0.9rem; border: 2px dashed var(--border); }
+    .map-placeholder svg { width: 24px; height: 24px; fill: var(--primary-light); margin-right: 8px; }
+
+    /* ===== DEMO NOTICE ===== */
+    .demo-notice { background: linear-gradient(135deg, #fff8e1, #fff3cd); padding: 20px 24px; text-align: center; font-size: 0.85rem; color: #7a6100; border-top: 3px solid #ffc107; line-height: 1.7; }
+
+    /* ===== FOOTER ===== */
+    footer { background: var(--primary-dark); color: rgba(255,255,255,0.6); padding: 40px 24px; text-align: center; font-size: 0.8rem; }
+    footer .footer-name { color: rgba(255,255,255,0.85); font-weight: 600; font-size: 0.9rem; margin-bottom: 8px; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .hero { margin-top: 100px; min-height: auto; }
+      .hero-content { padding: 50px 20px; }
+      .hero h1 { font-size: 1.65rem; }
+      .hero-stats { gap: 20px; flex-wrap: wrap; }
+      .hero-stat .num { font-size: 1.5rem; }
+      .hero-buttons { flex-direction: column; align-items: flex-start; }
+      .features-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .header-tel { display: none; }
+      .section-title h2 { font-size: 1.45rem; }
+      .section { padding: 60px 18px; }
+      nav ul { flex-wrap: wrap; justify-content: center; }
+      nav li a { padding: 10px 13px; font-size: 0.76rem; }
+      .cta-buttons { flex-direction: column; align-items: center; }
+      .cta h2 { font-size: 1.5rem; }
+      .company-table th { width: 110px; }
+      .hours-table { font-size: 0.78rem; }
+    }
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 1.4rem; }
+      .logo-text { font-size: 0.95rem; }
+      .header-main { padding: 8px 16px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="header-top">札幌市豊平区平岸の鍼灸・整骨なら あすなろ鍼灸整骨院｜平日20時まで受付</div>
+    <div class="header-main">
+      <div class="logo-area">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        </div>
+        <div class="logo-text">
+          あすなろ鍼灸整骨院
+          <small>ASUNARO SHINKYU SEIKOTSUIN</small>
+        </div>
+      </div>
+      <div class="header-contact">
+        <div class="header-tel">
+          <a href="tel:011-832-5189" class="number">011-832-5189</a>
+          <div class="hours">平日 8:00〜20:00 / 土 8:00〜12:00</div>
+        </div>
+        <a href="#contact" class="btn-cta">ご予約・お問い合わせ</a>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#features">当院の特徴</a></li>
+        <li><a href="#services">施術メニュー</a></li>
+        <li><a href="#voice">患者様の声</a></li>
+        <li><a href="#about">院概要</a></li>
+        <li><a href="#access">アクセス</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">北海道柔道整復師会・北海道鍼灸師会 所属</div>
+      <h1>つらい痛み、あきらめないで。<br><span>あなたの「明日」を支える治療を。</span></h1>
+      <p class="hero-sub">鍼灸・整骨・マッサージの専門施術で、お体の不調を根本から改善。一人ひとりの症状に向き合い、最適な治療プランをご提案します。</p>
+      <div class="hero-buttons">
+        <a href="tel:011-832-5189" class="btn-hero">今すぐ電話で予約</a>
+        <a href="#services" class="btn-hero-outline">施術メニューを見る</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="num">2009年</span>
+          <span class="label">開院</span>
+        </div>
+        <div class="hero-stat">
+          <span class="num">20時</span>
+          <span class="label">まで受付（平日）</span>
+        </div>
+        <div class="hero-stat">
+          <span class="num">予約制</span>
+          <span class="label">時間外も対応</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES ===== -->
+  <section class="section section-alt" id="features">
+    <div class="section-title">
+      <span class="en">Features</span>
+      <h2>当院の特徴</h2>
+      <div class="line"></div>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-num">1</div>
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-4h2v2h-2v-2zm1-10c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"/></svg>
+        </div>
+        <h3>鍼灸と整骨の複合治療</h3>
+        <p>鍼灸師と柔道整復師の資格を持つ施術者が、東洋医学と西洋医学の両面からアプローチ。痛みの根本原因にしっかり向き合います。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">2</div>
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+        </div>
+        <h3>平日20時まで受付</h3>
+        <p>お仕事帰りにも通いやすい夜間受付。さらに受付時間外も予約制で対応しておりますので、ライフスタイルに合わせた通院が可能です。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">3</div>
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+        </div>
+        <h3>地域密着で15年以上</h3>
+        <p>2009年の開院以来、豊平区平岸で地域の皆様の健康をサポート。長年の実績と信頼で、安心して通っていただける整骨院です。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="section section-white" id="services">
+    <div class="section-title">
+      <span class="en">Treatment Menu</span>
+      <h2>施術メニュー</h2>
+      <div class="line"></div>
+    </div>
+    <div class="services-grid">
+      <!-- 1. 整骨 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z"/></svg>
+        </div>
+        <h3>整骨施術</h3>
+        <p>骨折・脱臼・捻挫・打撲・肉離れなど、急性のケガに対して柔道整復術で治療します。各種保険適用可能です。</p>
+        <span class="service-tag">保険適用</span>
+      </div>
+      <!-- 2. 鍼灸 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71L12 2zm0 3.8L16.45 18H7.55L12 5.8z"/></svg>
+        </div>
+        <h3>鍼灸治療</h3>
+        <p>経絡・ツボへの鍼灸刺激で、自然治癒力を高めます。肩こり・腰痛・神経痛・冷え性などに効果的です。</p>
+        <span class="service-tag">東洋医学</span>
+      </div>
+      <!-- 3. マッサージ -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M18.5 3H6c-1.1 0-2 .9-2 2v5.71c0 3.83 2.95 7.18 6.78 7.29 3.96.12 7.22-3.06 7.22-7v-6c0-1.1-.9-2-2-2zm-9 11.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm5 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM18 7H6V5h12v2zm-5.5 13v2h-1v-2h1z"/></svg>
+        </div>
+        <h3>マッサージ</h3>
+        <p>筋肉のコリや疲労を手技でほぐし、血行を促進。日常の疲れから慢性的な身体の不調まで幅広く対応します。</p>
+        <span class="service-tag">リラクゼーション</span>
+      </div>
+      <!-- 4. 交通事故 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+        </div>
+        <h3>交通事故治療</h3>
+        <p>むちうち・打撲等、交通事故によるケガの治療に対応。自賠責保険適用で窓口負担0円。丁寧にサポートします。</p>
+        <span class="service-tag">自賠責対応</span>
+      </div>
+      <!-- 5. スポーツ -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M13.49 5.48c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm-3.6 13.9l1-4.4 2.1 2v6h2v-7.5l-2.1-2 .6-3c1.3 1.5 3.3 2.5 5.5 2.5v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1l-5.2 2.2v4.7h2v-3.4l1.8-.7-1.6 8.1-4.9-1-.4 2 7 1.4z"/></svg>
+        </div>
+        <h3>スポーツ障害</h3>
+        <p>スポーツによるケガや障害の治療・リハビリ。テーピングや運動指導を含め、早期復帰をサポートします。</p>
+        <span class="service-tag">スポーツ</span>
+      </div>
+      <!-- 6. 予防 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        </div>
+        <h3>予防・メンテナンス</h3>
+        <p>痛みが出る前の予防ケアや定期的な体のメンテナンス。健康な状態を維持するための施術を行います。</p>
+        <span class="service-tag">予防ケア</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section section-warm" id="voice">
+    <div class="section-title">
+      <span class="en">Voice</span>
+      <h2>患者様の声</h2>
+      <div class="line"></div>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testimonial-text">長年の腰痛で悩んでいましたが、鍼灸と整骨の組み合わせで驚くほど改善しました。先生がしっかり話を聞いてくださるので、安心して通えています。仕事帰りに寄れるのも助かっています。</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">T</div>
+          <div>
+            <div class="testimonial-name">T.S様</div>
+            <div class="testimonial-role">50代・会社員</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testimonial-text">交通事故のむちうちで通院しました。保険の手続きも丁寧に教えていただき、治療も痛みに合わせて調整してくれました。おかげさまで今はすっかり良くなりました。</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">M</div>
+          <div>
+            <div class="testimonial-name">M.K様</div>
+            <div class="testimonial-role">30代・主婦</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testimonial-text">部活でケガをした息子が通っています。テーピングの指導もしてくれて、再発予防まで考えてくれるのがありがたいです。地域に根ざした信頼できる先生です。</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">A</div>
+          <div>
+            <div class="testimonial-name">A.H様</div>
+            <div class="testimonial-role">40代・保護者</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta" id="contact">
+    <div class="cta-inner">
+      <h2>お体のお悩み、まずはお気軽にご相談ください</h2>
+      <p>初めての方も安心。症状やお悩みに合わせた最適な施術をご提案いたします。</p>
+      <div class="cta-buttons">
+        <a href="tel:011-832-5189" class="btn-cta-large">電話で予約する</a>
+        <a href="#about" class="btn-cta-outline">院の詳細を見る</a>
+      </div>
+      <a href="tel:011-832-5189" class="cta-tel">
+        011-832-5189
+        <small>平日 8:00〜12:00 / 14:00〜20:00　土曜 8:00〜12:00</small>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section section-white" id="about">
+    <div class="section-title">
+      <span class="en">About</span>
+      <h2>院概要</h2>
+      <div class="line"></div>
+    </div>
+    <table class="company-table">
+      <tr>
+        <th>院名</th>
+        <td>あすなろ鍼灸整骨院</td>
+      </tr>
+      <tr>
+        <th>所在地</th>
+        <td>〒062-0931<br>札幌市豊平区平岸1条8丁目4番15号 及川ステージ1</td>
+      </tr>
+      <tr>
+        <th>電話番号</th>
+        <td><a href="tel:011-832-5189" style="color:var(--primary);font-weight:600;text-decoration:none;">011-832-5189</a></td>
+      </tr>
+      <tr>
+        <th>受付時間</th>
+        <td>
+          平日 8:00〜12:00 / 14:00〜20:00<br>
+          土曜 8:00〜12:00<br>
+          <span style="font-size:0.82rem;color:var(--accent);">※上記以外の時間は予約制で対応</span>
+        </td>
+      </tr>
+      <tr>
+        <th>休診日</th>
+        <td>日曜日・祝日</td>
+      </tr>
+      <tr>
+        <th>施術内容</th>
+        <td>整骨・鍼灸・マッサージ・交通事故治療・スポーツ障害</td>
+      </tr>
+      <tr>
+        <th>所属団体</th>
+        <td>北海道柔道整復師会・北海道鍼灸師会</td>
+      </tr>
+    </table>
+
+    <!-- 診療時間表 -->
+    <table class="hours-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>月</th>
+          <th>火</th>
+          <th>水</th>
+          <th>木</th>
+          <th>金</th>
+          <th>土</th>
+          <th>日・祝</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>8:00〜12:00</th>
+          <td class="open">&#9675;</td>
+          <td class="open">&#9675;</td>
+          <td class="open">&#9675;</td>
+          <td class="open">&#9675;</td>
+          <td class="open">&#9675;</td>
+          <td class="open">&#9675;</td>
+          <td class="closed">&#10005;</td>
+        </tr>
+        <tr>
+          <th>14:00〜20:00</th>
+          <td class="open">&#9675;</td>
+          <td class="open">&#9675;</td>
+          <td class="open">&#9675;</td>
+          <td class="open">&#9675;</td>
+          <td class="open">&#9675;</td>
+          <td class="closed">&#10005;</td>
+          <td class="closed">&#10005;</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ===== ACCESS ===== -->
+  <section class="section section-alt" id="access">
+    <div class="section-title">
+      <span class="en">Access</span>
+      <h2>アクセス</h2>
+      <div class="line"></div>
+    </div>
+    <div class="map-placeholder">
+      <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      ※本番ではGoogleマップを埋め込みます
+    </div>
+  </section>
+
+  <!-- ===== DEMO NOTICE ===== -->
+  <div class="demo-notice">
+    ※ 本ページはリニューアルのイメージサンプルです。本番では実際のお写真・正式な情報を使用し、より完成度の高いサイトに仕上げます。
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-name">あすなろ鍼灸整骨院</div>
+    <p>〒062-0931 札幌市豊平区平岸1条8丁目4番15号 及川ステージ1</p>
+    <p style="margin-top:4px;">TEL: 011-832-5189</p>
+    <p style="margin-top:16px;">&copy; あすなろ鍼灸整骨院 All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

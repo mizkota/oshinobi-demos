@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>株式会社スリーエスメンテナンス｜ビル清掃・産廃処理のプロフェッショナル</title>
+  <meta name="description" content="札幌市中央区のビル清掃・産業廃棄物処理。フローリング、大理石、外壁ガラス、エアコン、貯水槽など8つの専門サービス。官公庁実績あり。">
+  <meta property="og:title" content="株式会社スリーエスメンテナンス｜ビル清掃・産廃処理のプロフェッショナル">
+  <meta property="og:description" content="札幌市中央区のビル清掃・産業廃棄物処理。8つの専門サービスで安全・清潔・快適な環境を。">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0d3b66;
+      --primary-light: #1a5f9e;
+      --accent: #00a8e8;
+      --accent-light: #66d4f5;
+      --accent-dark: #0088c2;
+      --text: #2d2d2d;
+      --text-light: #666;
+      --bg: #f8fbfd;
+      --white: #ffffff;
+      --section-bg: #eef5fa;
+      --border: #dce8f0;
+      --gradient: linear-gradient(135deg, #0d3b66 0%, #1a5f9e 100%);
+      --gradient-accent: linear-gradient(135deg, #00a8e8 0%, #0088c2 100%);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: 'Noto Sans JP', sans-serif; color: var(--text); background: var(--bg); line-height: 1.8; }
+
+    /* ===== HEADER ===== */
+    header { background: var(--white); box-shadow: 0 2px 20px rgba(0,0,0,0.06); position: fixed; top: 0; left: 0; right: 0; z-index: 1000; }
+    .header-top { background: var(--primary); color: white; font-size: 0.78rem; padding: 5px 0; text-align: center; letter-spacing: 0.05em; }
+    .header-main { max-width: 1200px; margin: 0 auto; padding: 10px 24px; display: flex; justify-content: space-between; align-items: center; }
+    .logo-area { display: flex; align-items: center; gap: 12px; }
+    .logo-area img { height: 44px; }
+    .logo-text { font-family: 'Noto Serif JP', serif; font-size: 1.1rem; font-weight: 700; color: var(--primary); }
+    .header-contact { display: flex; align-items: center; gap: 20px; }
+    .header-tel .number { font-size: 1.4rem; font-weight: 700; color: var(--primary); letter-spacing: 0.02em; }
+    .header-tel .hours { font-size: 0.7rem; color: var(--text-light); }
+    .btn-cta { background: var(--accent); color: white; padding: 10px 24px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: all 0.3s; border: none; cursor: pointer; }
+    .btn-cta:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,168,232,0.35); }
+
+    /* ===== NAV ===== */
+    nav { background: var(--primary); }
+    nav ul { max-width: 1200px; margin: 0 auto; display: flex; list-style: none; justify-content: center; }
+    nav li a { color: rgba(255,255,255,0.9); text-decoration: none; padding: 12px 22px; font-size: 0.85rem; font-weight: 500; display: block; transition: all 0.3s; letter-spacing: 0.03em; }
+    nav li a:hover { background: rgba(255,255,255,0.1); color: white; }
+
+    /* ===== HERO ===== */
+    .hero { margin-top: 130px; background: var(--gradient); position: relative; overflow: hidden; min-height: 520px; display: flex; align-items: center; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: url('images/hero-cleaning.png') center/cover no-repeat; opacity: 0.25; }
+    .hero-content { max-width: 1200px; margin: 0 auto; padding: 80px 40px; position: relative; z-index: 1; }
+    .hero h1 { font-family: 'Noto Serif JP', serif; color: white; font-size: 2.6rem; font-weight: 700; line-height: 1.5; margin-bottom: 16px; text-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+    .hero h1 span { color: var(--accent-light); }
+    .hero-sub { color: rgba(255,255,255,0.9); font-size: 1.05rem; line-height: 1.9; max-width: 600px; margin-bottom: 36px; }
+    .hero-stats { display: flex; gap: 40px; margin-top: 40px; }
+    .hero-stat { text-align: center; color: white; }
+    .hero-stat .num { font-size: 2rem; font-weight: 900; color: var(--accent-light); display: block; }
+    .hero-stat .label { font-size: 0.8rem; opacity: 0.9; margin-top: 4px; }
+    .btn-hero { background: var(--accent); color: white; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1rem; transition: all 0.3s; display: inline-block; }
+    .btn-hero:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,168,232,0.4); }
+
+    /* ===== SECTIONS ===== */
+    .section { padding: 80px 24px; }
+    .section-alt { background: var(--section-bg); }
+    .section-white { background: var(--white); }
+    .section-title { text-align: center; margin-bottom: 50px; }
+    .section-title .en { font-size: 0.75rem; color: var(--accent); font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; }
+    .section-title h2 { font-family: 'Noto Serif JP', serif; font-size: 2rem; color: var(--primary); margin-top: 8px; font-weight: 700; }
+    .section-title .line { width: 40px; height: 3px; background: var(--accent); margin: 16px auto 0; border-radius: 2px; }
+
+    /* ===== STRENGTHS ===== */
+    .strengths { max-width: 1100px; margin: 0 auto; display: flex; gap: 50px; align-items: center; }
+    .strengths-image { flex: 0 0 400px; }
+    .strengths-image img { width: 100%; border-radius: 16px; box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
+    .strengths-list { flex: 1; }
+    .strength-item { display: flex; gap: 16px; margin-bottom: 28px; }
+    .strength-num { flex: 0 0 48px; height: 48px; background: var(--gradient-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 900; font-size: 1.2rem; }
+    .strength-item h3 { font-size: 1.05rem; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
+    .strength-item p { font-size: 0.88rem; color: var(--text-light); line-height: 1.7; }
+
+    /* ===== SERVICES ===== */
+    .services-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .service-card { background: var(--white); border-radius: 14px; padding: 32px 20px; text-align: center; transition: all 0.3s; border: 1px solid var(--border); }
+    .service-card:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); border-color: var(--accent); }
+    .service-icon { width: 56px; height: 56px; background: var(--section-bg); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+    .service-icon svg { width: 28px; height: 28px; fill: var(--accent); }
+    .service-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--primary); margin-bottom: 8px; }
+    .service-card p { font-size: 0.8rem; color: var(--text-light); line-height: 1.6; }
+
+    /* ===== GALLERY ===== */
+    .gallery { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+    .gallery img { width: 100%; border-radius: 16px; box-shadow: 0 8px 30px rgba(0,0,0,0.1); aspect-ratio: 16/10; object-fit: cover; }
+
+    /* ===== TESTIMONIALS ===== */
+    .testimonials-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .testimonial-card { background: var(--white); border-radius: 16px; padding: 32px 28px; border: 1px solid var(--border); position: relative; }
+    .testimonial-card::before { content: '\201C'; position: absolute; top: 16px; left: 24px; font-size: 3rem; color: var(--accent); opacity: 0.3; font-family: serif; line-height: 1; }
+    .testimonial-text { font-size: 0.88rem; color: var(--text); line-height: 1.8; margin-bottom: 20px; padding-top: 10px; }
+    .testimonial-author { display: flex; align-items: center; gap: 12px; border-top: 1px solid var(--border); padding-top: 16px; }
+    .testimonial-avatar { width: 40px; height: 40px; background: var(--gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 0.85rem; }
+    .testimonial-name { font-size: 0.82rem; font-weight: 600; color: var(--primary); }
+    .testimonial-role { font-size: 0.72rem; color: var(--text-light); }
+
+    /* ===== CTA ===== */
+    .cta { padding: 80px 24px; background: var(--gradient); text-align: center; }
+    .cta h2 { font-family: 'Noto Serif JP', serif; color: white; font-size: 2rem; font-weight: 700; margin-bottom: 16px; }
+    .cta p { color: rgba(255,255,255,0.85); font-size: 1rem; margin-bottom: 36px; }
+    .cta-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .cta-tel { color: white; font-size: 1.8rem; font-weight: 700; margin-top: 30px; }
+    .cta-tel small { display: block; font-size: 0.8rem; font-weight: 400; opacity: 0.7; margin-top: 4px; }
+
+    /* ===== COMPANY INFO ===== */
+    .company-table { width: 100%; max-width: 700px; margin: 0 auto; border-collapse: collapse; }
+    .company-table th, .company-table td { padding: 16px 20px; text-align: left; font-size: 0.9rem; border-bottom: 1px solid var(--border); }
+    .company-table th { width: 140px; font-weight: 600; color: var(--primary); background: var(--section-bg); }
+    .company-table td { background: var(--white); }
+    .company-note { font-size: 0.82rem; color: var(--accent-dark); font-weight: 500; margin-top: 4px; }
+
+    /* ===== DEMO NOTICE ===== */
+    .demo-notice { background: linear-gradient(135deg, #fff8e1, #fff3cd); padding: 18px 24px; text-align: center; font-size: 0.85rem; color: #7a6100; border-top: 3px solid #ffc107; }
+
+    /* ===== FOOTER ===== */
+    footer { background: #0a2540; color: rgba(255,255,255,0.6); padding: 40px 24px; text-align: center; font-size: 0.8rem; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .hero { margin-top: 100px; min-height: auto; }
+      .hero-content { padding: 50px 20px; }
+      .hero h1 { font-size: 1.7rem; }
+      .hero-stats { gap: 20px; }
+      .hero-stat .num { font-size: 1.4rem; }
+      .strengths { flex-direction: column; gap: 30px; }
+      .strengths-image { flex: auto; }
+      .services-grid { grid-template-columns: 1fr; }
+      .gallery { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .header-tel { display: none; }
+      .section-title h2 { font-size: 1.5rem; }
+      nav ul { flex-wrap: wrap; justify-content: center; }
+      nav li a { padding: 10px 14px; font-size: 0.78rem; }
+      .cta-buttons { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="header-top">札幌のビル清掃・産廃処理なら株式会社スリーエスメンテナンス</div>
+    <div class="header-main">
+      <div class="logo-area">
+        <img src="https://sss-pro.com/images/logo.gif" alt="スリーエスメンテナンス ロゴ">
+        <span class="logo-text">スリーエスメンテナンス</span>
+      </div>
+      <div class="header-contact">
+        <div class="header-tel">
+          <div class="number">011-223-2232</div>
+          <div class="hours">お気軽にお電話ください</div>
+        </div>
+        <a href="#contact" class="btn-cta">お問い合わせ</a>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#strengths">当社の強み</a></li>
+        <li><a href="#services">サービス一覧</a></li>
+        <li><a href="#voice">お客様の声</a></li>
+        <li><a href="#company">会社概要</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>プロの目で、プロの技で。<br><span>安全・清潔・快適に。</span></h1>
+      <p class="hero-sub">フローリングから外壁ガラスまで、ビルメンテナンスのあらゆるニーズに応える専門集団。産業廃棄物収集運搬許可を持つ、札幌で唯一の清掃会社です。</p>
+      <a href="#contact" class="btn-hero">無料お見積りはこちら</a>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="num">8</span>
+          <span class="label">専門サービス</span>
+        </div>
+        <div class="hero-stat">
+          <span class="num">産廃許可</span>
+          <span class="label">登録業者</span>
+        </div>
+        <div class="hero-stat">
+          <span class="num">官公庁</span>
+          <span class="label">清掃実績あり</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STRENGTHS ===== -->
+  <section class="section section-alt" id="strengths">
+    <div class="section-title">
+      <span class="en">Our Strengths</span>
+      <h2>当社の強み</h2>
+      <div class="line"></div>
+    </div>
+    <div class="strengths">
+      <div class="strengths-image">
+        <img src="images/window-cleaning.png" alt="外壁ガラス清掃の様子">
+      </div>
+      <div class="strengths-list">
+        <div class="strength-item">
+          <div class="strength-num">1</div>
+          <div>
+            <h3>産業廃棄物収集運搬の登録業者</h3>
+            <p>清掃と廃棄物処理をワンストップで対応。余分な手配や費用が不要で、スムーズかつコスト削減を実現します。</p>
+          </div>
+        </div>
+        <div class="strength-item">
+          <div class="strength-num">2</div>
+          <div>
+            <h3>官公庁の清掃実績</h3>
+            <p>厳しい品質基準が求められる官公庁施設の清掃実績があり、高い技術力と信頼性を証明しています。</p>
+          </div>
+        </div>
+        <div class="strength-item">
+          <div class="strength-num">3</div>
+          <div>
+            <h3>幅広い業種への対応力</h3>
+            <p>オフィスビル、ホテル、商業施設、医療機関など、業種ごとの特性に合わせた最適な清掃プランをご提案します。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="section section-white" id="services">
+    <div class="section-title">
+      <span class="en">Services</span>
+      <h2>サービス一覧</h2>
+      <div class="line"></div>
+    </div>
+    <div class="services-grid">
+      <!-- 1. フローリング -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
+        </div>
+        <h3>フローリング清掃</h3>
+        <p>木床ウレタン塗装・ワックスがけで、美しい光沢と耐久性を復元します。</p>
+      </div>
+      <!-- 2. 室内クリーニング -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+        </div>
+        <h3>室内クリーニング</h3>
+        <p>カーペット・ジュータンクリーニングからハウスクリーニングまで幅広く対応。</p>
+      </div>
+      <!-- 3. 大理石研磨 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-7-2l3-4-1-1.5L12 14l-2-2.5L7 15h10z"/></svg>
+        </div>
+        <h3>大理石研磨・鏡面仕上</h3>
+        <p>専用機材で大理石を研磨し、新築時のような輝きを取り戻します。</p>
+      </div>
+      <!-- 4. 外壁ガラス -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M6 2l-2 4v16h16V6l-2-4H6zm0 2h1.5l1 2H5.5L6 4zm6 0h1.5l1 2h-3.5l1-2zm6 0l1 2h-3l1-2H18zM4 8h16v12H4V8z"/></svg>
+        </div>
+        <h3>外壁ガラス清掃</h3>
+        <p>高所作業にも対応。安全ハーネス着用で、ビルの外観を美しく保ちます。</p>
+      </div>
+      <!-- 5. 定期清掃 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+        </div>
+        <h3>定期清掃</h3>
+        <p>日常清掃から定期巡回まで、施設の美観を常にベストな状態に維持します。</p>
+      </div>
+      <!-- 6. 貯水槽 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2c-5.33 4.55-8 8.48-8 11.8 0 4.98 3.8 8.2 8 8.2s8-3.22 8-8.2C20 10.48 17.33 6.55 12 2zm0 18c-3.35 0-6-2.57-6-6.2 0-2.34 1.95-5.44 6-9.14 4.05 3.7 6 6.79 6 9.14 0 3.63-2.65 6.2-6 6.2z"/></svg>
+        </div>
+        <h3>貯水槽清掃</h3>
+        <p>法定点検にも対応する貯水槽の清掃・消毒で、安全な水質を確保します。</p>
+      </div>
+      <!-- 7. エアコン -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 11h-4.17l3.24-3.24-1.41-1.42L15 11h-2V9l4.66-4.66-1.42-1.41L13 6.17V2h-2v4.17L7.76 2.93 6.34 4.34 11 9v2H9L4.34 6.34 2.93 7.76 6.17 11H2v2h4.17l-3.24 3.24 1.41 1.42L9 13h2v2l-4.66 4.66 1.42 1.41L11 17.83V22h2v-4.17l3.24 3.24 1.42-1.41L13 15v-2h2l4.66 4.66 1.41-1.42L17.83 13H22z"/></svg>
+        </div>
+        <h3>エアコン清掃</h3>
+        <p>業務用エアコンの分解洗浄で、冷暖房効率アップと電気代削減を実現。</p>
+      </div>
+      <!-- 8. 産廃 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
+        </div>
+        <h3>産業廃棄物処理</h3>
+        <p>許可登録業者として、清掃で発生する廃棄物の適正処理まで一貫対応します。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <section class="section section-alt">
+    <div class="section-title">
+      <span class="en">Results</span>
+      <h2>清掃後イメージ</h2>
+      <div class="line"></div>
+    </div>
+    <div class="gallery">
+      <img src="images/clean-office.png" alt="清掃後のきれいなオフィス">
+      <img src="images/hero-cleaning.png" alt="プロの清掃スタッフ">
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section section-white" id="voice">
+    <div class="section-title">
+      <span class="en">Voice</span>
+      <h2>お客様の声</h2>
+      <div class="line"></div>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p class="testimonial-text">管理ビルの共用部清掃をお願いしています。入居者様からの評判も非常に良く、空室率の改善にも繋がりました。産廃処理もまとめて対応いただけるのが助かります。</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">A</div>
+          <div>
+            <div class="testimonial-name">A様</div>
+            <div class="testimonial-role">ビル管理会社</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">客室とロビーの定期清掃をお任せしています。お客様の目に触れる場所だからこそ、いつも完璧な仕上がりに感謝しています。急な対応にも快く引き受けてくださいます。</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">B</div>
+          <div>
+            <div class="testimonial-name">B様</div>
+            <div class="testimonial-role">ホテル支配人</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">現場の引き渡し前清掃と廃棄物処理を一括でお願いできるのは本当にありがたい。段取りが良く、工期に影響が出たことは一度もありません。</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">C</div>
+          <div>
+            <div class="testimonial-name">C様</div>
+            <div class="testimonial-role">建設会社 総務部</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta" id="contact">
+    <h2>まずはお気軽にご相談ください</h2>
+    <p>ご相談・お見積りは無料です。お電話またはメールでどうぞ。</p>
+    <div class="cta-buttons">
+      <a href="mailto:sssprofessional@ra2.so-net.ne.jp" class="btn-hero">メールで相談する</a>
+    </div>
+    <div class="cta-tel">011-223-2232<small>お気軽にお電話ください</small></div>
+  </section>
+
+  <!-- ===== COMPANY ===== -->
+  <section class="section section-white" id="company">
+    <div class="section-title">
+      <span class="en">Company</span>
+      <h2>会社概要</h2>
+      <div class="line"></div>
+    </div>
+    <table class="company-table">
+      <tr><th>会社名</th><td>株式会社スリーエスメンテナンス</td></tr>
+      <tr><th>所在地</th><td>〒060-0005 札幌市中央区北5条西12丁目2番地 北5ビルC館</td></tr>
+      <tr><th>電話番号</th><td>011-223-2232</td></tr>
+      <tr><th>メール</th><td>sssprofessional@ra2.so-net.ne.jp</td></tr>
+      <tr><th>事業内容</th><td>ビル清掃全般、室内クリーニング、外壁ガラス清掃、大理石研磨、<br>エアコン清掃、貯水槽清掃、産業廃棄物収集運搬</td></tr>
+      <tr>
+        <th>許認可</th>
+        <td>
+          産業廃棄物収集運搬業許可
+          <div class="company-note">※ 清掃と廃棄物処理をワンストップで対応できる登録業者です</div>
+        </td>
+      </tr>
+      <tr><th>URL</th><td><a href="https://sss-pro.com/" style="color:var(--accent);">https://sss-pro.com/</a></td></tr>
+    </table>
+  </section>
+
+  <!-- ===== DEMO NOTICE ===== -->
+  <div class="demo-notice">
+    ※ 本ページはリニューアルのイメージサンプルです。本番では実際のお写真・正式な情報を使用し、より完成度の高いサイトに仕上げます。
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>&copy; 2026 株式会社スリーエスメンテナンス All Rights Reserved.</footer>
+</body>
+</html>

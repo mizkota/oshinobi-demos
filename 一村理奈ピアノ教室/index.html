@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>一村理奈ピアノ教室 | 札幌市東区・栄町駅徒歩4分</title>
+<meta name="description" content="札幌市東区北40条のピアノ教室。地下鉄栄町駅より徒歩4分。子どもから大人まで、一人ひとりに寄り添ったレッスンをお届けします。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --primary: #3d2660;
+  --primary-light: #5e3d8f;
+  --primary-pale: #f3eef8;
+  --gold: #c9a84c;
+  --gold-light: #e8d48b;
+  --gold-pale: #faf6eb;
+  --text: #2c2c2c;
+  --text-light: #666;
+  --white: #ffffff;
+  --bg: #fafafa;
+  --shadow: 0 4px 24px rgba(61,38,96,0.08);
+  --shadow-hover: 0 8px 32px rgba(61,38,96,0.14);
+  --radius: 12px;
+  --transition: 0.3s ease;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.8;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ========== HEADER ========== */
+.header {
+  position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 8px rgba(61,38,96,0.06);
+  transition: var(--transition);
+}
+.header-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 24px; height: 72px;
+}
+.logo {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.2rem; font-weight: 700; color: var(--primary);
+  text-decoration: none; display: flex; align-items: center; gap: 10px;
+}
+.logo svg { flex-shrink: 0; }
+.header-cta {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--gold); color: var(--white);
+  padding: 10px 24px; border-radius: 50px;
+  font-size: 0.85rem; font-weight: 700;
+  text-decoration: none; transition: var(--transition);
+  border: none; cursor: pointer;
+}
+.header-cta:hover { background: var(--primary); transform: translateY(-1px); }
+
+/* ========== NAV ========== */
+.nav {
+  background: var(--primary);
+  position: sticky; top: 72px; z-index: 999;
+}
+.nav-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; justify-content: center; flex-wrap: wrap;
+  padding: 0 16px;
+}
+.nav a {
+  color: rgba(255,255,255,0.85); text-decoration: none;
+  padding: 12px 18px; font-size: 0.82rem; font-weight: 500;
+  transition: var(--transition); letter-spacing: 0.04em;
+}
+.nav a:hover { color: var(--gold-light); background: rgba(255,255,255,0.06); }
+
+/* ========== HERO ========== */
+.hero {
+  position: relative; overflow: hidden;
+  background: linear-gradient(135deg, #3d2660 0%, #5e3d8f 30%, #7a5aad 55%, #c9a84c 100%);
+  min-height: 520px;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center; color: var(--white);
+  padding: 120px 24px 80px;
+}
+.hero::before {
+  content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.5;
+}
+.hero::after {
+  content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 80px;
+  background: linear-gradient(to top, var(--bg), transparent);
+}
+.hero-content { position: relative; z-index: 1; max-width: 700px; }
+.hero-sub {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 0.95rem; letter-spacing: 0.2em; opacity: 0.9;
+  margin-bottom: 16px;
+}
+.hero h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+  font-weight: 700; line-height: 1.5;
+  margin-bottom: 20px;
+}
+.hero p {
+  font-size: 1rem; opacity: 0.9; line-height: 1.9;
+  margin-bottom: 32px;
+}
+.hero-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--gold); color: var(--white);
+  padding: 16px 40px; border-radius: 50px;
+  font-size: 1rem; font-weight: 700;
+  text-decoration: none; transition: var(--transition);
+  box-shadow: 0 4px 16px rgba(201,168,76,0.4);
+}
+.hero-cta:hover { background: var(--white); color: var(--primary); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(201,168,76,0.5); }
+
+/* Piano keys decoration */
+.piano-keys {
+  display: flex; justify-content: center; gap: 2px;
+  margin-top: 40px; opacity: 0.3;
+}
+.piano-keys .white-key {
+  width: 28px; height: 80px; background: white; border-radius: 0 0 4px 4px;
+}
+.piano-keys .black-key {
+  width: 18px; height: 50px; background: #222; border-radius: 0 0 3px 3px;
+  margin: 0 -10px; z-index: 1; position: relative;
+}
+
+/* ========== SECTIONS ========== */
+.section { padding: 80px 24px; }
+.section-inner { max-width: 1000px; margin: 0 auto; }
+.section-header { text-align: center; margin-bottom: 48px; }
+.section-header h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  color: var(--primary); margin-bottom: 8px;
+}
+.section-header .en {
+  font-size: 0.75rem; color: var(--gold);
+  letter-spacing: 0.15em; text-transform: uppercase;
+  font-weight: 500;
+}
+.section-header .divider {
+  width: 60px; height: 2px;
+  background: linear-gradient(to right, var(--gold), var(--primary));
+  margin: 16px auto 0; border-radius: 2px;
+}
+.section-alt { background: var(--white); }
+
+/* ========== FEATURES ========== */
+.features-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+.feature-card {
+  background: var(--white); border-radius: var(--radius);
+  padding: 40px 32px; text-align: center;
+  box-shadow: var(--shadow); transition: var(--transition);
+  border: 1px solid rgba(61,38,96,0.04);
+}
+.feature-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+.feature-icon {
+  width: 72px; height: 72px; margin: 0 auto 20px;
+  background: var(--primary-pale); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
+.feature-icon svg { width: 32px; height: 32px; color: var(--primary); }
+.feature-card h3 {
+  font-size: 1.05rem; color: var(--primary); margin-bottom: 12px;
+  font-weight: 700;
+}
+.feature-card p { font-size: 0.9rem; color: var(--text-light); line-height: 1.8; }
+
+/* ========== LESSONS ========== */
+.lessons-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 28px;
+}
+.lesson-card {
+  background: var(--white); border-radius: var(--radius);
+  overflow: hidden; box-shadow: var(--shadow); transition: var(--transition);
+  border: 1px solid rgba(61,38,96,0.04);
+}
+.lesson-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+.lesson-card-header {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  padding: 28px 24px; text-align: center; color: var(--white);
+}
+.lesson-card-header svg { width: 40px; height: 40px; margin-bottom: 12px; opacity: 0.9; }
+.lesson-card-header h3 { font-size: 1.1rem; font-weight: 700; }
+.lesson-card-body { padding: 28px 24px; }
+.lesson-card-body p { font-size: 0.9rem; color: var(--text-light); line-height: 1.9; margin-bottom: 12px; }
+.lesson-card-body ul {
+  list-style: none; padding: 0;
+}
+.lesson-card-body li {
+  font-size: 0.88rem; color: var(--text);
+  padding: 6px 0; border-bottom: 1px solid rgba(61,38,96,0.06);
+  display: flex; align-items: center; gap: 8px;
+}
+.lesson-card-body li::before {
+  content: ''; width: 6px; height: 6px; border-radius: 50%;
+  background: var(--gold); flex-shrink: 0;
+}
+.lesson-tag {
+  display: inline-block; background: var(--gold-pale); color: var(--gold);
+  font-size: 0.72rem; font-weight: 700; padding: 3px 10px;
+  border-radius: 20px; margin-bottom: 12px;
+}
+
+/* ========== INSTRUCTOR ========== */
+.instructor-wrap {
+  display: flex; gap: 48px; align-items: center;
+  background: var(--white); border-radius: var(--radius);
+  padding: 48px; box-shadow: var(--shadow);
+}
+.instructor-photo {
+  flex-shrink: 0; width: 200px; height: 200px;
+  background: linear-gradient(135deg, var(--primary-pale), var(--gold-pale));
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  border: 4px solid var(--gold-light);
+}
+.instructor-photo svg { width: 80px; height: 80px; color: var(--primary); opacity: 0.5; }
+.instructor-info h3 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.4rem; color: var(--primary); margin-bottom: 4px;
+}
+.instructor-info .role { font-size: 0.85rem; color: var(--gold); margin-bottom: 16px; font-weight: 500; }
+.instructor-info p { font-size: 0.92rem; color: var(--text-light); line-height: 2; margin-bottom: 12px; }
+.award-list { list-style: none; padding: 0; margin-top: 16px; }
+.award-list li {
+  font-size: 0.85rem; color: var(--primary);
+  padding: 6px 0; display: flex; align-items: center; gap: 8px;
+}
+.award-list li svg { width: 16px; height: 16px; color: var(--gold); flex-shrink: 0; }
+
+/* ========== TESTIMONIALS ========== */
+.testimonials-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+.testimonial-card {
+  background: var(--white); border-radius: var(--radius);
+  padding: 36px 28px; box-shadow: var(--shadow);
+  position: relative; border: 1px solid rgba(61,38,96,0.04);
+}
+.testimonial-card::before {
+  content: '\201C'; position: absolute; top: 16px; left: 24px;
+  font-size: 3.5rem; color: var(--gold-light);
+  font-family: 'Noto Serif JP', serif; line-height: 1;
+}
+.testimonial-card p {
+  font-size: 0.9rem; color: var(--text-light); line-height: 1.9;
+  margin-top: 24px; margin-bottom: 20px;
+}
+.testimonial-author {
+  display: flex; align-items: center; gap: 12px;
+  border-top: 1px solid rgba(61,38,96,0.06); padding-top: 16px;
+}
+.testimonial-avatar {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--primary-pale);
+  display: flex; align-items: center; justify-content: center;
+}
+.testimonial-avatar svg { width: 20px; height: 20px; color: var(--primary); opacity: 0.6; }
+.testimonial-name { font-size: 0.85rem; font-weight: 700; color: var(--primary); }
+.testimonial-desc { font-size: 0.75rem; color: var(--text-light); }
+
+/* ========== CTA ========== */
+.cta-section {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 50%, var(--gold) 100%);
+  padding: 80px 24px; text-align: center; color: var(--white);
+  position: relative;
+}
+.cta-section::before {
+  content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+}
+.cta-content { position: relative; z-index: 1; }
+.cta-section h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  margin-bottom: 16px;
+}
+.cta-section p { font-size: 1rem; opacity: 0.9; margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
+.cta-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--white); color: var(--primary);
+  padding: 18px 48px; border-radius: 50px;
+  font-size: 1.05rem; font-weight: 700;
+  text-decoration: none; transition: var(--transition);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+.cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.15); background: var(--gold-pale); }
+
+/* ========== INFO TABLE ========== */
+.info-table {
+  width: 100%; border-collapse: collapse;
+  background: var(--white); border-radius: var(--radius); overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.info-table th, .info-table td {
+  padding: 18px 24px; font-size: 0.9rem; text-align: left;
+  border-bottom: 1px solid rgba(61,38,96,0.06);
+}
+.info-table th {
+  background: var(--primary-pale); color: var(--primary);
+  font-weight: 700; width: 160px; white-space: nowrap;
+}
+.info-table td { color: var(--text-light); }
+
+/* ========== MAP PLACEHOLDER ========== */
+.map-placeholder {
+  margin-top: 28px; border-radius: var(--radius); overflow: hidden;
+  background: linear-gradient(135deg, var(--primary-pale), #e8e4f0);
+  height: 240px; display: flex; align-items: center; justify-content: center;
+  color: var(--primary); font-size: 0.9rem; opacity: 0.7;
+}
+
+/* ========== DEMO BANNER ========== */
+.demo-banner {
+  background: linear-gradient(90deg, var(--gold), #e0c15e);
+  color: var(--primary); text-align: center;
+  padding: 14px 24px; font-size: 0.85rem; font-weight: 700;
+}
+.demo-banner a { color: var(--primary); text-decoration: underline; }
+
+/* ========== FOOTER ========== */
+.footer {
+  background: var(--primary); color: rgba(255,255,255,0.7);
+  padding: 48px 24px 24px; text-align: center;
+}
+.footer-logo {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.2rem; color: var(--white); margin-bottom: 8px;
+}
+.footer p { font-size: 0.8rem; line-height: 1.8; }
+.footer-copy {
+  margin-top: 32px; padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.72rem; opacity: 0.5;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .header-inner { height: 60px; }
+  .logo { font-size: 1rem; }
+  .header-cta { padding: 8px 16px; font-size: 0.78rem; }
+  .nav { top: 60px; }
+  .nav a { padding: 10px 12px; font-size: 0.75rem; }
+  .hero { min-height: 440px; padding: 100px 20px 60px; }
+  .section { padding: 60px 16px; }
+  .instructor-wrap { flex-direction: column; text-align: center; padding: 32px 24px; }
+  .instructor-photo { width: 150px; height: 150px; }
+  .info-table th { width: 110px; padding: 14px 16px; }
+  .info-table td { padding: 14px 16px; }
+  .piano-keys .white-key { width: 20px; height: 56px; }
+  .piano-keys .black-key { width: 13px; height: 35px; margin: 0 -7px; }
+}
+@media (max-width: 480px) {
+  .nav-inner { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; -webkit-overflow-scrolling: touch; }
+  .nav a { white-space: nowrap; }
+  .features-grid, .lessons-grid, .testimonials-grid { grid-template-columns: 1fr; }
+  .info-table, .info-table thead, .info-table tbody, .info-table th, .info-table td, .info-table tr {
+    display: block;
+  }
+  .info-table th { width: 100%; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <rect x="2" y="8" width="4" height="18" rx="1" fill="#3d2660"/>
+        <rect x="7" y="8" width="4" height="18" rx="1" fill="#3d2660"/>
+        <rect x="12" y="8" width="4" height="18" rx="1" fill="#3d2660"/>
+        <rect x="17" y="8" width="4" height="18" rx="1" fill="#3d2660"/>
+        <rect x="22" y="8" width="4" height="18" rx="1" fill="#3d2660"/>
+        <rect x="27" y="8" width="3" height="18" rx="1" fill="#3d2660"/>
+        <rect x="4.5" y="8" width="2.5" height="11" rx="1" fill="#c9a84c"/>
+        <rect x="9.5" y="8" width="2.5" height="11" rx="1" fill="#c9a84c"/>
+        <rect x="19.5" y="8" width="2.5" height="11" rx="1" fill="#c9a84c"/>
+        <rect x="24.5" y="8" width="2.5" height="11" rx="1" fill="#c9a84c"/>
+      </svg>
+      一村理奈ピアノ教室
+    </a>
+    <a href="#contact" class="header-cta">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      体験レッスン
+    </a>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#">HOME</a>
+    <a href="#about">教室について</a>
+    <a href="#lessons">レッスン内容</a>
+    <a href="#instructor">講師紹介</a>
+    <a href="#testimonials">生徒さんの声</a>
+    <a href="#access">アクセス</a>
+    <a href="#contact">お問い合わせ</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <p class="hero-sub">ICHIMURA RINA PIANO LESSON</p>
+    <h1>音楽のある暮らしを、<br>あなたに。</h1>
+    <p>札幌市東区・栄町駅徒歩4分。<br>グランドピアノ2台を備えた教室で、<br>お一人おひとりに寄り添ったレッスンをお届けします。</p>
+    <a href="#contact" class="hero-cta">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      無料体験レッスンのお申込み
+    </a>
+    <div class="piano-keys">
+      <div class="white-key"></div>
+      <div class="black-key"></div>
+      <div class="white-key"></div>
+      <div class="black-key"></div>
+      <div class="white-key"></div>
+      <div class="white-key"></div>
+      <div class="black-key"></div>
+      <div class="white-key"></div>
+      <div class="black-key"></div>
+      <div class="white-key"></div>
+      <div class="black-key"></div>
+      <div class="white-key"></div>
+      <div class="white-key"></div>
+      <div class="black-key"></div>
+      <div class="white-key"></div>
+      <div class="black-key"></div>
+      <div class="white-key"></div>
+      <div class="white-key"></div>
+      <div class="black-key"></div>
+      <div class="white-key"></div>
+      <div class="black-key"></div>
+      <div class="white-key"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT / FEATURES -->
+<section class="section" id="about">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="en">About</span>
+      <h2>教室の特徴</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <h3>一人ひとりに合わせたレッスン</h3>
+        <p>お子さまから大人の方まで、それぞれのペースや目標に合わせた個人レッスン。初めての方も経験者も安心してお通いいただけます。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>YAMAHAグランドピアノ2台完備</h3>
+        <p>本格的なYAMAHAグランドピアノを2台備えた贅沢な環境。豊かな響きの中で、表現力を磨くことができます。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 10-16 0c0 3 2.7 7 8 11.7z"/></svg>
+        </div>
+        <h3>駅から徒歩4分・駐車場あり</h3>
+        <p>地下鉄東豊線・栄町駅より徒歩4分。駐車スペース2台分完備で、お車でのお通いにも便利です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LESSONS -->
+<section class="section section-alt" id="lessons">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="en">Lessons</span>
+      <h2>レッスン内容</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="lessons-grid">
+      <!-- 子ども -->
+      <div class="lesson-card">
+        <div class="lesson-card-header">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4" r="2"/><path d="M16 21v-4l-2-2-2 4-2-4-2 2v4"/><path d="M9 11a3 3 0 016 0"/></svg>
+          <h3>子どものピアノレッスン</h3>
+        </div>
+        <div class="lesson-card-body">
+          <span class="lesson-tag">幼児〜高校生</span>
+          <p>音楽の楽しさを感じながら、基礎から丁寧に指導します。お子さま一人ひとりの個性と成長に合わせたカリキュラムです。</p>
+          <ul>
+            <li>導入期はリズム遊びやソルフェージュから</li>
+            <li>読譜力・表現力をバランスよく育成</li>
+            <li>発表会やコンクールへの参加もサポート</li>
+            <li>保護者の方とのコミュニケーションを大切に</li>
+          </ul>
+        </div>
+      </div>
+      <!-- 大人 -->
+      <div class="lesson-card">
+        <div class="lesson-card-header" style="background: linear-gradient(135deg, #c9a84c, #e0c15e);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+          <h3>大人のピアノレッスン</h3>
+        </div>
+        <div class="lesson-card-body">
+          <span class="lesson-tag">女性限定</span>
+          <p>「弾きたかった曲に挑戦したい」「もう一度ピアノを始めたい」——大人の方のための、ゆったりとしたレッスンです。</p>
+          <ul>
+            <li>初心者の方も大歓迎</li>
+            <li>お好きな曲からスタートOK</li>
+            <li>ワンレッスン制でお気軽に</li>
+            <li>ブランクのある方も安心</li>
+          </ul>
+        </div>
+      </div>
+      <!-- コンクール -->
+      <div class="lesson-card">
+        <div class="lesson-card-header" style="background: linear-gradient(135deg, #2d1b4e, #3d2660);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+          <h3>コンクール対策</h3>
+        </div>
+        <div class="lesson-card-body">
+          <span class="lesson-tag">本格指導</span>
+          <p>ピティナ・ピアノコンペティションをはじめ、各種コンクールに向けた集中的な指導を行います。</p>
+          <ul>
+            <li>ピティナ指導者賞 5年連続受賞</li>
+            <li>毎日こどもピアノコンクール優秀指導者賞</li>
+            <li>曲の解釈から舞台マナーまで総合的に指導</li>
+            <li>本番で力を発揮するためのメンタルサポート</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTRUCTOR -->
+<section class="section" id="instructor">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="en">Instructor</span>
+      <h2>講師紹介</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="instructor-wrap">
+      <div class="instructor-photo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </div>
+      <div class="instructor-info">
+        <h3>一村 理奈</h3>
+        <p class="role">ピアノ講師 / 教室主宰</p>
+        <p>生徒の皆さん・保護者の方とのコミュニケーションを大切に、明るく楽しい教室をめざしています。一人ひとりの「弾きたい」という気持ちに寄り添い、音楽を通じて豊かな心を育むお手伝いをしたいと考えています。</p>
+        <ul class="award-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            ピティナ・ピアノコンペティション 指導者賞（2021〜2025年）
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            毎日こどもピアノコンクール 優秀指導者賞
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section section-alt" id="testimonials">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="en">Voice</span>
+      <h2>生徒さんの声</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p>娘が年中から通い始めて3年になります。先生はいつも笑顔で、娘のペースに合わせてくださるので、楽しく続けられています。昨年のコンクールでは初めて入賞でき、親子で感動しました。</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div>
+            <div class="testimonial-name">S.K さま</div>
+            <div class="testimonial-desc">小学2年生のお母さま</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p>50代から初めてピアノを始めました。「この年齢から…」と不安でしたが、先生が優しく丁寧に教えてくださり、今では大好きな曲を弾けるようになりました。毎回のレッスンが楽しみです。</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div>
+            <div class="testimonial-name">M.T さま</div>
+            <div class="testimonial-desc">大人の生徒さん（50代）</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p>グランドピアノ2台の環境が素晴らしいです。先生がお手本を弾いてくださるので、音の表現やニュアンスがとても分かりやすいです。コンクールの指導も的確で、毎年目標を持って頑張れています。</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div>
+            <div class="testimonial-name">A.N さま</div>
+            <div class="testimonial-desc">中学1年生のお母さま</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <div class="cta-content">
+    <h2>まずは体験レッスンから<br>始めてみませんか？</h2>
+    <p>お子さまの初めてのピアノも、大人の方の「もう一度」も。<br>お気軽にお問い合わせください。</p>
+    <a href="#" class="cta-btn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      お問い合わせはこちら
+    </a>
+  </div>
+</section>
+
+<!-- ACCESS -->
+<section class="section" id="access">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="en">Access</span>
+      <h2>教室概要</h2>
+      <div class="divider"></div>
+    </div>
+    <table class="info-table">
+      <tr><th>教室名</th><td>一村理奈ピアノ教室</td></tr>
+      <tr><th>講師</th><td>一村 理奈</td></tr>
+      <tr><th>所在地</th><td>札幌市東区北40条東14丁目</td></tr>
+      <tr><th>最寄駅</th><td>地下鉄東豊線 栄町駅より徒歩4分（約400m）<br>新道東駅より徒歩10分</td></tr>
+      <tr><th>駐車場</th><td>2台分あり</td></tr>
+      <tr><th>使用楽器</th><td>YAMAHAグランドピアノ 2台</td></tr>
+      <tr><th>対象</th><td>子ども（幼児〜高校生）/ 大人（女性限定）</td></tr>
+      <tr><th>レッスン形態</th><td>個人レッスン（完全予約制）</td></tr>
+    </table>
+    <div class="map-placeholder">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-right:8px"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 10-16 0c0 3 2.7 7 8 11.7z"/></svg>
+      Googleマップを埋め込み予定
+    </div>
+  </div>
+</section>
+
+<!-- DEMO BANNER -->
+<div class="demo-banner">
+  ※ これはデモサイトです。正式なご依頼後に本番環境へ反映いたします。制作：<a href="https://oshinobi-co.com" target="_blank" rel="noopener">OSHINOBI</a>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-logo">一村理奈ピアノ教室</div>
+  <p>札幌市東区北40条東14丁目<br>地下鉄東豊線 栄町駅より徒歩4分</p>
+  <div class="footer-copy">&copy; 2026 一村理奈ピアノ教室 All Rights Reserved.</div>
+</footer>
+
+</body>
+</html>

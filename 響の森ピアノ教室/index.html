@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>札幌ピアノ教室【響の森】| 中央区・西区 幼児から大人まで個人レッスン</title>
+    <meta name="description" content="札幌市中央区・西区のピアノ教室【響の森】。2歳の知育プレピアノから大人まで、一人ひとりに合わせたオーダーメイドレッスン。コンクール指導・音大受験にも対応。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6B3FA0;
+            --primary-light: #8B5FC0;
+            --primary-dark: #4A2070;
+            --accent: #C9A84C;
+            --accent-light: #E0C877;
+            --accent-dark: #A88A30;
+            --bg: #FDFBFF;
+            --bg-warm: #FAF6FF;
+            --bg-section: #F5F0FA;
+            --text: #2D2233;
+            --text-light: #5A4D66;
+            --text-muted: #8A7D96;
+            --white: #FFFFFF;
+            --border: #E8DFF0;
+            --shadow: rgba(107, 63, 160, 0.08);
+            --shadow-lg: rgba(107, 63, 160, 0.15);
+            --radius: 12px;
+            --radius-lg: 20px;
+            --transition: 0.3s ease;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(253, 251, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .header.scrolled {
+            box-shadow: 0 2px 20px var(--shadow);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 20px;
+        }
+
+        .logo-text {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+
+        .logo-text small {
+            display: block;
+            font-family: 'Playfair Display', serif;
+            font-size: 0.65rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--accent);
+            letter-spacing: 2px;
+        }
+
+        /* Navigation */
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav a {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-light);
+            padding: 8px 14px;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+
+        .nav a:hover {
+            color: var(--primary);
+            background: var(--bg-section);
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light)) !important;
+            color: var(--white) !important;
+            font-weight: 600 !important;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px var(--shadow-lg);
+        }
+
+        /* Mobile menu */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--primary);
+            margin: 5px 0;
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            padding: 140px 20px 80px;
+            background: linear-gradient(160deg, var(--bg-warm) 0%, #F0E8FA 50%, #FFF8E8 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(201, 168, 76, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(107, 63, 160, 0.06) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            line-height: 1.4;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+        }
+
+        .hero-content h1 span {
+            color: var(--accent);
+        }
+
+        .hero-subtitle {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: var(--accent-dark);
+            font-size: 0.95rem;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            margin-bottom: 30px;
+            line-height: 2;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .hero-badge {
+            background: var(--white);
+            border: 1px solid var(--border);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--primary);
+            box-shadow: 0 2px 8px var(--shadow);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: var(--transition);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: var(--white);
+            box-shadow: 0 4px 20px var(--shadow-lg);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px var(--shadow-lg);
+        }
+
+        .btn-outline {
+            background: var(--white);
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            color: var(--white);
+            box-shadow: 0 4px 20px rgba(201, 168, 76, 0.3);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(201, 168, 76, 0.4);
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            border-radius: var(--radius-lg);
+            box-shadow: 0 20px 60px var(--shadow-lg);
+        }
+
+        .hero-image .float-badge {
+            position: absolute;
+            bottom: -15px;
+            left: -15px;
+            background: var(--white);
+            padding: 14px 20px;
+            border-radius: var(--radius);
+            box-shadow: 0 8px 30px var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .float-badge .icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .float-badge .text {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .float-badge .text strong {
+            display: block;
+            font-size: 1rem;
+            color: var(--text);
+        }
+
+        /* ===== SECTIONS ===== */
+        .section {
+            padding: 80px 20px;
+        }
+
+        .section-alt {
+            background: var(--bg-section);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title .en {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: var(--accent);
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .section-title h2 {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .title-line {
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-light));
+            margin: 14px auto 0;
+            border-radius: 2px;
+        }
+
+        /* ===== FEATURES ===== */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 36px 28px;
+            text-align: center;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px var(--shadow);
+        }
+
+        .feature-card:hover::before {
+            opacity: 1;
+        }
+
+        .feature-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--bg-section), #F0E8FA);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+            font-size: 28px;
+        }
+
+        .feature-card h3 {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 1.1rem;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            font-size: 0.88rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* ===== LESSONS ===== */
+        .lessons-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .lesson-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .lesson-card:hover {
+            box-shadow: 0 8px 30px var(--shadow);
+        }
+
+        .lesson-card-header {
+            padding: 24px 28px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .lesson-card-header .icon {
+            font-size: 28px;
+        }
+
+        .lesson-card-header h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .lesson-card-header .age {
+            margin-left: auto;
+            background: rgba(255,255,255,0.2);
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+        }
+
+        .lesson-card-body {
+            padding: 24px 28px;
+        }
+
+        .lesson-card-body p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 14px;
+            line-height: 1.8;
+        }
+
+        .lesson-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .lesson-tag {
+            background: var(--bg-section);
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        /* ===== INSTRUCTOR ===== */
+        .instructor-section {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .instructor-card {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 40px;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            padding: 36px;
+            margin-bottom: 24px;
+        }
+
+        .instructor-img {
+            width: 280px;
+            height: 320px;
+            border-radius: var(--radius);
+            object-fit: cover;
+            box-shadow: 0 8px 24px var(--shadow);
+        }
+
+        .instructor-info h3 {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 1.3rem;
+            color: var(--primary-dark);
+            margin-bottom: 4px;
+        }
+
+        .instructor-role {
+            color: var(--accent-dark);
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 14px;
+        }
+
+        .instructor-info p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.9;
+            margin-bottom: 14px;
+        }
+
+        .instructor-achievements {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .instructor-achievements li {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            padding: 4px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .instructor-achievements li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 30px;
+            border: 1px solid var(--border);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '\201C';
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            color: var(--accent-light);
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            line-height: 1;
+            opacity: 0.5;
+        }
+
+        .testimonial-card p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.9;
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .testimonial-avatar {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary-light), var(--accent));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 16px;
+        }
+
+        .testimonial-name {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .testimonial-detail {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .stars {
+            color: var(--accent);
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        /* ===== CTA ===== */
+        .cta-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+            text-align: center;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(201, 168, 76, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .cta-section h2 {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 2rem;
+            margin-bottom: 14px;
+            position: relative;
+        }
+
+        .cta-section p {
+            font-size: 1.05rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .btn-white {
+            background: var(--white);
+            color: var(--primary);
+            padding: 16px 36px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .btn-white:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+        }
+
+        .btn-gold-outline {
+            background: transparent;
+            color: var(--accent-light);
+            border: 2px solid var(--accent-light);
+            padding: 14px 34px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .btn-gold-outline:hover {
+            background: var(--accent);
+            color: var(--white);
+            border-color: var(--accent);
+        }
+
+        /* ===== INFO ===== */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .info-table th,
+        .info-table td {
+            padding: 14px 16px;
+            font-size: 0.9rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .info-table th {
+            width: 120px;
+            color: var(--primary);
+            font-weight: 600;
+            background: var(--bg-section);
+            border-radius: 6px 0 0 6px;
+        }
+
+        .info-table td {
+            color: var(--text-light);
+        }
+
+        .map-container {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 8px 30px var(--shadow);
+            height: 100%;
+            min-height: 300px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 300px;
+            border: none;
+        }
+
+        /* ===== DEMO NOTICE ===== */
+        .demo-notice {
+            background: linear-gradient(135deg, #FFF8E1, #FFF3CD);
+            border: 2px solid var(--accent);
+            border-radius: var(--radius);
+            padding: 24px 30px;
+            max-width: 800px;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .demo-notice h3 {
+            color: var(--accent-dark);
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+
+        .demo-notice p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--primary-dark);
+            color: rgba(255,255,255,0.8);
+            padding: 50px 20px 24px;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-brand h3 {
+            font-family: 'Noto Serif JP', serif;
+            color: var(--white);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .footer-brand p {
+            font-size: 0.85rem;
+            line-height: 1.8;
+            opacity: 0.8;
+        }
+
+        .footer h4 {
+            color: var(--accent-light);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 14px;
+            letter-spacing: 1px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links a {
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--accent-light);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.8rem;
+            opacity: 0.6;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 30px var(--shadow);
+                border-bottom: 2px solid var(--border);
+            }
+
+            .nav.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero-inner {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-badges {
+                justify-content: center;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                max-width: 480px;
+            }
+
+            .lessons-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .instructor-card {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .instructor-img {
+                width: 200px;
+                height: 240px;
+                margin: 0 auto;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                max-width: 480px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .section-title h2 {
+                font-size: 1.5rem;
+            }
+
+            .cta-section h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 120px 16px 60px;
+            }
+
+            .hero-content h1 {
+                font-size: 1.5rem;
+            }
+
+            .section {
+                padding: 60px 16px;
+            }
+
+            .btn {
+                padding: 12px 24px;
+                font-size: 0.9rem;
+            }
+
+            .instructor-card {
+                padding: 24px;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <div class="logo-icon">&#9835;</div>
+                <div class="logo-text">
+                    響の森
+                    <small>Hibiki no Mori</small>
+                </div>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="メニュー">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav" id="navMenu">
+                <a href="#features">特徴</a>
+                <a href="#lessons">レッスン</a>
+                <a href="#instructors">講師紹介</a>
+                <a href="#testimonials">生徒の声</a>
+                <a href="#info">教室概要</a>
+                <a href="#cta" class="nav-cta">体験レッスン</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-content">
+                <div class="hero-subtitle">Piano School Sapporo</div>
+                <h1>音楽で育む<span>豊かな心</span>と<span>無限の可能性</span></h1>
+                <p>2歳の知育プレピアノから大人のレッスンまで。<br>一人ひとりに寄り添うオーダーメイドレッスンで、<br>お子さまの「楽しい！」を応援します。</p>
+                <div class="hero-badges">
+                    <span class="hero-badge">&#127932; 2歳から対応</span>
+                    <span class="hero-badge">&#127941; コンクール実績多数</span>
+                    <span class="hero-badge">&#128218; 育脳レッスン認定教室</span>
+                    <span class="hero-badge">&#127911; 2台ピアノ完備</span>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#cta" class="btn btn-primary">&#9742; 体験レッスンに申し込む</a>
+                    <a href="#lessons" class="btn btn-outline">レッスン内容を見る</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://crayonimg.e-shops.jp/cms-dimg/1024045/784404/850_522.jpg" alt="響の森ピアノ教室の様子">
+                <div class="float-badge">
+                    <div class="icon">&#127942;</div>
+                    <div class="text">
+                        全国大会実績あり
+                        <strong>信頼の指導力</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section" id="features">
+        <div class="container">
+            <div class="section-title fade-in">
+                <span class="en">Features</span>
+                <h2>響の森が選ばれる理由</h2>
+                <p>一人ひとりの「楽しい」を大切に、確かな実力を育てます</p>
+                <div class="title-line"></div>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">&#127891;</div>
+                    <h3>オーダーメイドレッスン</h3>
+                    <p>お一人ひとりの目的やペースに合わせたきめ細やかな個人レッスン。幼児から大人まで、それぞれに最適なカリキュラムをご用意します。</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">&#129504;</div>
+                    <h3>育脳ピアノメソッド</h3>
+                    <p>松田知育ピアノメソッドを採用。モンテッソーリ教育やリトミックも取り入れ、ワーキングメモリー・集中力・認知機能を総合的に発達させます。</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">&#127942;</div>
+                    <h3>コンクール指導実績</h3>
+                    <p>全国大会出場者を輩出するハイレベルな指導力。コンクール挑戦から音大受験まで、目標達成を全力でサポートします。</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">&#127929;</div>
+                    <h3>2台ピアノ完備</h3>
+                    <p>レッスン室には2台のピアノを設置。ミニコンサートも開催でき、豊かな音楽体験を提供します。</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">&#128104;&#8205;&#127891;</div>
+                    <h3>ベテラン講師陣</h3>
+                    <p>全国コンクール入賞歴や海外演奏経験を持つ講師が在籍。確かな技術と温かい指導で、着実な上達をお約束します。</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">&#128187;</div>
+                    <h3>オンラインレッスン対応</h3>
+                    <p>LINE・Zoom・FaceTimeによるオンラインレッスンにも対応。ご自宅にいながら質の高いレッスンを受けられます。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LESSONS -->
+    <section class="section section-alt" id="lessons">
+        <div class="container">
+            <div class="section-title fade-in">
+                <span class="en">Lessons</span>
+                <h2>レッスン内容</h2>
+                <p>年齢や目的に合わせた多彩なコースをご用意しています</p>
+                <div class="title-line"></div>
+            </div>
+            <div class="lessons-grid">
+                <div class="lesson-card fade-in">
+                    <div class="lesson-card-header">
+                        <span class="icon">&#127880;</span>
+                        <h3>知育プレピアノコース</h3>
+                        <span class="age">2歳〜</span>
+                    </div>
+                    <div class="lesson-card-body">
+                        <p>モンテッソーリの知育要素、指先トレーニング、リトミック、音感教育を総合的に行い、自然に音楽の素地を育てます。</p>
+                        <div class="lesson-tags">
+                            <span class="lesson-tag">知育モンテッソーリ</span>
+                            <span class="lesson-tag">リトミック</span>
+                            <span class="lesson-tag">音感教育</span>
+                            <span class="lesson-tag">育脳</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lesson-card fade-in">
+                    <div class="lesson-card-header">
+                        <span class="icon">&#127932;</span>
+                        <h3>こどもピアノコース</h3>
+                        <span class="age">3歳〜</span>
+                    </div>
+                    <div class="lesson-card-body">
+                        <p>絶対音感トレーニング、ソルフェージュ、譜読みなど幅広い音楽力を育成。楽しみながら確かな実力をつけていきます。</p>
+                        <div class="lesson-tags">
+                            <span class="lesson-tag">絶対音感</span>
+                            <span class="lesson-tag">ソルフェージュ</span>
+                            <span class="lesson-tag">譜読み</span>
+                            <span class="lesson-tag">個人レッスン</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lesson-card fade-in">
+                    <div class="lesson-card-header" style="background: linear-gradient(135deg, var(--accent-dark), var(--accent));">
+                        <span class="icon">&#127942;</span>
+                        <h3>コンクール特別コース</h3>
+                        <span class="age">全年齢</span>
+                    </div>
+                    <div class="lesson-card-body">
+                        <p>コンクールへの挑戦やステップアップを目指す方に。全国大会出場実績のある講師が、高いレベルの演奏を引き出します。</p>
+                        <div class="lesson-tags">
+                            <span class="lesson-tag">コンクール対策</span>
+                            <span class="lesson-tag">表現力強化</span>
+                            <span class="lesson-tag">全国大会実績</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lesson-card fade-in">
+                    <div class="lesson-card-header" style="background: linear-gradient(135deg, #5A4070, #8B6FA0);">
+                        <span class="icon">&#127925;</span>
+                        <h3>大人・シニアピアノコース</h3>
+                        <span class="age">大人</span>
+                    </div>
+                    <div class="lesson-card-body">
+                        <p>初心者から再開組まで歓迎。お子さんの手が離れた方、脳トレとしてピアノを始めたい方に。保育士試験対策にも対応。</p>
+                        <div class="lesson-tags">
+                            <span class="lesson-tag">初心者歓迎</span>
+                            <span class="lesson-tag">脳トレ</span>
+                            <span class="lesson-tag">保育士試験</span>
+                            <span class="lesson-tag">音大受験</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INSTRUCTORS -->
+    <section class="section" id="instructors">
+        <div class="container">
+            <div class="section-title fade-in">
+                <span class="en">Instructors</span>
+                <h2>講師紹介</h2>
+                <p>確かな実力と温かい人柄で、生徒さんに寄り添います</p>
+                <div class="title-line"></div>
+            </div>
+            <div class="instructor-section">
+                <div class="instructor-card fade-in">
+                    <img src="https://crayonimg.e-shops.jp/cms-dimg/1024045/153956/478_595.jpg" alt="講師" class="instructor-img">
+                    <div class="instructor-info">
+                        <h3>主宰講師</h3>
+                        <div class="instructor-role">ピアノ指導・教室主宰 / 月・火・木・土曜日担当</div>
+                        <p>2歳からの知育プレピアノから大人のレッスンまで幅広く担当。全国大会出場を目指す生徒さんの指導経験も豊富で、一人ひとりに合わせた丁寧なレッスンが好評です。</p>
+                        <p>育脳ピアノレッスン認定教室として、ピアノを通じた総合的な人間力の育成を理念に掲げています。</p>
+                    </div>
+                </div>
+                <div class="instructor-card fade-in">
+                    <img src="https://crayonimg.e-shops.jp/cms-dimg/1024045/476999/850_637.jpg" alt="講師" class="instructor-img">
+                    <div class="instructor-info">
+                        <h3>浅野 美結樹 先生</h3>
+                        <div class="instructor-role">ピアノ指導 / 水・金曜日担当（3歳〜大人）</div>
+                        <p>北海道教育大学札幌校芸術文化課程ピアノ科卒業。ヤマハシステム講師を経て、長年にわたりピアノ科個人講師として活躍。コンクール指導・グレード指導のベテランです。</p>
+                        <ul class="instructor-achievements">
+                            <li>ヤマハ ピアノ指導者・演奏グレード3級</li>
+                            <li>ヤマハグレード試験官・コンサートグレードアドバイザー</li>
+                            <li>札幌市民芸術祭新人音楽会出演</li>
+                            <li>全日本ピアノ教育連盟会員</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section section-alt" id="testimonials">
+        <div class="container">
+            <div class="section-title fade-in">
+                <span class="en">Voices</span>
+                <h2>生徒さん・保護者の方の声</h2>
+                <p>響の森に通って良かったというお声をいただいています</p>
+                <div class="title-line"></div>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p>2歳から通い始めて3年。知育レッスンのおかげで集中力がつき、幼稚園でも先生に褒められるようになりました。ピアノの時間が毎週の楽しみです。</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">M</div>
+                        <div>
+                            <div class="testimonial-name">M.S様（保護者）</div>
+                            <div class="testimonial-detail">知育プレピアノコース / 5歳</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p>先生の丁寧な指導のおかげで、コンクールで入賞することができました。子どもの「もっと弾きたい！」という気持ちを引き出してくださいます。</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">K</div>
+                        <div>
+                            <div class="testimonial-name">K.T様（保護者）</div>
+                            <div class="testimonial-detail">こどもピアノコース / 小学3年</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p>子育てが一段落して始めたピアノ。大人になってからでも上達を実感できて嬉しいです。先生が優しく教えてくださるので、毎回リフレッシュになっています。</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">Y</div>
+                        <div>
+                            <div class="testimonial-name">Y.N様</div>
+                            <div class="testimonial-detail">大人ピアノコース / 40代</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" id="cta">
+        <h2>まずは体験レッスンから始めませんか？</h2>
+        <p>お子さまの可能性を広げる第一歩。お気軽にお問い合わせください。</p>
+        <div class="cta-buttons">
+            <a href="tel:09048786300" class="btn btn-white">&#9742; 090-4878-6300</a>
+            <a href="https://www.pia-oto-no-mori.com/" class="btn btn-gold-outline">&#128172; 公式LINEで問い合わせ</a>
+        </div>
+        <p style="margin-top: 16px; font-size: 0.85rem; opacity: 0.7;">※レッスン中はお電話に出られないことがございます。LINEが便利です。</p>
+    </section>
+
+    <!-- INFO -->
+    <section class="section" id="info">
+        <div class="container">
+            <div class="section-title fade-in">
+                <span class="en">About</span>
+                <h2>教室概要</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="info-grid">
+                <div class="fade-in">
+                    <table class="info-table">
+                        <tr><th>教室名</th><td>札幌ピアノ教室【響の森】</td></tr>
+                        <tr><th>所在地</th><td>札幌市中央区北5条西20丁目3</td></tr>
+                        <tr><th>教室</th><td>中央区北円山教室 / 二十四軒教室</td></tr>
+                        <tr><th>電話</th><td><a href="tel:09048786300" style="color:var(--primary)">090-4878-6300</a></td></tr>
+                        <tr><th>お問い合わせ</th><td>公式LINE（24時間受付）</td></tr>
+                        <tr><th>対象</th><td>2歳〜大人</td></tr>
+                        <tr><th>レッスン日</th><td>月〜土曜日</td></tr>
+                        <tr><th>駐車場</th><td>あり</td></tr>
+                        <tr><th>対応エリア</th><td>宮の森・桑園・西28丁目・円山・北円山・山の手・二十四軒・琴似 ほか</td></tr>
+                    </table>
+                </div>
+                <div class="map-container fade-in">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2914.5!2d141.327!3d43.067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z5pyt5bmM5biC5Lit5aSu5Yy65YyX77yV5p2h6KW_77yS77yQ5LiB55uu77yT!5e0!3m2!1sja!2sjp!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEMO NOTICE -->
+    <div class="container">
+        <div class="demo-notice">
+            <h3>&#9888; こちらはデモサイトです</h3>
+            <p>本ページは札幌ピアノ教室【響の森】様へのご提案用デモサイトです。<br>実際の公開サイトではございません。掲載内容は現サイトの情報を基に構成しています。<br>制作：OSHINOBI Co. &#047; info@oshinobi-co.com</p>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <h3>&#9835; 響の森</h3>
+                <p>札幌市中央区・西区のピアノ教室。<br>2歳から大人まで、一人ひとりの「楽しい！」を<br>応援するオーダーメイドレッスン。</p>
+            </div>
+            <div>
+                <h4>MENU</h4>
+                <ul class="footer-links">
+                    <li><a href="#features">教室の特徴</a></li>
+                    <li><a href="#lessons">レッスン内容</a></li>
+                    <li><a href="#instructors">講師紹介</a></li>
+                    <li><a href="#testimonials">生徒の声</a></li>
+                    <li><a href="#info">教室概要</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>CONTACT</h4>
+                <ul class="footer-links">
+                    <li>&#128205; 札幌市中央区北5条西20丁目3</li>
+                    <li>&#9742; <a href="tel:09048786300">090-4878-6300</a></li>
+                    <li>&#128172; 公式LINEで24時間受付</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 札幌ピアノ教室【響の森】 All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu on link click
+        document.querySelectorAll('.nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Fade-in on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

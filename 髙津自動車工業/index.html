@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>髙津自動車工業株式会社 | 札幌市南区の車検・板金塗装・整備</title>
+<meta name="description" content="札幌市南区で60年以上の実績。車検・板金塗装・一般整備・損害保険まで、クルマのことなら髙津自動車工業にお任せください。">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #1a2d5a;
+  --primary-light: #2a4480;
+  --primary-dark: #0f1b3a;
+  --accent: #e8700a;
+  --accent-light: #ff8c2a;
+  --accent-dark: #c45d00;
+  --white: #ffffff;
+  --gray-50: #f8f9fa;
+  --gray-100: #f0f1f3;
+  --gray-200: #e2e4e8;
+  --gray-300: #c8cbd2;
+  --gray-600: #6b7280;
+  --gray-700: #4a4f5a;
+  --gray-800: #2d3139;
+  --text: #1a1c20;
+  --shadow: 0 4px 24px rgba(26,45,90,0.10);
+  --shadow-lg: 0 8px 40px rgba(26,45,90,0.15);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Noto Sans JP', sans-serif; color: var(--text); line-height: 1.8; }
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+/* ===== HEADER ===== */
+.header {
+  position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+  background: rgba(26,45,90,0.97); backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+}
+.header-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  max-width: 1100px; margin: 0 auto; padding: 0 20px; height: 70px;
+}
+.logo { display: flex; align-items: center; gap: 12px; }
+.logo img { height: 44px; width: auto; }
+.logo-text { color: var(--white); font-weight: 700; font-size: 1.1rem; line-height: 1.3; }
+.logo-text small { display: block; font-size: 0.7rem; font-weight: 400; opacity: 0.8; }
+.header-tel { color: var(--accent-light); font-size: 1.2rem; font-weight: 700; }
+.header-tel span { font-size: 0.75rem; color: var(--gray-300); display: block; font-weight: 400; }
+
+/* NAV */
+.nav { background: var(--primary-dark); }
+.nav-list {
+  display: flex; justify-content: center; list-style: none;
+  max-width: 1100px; margin: 0 auto;
+}
+.nav-list a {
+  display: block; padding: 14px 22px; color: var(--white); font-size: 0.88rem;
+  font-weight: 500; transition: var(--transition); position: relative;
+}
+.nav-list a::after {
+  content: ''; position: absolute; bottom: 0; left: 50%; width: 0; height: 3px;
+  background: var(--accent); transition: var(--transition); transform: translateX(-50%);
+}
+.nav-list a:hover { color: var(--accent-light); }
+.nav-list a:hover::after { width: 60%; }
+
+/* HAMBURGER */
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.hamburger span {
+  display: block; width: 26px; height: 3px; background: var(--white);
+  margin: 5px 0; border-radius: 2px; transition: var(--transition);
+}
+
+/* ===== HERO ===== */
+.hero {
+  margin-top: 70px; position: relative; overflow: hidden;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  min-height: 520px; display: flex; align-items: center;
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  background: url('https://www.takatsu-auto.co.jp/library/6170bd9a943b8dfb12b7e73e/61e4fbbc5338eac41b801135.png') center/cover no-repeat;
+  opacity: 0.2;
+}
+.hero-content {
+  position: relative; z-index: 2; text-align: center; width: 100%;
+  padding: 80px 20px;
+}
+.hero-badge {
+  display: inline-block; background: var(--accent); color: var(--white);
+  padding: 6px 20px; border-radius: 30px; font-size: 0.85rem; font-weight: 700;
+  margin-bottom: 20px; letter-spacing: 0.05em;
+}
+.hero h1 {
+  color: var(--white); font-size: 2.6rem; font-weight: 900;
+  line-height: 1.4; margin-bottom: 16px;
+}
+.hero h1 .accent { color: var(--accent-light); }
+.hero-sub { color: var(--gray-200); font-size: 1.1rem; margin-bottom: 36px; }
+.hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 16px 36px; border-radius: 50px; font-size: 1rem;
+  font-weight: 700; transition: var(--transition); border: none; cursor: pointer;
+}
+.btn-primary {
+  background: var(--accent); color: var(--white);
+  box-shadow: 0 4px 16px rgba(232,112,10,0.4);
+}
+.btn-primary:hover { background: var(--accent-light); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(232,112,10,0.5); }
+.btn-outline {
+  background: transparent; color: var(--white);
+  border: 2px solid rgba(255,255,255,0.5);
+}
+.btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
+
+/* ===== SECTION COMMON ===== */
+section { padding: 80px 0; }
+.section-header { text-align: center; margin-bottom: 50px; }
+.section-label {
+  display: inline-block; color: var(--accent); font-size: 0.85rem;
+  font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.section-title {
+  font-size: 2rem; font-weight: 900; color: var(--primary);
+  line-height: 1.4;
+}
+.section-title::after {
+  content: ''; display: block; width: 50px; height: 4px;
+  background: var(--accent); margin: 16px auto 0; border-radius: 2px;
+}
+
+/* ===== STRENGTHS ===== */
+.strengths { background: var(--gray-50); }
+.strengths-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.strength-card {
+  background: var(--white); border-radius: var(--radius); padding: 36px 28px;
+  text-align: center; box-shadow: var(--shadow); transition: var(--transition);
+  position: relative; overflow: hidden;
+}
+.strength-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+}
+.strength-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.strength-icon {
+  width: 64px; height: 64px; margin: 0 auto 20px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 1.8rem; color: var(--white);
+}
+.strength-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 12px; color: var(--primary); }
+.strength-card p { font-size: 0.92rem; color: var(--gray-600); }
+
+/* ===== SERVICES ===== */
+.services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+.service-card {
+  background: var(--white); border-radius: var(--radius); overflow: hidden;
+  box-shadow: var(--shadow); transition: var(--transition);
+}
+.service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.service-img {
+  height: 200px; display: flex; align-items: center; justify-content: center;
+  font-size: 3.5rem; color: var(--white); position: relative;
+}
+.service-img.shaken { background: linear-gradient(135deg, #1a2d5a, #2a4480); }
+.service-img.bankin { background: linear-gradient(135deg, #c45d00, #e8700a); }
+.service-img.seibi { background: linear-gradient(135deg, #1b6b3a, #27a05a); }
+.service-img.hoken { background: linear-gradient(135deg, #5a2d8a, #7a44b0); }
+.service-img.tire { background: linear-gradient(135deg, #4a4f5a, #6b7280); }
+.service-img.goods { background: linear-gradient(135deg, #8a5a2d, #b07a44); }
+.service-body { padding: 28px; }
+.service-body h3 { font-size: 1.2rem; font-weight: 700; color: var(--primary); margin-bottom: 10px; }
+.service-body p { font-size: 0.92rem; color: var(--gray-600); margin-bottom: 16px; }
+.service-tag {
+  display: inline-block; background: var(--gray-100); color: var(--primary);
+  padding: 4px 12px; border-radius: 20px; font-size: 0.78rem; font-weight: 500;
+}
+
+/* ===== QUALIFICATIONS ===== */
+.qualifications { background: var(--primary); color: var(--white); }
+.qualifications .section-title { color: var(--white); }
+.qualifications .section-title::after { background: var(--accent-light); }
+.qual-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.qual-item {
+  text-align: center; padding: 28px 20px;
+  background: rgba(255,255,255,0.08); border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.qual-icon { font-size: 2.4rem; margin-bottom: 12px; }
+.qual-item h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 8px; }
+.qual-item p { font-size: 0.82rem; opacity: 0.8; }
+
+/* ===== VOICE ===== */
+.voice { background: var(--gray-50); }
+.voice-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.voice-card {
+  background: var(--white); border-radius: var(--radius); padding: 32px 28px;
+  box-shadow: var(--shadow); position: relative;
+}
+.voice-card::before {
+  content: '\201C'; position: absolute; top: 12px; left: 20px;
+  font-size: 4rem; color: var(--accent); opacity: 0.15; font-family: serif; line-height: 1;
+}
+.voice-stars { color: var(--accent); font-size: 1rem; margin-bottom: 12px; letter-spacing: 2px; }
+.voice-card p { font-size: 0.92rem; color: var(--gray-700); margin-bottom: 16px; }
+.voice-author { font-size: 0.82rem; color: var(--gray-600); font-weight: 500; }
+
+/* ===== CTA ===== */
+.cta {
+  background: linear-gradient(135deg, var(--accent-dark), var(--accent));
+  text-align: center; color: var(--white); padding: 70px 20px;
+}
+.cta h2 { font-size: 2rem; font-weight: 900; margin-bottom: 16px; }
+.cta p { font-size: 1.05rem; margin-bottom: 30px; opacity: 0.95; }
+.cta-tel { font-size: 2.2rem; font-weight: 900; margin-bottom: 8px; letter-spacing: 0.03em; }
+.cta-tel a { color: var(--white); }
+.cta-note { font-size: 0.85rem; opacity: 0.85; }
+.btn-white {
+  background: var(--white); color: var(--accent); font-weight: 700;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  margin-top: 24px;
+}
+.btn-white:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.2); }
+
+/* ===== COMPANY ===== */
+.company-content { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+.company-img {
+  border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow);
+}
+.company-img img { width: 100%; height: 300px; object-fit: cover; }
+.company-table { width: 100%; }
+.company-table tr { border-bottom: 1px solid var(--gray-200); }
+.company-table th {
+  padding: 14px 16px; font-size: 0.88rem; font-weight: 700;
+  color: var(--primary); text-align: left; white-space: nowrap; width: 120px;
+  vertical-align: top;
+}
+.company-table td { padding: 14px 16px; font-size: 0.9rem; color: var(--gray-700); }
+
+/* ===== MAP ===== */
+.map-section { padding: 0; }
+.map-section iframe { width: 100%; height: 350px; border: 0; display: block; }
+
+/* ===== DEMO BANNER ===== */
+.demo-banner {
+  background: linear-gradient(90deg, #fff3e0, #ffe0b2); text-align: center;
+  padding: 28px 20px; border-top: 3px solid var(--accent);
+}
+.demo-banner p { font-size: 0.95rem; color: var(--gray-700); }
+.demo-banner strong { color: var(--accent-dark); }
+
+/* ===== FOOTER ===== */
+.footer { background: var(--primary-dark); color: var(--gray-300); padding: 50px 0 30px; }
+.footer-grid {
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 40px;
+  margin-bottom: 40px;
+}
+.footer h4 { color: var(--white); font-size: 1rem; margin-bottom: 16px; }
+.footer-info p { font-size: 0.88rem; margin-bottom: 6px; }
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 8px; }
+.footer-links a { font-size: 0.88rem; transition: var(--transition); }
+.footer-links a:hover { color: var(--accent-light); }
+.footer-bottom {
+  text-align: center; padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.82rem; opacity: 0.7;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .nav-list { display: none; }
+  .nav-list.open { display: flex; flex-direction: column; padding: 10px 0; }
+  .nav-list a { padding: 12px 20px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .hamburger { display: block; }
+  .hero h1 { font-size: 1.8rem; }
+  .hero-content { padding: 60px 20px; }
+  .strengths-grid, .qual-grid, .voice-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+  .company-content { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+  .header-tel { display: none; }
+}
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.5rem; }
+  section { padding: 60px 0; }
+  .section-title { font-size: 1.6rem; }
+  .btn { padding: 14px 28px; font-size: 0.92rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <img src="https://www.takatsu-auto.co.jp/library/6170bd9a943b8dfb12b7e73e/61944cc35464a55356fd043d.png" alt="髙津自動車工業 ロゴ">
+      <div class="logo-text">
+        髙津自動車工業株式会社
+        <small>札幌市南区の車検・板金・整備</small>
+      </div>
+    </a>
+    <div class="header-tel">
+      <span>お電話でのご予約</span>
+      <a href="tel:011-581-0618">011-581-0618</a>
+    </div>
+    <button class="hamburger" onclick="document.querySelector('.nav-list').classList.toggle('open')" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav class="nav" style="margin-top:70px;">
+  <ul class="nav-list">
+    <li><a href="#top">ホーム</a></li>
+    <li><a href="#services">サービス</a></li>
+    <li><a href="#strengths">当社の強み</a></li>
+    <li><a href="#voice">お客様の声</a></li>
+    <li><a href="#company">会社概要</a></li>
+    <li><a href="#cta">ご予約・お問い合わせ</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-content">
+    <span class="hero-badge">創業60年以上の信頼と実績</span>
+    <h1>クルマと私の物語<br><span class="accent">ずっと続く未来の安心</span></h1>
+    <p class="hero-sub">札幌市南区で、車検・板金塗装・整備・保険まで<br>あなたのカーライフをトータルサポートします</p>
+    <div class="hero-buttons">
+      <a href="#cta" class="btn btn-primary">&#9742; 今すぐ予約する</a>
+      <a href="#services" class="btn btn-outline">サービスを見る &#8595;</a>
+    </div>
+  </div>
+</section>
+
+<!-- STRENGTHS -->
+<section class="strengths" id="strengths">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Our Strengths</span>
+      <h2 class="section-title">選ばれる3つの理由</h2>
+    </div>
+    <div class="strengths-grid">
+      <div class="strength-card">
+        <div class="strength-icon">&#128736;</div>
+        <h3>60年以上の確かな技術</h3>
+        <p>1960年の創業以来、北海道運輸局指定工場として最高水準の整備技術を磨き続けています。国家資格保有の整備士がお客様の愛車を丁寧にケアします。</p>
+      </div>
+      <div class="strength-card">
+        <div class="strength-icon">&#128176;</div>
+        <h3>ちょっぴりお得な価格設定</h3>
+        <p>品質を保ちながらリーズナブルな価格を実現。「近くて頼れる街の自動車屋さん」として、地域のお客様に寄り添ったサービスを提供します。</p>
+      </div>
+      <div class="strength-card">
+        <div class="strength-icon">&#128663;</div>
+        <h3>ワンストップ対応</h3>
+        <p>車検・板金塗装・一般整備・損害保険まで一か所で完結。お客様の手間を最小限に、カーライフに関するあらゆるご相談にお応えします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Services</span>
+      <h2 class="section-title">サービス一覧</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-img shaken">&#128269;</div>
+        <div class="service-body">
+          <h3>車検（法定24ヶ月点検）</h3>
+          <p>運輸局指定工場だから、検査から整備まで自社で完結。スピーディーかつ確実な車検をリーズナブルにご提供。法定点検もお任せください。</p>
+          <span class="service-tag">指定工場</span>
+          <span class="service-tag">最短1日</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-img bankin">&#128296;</div>
+        <div class="service-body">
+          <h3>板金塗装・デントリペア</h3>
+          <p>小さなヘコミはデントリペア、気になるキズはクイック塗装でお直し。最新塗装機器を導入し、仕上がりの美しさに自信があります。</p>
+          <span class="service-tag">最新機器導入</span>
+          <span class="service-tag">優良車体整備工場</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-img seibi">&#9881;</div>
+        <div class="service-body">
+          <h3>一般整備・メンテナンス</h3>
+          <p>オイル交換からエンジン不調まで、日常のメンテナンスを丁寧に対応。特定整備工場の認証を持ち、先進安全装置の整備にも対応しています。</p>
+          <span class="service-tag">特定整備対応</span>
+          <span class="service-tag">予防整備</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-img hoken">&#128203;</div>
+        <div class="service-body">
+          <h3>損害保険</h3>
+          <p>自動車保険のご相談もお気軽にどうぞ。万が一の事故時も、修理から保険手続きまでワンストップでサポートいたします。</p>
+          <span class="service-tag">保険部直通あり</span>
+          <span class="service-tag">事故対応</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-img tire">&#9898;</div>
+        <div class="service-body">
+          <h3>タイヤ交換</h3>
+          <p>春・冬のシーズン交換はお早めにご予約ください。タイヤの状態チェック、保管のご相談にも対応しています。</p>
+          <span class="service-tag">シーズン対応</span>
+          <span class="service-tag">早期予約推奨</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-img goods">&#128722;</div>
+        <div class="service-body">
+          <h3>カーライフ用品販売</h3>
+          <p>ワイパー、バッテリー、エアコンガスなど、カーライフに必要な用品を取り揃えています。取り付けもお気軽にご依頼ください。</p>
+          <span class="service-tag">各種パーツ</span>
+          <span class="service-tag">取付対応</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUALIFICATIONS -->
+<section class="qualifications">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label" style="color:var(--accent-light);">Certifications</span>
+      <h2 class="section-title">公的認証・資格</h2>
+    </div>
+    <div class="qual-grid">
+      <div class="qual-item">
+        <div class="qual-icon">&#127941;</div>
+        <h4>指定民間車検場</h4>
+        <p>北海道運輸局長指定<br>第1-180号</p>
+      </div>
+      <div class="qual-item">
+        <div class="qual-icon">&#128736;</div>
+        <h4>特定整備工場</h4>
+        <p>北海道運輸局長認証<br>第1-716号</p>
+      </div>
+      <div class="qual-item">
+        <div class="qual-icon">&#11088;</div>
+        <h4>優良車体整備工場</h4>
+        <p>北海道運輸局長認定<br>第13-2号</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VOICE -->
+<section class="voice" id="voice">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Voice</span>
+      <h2 class="section-title">お客様の声</h2>
+    </div>
+    <div class="voice-grid">
+      <div class="voice-card">
+        <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>車検を初めてお願いしましたが、丁寧に説明してくれて安心できました。料金もディーラーより抑えられて大満足です。</p>
+        <div class="voice-author">札幌市南区 T.S.様（40代・男性）</div>
+      </div>
+      <div class="voice-card">
+        <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>バンパーのキズを直してもらいました。仕上がりが綺麗で、どこを直したかわからないくらい。また何かあればお願いしたいです。</p>
+        <div class="voice-author">札幌市中央区 M.K.様（30代・女性）</div>
+      </div>
+      <div class="voice-card">
+        <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>20年以上お世話になっています。スタッフの方がいつも親切で、家族全員の車をここでお願いしています。信頼できる工場です。</p>
+        <div class="voice-author">札幌市南区 Y.A.様（60代・男性）</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="cta">
+  <div class="container">
+    <h2>ご予約・お問い合わせ</h2>
+    <p>車検・整備・板金のご予約、お見積もりなど<br>お気軽にお電話ください</p>
+    <div class="cta-tel"><a href="tel:011-581-0618">&#9742; 011-581-0618</a></div>
+    <div class="cta-note">営業時間 9:00〜17:30（12:00〜13:00休憩）<br>定休日：日曜・祝日</div>
+    <div style="margin-top:12px; font-size:0.9rem;">保険部直通：<a href="tel:011-583-0055" style="color:var(--white); font-weight:700;">011-583-0055</a></div>
+  </div>
+</section>
+
+<!-- COMPANY -->
+<section id="company">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Company</span>
+      <h2 class="section-title">会社概要</h2>
+    </div>
+    <div class="company-content">
+      <div class="company-img">
+        <img src="https://www.takatsu-auto.co.jp/library/6170bd9a943b8dfb12b7e73e/61aeb14324c2868f3bf502b9.jpg" alt="髙津自動車工業 外観">
+      </div>
+      <table class="company-table">
+        <tr><th>社名</th><td>髙津自動車工業株式会社</td></tr>
+        <tr><th>代表取締役</th><td>髙津比呂志</td></tr>
+        <tr><th>創立</th><td>1960年4月</td></tr>
+        <tr><th>設立</th><td>1964年12月</td></tr>
+        <tr><th>資本金</th><td>1,200万円</td></tr>
+        <tr><th>所在地</th><td>〒005-0035<br>札幌市南区南35条西11丁目2-3</td></tr>
+        <tr><th>電話</th><td>011-581-0618（代表）<br>011-583-0055（保険部）</td></tr>
+        <tr><th>FAX</th><td>011-581-0652</td></tr>
+        <tr><th>営業時間</th><td>9:00〜17:30<br>（12:00〜13:00 休憩）</td></tr>
+        <tr><th>定休日</th><td>日曜・祝日・カレンダーによる月火曜<br>GW・盆休・年末年始</td></tr>
+        <tr><th>加盟団体</th><td>札幌地方自動車整備振興会<br>全国自動車保険整備工場協会（A.I.R）<br>札幌商工会議所</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="map-section">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2916.5!2d141.3475!3d43.0150!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b29b00000000%3A0x0!2z5pyt5bmM5biC5Y2X5Yy65Y2X77yT77yV5p2h6KW_77yR77yR5LiB55uu!5e0!3m2!1sja!2sjp!4v1600000000000" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+<!-- DEMO BANNER -->
+<div class="demo-banner">
+  <p><strong>&#9888; これはデモサイトです</strong> &#8212; 御忍ビジネスサービス（oshinobi-co.com）が作成したリニューアルイメージです。実際のサイトではありません。</p>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-info">
+        <h4>髙津自動車工業株式会社</h4>
+        <p>〒005-0035 札幌市南区南35条西11丁目2-3</p>
+        <p>TEL: 011-581-0618 ／ FAX: 011-581-0652</p>
+        <p>営業時間: 9:00〜17:30（日曜・祝日定休）</p>
+      </div>
+      <div>
+        <h4>サービス</h4>
+        <ul class="footer-links">
+          <li><a href="#services">車検・法定点検</a></li>
+          <li><a href="#services">板金塗装</a></li>
+          <li><a href="#services">一般整備</a></li>
+          <li><a href="#services">損害保険</a></li>
+          <li><a href="#services">タイヤ交換</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>ご案内</h4>
+        <ul class="footer-links">
+          <li><a href="#company">会社概要</a></li>
+          <li><a href="#cta">ご予約・お問い合わせ</a></li>
+          <li><a href="#">個人情報保護方針</a></li>
+          <li><a href="#">採用情報</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2024 髙津自動車工業株式会社 All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

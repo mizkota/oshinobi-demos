@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>社労士・行政書士 はまぐち総合法務事務所｜札幌駅徒歩2分</title>
+  <meta name="description" content="札幌駅徒歩2分。社会保険労務士×行政書士の2つの力で、採用定着・助成金・就業規則・ハラスメント対策・給与計算をワンストップサポート。ZOOM顧問で全国対応。">
+  <meta property="og:title" content="社労士・行政書士 はまぐち総合法務事務所｜札幌駅徒歩2分">
+  <meta property="og:description" content="社会保険労務士×行政書士の2つの力で、採用定着・助成金・就業規則・ハラスメント対策をワンストップサポート。">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1a3a5c;
+      --primary-light: #2c5f8a;
+      --accent: #c8a45c;
+      --accent-light: #e8d4a0;
+      --text: #2d2d2d;
+      --text-light: #666;
+      --bg: #fafaf8;
+      --white: #ffffff;
+      --section-bg: #f0ede6;
+      --border: #e0ddd6;
+      --gradient: linear-gradient(135deg, #1a3a5c 0%, #2c5f8a 100%);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.8;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: var(--white);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+    }
+
+    .header-top {
+      background: var(--primary);
+      color: white;
+      font-size: 0.8rem;
+      padding: 6px 0;
+      text-align: center;
+      letter-spacing: 0.05em;
+    }
+
+    .header-main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-sub {
+      font-size: 0.7rem;
+      color: var(--accent);
+      font-weight: 500;
+      letter-spacing: 0.15em;
+    }
+
+    .logo-main {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: 0.05em;
+    }
+
+    .header-contact {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .header-tel {
+      text-align: right;
+    }
+
+    .header-tel .number {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: 0.05em;
+    }
+
+    .header-tel .hours {
+      font-size: 0.7rem;
+      color: var(--text-light);
+    }
+
+    .btn-contact {
+      background: var(--accent);
+      color: white;
+      padding: 10px 24px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.85rem;
+      transition: all 0.3s;
+      letter-spacing: 0.05em;
+    }
+
+    .btn-contact:hover {
+      background: #b8943c;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(200,164,92,0.4);
+    }
+
+    /* ===== NAV ===== */
+    nav {
+      background: var(--primary);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      margin-top: 96px;
+    }
+
+    nav ul {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      list-style: none;
+      justify-content: center;
+    }
+
+    nav li a {
+      display: block;
+      color: rgba(255,255,255,0.9);
+      text-decoration: none;
+      padding: 12px 20px;
+      font-size: 0.82rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      transition: all 0.3s;
+      border-bottom: 2px solid transparent;
+    }
+
+    nav li a:hover {
+      color: white;
+      background: rgba(255,255,255,0.08);
+      border-bottom-color: var(--accent);
+    }
+
+    /* ===== HAMBURGER ===== */
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--primary);
+      margin: 5px 0;
+      transition: 0.3s;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      margin-top: 140px;
+      background: var(--gradient);
+      position: relative;
+      overflow: hidden;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800"><circle cx="400" cy="400" r="300" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/><circle cx="400" cy="400" r="200" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/><circle cx="400" cy="400" r="100" fill="none" stroke="rgba(255,255,255,0.02)" stroke-width="1"/></svg>') center/contain no-repeat;
+    }
+
+    .hero-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 40px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(200,164,92,0.2);
+      border: 1px solid var(--accent);
+      color: var(--accent-light);
+      padding: 6px 20px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-bottom: 24px;
+      letter-spacing: 0.1em;
+    }
+
+    .hero h1 {
+      font-family: 'Noto Serif JP', serif;
+      color: white;
+      font-size: 2.8rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: var(--accent-light);
+    }
+
+    .hero-sub {
+      color: rgba(255,255,255,0.85);
+      font-size: 1.05rem;
+      line-height: 1.9;
+      max-width: 600px;
+      margin-bottom: 36px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-hero-primary {
+      background: var(--accent);
+      color: white;
+      padding: 16px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.3s;
+      letter-spacing: 0.05em;
+    }
+
+    .btn-hero-primary:hover {
+      background: #b8943c;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(200,164,92,0.4);
+    }
+
+    .btn-hero-secondary {
+      background: transparent;
+      color: white;
+      padding: 16px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      border: 1px solid rgba(255,255,255,0.4);
+      transition: all 0.3s;
+    }
+
+    .btn-hero-secondary:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: white;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 50px;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .hero-stat {
+      text-align: center;
+    }
+
+    .hero-stat .num {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--accent-light);
+    }
+
+    .hero-stat .label {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.7);
+      margin-top: 4px;
+    }
+
+    /* ===== FEATURES ===== */
+    .features {
+      padding: 80px 24px;
+      background: var(--white);
+    }
+
+    .features-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .feature-card {
+      background: var(--bg);
+      border-radius: 16px;
+      padding: 40px 30px;
+      text-align: center;
+      transition: all 0.3s;
+      border: 1px solid var(--border);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+      border-color: var(--accent);
+    }
+
+    .feature-icon {
+      width: 64px;
+      height: 64px;
+      background: var(--gradient);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 1.8rem;
+      color: white;
+    }
+
+    .feature-icon svg {
+      width: 32px;
+      height: 32px;
+      fill: none;
+      stroke: white;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* ===== TESTIMONIALS ===== */
+    .testimonials {
+      padding: 80px 24px;
+      background: var(--section-bg);
+    }
+
+    .testimonials-grid {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .testimonial-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 30px;
+      border: 1px solid var(--border);
+      position: relative;
+    }
+
+    .testimonial-card::before {
+      content: '\201C';
+      font-family: 'Noto Serif JP', serif;
+      font-size: 4rem;
+      color: var(--accent);
+      opacity: 0.3;
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      line-height: 1;
+    }
+
+    .testimonial-card p {
+      font-size: 0.88rem;
+      color: var(--text);
+      line-height: 1.7;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonial-author {
+      font-size: 0.8rem;
+      color: var(--text-light);
+      border-top: 1px solid var(--border);
+      padding-top: 12px;
+    }
+
+    .testimonial-author strong {
+      color: var(--primary);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .feature-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .feature-card p {
+      font-size: 0.88rem;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    /* ===== SECTION COMMON ===== */
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title .en {
+      font-size: 0.75rem;
+      color: var(--accent);
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .section-title h2 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 2rem;
+      color: var(--primary);
+      margin-top: 8px;
+      font-weight: 700;
+    }
+
+    .section-title .line {
+      width: 40px;
+      height: 3px;
+      background: var(--accent);
+      margin: 16px auto 0;
+      border-radius: 2px;
+    }
+
+    /* ===== SERVICES ===== */
+    .services {
+      padding: 80px 24px;
+      background: var(--section-bg);
+    }
+
+    .services-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 30px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      transition: all 0.3s;
+      border: 1px solid var(--border);
+    }
+
+    .service-card:hover {
+      box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+      border-color: var(--accent);
+    }
+
+    .service-num {
+      width: 40px;
+      height: 40px;
+      background: var(--gradient);
+      border-radius: 10px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .service-info h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .service-info p {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* ===== ORIGINAL CONTENTS ===== */
+    .originals {
+      padding: 80px 24px;
+      background: var(--white);
+    }
+
+    .originals-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .original-card {
+      background: var(--bg);
+      border-radius: 12px;
+      padding: 30px;
+      border: 1px solid var(--border);
+      transition: all 0.3s;
+    }
+
+    .original-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+    }
+
+    .original-card .tag {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      font-size: 0.7rem;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .original-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .original-card .price {
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .original-card .price small {
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: var(--text-light);
+    }
+
+    .original-card p {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* ===== MEDIA / BOOKS ===== */
+    .media {
+      padding: 80px 24px;
+      background: var(--section-bg);
+    }
+
+    .media-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    .media-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 36px;
+      border: 1px solid var(--border);
+    }
+
+    .media-card .badge {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      font-size: 0.7rem;
+      padding: 4px 12px;
+      border-radius: 4px;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .media-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .media-card p {
+      font-size: 0.88rem;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    /* ===== CTA ===== */
+    .cta {
+      padding: 80px 24px;
+      background: var(--gradient);
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-family: 'Noto Serif JP', serif;
+      color: white;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .cta p {
+      color: rgba(255,255,255,0.85);
+      font-size: 1rem;
+      margin-bottom: 36px;
+      line-height: 1.8;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .cta .btn-hero-primary {
+      font-size: 1.1rem;
+      padding: 18px 48px;
+    }
+
+    .cta-tel {
+      color: white;
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-top: 30px;
+      letter-spacing: 0.05em;
+    }
+
+    .cta-tel small {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 400;
+      opacity: 0.7;
+      margin-top: 4px;
+    }
+
+    /* ===== OFFICE INFO ===== */
+    .office {
+      padding: 80px 24px;
+      background: var(--white);
+    }
+
+    .office-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .office-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .office-table th,
+    .office-table td {
+      padding: 14px 16px;
+      text-align: left;
+      font-size: 0.9rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .office-table th {
+      width: 120px;
+      font-weight: 500;
+      color: var(--primary);
+      background: var(--bg);
+    }
+
+    .office-map {
+      background: var(--section-bg);
+      border-radius: 12px;
+      height: 100%;
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-light);
+      font-size: 0.9rem;
+      border: 1px solid var(--border);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #1a1a2e;
+      color: rgba(255,255,255,0.7);
+      padding: 60px 24px 30px;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    .footer-logo {
+      font-family: 'Noto Serif JP', serif;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    footer p {
+      font-size: 0.82rem;
+      line-height: 1.8;
+    }
+
+    .footer-links h4 {
+      color: white;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .footer-links ul {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 8px;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      font-size: 0.82rem;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 40px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      text-align: center;
+      font-size: 0.75rem;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .header-main { padding: 10px 16px; }
+      .logo-main { font-size: 1rem; }
+      .header-contact .header-tel { display: none; }
+      .hamburger { display: block; }
+
+      nav { display: none; }
+      nav.open { display: block; margin-top: 80px; }
+      nav ul { flex-direction: column; }
+      nav li a { padding: 14px 20px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+
+      .hero { margin-top: 80px; min-height: auto; }
+      .hero-content { padding: 50px 20px; }
+      .hero h1 { font-size: 1.8rem; }
+      .hero-sub { font-size: 0.9rem; }
+      .hero-stats { flex-direction: column; gap: 20px; }
+      .hero-buttons { flex-direction: column; }
+      .btn-hero-primary, .btn-hero-secondary { text-align: center; }
+
+      .features-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .originals-grid { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .media-grid { grid-template-columns: 1fr; }
+      .office-content { grid-template-columns: 1fr; }
+      .footer-content { grid-template-columns: 1fr; }
+
+      .section-title h2 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-top">
+      札幌駅北口から徒歩2分 ／ 社会保険労務士 × 行政書士のワンストップサポート
+    </div>
+    <div class="header-main">
+      <div class="logo">
+        <span class="logo-sub">SOCIAL INSURANCE LABOR CONSULTANT & ADMINISTRATIVE SCRIVENER</span>
+        <span class="logo-main">はまぐち総合法務事務所</span>
+      </div>
+      <div class="header-contact">
+        <div class="header-tel">
+          <div class="number">011-738-2255</div>
+          <div class="hours">受付 9:30〜18:00（土日祝休）</div>
+        </div>
+        <a href="#contact" class="btn-contact">無料相談はこちら</a>
+        <button class="hamburger" aria-label="メニューを開く" aria-expanded="false" onclick="var n=document.querySelector('nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAV -->
+  <nav>
+    <ul>
+      <li><a href="#top">HOME</a></li>
+      <li><a href="#features">選ばれる理由</a></li>
+      <li><a href="#services">社労士業務</a></li>
+      <li><a href="#originals">オリジナルサービス</a></li>
+      <li><a href="#media">メディア・著書</a></li>
+      <li><a href="#office">事務所案内</a></li>
+      <li><a href="#contact">お問い合わせ</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-content">
+      <div class="hero-badge">労務 × 法務 × AI ── 次世代型社労士事務所</div>
+      <h1>ココロオドル職場を、<br><span>共に</span>創る。</h1>
+      <p class="hero-sub">
+        持続可能（サステナブル）な企業づくりを目指して。<br>
+        採用と定着にこだわり、社会保険労務士×行政書士の<br>
+        2つの国家資格でワンストップサポートいたします。
+      </p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn-hero-primary">無料相談を予約する</a>
+        <a href="#services" class="btn-hero-secondary">サービス一覧を見る</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="num">2</div>
+          <div class="label">国家資格（社労士×行政書士）</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">10,000<small>円〜</small></div>
+          <div class="label">ZOOM顧問 月額</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">Amazon</div>
+          <div class="label">10部門1位 著書実績</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <div class="section-title">
+      <span class="en">Why Choose Us</span>
+      <h2>はまぐち事務所が選ばれる理由</h2>
+      <div class="line"></div>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+        <h3>社労士×行政書士<br>ダブルライセンス</h3>
+        <p>労務管理から許認可申請まで、2つの国家資格を持つ総合事務所だからこそ実現する、ワンストップの安心サポート。窓口一本で完結します。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg></div>
+        <h3>ZOOM顧問で<br>全国どこからでも</h3>
+        <p>月額10,000円からのZOOM顧問で、距離を超えた顧問契約を実現。資料共有も画面越しにスムーズ。遠方のお客様にも好評です。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+        <h3>AI×社労士の<br>次世代経営支援</h3>
+        <p>法人向けAIシステム「ゴトクAI」で業務効率を飛躍的に向上。AIに任せて、人は"徳"を育てる。そんな新しい経営スタイルをご提案。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="section-title">
+      <span class="en">Services</span>
+      <h2>社会保険労務士 × 行政書士 業務一覧</h2>
+      <div class="line"></div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <div class="service-info">
+          <h3>労務顧問契約</h3>
+          <p>日常の労務相談から法改正対応まで。貴社の"社外人事部長"として伴走します。</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <div class="service-info">
+          <h3>助成金の申請サポート</h3>
+          <p>返済不要の助成金を最大限活用。申請書類の作成から受給までトータルサポート。</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <div class="service-info">
+          <h3>就業規則の作成・見直し</h3>
+          <p>会社を守る就業規則を。労使トラブルを未然に防ぎ、働きやすい環境を整備。</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">04</div>
+        <div class="service-info">
+          <h3>給与計算サポート</h3>
+          <p>毎月の給与計算業務を正確・迅速に代行。クラウドシステムで効率化。</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">05</div>
+        <div class="service-info">
+          <h3>労働・社会保険の手続代行</h3>
+          <p>入退社手続き、算定基礎、年度更新など煩雑な手続きをまるごとお任せ。</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">06</div>
+        <div class="service-info">
+          <h3>セクハラ・パワハラ対策</h3>
+          <p>ハラスメント相談窓口の設置代行。外部委託で社員が安心して相談できる環境を。</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">07</div>
+        <div class="service-info">
+          <h3>建設業・産廃・古物商 許可申請</h3>
+          <p>行政書士の力で各種許認可をスムーズに取得。「お任せくん」でまるごと代行。</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">08</div>
+        <div class="service-info">
+          <h3>労基署・社保調査対策</h3>
+          <p>突然の調査も安心。事前準備から当日立会い、是正対応まで完全サポート。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORIGINAL CONTENTS -->
+  <section class="originals" id="originals">
+    <div class="section-title">
+      <span class="en">Original Contents</span>
+      <h2>はまオリジナルコンテンツ</h2>
+      <div class="line"></div>
+    </div>
+    <div class="originals-grid">
+      <div class="original-card">
+        <span class="tag">人気No.1</span>
+        <h3>ZOOM顧問<br>（名物はま顧問）</h3>
+        <div class="price">月額 10,000<small>円（税抜）</small></div>
+        <p>オンラインで気軽に相談。月1回30分のZOOM面談＋MyKomon使い放題付き。忙しい社長にぴったり。</p>
+      </div>
+      <div class="original-card">
+        <span class="tag">道内唯一</span>
+        <h3>社長の年金復活プラン</h3>
+        <div class="price">個別お見積り</div>
+        <p>年収を変えずに年金を復活。公認「社長の年金コンサルタント」が、停止されている年金の受給をサポート。</p>
+      </div>
+      <div class="original-card">
+        <span class="tag">道内初</span>
+        <h3>ハラスメント相談窓口</h3>
+        <div class="price">月額 7,500<small>円〜（税抜）</small></div>
+        <p>外部委託で安心の相談環境。認証マーク付与で対外的信用力アップ。採用強化にも効果的。</p>
+      </div>
+      <div class="original-card">
+        <span class="tag">NEW</span>
+        <h3>ゴトクAI<br>（法人向けAIシステム）</h3>
+        <div class="price">月額 10,000<small>円（税抜）</small></div>
+        <p>アカウント無制限・定額制。全社員が同時に使える、中小企業のためのセキュアなAIプラットフォーム。</p>
+      </div>
+      <div class="original-card">
+        <span class="tag">オプション</span>
+        <h3>顧問医plus</h3>
+        <div class="price">月額 20,000<small>円〜（税抜）</small></div>
+        <p>50人未満の事業所様へ。健康診断フォロー、メンタルヘルス対応、新型コロナ緊急時対応を身近な顧問医が。</p>
+      </div>
+      <div class="original-card">
+        <span class="tag">採用支援</span>
+        <h3>採用定着支援顧問</h3>
+        <div class="price">月額 20,000<small>円（税抜）</small></div>
+        <p>「採用と定着」にこだわる当事務所ならではの支援。人材確保と離職率低下を同時に実現。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="section-title">
+      <span class="en">Voice</span>
+      <h2>お客様の声</h2>
+      <div class="line"></div>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p>就業規則の見直しをお願いしました。法改正のポイントを丁寧に説明していただき、社員からの信頼度も上がりました。</p>
+        <div class="testimonial-author">
+          <strong>建設業 代表取締役</strong>
+          札幌市・従業員15名
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p>助成金の申請を全面的にサポートしていただきました。自分では到底できなかった手続きがスムーズに進み、大変助かりました。</p>
+        <div class="testimonial-author">
+          <strong>飲食業 オーナー</strong>
+          札幌市・従業員8名
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p>ZOOM顧問で毎月相談できる安心感が大きいです。遠方でも顔を見ながら相談できるので、電話やメールより断然わかりやすい。</p>
+        <div class="testimonial-author">
+          <strong>IT企業 代表</strong>
+          旭川市・従業員20名
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEDIA -->
+  <section class="media" id="media">
+    <div class="section-title">
+      <span class="en">Media & Publications</span>
+      <h2>メディア掲載・著書</h2>
+      <div class="line"></div>
+    </div>
+    <div class="media-grid">
+      <div class="media-card">
+        <span class="badge">著書</span>
+        <h3>Amazon 10部門で1位獲得</h3>
+        <p>労働基準監督署の調査対策について解説した実務書を出版。「労基署調査は本当に怖い！」――これ一冊で労務管理の不安をスッキリ解消。企業総務担当者必携。</p>
+      </div>
+      <div class="media-card">
+        <span class="badge">TV出演</span>
+        <h3>TVh「5時ナビ」出演</h3>
+        <p>SDGsアップサイクルについて取材を受け、テレビ出演。社労士の枠を超えた幅広い活動が注目されています。</p>
+      </div>
+      <div class="media-card">
+        <span class="badge">LINE公式</span>
+        <h3>社外のCHRO HUB</h3>
+        <p>公式LINEアカウント「社外のCHRO（最高人事責任者）HUB」で経営に役立つ情報を無料配信中。今すぐ友だち追加！</p>
+      </div>
+      <div class="media-card">
+        <span class="badge">無料動画</span>
+        <h3>助成金オンライン講座</h3>
+        <p>経営者様向けに助成金オンライン講座を無料配信中。通常有料ライブセミナーの内容をそのまま。メルマガ登録でご視聴いただけます。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="contact">
+    <h2>まずはお気軽にご相談ください</h2>
+    <p>初回相談は無料です。ZOOM・電話・メール、お好きな方法でどうぞ。<br>社労士×行政書士の2つの力で、貴社の課題を解決します。</p>
+    <div class="cta-buttons">
+      <a href="mailto:info@office-hamaguchi.com" class="btn-hero-primary">メールで相談する</a>
+      <a href="#" class="btn-hero-secondary">LINE公式で相談する</a>
+    </div>
+    <div class="cta-tel">
+      011-738-2255
+      <small>受付時間 9:30〜18:00（土日祝休み）</small>
+    </div>
+  </section>
+
+  <!-- OFFICE -->
+  <section class="office" id="office">
+    <div class="section-title">
+      <span class="en">Office Information</span>
+      <h2>事務所案内</h2>
+      <div class="line"></div>
+    </div>
+    <div class="office-content">
+      <table class="office-table">
+        <tr><th>事務所名</th><td>社労士・行政書士 はまぐち総合法務事務所</td></tr>
+        <tr><th>所在地</th><td>〒060-0806<br>北海道札幌市北区北6条西6丁目2 福徳ビル3F</td></tr>
+        <tr><th>アクセス</th><td>JR札幌駅北口より徒歩2分</td></tr>
+        <tr><th>TEL</th><td>011-738-2255</td></tr>
+        <tr><th>FAX</th><td>011-738-2256</td></tr>
+        <tr><th>メール</th><td>info@office-hamaguchi.com</td></tr>
+        <tr><th>受付時間</th><td>9:30〜18:00</td></tr>
+        <tr><th>定休日</th><td>土曜・日曜・祝日</td></tr>
+        <tr><th>業務内容</th><td>社会保険労務士業務 / 行政書士業務 / 各種コンサルティング</td></tr>
+      </table>
+      <div class="office-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2914.5!2d141.3485!3d43.0687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b29a3a3a3a3a3%3A0x0!2z5YyX5rW36YGT5pyt5bmM5biC5YyX5Yy65YyX77yW5p2h6KW_77yW5LiB55uu77yS!5e0!3m2!1sja!2sjp!4v1" width="100%" height="100%" style="border:0; border-radius: 12px; min-height: 300px;" allowfullscreen loading="lazy" title="はまぐち総合法務事務所の所在地"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMO NOTICE -->
+  <div style="background: #fff3cd; padding: 16px 24px; text-align: center; font-size: 0.85rem; color: #856404; border-top: 2px solid #ffc107;">
+    ※ 本ページはリニューアルのイメージサンプルです。本番では御社の実際のお写真・ロゴを使用し、より完成度の高いサイトに仕上げます。
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div>
+        <div class="footer-logo">はまぐち総合法務事務所</div>
+        <p>
+          社会保険労務士 × 行政書士の2つの国家資格で、<br>
+          採用・定着・助成金・就業規則・ハラスメント対策まで<br>
+          ワンストップでサポートいたします。
+        </p>
+      </div>
+      <div class="footer-links">
+        <h4>業務内容</h4>
+        <ul>
+          <li><a href="#services">労務顧問契約</a></li>
+          <li><a href="#services">助成金申請サポート</a></li>
+          <li><a href="#services">就業規則作成</a></li>
+          <li><a href="#services">給与計算サポート</a></li>
+          <li><a href="#services">許認可申請</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>事務所情報</h4>
+        <ul>
+          <li><a href="#office">事務所概要</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+          <li><a href="#">プライバシーポリシー</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 社労士・行政書士 はまぐち総合法務事務所 All Rights Reserved.
+    </div>
+  </footer>
+
+</body>
+</html>

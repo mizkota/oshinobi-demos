@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>リフォーム・ワン｜札幌の総合内装リフォーム</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #4a3728;
+  --primary-light: #6b5344;
+  --primary-dark: #2e2018;
+  --accent: #6dba5e;
+  --accent-light: #8fd183;
+  --accent-dark: #4a9a3c;
+  --warm-bg: #faf6f1;
+  --warm-card: #ffffff;
+  --warm-border: #e8ddd0;
+  --text: #3a3a3a;
+  --text-light: #6b6b6b;
+  --white: #ffffff;
+  --shadow: 0 4px 20px rgba(74,55,40,0.10);
+  --shadow-hover: 0 8px 30px rgba(74,55,40,0.18);
+  --radius: 12px;
+  --transition: 0.3s ease;
+}
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: var(--text);
+  background: var(--warm-bg);
+  line-height: 1.8;
+}
+img { max-width:100%; display:block; }
+a { color: inherit; text-decoration: none; }
+
+/* HEADER */
+.header {
+  position: fixed; top:0; left:0; width:100%; z-index:1000;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 12px rgba(74,55,40,0.08);
+}
+.header-inner {
+  max-width: 1200px; margin:0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 24px; height: 72px;
+}
+.logo {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.4rem; font-weight: 700;
+  color: var(--primary);
+  display: flex; align-items: center; gap: 10px;
+}
+.logo svg { flex-shrink:0; }
+.header-right { display:flex; align-items:center; gap:20px; }
+.header-phone {
+  display:flex; align-items:center; gap:6px;
+  font-weight:700; color:var(--primary); font-size:1.1rem;
+}
+.header-phone svg { flex-shrink:0; }
+.header-cta {
+  background: var(--accent); color:var(--white);
+  padding: 10px 24px; border-radius: 50px;
+  font-weight:700; font-size:0.9rem;
+  transition: var(--transition);
+  display:inline-flex; align-items:center; gap:6px;
+}
+.header-cta:hover { background: var(--accent-dark); transform:translateY(-1px); }
+
+/* NAV */
+.nav {
+  background: var(--primary);
+}
+.nav-inner {
+  max-width:1200px; margin:0 auto;
+  display:flex; justify-content:center; gap:0;
+  overflow-x:auto;
+}
+.nav a {
+  color: rgba(255,255,255,0.9); padding:14px 20px;
+  font-size:0.85rem; font-weight:500;
+  white-space:nowrap; transition: var(--transition);
+  position:relative;
+}
+.nav a::after {
+  content:''; position:absolute; bottom:0; left:50%; width:0; height:3px;
+  background:var(--accent); transition: var(--transition); transform:translateX(-50%);
+}
+.nav a:hover { color:#fff; }
+.nav a:hover::after { width:60%; }
+
+/* HERO */
+.hero {
+  margin-top: 72px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 50%, #7a6455 100%);
+  position:relative; overflow:hidden;
+  padding: 100px 24px 80px;
+  text-align:center; color:var(--white);
+}
+.hero::before {
+  content:''; position:absolute; inset:0;
+  background: repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(255,255,255,0.02) 40px, rgba(255,255,255,0.02) 80px);
+}
+.hero-content { position:relative; z-index:1; max-width:800px; margin:0 auto; }
+.hero-badge {
+  display:inline-block; background:rgba(109,186,94,0.2); border:1px solid rgba(109,186,94,0.4);
+  padding:6px 20px; border-radius:50px; font-size:0.85rem; margin-bottom:24px;
+  color:var(--accent-light);
+}
+.hero h1 {
+  font-family:'Noto Serif JP', serif;
+  font-size:clamp(1.8rem,4vw,2.8rem);
+  font-weight:700; line-height:1.5; margin-bottom:20px;
+}
+.hero p {
+  font-size:1.1rem; opacity:0.9; margin-bottom:36px; line-height:1.9;
+}
+.hero-cta {
+  display:inline-flex; align-items:center; gap:8px;
+  background:var(--accent); color:var(--white);
+  padding:16px 40px; border-radius:50px;
+  font-size:1.1rem; font-weight:700;
+  transition:var(--transition);
+  box-shadow: 0 4px 20px rgba(109,186,94,0.3);
+}
+.hero-cta:hover { background:var(--accent-dark); transform:translateY(-2px); box-shadow:0 6px 24px rgba(109,186,94,0.4); }
+.hero-stats {
+  display:flex; justify-content:center; gap:48px; margin-top:48px;
+  flex-wrap:wrap;
+}
+.hero-stat { text-align:center; }
+.hero-stat-num {
+  font-family:'Noto Serif JP',serif;
+  font-size:2.4rem; font-weight:700; color:var(--accent-light);
+}
+.hero-stat-label { font-size:0.85rem; opacity:0.8; }
+
+/* SECTIONS */
+.section { padding: 80px 24px; }
+.section-title {
+  text-align:center; margin-bottom:56px;
+}
+.section-title h2 {
+  font-family:'Noto Serif JP',serif;
+  font-size:clamp(1.5rem,3vw,2rem);
+  color:var(--primary); margin-bottom:12px;
+}
+.section-title p { color:var(--text-light); font-size:0.95rem; }
+.section-title .line {
+  width:60px; height:3px; background:var(--accent);
+  margin:16px auto 0; border-radius:2px;
+}
+
+/* FEATURES */
+.features-grid {
+  max-width:1100px; margin:0 auto;
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:32px;
+}
+.feature-card {
+  background:var(--warm-card); border-radius:var(--radius);
+  padding:40px 32px; text-align:center;
+  box-shadow:var(--shadow); transition:var(--transition);
+  border:1px solid var(--warm-border);
+}
+.feature-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-hover); }
+.feature-icon {
+  width:72px; height:72px; margin:0 auto 20px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  border-radius:50%; display:flex; align-items:center; justify-content:center;
+}
+.feature-icon svg { width:36px; height:36px; }
+.feature-card h3 {
+  font-size:1.15rem; font-weight:700; color:var(--primary); margin-bottom:12px;
+}
+.feature-card p { color:var(--text-light); font-size:0.9rem; line-height:1.8; }
+
+/* MENU */
+.menu-section { background:var(--white); }
+.menu-grid {
+  max-width:1100px; margin:0 auto;
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:24px;
+}
+.menu-card {
+  background:var(--warm-bg); border-radius:var(--radius);
+  padding:32px 24px; text-align:center;
+  border:1px solid var(--warm-border);
+  transition:var(--transition);
+}
+.menu-card:hover { border-color:var(--accent); transform:translateY(-3px); box-shadow:var(--shadow); }
+.menu-icon {
+  width:56px; height:56px; margin:0 auto 16px;
+  background:var(--primary); border-radius:12px;
+  display:flex; align-items:center; justify-content:center;
+}
+.menu-icon svg { width:28px; height:28px; }
+.menu-card h3 { font-size:1rem; font-weight:700; color:var(--primary); margin-bottom:8px; }
+.menu-card p { color:var(--text-light); font-size:0.85rem; }
+
+/* GALLERY */
+.gallery-grid {
+  max-width:1100px; margin:0 auto;
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:24px;
+}
+.gallery-card {
+  background:var(--warm-card); border-radius:var(--radius);
+  overflow:hidden; box-shadow:var(--shadow);
+  transition:var(--transition); border:1px solid var(--warm-border);
+}
+.gallery-card:hover { transform:translateY(-3px); box-shadow:var(--shadow-hover); }
+.gallery-img {
+  height:200px; position:relative; overflow:hidden;
+}
+.gallery-img-bg {
+  width:100%; height:100%; display:flex; align-items:center; justify-content:center;
+  font-size:0.85rem; color:var(--text-light);
+}
+.gallery-img-bg-1 { background:linear-gradient(135deg,#e8ddd0 0%,#d4c4b0 100%); }
+.gallery-img-bg-2 { background:linear-gradient(135deg,#d0dde8 0%,#b0c4d4 100%); }
+.gallery-img-bg-3 { background:linear-gradient(135deg,#d0e8d4 0%,#b0d4b8 100%); }
+.gallery-badge {
+  position:absolute; top:12px; left:12px;
+  background:var(--accent); color:var(--white);
+  padding:4px 12px; border-radius:50px; font-size:0.75rem; font-weight:700;
+}
+.gallery-body { padding:20px 24px; }
+.gallery-body h3 { font-size:1rem; font-weight:700; color:var(--primary); margin-bottom:6px; }
+.gallery-body p { font-size:0.85rem; color:var(--text-light); }
+.gallery-tags { display:flex; gap:8px; margin-top:10px; flex-wrap:wrap; }
+.gallery-tag {
+  background:var(--warm-bg); padding:3px 10px; border-radius:50px;
+  font-size:0.75rem; color:var(--primary-light);
+}
+
+/* VOICE */
+.voice-section { background:var(--white); }
+.voice-grid {
+  max-width:1100px; margin:0 auto;
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:28px;
+}
+.voice-card {
+  background:var(--warm-bg); border-radius:var(--radius);
+  padding:32px; border-left:4px solid var(--accent);
+}
+.voice-stars { color:#f5a623; font-size:1.1rem; margin-bottom:12px; }
+.voice-text { font-size:0.9rem; color:var(--text); line-height:1.9; margin-bottom:16px; font-style:italic; }
+.voice-author { font-size:0.85rem; color:var(--text-light); font-weight:500; }
+
+/* CTA */
+.cta-section {
+  background: linear-gradient(135deg, var(--accent-dark), var(--accent));
+  padding:64px 24px; text-align:center; color:var(--white);
+}
+.cta-section h2 {
+  font-family:'Noto Serif JP',serif;
+  font-size:clamp(1.4rem,3vw,1.8rem); margin-bottom:16px;
+}
+.cta-section p { font-size:0.95rem; opacity:0.9; margin-bottom:32px; }
+.cta-phone {
+  display:inline-flex; align-items:center; gap:12px;
+  background:var(--white); color:var(--primary);
+  padding:20px 48px; border-radius:var(--radius);
+  font-size:1.6rem; font-weight:700;
+  font-family:'Noto Serif JP',serif;
+  box-shadow:0 4px 20px rgba(0,0,0,0.15);
+  transition:var(--transition);
+}
+.cta-phone:hover { transform:translateY(-2px); box-shadow:0 6px 24px rgba(0,0,0,0.2); }
+.cta-phone svg { flex-shrink:0; }
+.cta-sub { margin-top:12px; font-size:0.85rem; opacity:0.8; }
+
+/* COMPANY */
+.company-table {
+  max-width:800px; margin:0 auto;
+  border-collapse:collapse; width:100%;
+}
+.company-table th, .company-table td {
+  padding:16px 20px; text-align:left;
+  border-bottom:1px solid var(--warm-border);
+  font-size:0.9rem;
+}
+.company-table th {
+  width:160px; background:var(--warm-bg);
+  font-weight:700; color:var(--primary);
+  white-space:nowrap;
+}
+.company-table td { color:var(--text); }
+
+/* DEMO BANNER */
+.demo-banner {
+  background: linear-gradient(135deg, #ff6b6b, #e74c3c);
+  color:var(--white); text-align:center;
+  padding:20px 24px;
+}
+.demo-banner p { font-size:0.9rem; }
+.demo-banner strong { font-size:1rem; }
+
+/* FOOTER */
+.footer {
+  background:var(--primary-dark); color:rgba(255,255,255,0.7);
+  padding:40px 24px 24px; text-align:center;
+}
+.footer-logo {
+  font-family:'Noto Serif JP',serif;
+  font-size:1.2rem; font-weight:700; color:var(--white);
+  margin-bottom:12px;
+}
+.footer-info { font-size:0.8rem; line-height:2; margin-bottom:16px; }
+.footer-copy { font-size:0.75rem; opacity:0.6; }
+
+/* CONTACT FORM */
+.contact-section { background:var(--white); }
+.contact-inner {
+  max-width:700px; margin:0 auto;
+  background:var(--warm-bg); border-radius:var(--radius);
+  padding:48px 40px; border:1px solid var(--warm-border);
+}
+.form-group { margin-bottom:24px; }
+.form-group label {
+  display:block; font-weight:700; font-size:0.9rem;
+  color:var(--primary); margin-bottom:8px;
+}
+.form-group label .req {
+  background:var(--accent); color:var(--white);
+  font-size:0.7rem; padding:2px 8px; border-radius:4px;
+  margin-left:8px; font-weight:500;
+}
+.form-group input, .form-group textarea, .form-group select {
+  width:100%; padding:14px 16px; border:1px solid var(--warm-border);
+  border-radius:8px; font-family:inherit; font-size:0.9rem;
+  transition:var(--transition); background:var(--white);
+}
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+  outline:none; border-color:var(--accent);
+  box-shadow:0 0 0 3px rgba(109,186,94,0.15);
+}
+.form-group textarea { height:140px; resize:vertical; }
+.form-submit {
+  display:block; width:100%;
+  background:var(--accent); color:var(--white);
+  padding:16px; border:none; border-radius:50px;
+  font-size:1.05rem; font-weight:700; font-family:inherit;
+  cursor:pointer; transition:var(--transition);
+}
+.form-submit:hover { background:var(--accent-dark); }
+
+/* RESPONSIVE */
+@media (max-width:768px) {
+  .header-inner { padding:0 16px; height:64px; }
+  .logo { font-size:1.1rem; }
+  .header-phone { display:none; }
+  .nav a { padding:12px 14px; font-size:0.8rem; }
+  .hero { margin-top:64px; padding:64px 20px 56px; }
+  .hero-stats { gap:24px; }
+  .hero-stat-num { font-size:1.8rem; }
+  .section { padding:56px 20px; }
+  .features-grid, .menu-grid, .gallery-grid, .voice-grid { gap:20px; }
+  .company-table th { width:120px; }
+  .contact-inner { padding:32px 24px; }
+  .cta-phone { font-size:1.2rem; padding:16px 32px; }
+}
+@media (max-width:480px) {
+  .header-cta { padding:8px 16px; font-size:0.8rem; }
+  .features-grid { grid-template-columns:1fr; }
+  .menu-grid { grid-template-columns:1fr 1fr; }
+  .gallery-grid { grid-template-columns:1fr; }
+  .voice-grid { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <rect width="32" height="32" rx="8" fill="#4a3728"/>
+        <path d="M8 22V10h4c3 0 5 1.5 5 4s-2 4-5 4h-1v4H8zm3-7h1c1.2 0 2-.6 2-1.5S13.2 12 12 12h-1v3z" fill="#6dba5e"/>
+        <path d="M19 10h3l3 12h-3l-.5-2.5h-2.5L18.5 22H16l3-12zm.8 7h1.4l-.7-4-.7 4z" fill="#fff"/>
+      </svg>
+      リフォーム・ワン
+    </div>
+    <div class="header-right">
+      <div class="header-phone">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4a3728" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        0120-978-326
+      </div>
+      <a href="#contact" class="header-cta">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        無料見積り
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav class="nav" style="margin-top:72px;">
+  <div class="nav-inner">
+    <a href="#hero">HOME</a>
+    <a href="#features">当社の特徴</a>
+    <a href="#menu">施工メニュー</a>
+    <a href="#gallery">施工事例</a>
+    <a href="#voice">お客様の声</a>
+    <a href="#company">会社概要</a>
+    <a href="#contact">お問い合わせ</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <div class="hero-badge">札幌市・近郊エリア対応</div>
+    <h1>30年以上の実績で、<br>あなたの暮らしを<br>もっと快適に。</h1>
+    <p>床材・クロス・大工工事・設備工事まで、内装リフォームのことなら何でもお任せください。<br>直接施工だから中間マージンなし。高品質を、適正価格で。</p>
+    <a href="#contact" class="hero-cta">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      無料相談・お見積りはこちら
+    </a>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num">30<span style="font-size:1.2rem">年以上</span></div>
+        <div class="hero-stat-label">施工実績</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">0<span style="font-size:1.2rem">円</span></div>
+        <div class="hero-stat-label">相談・見積り</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">直接<span style="font-size:1.2rem">施工</span></div>
+        <div class="hero-stat-label">中間マージンなし</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section" id="features">
+  <div class="section-title">
+    <h2>当社が選ばれる3つの理由</h2>
+    <p>リフォーム・ワンは「安心」「品質」「価格」でお客様に選ばれ続けています</p>
+    <div class="line"></div>
+  </div>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M3 21v-2a7 7 0 017-7h4a7 7 0 017 7v2"/><path d="M12 3v2M15.5 4.5l-1 1.7M8.5 4.5l1 1.7"/></svg>
+      </div>
+      <h3>30年以上の確かな実績</h3>
+      <p>代表・寺島一が30年以上にわたり培ってきた技術と経験。札幌の気候・住宅事情を知り尽くしたプロフェッショナルが、最適なリフォームをご提案します。</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M2 10h20"/><path d="M6 14h4"/></svg>
+      </div>
+      <h3>直接施工で中間マージンゼロ</h3>
+      <p>下請けに丸投げしない直接施工だから、仲介料を大幅カット。同じ品質の工事を、他社よりもリーズナブルな価格でご提供できます。</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+      </div>
+      <h3>内装トータル対応</h3>
+      <p>フローリング・クロス・大工工事・設備工事まで、内装リフォームを一括でお任せいただけます。複数業者への依頼が不要で、工期短縮・コスト削減を実現。</p>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="section menu-section" id="menu">
+  <div class="section-title">
+    <h2>施工メニュー</h2>
+    <p>住まいの内装に関することなら、何でもご相談ください</p>
+    <div class="line"></div>
+  </div>
+  <div class="menu-grid">
+    <div class="menu-card">
+      <div class="menu-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="1" width="22" height="22" rx="0"/><line x1="1" y1="8" x2="23" y2="8"/><line x1="1" y1="15" x2="23" y2="15"/><line x1="8" y1="1" x2="8" y2="23"/><line x1="16" y1="1" x2="16" y2="23"/></svg>
+      </div>
+      <h3>フローリング工事</h3>
+      <p>無垢材・複合フローリング・クッションフロアなど豊富な選択肢</p>
+    </div>
+    <div class="menu-card">
+      <div class="menu-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 3v18"/></svg>
+      </div>
+      <h3>クロス張替え</h3>
+      <p>壁紙・天井クロスの張替えで、お部屋の印象を一新</p>
+    </div>
+    <div class="menu-card">
+      <div class="menu-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      </div>
+      <h3>大工工事</h3>
+      <p>建具の調整・造作棚・間仕切り変更など、木工事全般</p>
+    </div>
+    <div class="menu-card">
+      <div class="menu-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      </div>
+      <h3>設備工事</h3>
+      <p>キッチン・トイレ・洗面台など水回り設備の交換・修繕</p>
+    </div>
+    <div class="menu-card">
+      <div class="menu-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+      </div>
+      <h3>内装総合リフォーム</h3>
+      <p>複数の工事をまとめて対応。一括依頼で工期短縮＆コスト削減</p>
+    </div>
+    <div class="menu-card">
+      <div class="menu-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+      </div>
+      <h3>その他ご相談</h3>
+      <p>「これって対応できる？」もお気軽にお問い合わせください</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section" id="gallery">
+  <div class="section-title">
+    <h2>施工事例</h2>
+    <p>実際の施工事例をご紹介します</p>
+    <div class="line"></div>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-card">
+      <div class="gallery-img">
+        <div class="gallery-img-bg gallery-img-bg-1">
+          <div style="text-align:center;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#8a7a6a" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="1" width="22" height="22" rx="0"/><line x1="1" y1="8" x2="23" y2="8"/><line x1="1" y1="15" x2="23" y2="15"/><line x1="8" y1="1" x2="8" y2="23"/><line x1="16" y1="1" x2="16" y2="23"/></svg>
+            <div style="margin-top:8px;font-size:0.8rem;">フローリング張替え</div>
+          </div>
+        </div>
+        <div class="gallery-badge">マンション</div>
+      </div>
+      <div class="gallery-body">
+        <h3>リビング フローリング張替え工事</h3>
+        <p>築25年マンションのリビング16畳。古くなったカーペットからフローリングへ張替え。明るく清潔感のある空間に生まれ変わりました。</p>
+        <div class="gallery-tags">
+          <span class="gallery-tag">フローリング</span>
+          <span class="gallery-tag">リビング</span>
+          <span class="gallery-tag">16畳</span>
+        </div>
+      </div>
+    </div>
+    <div class="gallery-card">
+      <div class="gallery-img">
+        <div class="gallery-img-bg gallery-img-bg-2">
+          <div style="text-align:center;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#6a7a8a" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 3v18"/></svg>
+            <div style="margin-top:8px;font-size:0.8rem;">クロス張替え</div>
+          </div>
+        </div>
+        <div class="gallery-badge">戸建て</div>
+      </div>
+      <div class="gallery-body">
+        <h3>全室クロス張替えリフォーム</h3>
+        <p>戸建て住宅の全室クロス張替え。経年劣化による黄ばみ・剥がれを解消し、白を基調とした清潔感あふれる空間へ。</p>
+        <div class="gallery-tags">
+          <span class="gallery-tag">クロス</span>
+          <span class="gallery-tag">全室</span>
+          <span class="gallery-tag">戸建て</span>
+        </div>
+      </div>
+    </div>
+    <div class="gallery-card">
+      <div class="gallery-img">
+        <div class="gallery-img-bg gallery-img-bg-3">
+          <div style="text-align:center;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#6a8a6a" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+            <div style="margin-top:8px;font-size:0.8rem;">総合リフォーム</div>
+          </div>
+        </div>
+        <div class="gallery-badge">店舗</div>
+      </div>
+      <div class="gallery-body">
+        <h3>店舗内装リニューアル工事</h3>
+        <p>飲食店の内装を全面リニューアル。床・壁・天井・設備を一括施工。営業への影響を最小限に抑え、短期間で完了。</p>
+        <div class="gallery-tags">
+          <span class="gallery-tag">店舗</span>
+          <span class="gallery-tag">総合</span>
+          <span class="gallery-tag">短期施工</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VOICE -->
+<section class="section voice-section" id="voice">
+  <div class="section-title">
+    <h2>お客様の声</h2>
+    <p>リフォーム・ワンをご利用いただいたお客様からの声をご紹介します</p>
+    <div class="line"></div>
+  </div>
+  <div class="voice-grid">
+    <div class="voice-card">
+      <div class="voice-stars">★★★★★</div>
+      <p class="voice-text">「見積りの段階から丁寧に説明してくださり、安心してお任せできました。フローリングの仕上がりも綺麗で、料金も思っていたより安く大満足です。」</p>
+      <div class="voice-author">札幌市北区 M様（マンション・フローリング張替え）</div>
+    </div>
+    <div class="voice-card">
+      <div class="voice-stars">★★★★★</div>
+      <p class="voice-text">「他社と比較して、同じ工事内容で3割ほど安い見積りでした。直接施工ならではの価格で、品質も全く問題なし。知人にも紹介しました。」</p>
+      <div class="voice-author">江別市 S様（戸建て・クロス張替え＋フローリング）</div>
+    </div>
+    <div class="voice-card">
+      <div class="voice-stars">★★★★★</div>
+      <p class="voice-text">「急ぎの工事だったのですが、スケジュールを調整していただき助かりました。30年の経験があるだけあって、細かい部分の仕上がりが違いますね。」</p>
+      <div class="voice-author">札幌市東区 T様（店舗・内装リニューアル）</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>まずはお気軽にご相談ください</h2>
+  <p>相談・お見積りは無料です。無理な営業は一切いたしません。</p>
+  <a href="tel:0120978326" class="cta-phone">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4a3728" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    0120-978-326
+  </a>
+  <p class="cta-sub">受付時間 9:00〜18:00（月〜土）/ メールは24時間受付</p>
+</section>
+
+<!-- COMPANY -->
+<section class="section" id="company">
+  <div class="section-title">
+    <h2>会社概要</h2>
+    <div class="line"></div>
+  </div>
+  <table class="company-table">
+    <tr><th>会社名</th><td>リフォーム・ワン</td></tr>
+    <tr><th>代表者</th><td>寺島 一</td></tr>
+    <tr><th>所在地</th><td>〒002-8004 札幌市北区太平4条5丁目3-12</td></tr>
+    <tr><th>電話番号</th><td>フリーダイヤル: 0120-978-326 / TEL: 011-790-6503</td></tr>
+    <tr><th>FAX</th><td>011-773-6175</td></tr>
+    <tr><th>メール</th><td>reform-one0120978326@apost.plala.or.jp</td></tr>
+    <tr><th>営業時間</th><td>9:00〜18:00（月〜土）※メール受付は24時間</td></tr>
+    <tr><th>定休日</th><td>日曜日（工事は日・祝対応可）</td></tr>
+    <tr><th>事業内容</th><td>総合内装リフォーム（床材・クロス・大工設備工事一式）</td></tr>
+    <tr><th>対応エリア</th><td>札幌市、小樽市、石狩市、当別町、江別市、北広島市、恵庭市（その他要相談）</td></tr>
+    <tr><th>取引銀行</th><td>北海道信用金庫</td></tr>
+  </table>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact-section" id="contact">
+  <div class="section-title">
+    <h2>お問い合わせ</h2>
+    <p>ご相談・お見積りは無料です。お気軽にお問い合わせください。</p>
+    <div class="line"></div>
+  </div>
+  <div class="contact-inner">
+    <div class="form-group">
+      <label>お名前 <span class="req">必須</span></label>
+      <input type="text" placeholder="例：山田 太郎">
+    </div>
+    <div class="form-group">
+      <label>電話番号 <span class="req">必須</span></label>
+      <input type="tel" placeholder="例：090-1234-5678">
+    </div>
+    <div class="form-group">
+      <label>メールアドレス</label>
+      <input type="email" placeholder="例：example@mail.com">
+    </div>
+    <div class="form-group">
+      <label>ご相談の種類</label>
+      <select>
+        <option value="">選択してください</option>
+        <option>フローリング工事</option>
+        <option>クロス張替え</option>
+        <option>大工工事</option>
+        <option>設備工事</option>
+        <option>内装総合リフォーム</option>
+        <option>その他</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>お問い合わせ内容 <span class="req">必須</span></label>
+      <textarea placeholder="リフォームのご希望内容、ご予算、時期などをお知らせください。"></textarea>
+    </div>
+    <button class="form-submit" type="button" onclick="alert('デモサイトのため送信機能はございません。')">送信する</button>
+  </div>
+</section>
+
+<!-- DEMO BANNER -->
+<div class="demo-banner">
+  <p><strong>※ こちらはデモサイトです</strong><br>
+  リフォーム・ワン様のホームページリニューアルイメージとして制作いたしました。<br>
+  制作：OSHINOBI｜<a href="https://oshinobi-co.com" style="color:#fff;text-decoration:underline;">oshinobi-co.com</a>｜info@oshinobi-co.com</p>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-logo">リフォーム・ワン</div>
+  <div class="footer-info">
+    〒002-8004 札幌市北区太平4条5丁目3-12<br>
+    フリーダイヤル: 0120-978-326 / TEL: 011-790-6503<br>
+    営業時間: 9:00〜18:00（月〜土）
+  </div>
+  <div class="footer-copy">&copy; 2026 リフォーム・ワン All Rights Reserved.</div>
+</footer>
+
+</body>
+</html>

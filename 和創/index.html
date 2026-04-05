@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社和創 | 札幌市豊平区 畳の製造・販売 表替え・新畳・襖・障子</title>
+<meta name="description" content="札幌市豊平区の畳専門店 株式会社和創。天然い草から和紙表・樹脂表まで豊富な品揃え。新畳・表替え・裏返し・琉球畳・襖・障子・網戸の張替えもお任せください。御見積無料。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #2B5B3C;
+  --primary-light: #3D7A52;
+  --primary-dark: #1A3A26;
+  --secondary: #8B6914;
+  --secondary-light: #C4A243;
+  --accent: #C8A84E;
+  --accent-warm: #B8860B;
+  --bg-cream: #FAF8F2;
+  --bg-light: #F3EFE6;
+  --bg-white: #FFFFFF;
+  --text-dark: #2C2C2C;
+  --text-medium: #555555;
+  --text-light: #888888;
+  --border-light: #E4DDD0;
+  --shadow-sm: 0 2px 8px rgba(43,91,60,0.08);
+  --shadow-md: 0 4px 20px rgba(43,91,60,0.12);
+  --shadow-lg: 0 8px 40px rgba(43,91,60,0.16);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --transition: 0.3s ease;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: var(--text-dark);
+  background: var(--bg-cream);
+  line-height: 1.8;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== HEADER ===== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 10px rgba(0,0,0,0.08);
+  z-index: 1000;
+  transition: var(--transition);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--primary);
+}
+
+.header-logo img {
+  height: 44px;
+  width: auto;
+}
+
+.header-logo-text {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--primary-dark);
+}
+
+.header-logo-sub {
+  font-size: 0.65rem;
+  color: var(--text-light);
+  letter-spacing: 0.08em;
+  display: block;
+  margin-top: -2px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-phone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-dark);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.03em;
+}
+
+.header-phone svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--primary);
+}
+
+.header-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  background: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: var(--transition);
+  box-shadow: 0 2px 10px rgba(43,91,60,0.3);
+}
+
+.header-cta:hover {
+  background: var(--primary-light);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(43,91,60,0.4);
+}
+
+/* ===== NAV ===== */
+.nav {
+  background: var(--primary-dark);
+  overflow-x: auto;
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: center;
+  gap: 0;
+}
+
+.nav a {
+  display: block;
+  padding: 14px 18px;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  transition: var(--transition);
+  position: relative;
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: var(--transition);
+}
+
+.nav a:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+
+.nav a:hover::after {
+  width: 60%;
+}
+
+/* ===== HERO ===== */
+.hero {
+  margin-top: 72px;
+  padding: 100px 24px 80px;
+  background: linear-gradient(135deg, #1A3A26 0%, #2B5B3C 30%, #3D7A52 60%, #2B5B3C 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(200,168,78,0.1) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 30%, rgba(255,255,255,0.04) 0%, transparent 50%);
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200,168,78,0.06) 0%, transparent 70%);
+}
+
+/* 畳模様のパターンオーバーレイ */
+.hero .tatami-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.04;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255,255,255,0.5) 40px, rgba(255,255,255,0.5) 41px),
+    repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(255,255,255,0.5) 80px, rgba(255,255,255,0.5) 81px);
+}
+
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 6px 20px;
+  background: rgba(200,168,78,0.15);
+  border: 1px solid rgba(200,168,78,0.3);
+  border-radius: 50px;
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  margin-bottom: 28px;
+}
+
+.hero h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  letter-spacing: 0.05em;
+}
+
+.hero h1 span {
+  color: var(--accent);
+}
+
+.hero-sub {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.75);
+  max-width: 600px;
+  margin-bottom: 40px;
+  line-height: 2;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-stat {
+  text-align: center;
+}
+
+.hero-stat-num {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1.2;
+}
+
+.hero-stat-num span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(255,255,255,0.6);
+}
+
+.hero-stat-label {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.6);
+  margin-top: 4px;
+  letter-spacing: 0.05em;
+}
+
+/* ===== SECTION COMMON ===== */
+.section {
+  padding: 80px 24px;
+}
+
+.section-alt {
+  background: var(--bg-light);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.section-en {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 0.8rem;
+  color: var(--accent);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.section-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  color: var(--primary-dark);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.section-line {
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--secondary-light));
+  margin: 16px auto 0;
+}
+
+/* ===== FEATURES ===== */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.feature-card {
+  background: var(--bg-white);
+  border-radius: var(--radius-md);
+  padding: 36px 28px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+  transition: var(--transition);
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.feature-icon {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, rgba(43,91,60,0.08), rgba(200,168,78,0.08));
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.feature-icon svg {
+  width: 28px;
+  height: 28px;
+  color: var(--primary);
+}
+
+.feature-card h3 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--primary-dark);
+}
+
+.feature-card p {
+  font-size: 0.9rem;
+  color: var(--text-medium);
+  line-height: 1.9;
+}
+
+/* ===== SERVICES ===== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.service-card {
+  background: var(--bg-white);
+  border-radius: var(--radius-md);
+  padding: 32px 24px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+  transition: var(--transition);
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent);
+}
+
+.service-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, rgba(43,91,60,0.06), rgba(200,168,78,0.06));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+}
+
+.service-icon svg {
+  width: 30px;
+  height: 30px;
+  color: var(--primary);
+}
+
+.service-card h3 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--primary-dark);
+}
+
+.service-card .price {
+  font-size: 0.85rem;
+  color: var(--accent-warm);
+  font-weight: 600;
+  margin-bottom: 12px;
+  letter-spacing: 0.03em;
+}
+
+.service-card p {
+  font-size: 0.85rem;
+  color: var(--text-medium);
+  line-height: 1.8;
+}
+
+/* ===== GALLERY ===== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  background: linear-gradient(135deg, #3D7A52 0%, #2B5B3C 50%, #1A3A26 100%);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.gallery-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    repeating-linear-gradient(0deg, transparent, transparent 20px, rgba(255,255,255,0.03) 20px, rgba(255,255,255,0.03) 21px),
+    repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255,255,255,0.03) 40px, rgba(255,255,255,0.03) 41px);
+}
+
+.gallery-item:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-lg);
+}
+
+.gallery-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  color: #fff;
+}
+
+.gallery-label-tag {
+  display: inline-block;
+  padding: 3px 12px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.75rem;
+  border-radius: 50px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.gallery-label h4 {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.gallery-label p {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+/* ===== VOICE ===== */
+.voice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.voice-card {
+  background: var(--bg-white);
+  border-radius: var(--radius-md);
+  padding: 32px 28px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+}
+
+.voice-stars {
+  color: var(--accent);
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+}
+
+.voice-text {
+  font-size: 0.9rem;
+  color: var(--text-medium);
+  line-height: 2;
+  margin-bottom: 20px;
+}
+
+.voice-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-light);
+}
+
+.voice-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.voice-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+
+.voice-detail {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+/* ===== CTA ===== */
+.cta-section {
+  padding: 64px 24px;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.04;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 30px, rgba(255,255,255,0.5) 30px, rgba(255,255,255,0.5) 31px),
+    repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(255,255,255,0.5) 60px, rgba(255,255,255,0.5) 61px);
+}
+
+.cta-section h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  color: #fff;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-section > p {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.95rem;
+  margin-bottom: 32px;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-phone-box {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-phone-num {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.cta-phone-num:hover {
+  color: #fff;
+}
+
+.cta-phone-num svg {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+}
+
+.cta-phone-time {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.6);
+}
+
+/* ===== COMPANY ===== */
+.company-table {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.company-table tr {
+  border-bottom: 1px solid var(--border-light);
+}
+
+.company-table th {
+  padding: 18px 20px;
+  text-align: left;
+  font-weight: 500;
+  color: var(--primary-dark);
+  font-size: 0.9rem;
+  width: 160px;
+  vertical-align: top;
+  background: rgba(43,91,60,0.03);
+}
+
+.company-table td {
+  padding: 18px 20px;
+  font-size: 0.95rem;
+  color: var(--text-medium);
+}
+
+/* ===== CONTACT FORM ===== */
+.contact-wrap {
+  max-width: 700px;
+  margin: 0 auto;
+  background: var(--bg-white);
+  border-radius: var(--radius-lg);
+  padding: 48px 40px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-light);
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.form-group label .required {
+  display: inline-block;
+  padding: 2px 8px;
+  background: #E74C3C;
+  color: #fff;
+  font-size: 0.7rem;
+  border-radius: 3px;
+  margin-left: 8px;
+  font-weight: 400;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  font-family: 'Noto Sans JP', sans-serif;
+  transition: var(--transition);
+  background: var(--bg-cream);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(43,91,60,0.1);
+}
+
+.form-group textarea {
+  height: 140px;
+  resize: vertical;
+}
+
+.form-submit {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Noto Sans JP', sans-serif;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.form-submit:hover {
+  background: var(--primary-light);
+  box-shadow: var(--shadow-md);
+}
+
+/* ===== DEMO BANNER ===== */
+.demo-banner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 28px;
+  background: linear-gradient(135deg, #FFF3CD, #FFF8E1);
+  border: 2px dashed #C8A84E;
+  border-radius: var(--radius-md);
+  text-align: center;
+  font-size: 0.9rem;
+  color: #856404;
+  line-height: 1.8;
+}
+
+.demo-banner strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 1rem;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--primary-dark);
+  color: rgba(255,255,255,0.7);
+  padding: 48px 24px 24px;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.footer-brand {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.footer-info p {
+  font-size: 0.85rem;
+  line-height: 2;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-links a {
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-copy {
+  text-align: center;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.35);
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ===== HAMBURGER ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--primary-dark);
+  transition: var(--transition);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .header-inner {
+    height: 60px;
+  }
+
+  .header-phone {
+    display: none;
+  }
+
+  .header-cta {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .nav.open {
+    display: block;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+
+  .nav.open .nav-inner {
+    flex-direction: column;
+  }
+
+  .hero {
+    margin-top: 60px;
+    padding: 60px 20px 50px;
+  }
+
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero-stats {
+    gap: 24px;
+  }
+
+  .hero-stat-num {
+    font-size: 2rem;
+  }
+
+  .section {
+    padding: 56px 16px;
+  }
+
+  .features-grid,
+  .services-grid,
+  .gallery-grid,
+  .voice-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .company-table th {
+    display: block;
+    width: 100%;
+    padding: 12px 16px 4px;
+  }
+
+  .company-table td {
+    display: block;
+    padding: 4px 16px 12px;
+  }
+
+  .contact-wrap {
+    padding: 32px 20px;
+  }
+
+  .cta-phone-num {
+    font-size: 1.6rem;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+}
+</style>
+</head>
+<body id="top">
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <a href="#top" class="header-logo">
+      <img src="https://www.wasou-tatami.com/library/5449fea3c7f26f3f1b000044/54cf2ce170bd622152000712.png" alt="和創ロゴ">
+      <div>
+        <div class="header-logo-text">株式会社 和創</div>
+        <span class="header-logo-sub">WASOU TATAMI</span>
+      </div>
+    </a>
+    <div class="header-right">
+      <a href="tel:011-821-0157" class="header-phone">
+        <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+        011-821-0157
+      </a>
+      <a href="#contact" class="header-cta">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        無料お見積り
+      </a>
+      <button class="hamburger" onclick="document.querySelector('.nav').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#top">HOME</a>
+    <a href="#features">和創の特徴</a>
+    <a href="#services">サービス一覧</a>
+    <a href="#gallery">施工事例</a>
+    <a href="#voice">お客様の声</a>
+    <a href="#company">会社概要</a>
+    <a href="#contact">お問い合わせ</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="tatami-pattern"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">御見積無料 / 札幌市全域対応</div>
+    <h1>暮らしに寄り添う<br><span>畳</span>のある空間を</h1>
+    <p class="hero-sub">天然い草の心地よい香り、足裏に伝わるやさしい感触。<br>株式会社和創は、札幌市豊平区から畳の製造・販売を通じて、<br>お客様の快適な住まいづくりをお手伝いいたします。</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num">畳<span>の</span></div>
+        <div class="hero-stat-label">製造から施工まで一貫</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">豊富<span>な</span></div>
+        <div class="hero-stat-label">素材バリエーション</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">安心<span>の</span></div>
+        <div class="hero-stat-label">無料見積り対応</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section" id="features">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-en">Features</p>
+      <h2 class="section-title">和創の特徴</h2>
+      <span class="section-line"></span>
+    </div>
+    <div class="features-grid">
+      <!-- 1 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 48 48"><rect x="6" y="14" width="36" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><line x1="6" y1="24" x2="42" y2="24" stroke="currentColor" stroke-width="1.5"/><path d="M18 14v20M30 14v20" stroke="currentColor" stroke-width="1" stroke-dasharray="3 2"/></svg>
+        </div>
+        <h3>製造から施工まで自社一貫体制</h3>
+        <p>畳の製造から施工まで自社で一貫して対応。中間マージンがないため、高品質な畳をお求めやすい価格でご提供いたします。職人が直接お伺いし、お部屋に合わせた最適なご提案をいたします。</p>
+      </div>
+      <!-- 2 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 48 48"><path d="M24 4v8M24 36v8M4 24h8M36 24h8M10 10l6 6M32 32l6 6M10 38l6-6M32 16l6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="24" cy="24" r="8" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <h3>天然い草から最新素材まで</h3>
+        <p>熊本県産の天然い草はもちろん、ダイケン和紙表「健やかおもて」やセキスイ樹脂表「MIGUSA」など最新素材も豊富に取り揃え。お客様のライフスタイルやご予算に合わせた最適な畳をご提案します。</p>
+      </div>
+      <!-- 3 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 48 48"><path d="M24 4C14 4 6 12 6 22c0 12 18 22 18 22s18-10 18-22C42 12 34 4 24 4z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="20" r="6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <h3>札幌市全域に対応・地域密着</h3>
+        <p>札幌市豊平区を拠点に、市内全域へ無料で出張見積もりにお伺いします。地域密着ならではの迅速な対応で、畳のお悩みをスピーディーに解決。お気軽にご相談ください。</p>
+      </div>
+      <!-- 4 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 48 48"><rect x="6" y="6" width="16" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><rect x="26" y="6" width="16" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><rect x="6" y="26" width="16" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><rect x="26" y="26" width="16" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <h3>畳以外もワンストップ対応</h3>
+        <p>畳だけでなく、襖・障子・網戸の張替えまで幅広く対応。和室まわりのお困りごとをまとめてご相談いただけるので、手間も費用も抑えられます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section section-alt" id="services">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-en">Services</p>
+      <h2 class="section-title">サービス一覧</h2>
+      <span class="section-line"></span>
+    </div>
+    <div class="services-grid">
+      <!-- 新畳 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 48 48"><rect x="6" y="14" width="36" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><line x1="6" y1="24" x2="42" y2="24" stroke="currentColor" stroke-width="1.5"/><path d="M18 14v20M30 14v20" stroke="currentColor" stroke-width="1" stroke-dasharray="3 2"/></svg>
+        </div>
+        <h3>新畳（しんだたみ）</h3>
+        <p class="price">お見積りにてご案内</p>
+        <p>畳床・畳表・畳縁すべてを新品に。表面がブヨブヨしていたり、虫食い被害がある場合におすすめ。天然い草から和紙表・樹脂表まで豊富にご用意しております。</p>
+      </div>
+      <!-- 表替え -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 48 48"><rect x="8" y="16" width="32" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 20h32" stroke="currentColor" stroke-width="1.5"/><path d="M12 10l4 6M36 10l-4 6" stroke="currentColor" stroke-width="1.5"/><path d="M20 16v-4h8v4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+        </div>
+        <h3>表替え（おもてがえ）</h3>
+        <p class="price">お見積りにてご案内</p>
+        <p>畳表のみを新品に交換し、畳床は再利用。リーズナブルに和室をリフレッシュできます。裏返しから5年が交換の目安です。</p>
+      </div>
+      <!-- 裏返し -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 48 48"><path d="M10 28c0-8 6-14 14-14s14 6 14 14" fill="none" stroke="currentColor" stroke-width="2"/><path d="M34 24l4 4 4-4" stroke="currentColor" stroke-width="2" fill="none"/><rect x="12" y="30" width="24" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <h3>裏返し（うらがえし）</h3>
+        <p class="price">お見積りにてご案内</p>
+        <p>畳表の裏面を再利用するお得なリフォーム方法。キレイに使われていた畳であれば、まずは裏返しのご検討を。新畳から3~5年が目安です。</p>
+      </div>
+      <!-- 琉球畳 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 48 48"><rect x="8" y="8" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"/><rect x="26" y="8" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"/><rect x="8" y="26" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"/><rect x="26" y="26" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"/><line x1="11" y1="11" x2="19" y2="19" stroke="currentColor" stroke-width="0.8" opacity="0.4"/><line x1="29" y1="29" x2="37" y2="37" stroke="currentColor" stroke-width="0.8" opacity="0.4"/></svg>
+        </div>
+        <h3>琉球畳・へりなし畳</h3>
+        <p class="price">お見積りにてご案内</p>
+        <p>市松柄がモダンなデザイン畳。天然い草のほか和紙製の畳表もあり、豊富なカラーバリエーションで理想の和空間を実現します。</p>
+      </div>
+      <!-- 和紙表 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 48 48"><path d="M8 12h32v24H8z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 12c4 4 12 4 16 0s12-4 16 0" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 20h24M12 26h24M12 32h24" stroke="currentColor" stroke-width="1" opacity="0.5"/></svg>
+        </div>
+        <h3>和紙表（ダイケン）</h3>
+        <p class="price">健やかおもて各種</p>
+        <p>ダイケンの和紙表「健やかおもて」。変色しにくく、ダニ・カビの心配が少ない高機能畳表。カラーバリエーションも豊富です。</p>
+      </div>
+      <!-- 樹脂表 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="16" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 20c2-4 12-4 16 0M16 28c2 4 12 4 16 0" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="24" cy="24" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <h3>樹脂表（セキスイ）</h3>
+        <p class="price">MIGUSA各種</p>
+        <p>セキスイの樹脂表「MIGUSA」。水拭きできてお手入れ簡単。ペットやお子様のいるご家庭にもおすすめの機能性畳表です。</p>
+      </div>
+      <!-- 襖 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 48 48"><rect x="10" y="6" width="28" height="36" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><line x1="24" y1="6" x2="24" y2="42" stroke="currentColor" stroke-width="1.5"/><circle cx="22" cy="24" r="1.5" fill="currentColor"/><circle cx="26" cy="24" r="1.5" fill="currentColor"/></svg>
+        </div>
+        <h3>襖の張替え</h3>
+        <p class="price">お見積りにてご案内</p>
+        <p>お部屋の雰囲気に合わせた襖紙をお選びいただけます。紙襖から糸入りまで多彩なラインナップ。巾広・長尺タイプにも対応。</p>
+      </div>
+      <!-- 障子 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 48 48"><rect x="10" y="6" width="28" height="36" rx="1" fill="none" stroke="currentColor" stroke-width="2"/><line x1="10" y1="18" x2="38" y2="18" stroke="currentColor" stroke-width="1"/><line x1="10" y1="30" x2="38" y2="30" stroke="currentColor" stroke-width="1"/><line x1="19" y1="6" x2="19" y2="42" stroke="currentColor" stroke-width="1"/><line x1="29" y1="6" x2="29" y2="42" stroke="currentColor" stroke-width="1"/></svg>
+        </div>
+        <h3>障子の張替え</h3>
+        <p class="price">お見積りにてご案内</p>
+        <p>破れた障子も美しく蘇ります。雪見タイプ・両桟タイプにも対応。柔らかな光を通す障子は、和室の雰囲気づくりに欠かせません。</p>
+      </div>
+      <!-- 網戸 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 48 48"><rect x="8" y="6" width="32" height="36" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 10h24v28H12z" fill="none" stroke="currentColor" stroke-width="1"/><path d="M12 18h24M12 26h24M12 34h24M20 10v28M28 10v28" stroke="currentColor" stroke-width="0.5" opacity="0.4"/></svg>
+        </div>
+        <h3>網戸の張替え</h3>
+        <p class="price">お見積りにてご案内</p>
+        <p>破れやたるみが気になる網戸もお任せください。虫の侵入をしっかり防ぎ、快適な室内環境を保ちます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section" id="gallery">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-en">Gallery</p>
+      <h2 class="section-title">施工事例</h2>
+      <span class="section-line"></span>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <div class="gallery-label">
+          <span class="gallery-label-tag">表替え</span>
+          <h4>築25年 和室8畳の表替え</h4>
+          <p>天然い草表 / 新品同様の美しい仕上がり</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-label">
+          <span class="gallery-label-tag">琉球畳</span>
+          <h4>リビング横 琉球畳でモダン和室に</h4>
+          <p>ダイケン和紙表 / 市松敷き半畳12枚</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-label">
+          <span class="gallery-label-tag">襖・障子</span>
+          <h4>和室まるごとリフレッシュ</h4>
+          <p>畳表替え + 襖・障子張替え一式</p>
+        </div>
+      </div>
+    </div>
+    <p style="text-align:center; color:var(--text-light); font-size:0.85rem; margin-top:24px;">※ 本番サイトでは実際の施工写真を掲載いたします</p>
+  </div>
+</section>
+
+<!-- VOICE -->
+<section class="section section-alt" id="voice">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-en">Voice</p>
+      <h2 class="section-title">お客様の声</h2>
+      <span class="section-line"></span>
+    </div>
+    <div class="voice-grid">
+      <div class="voice-card">
+        <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="voice-text">古い和室の畳を表替えしていただきました。天然い草と和紙表の違いを丁寧に説明してくださり、ライフスタイルに合った素材を選べました。仕上がりも大変美しく、い草の香りに癒されています。</p>
+        <div class="voice-author">
+          <div class="voice-avatar">T</div>
+          <div>
+            <p class="voice-name">T.K 様</p>
+            <p class="voice-detail">札幌市豊平区 / 表替え8畳</p>
+          </div>
+        </div>
+      </div>
+      <div class="voice-card">
+        <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="voice-text">琉球畳にリフォームしてもらいました。カラーの組み合わせなど相談にも親身に乗っていただき、想像以上におしゃれな和室になりました。来客時に必ず褒められるのが嬉しいです。</p>
+        <div class="voice-author">
+          <div class="voice-avatar">M</div>
+          <div>
+            <p class="voice-name">M.S 様</p>
+            <p class="voice-detail">札幌市中央区 / 琉球畳6畳</p>
+          </div>
+        </div>
+      </div>
+      <div class="voice-card">
+        <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="voice-text">畳と一緒に襖・障子の張替えもお願いしました。全部まとめて対応してくれるので楽でしたし、見積もりも無料で安心。和室全体が見違えるように綺麗になりました。</p>
+        <div class="voice-author">
+          <div class="voice-avatar">Y</div>
+          <div>
+            <p class="voice-name">Y.A 様</p>
+            <p class="voice-detail">札幌市白石区 / 畳・襖・障子</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>畳のことなら、まずはお気軽にご相談ください</h2>
+  <p>御見積無料。お電話一本で、ご自宅までお伺いいたします。</p>
+  <div class="cta-phone-box">
+    <a href="tel:011-821-0157" class="cta-phone-num">
+      <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+      011-821-0157
+    </a>
+    <span class="cta-phone-time">受付時間 8:30~17:30（日曜・祭日定休）</span>
+  </div>
+</section>
+
+<!-- COMPANY -->
+<section class="section" id="company">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-en">Company</p>
+      <h2 class="section-title">会社概要</h2>
+      <span class="section-line"></span>
+    </div>
+    <table class="company-table">
+      <tr><th>商号</th><td>株式会社 和創</td></tr>
+      <tr><th>所在地</th><td>〒062-0901 北海道札幌市豊平区豊平1条2丁目2番3号</td></tr>
+      <tr><th>電話番号</th><td>011-821-0157</td></tr>
+      <tr><th>FAX</th><td>011-821-0223</td></tr>
+      <tr><th>事業内容</th><td>畳の製造・販売、表替え・新畳・裏返し、琉球畳、襖・障子・網戸の張替え</td></tr>
+      <tr><th>取扱素材</th><td>天然い草表 / 和紙表（ダイケン健やかおもて）/ 樹脂表（セキスイMIGUSA）/ ここち和座 / 花ござ置畳</td></tr>
+      <tr><th>営業時間</th><td>午前8時30分~午後5時30分</td></tr>
+      <tr><th>定休日</th><td>日曜・祭日</td></tr>
+    </table>
+    <!-- MAP -->
+    <div style="max-width:800px; margin:32px auto 0; border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-sm);">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2915.5!2d141.3681!3d43.0476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z5qCq5byP5Lya56S-5ZKM5Ym1!5e0!3m2!1sja!2sjp!4v1" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section section-alt" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-en">Contact</p>
+      <h2 class="section-title">お問い合わせ</h2>
+      <span class="section-line"></span>
+    </div>
+    <div class="contact-wrap">
+      <div class="form-group">
+        <label>お名前 <span class="required">必須</span></label>
+        <input type="text" placeholder="例：山田 太郎">
+      </div>
+      <div class="form-group">
+        <label>電話番号 <span class="required">必須</span></label>
+        <input type="tel" placeholder="例：090-1234-5678">
+      </div>
+      <div class="form-group">
+        <label>メールアドレス</label>
+        <input type="email" placeholder="例：example@email.com">
+      </div>
+      <div class="form-group">
+        <label>ご住所</label>
+        <input type="text" placeholder="例：札幌市豊平区...">
+      </div>
+      <div class="form-group">
+        <label>ご依頼内容 <span class="required">必須</span></label>
+        <select>
+          <option value="">選択してください</option>
+          <option>新畳</option>
+          <option>表替え</option>
+          <option>裏返し</option>
+          <option>琉球畳・へりなし畳</option>
+          <option>和紙表（ダイケン）</option>
+          <option>樹脂表（セキスイ）</option>
+          <option>襖の張替え</option>
+          <option>障子の張替え</option>
+          <option>網戸の張替え</option>
+          <option>その他</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>お問い合わせ内容</label>
+        <textarea placeholder="畳の状態やご希望など、お気軽にお書きください"></textarea>
+      </div>
+      <button class="form-submit" type="button">送信する</button>
+    </div>
+  </div>
+</section>
+
+<!-- DEMO BANNER -->
+<div style="padding: 0 24px;">
+  <div class="demo-banner">
+    <strong>※ デモサイトのご案内</strong>
+    本ページはリニューアルのイメージサンプルです。本番では実際のお写真・正式な情報を使用し、より完成度の高いサイトに仕上げます。
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-info">
+      <p class="footer-brand">株式会社 和創</p>
+      <p>〒062-0901 北海道札幌市豊平区豊平1条2丁目2番3号<br>TEL: 011-821-0157 / FAX: 011-821-0223<br>営業時間 8:30~17:30（日曜・祭日定休）</p>
+    </div>
+    <div class="footer-links">
+      <a href="#top">HOME</a>
+      <a href="#features">和創の特徴</a>
+      <a href="#services">サービス一覧</a>
+      <a href="#gallery">施工事例</a>
+      <a href="#voice">お客様の声</a>
+      <a href="#company">会社概要</a>
+      <a href="#contact">お問い合わせ</a>
+    </div>
+  </div>
+  <p class="footer-copy">&copy; 2026 株式会社和創 All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

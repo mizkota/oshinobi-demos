@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>幡本印刷株式会社｜札幌のオンデマンド印刷・小ロット対応</title>
+  <meta name="description" content="札幌市西区の印刷会社。オンデマンド印刷で小ロットから大量印刷まで対応。チラシ・ポスター・名刺・冊子・封筒など幅広い印刷物を高品質でお届けします。">
+  <meta property="og:title" content="幡本印刷株式会社｜札幌のオンデマンド印刷・小ロット対応">
+  <meta property="og:description" content="必要なものを、必要な時に、必要な量だけ。札幌の印刷パートナー。">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0d1f3c;
+      --primary-light: #1a3a6a;
+      --accent: #00b4d8;
+      --accent-light: #90e0ef;
+      --accent-dark: #0096b7;
+      --text: #2d2d2d;
+      --text-light: #666;
+      --bg: #f8f9fb;
+      --white: #ffffff;
+      --section-bg: #eef2f7;
+      --border: #dde3eb;
+      --gradient: linear-gradient(135deg, #0d1f3c 0%, #1a3a6a 50%, #0d2f5e 100%);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.8;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: var(--white);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+    }
+
+    .header-top {
+      background: var(--primary);
+      color: rgba(255,255,255,0.8);
+      font-size: 0.75rem;
+      padding: 5px 0;
+      text-align: center;
+      letter-spacing: 0.05em;
+    }
+
+    .header-main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-sub {
+      font-size: 0.65rem;
+      color: var(--accent);
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .logo-main {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: 0.08em;
+    }
+
+    .header-contact {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .header-tel {
+      text-align: right;
+    }
+
+    .header-tel .number {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: 0.05em;
+    }
+
+    .header-tel .hours {
+      font-size: 0.7rem;
+      color: var(--text-light);
+    }
+
+    .btn-cta {
+      background: var(--accent);
+      color: white;
+      padding: 10px 24px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.85rem;
+      transition: all 0.3s;
+      letter-spacing: 0.05em;
+      display: inline-block;
+    }
+
+    .btn-cta:hover {
+      background: var(--accent-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(0,180,216,0.4);
+    }
+
+    /* ===== NAV ===== */
+    nav {
+      background: var(--primary);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      margin-top: 94px;
+    }
+
+    nav ul {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      list-style: none;
+      justify-content: center;
+    }
+
+    nav li a {
+      display: block;
+      color: rgba(255,255,255,0.9);
+      text-decoration: none;
+      padding: 12px 18px;
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      transition: all 0.3s;
+      border-bottom: 2px solid transparent;
+    }
+
+    nav li a:hover {
+      color: white;
+      background: rgba(255,255,255,0.08);
+      border-bottom-color: var(--accent);
+    }
+
+    /* ===== HAMBURGER ===== */
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--primary);
+      margin: 5px 0;
+      transition: 0.3s;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      margin-top: 138px;
+      background: var(--gradient);
+      position: relative;
+      overflow: hidden;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(0,180,216,0.08) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -5%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(0,180,216,0.05) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 40px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(0,180,216,0.15);
+      border: 1px solid rgba(0,180,216,0.5);
+      color: var(--accent-light);
+      padding: 6px 20px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-bottom: 24px;
+      letter-spacing: 0.1em;
+    }
+
+    .hero h1 {
+      font-family: 'Noto Serif JP', serif;
+      color: white;
+      font-size: 2.6rem;
+      font-weight: 700;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: var(--accent-light);
+    }
+
+    .hero-sub {
+      color: rgba(255,255,255,0.85);
+      font-size: 1.05rem;
+      line-height: 1.9;
+      max-width: 620px;
+      margin-bottom: 36px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-hero-primary {
+      background: var(--accent);
+      color: white;
+      padding: 16px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.3s;
+      letter-spacing: 0.05em;
+    }
+
+    .btn-hero-primary:hover {
+      background: var(--accent-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,180,216,0.4);
+    }
+
+    .btn-hero-secondary {
+      background: transparent;
+      color: white;
+      padding: 16px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      border: 1px solid rgba(255,255,255,0.4);
+      transition: all 0.3s;
+    }
+
+    .btn-hero-secondary:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: white;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 50px;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .hero-stat { text-align: center; }
+
+    .hero-stat .num {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--accent-light);
+      line-height: 1.2;
+    }
+
+    .hero-stat .num small {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .hero-stat .label {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.6);
+      margin-top: 4px;
+    }
+
+    /* ===== SECTIONS ===== */
+    .section {
+      padding: 80px 24px;
+    }
+
+    .section-alt {
+      background: var(--section-bg);
+    }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 16px;
+      line-height: 1.4;
+    }
+
+    .section-desc {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      max-width: 700px;
+      margin-bottom: 48px;
+      line-height: 1.9;
+    }
+
+    /* ===== STRENGTHS ===== */
+    .strengths-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .strength-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 40px 32px;
+      text-align: center;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+      transition: all 0.3s;
+      border: 1px solid var(--border);
+    }
+
+    .strength-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+    }
+
+    .strength-icon {
+      width: 72px;
+      height: 72px;
+      background: linear-gradient(135deg, rgba(0,180,216,0.1), rgba(0,180,216,0.05));
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+
+    .strength-icon svg {
+      width: 36px;
+      height: 36px;
+      color: var(--accent);
+    }
+
+    .strength-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .strength-card p {
+      font-size: 0.88rem;
+      color: var(--text-light);
+      line-height: 1.8;
+    }
+
+    /* ===== SERVICES ===== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 32px 24px;
+      text-align: center;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.03);
+      transition: all 0.3s;
+      border: 1px solid var(--border);
+    }
+
+    .service-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.07);
+      border-color: var(--accent);
+    }
+
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--section-bg);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+
+    .service-icon svg {
+      width: 28px;
+      height: 28px;
+      color: var(--primary-light);
+    }
+
+    .service-card h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .service-card p {
+      font-size: 0.78rem;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    /* ===== VOICE ===== */
+    .voice-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .voice-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 36px 32px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+      border: 1px solid var(--border);
+      position: relative;
+    }
+
+    .voice-card::before {
+      content: '\201C';
+      font-size: 4rem;
+      color: var(--accent);
+      opacity: 0.2;
+      position: absolute;
+      top: 12px;
+      left: 20px;
+      font-family: serif;
+      line-height: 1;
+    }
+
+    .voice-stars {
+      color: #f59e0b;
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+      letter-spacing: 2px;
+    }
+
+    .voice-text {
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.9;
+      margin-bottom: 16px;
+    }
+
+    .voice-author {
+      font-size: 0.8rem;
+      color: var(--text-light);
+      font-weight: 500;
+    }
+
+    .voice-author strong {
+      color: var(--primary);
+    }
+
+    /* ===== CTA SECTION ===== */
+    .cta-section {
+      background: var(--gradient);
+      padding: 72px 24px;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-family: 'Noto Serif JP', serif;
+      color: white;
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+
+    .cta-section p {
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 32px;
+      font-size: 0.95rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-cta-white {
+      background: white;
+      color: var(--primary);
+      padding: 16px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.3s;
+    }
+
+    .btn-cta-white:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255,255,255,0.3);
+    }
+
+    .btn-cta-outline {
+      background: transparent;
+      color: white;
+      padding: 16px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      border: 1px solid rgba(255,255,255,0.5);
+      transition: all 0.3s;
+    }
+
+    .btn-cta-outline:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: white;
+    }
+
+    /* ===== COMPANY TABLE ===== */
+    .company-table {
+      width: 100%;
+      border-collapse: collapse;
+      max-width: 800px;
+    }
+
+    .company-table th,
+    .company-table td {
+      padding: 16px 20px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+
+    .company-table th {
+      background: var(--section-bg);
+      color: var(--primary);
+      font-weight: 700;
+      width: 180px;
+      white-space: nowrap;
+    }
+
+    .company-table td {
+      color: var(--text);
+    }
+
+    /* ===== DEMO BANNER ===== */
+    .demo-banner {
+      background: linear-gradient(135deg, #ff6b35, #ff8c5a);
+      color: white;
+      text-align: center;
+      padding: 28px 24px;
+    }
+
+    .demo-banner p {
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .demo-banner small {
+      display: block;
+      margin-top: 6px;
+      font-size: 0.78rem;
+      font-weight: 400;
+      opacity: 0.9;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--primary);
+      color: rgba(255,255,255,0.6);
+      text-align: center;
+      padding: 40px 24px;
+    }
+
+    .footer-logo {
+      font-family: 'Noto Serif JP', serif;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .footer-address {
+      font-size: 0.8rem;
+      margin-bottom: 6px;
+    }
+
+    .footer-tel {
+      font-size: 0.85rem;
+      color: var(--accent-light);
+      margin-bottom: 20px;
+    }
+
+    .footer-copy {
+      font-size: 0.72rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 20px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .header-top { display: none; }
+      .header-tel { display: none; }
+      nav { margin-top: 60px; }
+
+      .hamburger { display: block; }
+
+      nav ul {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav.active ul { display: flex; }
+
+      nav li a {
+        padding: 14px 20px;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+      }
+
+      .hero { margin-top: 100px; min-height: 480px; }
+
+      .hero h1 { font-size: 1.8rem; }
+
+      .hero-content { padding: 50px 24px; }
+
+      .hero-stats { gap: 24px; flex-wrap: wrap; }
+
+      .hero-stat .num { font-size: 1.6rem; }
+
+      .strengths-grid { grid-template-columns: 1fr; }
+
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+
+      .voice-grid { grid-template-columns: 1fr; }
+
+      .section-title { font-size: 1.5rem; }
+
+      .company-table th {
+        width: 120px;
+        font-size: 0.82rem;
+      }
+
+      .cta-section h2 { font-size: 1.5rem; }
+    }
+
+    @media (max-width: 480px) {
+      .services-grid { grid-template-columns: 1fr; }
+
+      .hero-buttons { flex-direction: column; }
+      .hero-buttons a { text-align: center; }
+
+      .cta-buttons { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-top">
+      〒063-0830 札幌市西区発寒10条14丁目 ／ 平日 9:00〜18:00
+    </div>
+    <div class="header-main">
+      <div class="logo">
+        <span class="logo-sub">Hatamoto Printing</span>
+        <span class="logo-main">幡本印刷株式会社</span>
+      </div>
+      <div class="header-contact">
+        <div class="header-tel">
+          <div class="number">011-666-1111</div>
+          <div class="hours">FAX: 011-666-1151</div>
+        </div>
+        <a href="#contact" class="btn-cta">無料お見積り</a>
+      </div>
+      <button class="hamburger" onclick="document.querySelector('nav').classList.toggle('active')">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- NAV -->
+  <nav>
+    <ul>
+      <li><a href="#top">HOME</a></li>
+      <li><a href="#strengths">当社の強み</a></li>
+      <li><a href="#services">サービス一覧</a></li>
+      <li><a href="#works">印刷実績</a></li>
+      <li><a href="#voice">お客様の声</a></li>
+      <li><a href="#company">会社概要</a></li>
+      <li><a href="#contact">お問い合わせ</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-content">
+      <div class="hero-badge">札幌のオンデマンド印刷パートナー</div>
+      <h1>小ロットから大量印刷まで。<br>あなたの<span>「伝えたい」</span>を<br>カタチにします。</h1>
+      <p class="hero-sub">チラシ・ポスター・名刺・冊子・パンフレットなど、必要なものを、必要な時に、必要な量だけ。経験豊富なスタッフが企画からお届けまでワンストップでサポートします。</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn-hero-primary">無料お見積りはこちら</a>
+        <a href="#services" class="btn-hero-secondary">サービスを見る</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="num">30<small>年以上</small></div>
+          <div class="label">印刷業の実績</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">1<small>枚〜</small></div>
+          <div class="label">小ロット対応</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">100<small>種+</small></div>
+          <div class="label">対応アイテム数</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">最短<small>翌日</small></div>
+          <div class="label">スピード納品</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRENGTHS -->
+  <section class="section" id="strengths">
+    <div class="section-inner">
+      <div class="section-label">Strengths</div>
+      <h2 class="section-title">幡本印刷が選ばれる3つの理由</h2>
+      <p class="section-desc">「手間の削減」「コストの削減」「時間の削減」そして「売上拡大の支援」。お客様のビジネスを印刷の力で加速させます。</p>
+      <div class="strengths-grid">
+        <div class="strength-card">
+          <div class="strength-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5h11v11h-11z"/><path d="M6.5 6.5L12 2l5.5 4.5"/><path d="M17.5 17.5L12 22l-5.5-4.5"/><circle cx="12" cy="12" r="2.5"/></svg>
+          </div>
+          <h3>オンデマンド印刷対応</h3>
+          <p>必要な量だけ、必要な時に印刷。在庫リスクゼロで無駄なコストをカット。少部数から大量ロットまで柔軟にお応えします。</p>
+        </div>
+        <div class="strength-card">
+          <div class="strength-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>企画からお届けまでワンストップ</h3>
+          <p>デザイン・印刷・加工・納品を一括対応。コピーライターやカメラマンなど外部エキスパートとの連携で、高品質な仕上がりを実現します。</p>
+        </div>
+        <div class="strength-card">
+          <div class="strength-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h3>スピード×品質の両立</h3>
+          <p>30年以上の経験と最新設備で、短納期でも品質に妥協しません。急ぎのご依頼も、まずはお気軽にご相談ください。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section section-alt" id="services">
+    <div class="section-inner">
+      <div class="section-label">Services</div>
+      <h2 class="section-title">幅広い印刷サービス</h2>
+      <p class="section-desc">チラシからブライダルアイテムまで、あらゆる印刷ニーズにお応えします。</p>
+      <div class="services-grid">
+
+        <!-- チラシ -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          </div>
+          <h3>チラシ・フライヤー</h3>
+          <p>集客の基本ツール。デザインから印刷まで一貫対応。</p>
+        </div>
+
+        <!-- ポスター -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="18" x2="12" y2="21"/></svg>
+          </div>
+          <h3>ポスター・カレンダー</h3>
+          <p>大判印刷も高品質。店舗・イベントの訴求力を高めます。</p>
+        </div>
+
+        <!-- 名刺 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="6" y1="12" x2="12" y2="12"/><line x1="6" y1="15" x2="10" y2="15"/><circle cx="17" cy="10" r="2"/></svg>
+          </div>
+          <h3>名刺・カード</h3>
+          <p>ビジネスの第一印象を決める名刺。小ロットから対応。</p>
+        </div>
+
+        <!-- パンフレット -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <h3>パンフレット・冊子</h3>
+          <p>会社案内・学校案内・記念誌など。ページものもお任せください。</p>
+        </div>
+
+        <!-- 封筒・DM -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+          </div>
+          <h3>封筒・DM</h3>
+          <p>ダイレクトメール・封筒印刷で効果的な販促をサポート。</p>
+        </div>
+
+        <!-- メニュー -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="12" y2="16"/></svg>
+          </div>
+          <h3>メニュー・リーフレット</h3>
+          <p>飲食店メニューや案内リーフレットを美しく仕上げます。</p>
+        </div>
+
+        <!-- ブライダル -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3>ブライダルアイテム</h3>
+          <p>「マニーフィコ」ブランドで招待状・席次表など特別な日を彩ります。</p>
+        </div>
+
+        <!-- デジタルサイネージ -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><polygon points="10 8 16 11 10 14"/></svg>
+          </div>
+          <h3>デジタルサイネージ・動画</h3>
+          <p>電子看板コンテンツや動画制作で、新しい訴求方法をご提案。</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKS (実績) -->
+  <section class="section" id="works">
+    <div class="section-inner">
+      <div class="section-label">Works</div>
+      <h2 class="section-title">印刷実績</h2>
+      <p class="section-desc">官公庁・教育機関・医療機関・飲食店・一般企業まで、幅広いお客様の印刷物を手がけています。</p>
+      <div class="strengths-grid">
+        <div class="strength-card">
+          <div class="strength-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><path d="M9 9h1"/><path d="M9 13h1"/><path d="M9 17h1"/></svg>
+          </div>
+          <h3>広報誌・会報</h3>
+          <p>学校・自治体・企業の広報誌・会報を数多く制作。定期刊行のスケジュール管理もお任せください。</p>
+        </div>
+        <div class="strength-card">
+          <div class="strength-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <h3>記念誌・報告書</h3>
+          <p>周年記念誌、学術抄録、各種報告書など、ページ数の多い冊子も高品質に仕上げます。</p>
+        </div>
+        <div class="strength-card">
+          <div class="strength-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>
+          </div>
+          <h3>販促ツール全般</h3>
+          <p>チケット・ステッカー・うちわ・サンバイザーなど、販促グッズもまとめてご対応いたします。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VOICE -->
+  <section class="section section-alt" id="voice">
+    <div class="section-inner">
+      <div class="section-label">Voice</div>
+      <h2 class="section-title">お客様の声</h2>
+      <p class="section-desc">幡本印刷をご利用いただいたお客様からの声をご紹介します。</p>
+      <div class="voice-grid">
+        <div class="voice-card">
+          <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="voice-text">急ぎのチラシ印刷をお願いしましたが、翌日に納品してもらい本当に助かりました。デザインの相談にも親身に乗っていただき、仕上がりも大満足です。</p>
+          <p class="voice-author"><strong>札幌市 飲食店経営</strong> ／ A様</p>
+        </div>
+        <div class="voice-card">
+          <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="voice-text">会社案内パンフレットのリニューアルをお願いしました。写真撮影の手配からデザインまでトータルで提案してくれて、社員からも好評です。</p>
+          <p class="voice-author"><strong>札幌市 建設会社</strong> ／ B様</p>
+        </div>
+        <div class="voice-card">
+          <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="voice-text">毎月の広報誌を長年お願いしています。締切管理もしっかりしていて安心。小ロットの追加印刷にも快く対応してくれるのがありがたいです。</p>
+          <p class="voice-author"><strong>北海道 教育機関</strong> ／ C様</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" id="contact">
+    <h2>まずはお気軽にご相談ください</h2>
+    <p>印刷物のお見積り・デザインのご相談など、どんなことでもお問い合わせください。</p>
+    <div class="cta-buttons">
+      <a href="tel:011-666-1111" class="btn-cta-white">電話で相談する</a>
+      <a href="mailto:info@hatamoto.cc" class="btn-cta-outline">メールで問い合わせ</a>
+    </div>
+  </section>
+
+  <!-- COMPANY -->
+  <section class="section" id="company">
+    <div class="section-inner">
+      <div class="section-label">Company</div>
+      <h2 class="section-title">会社概要</h2>
+      <table class="company-table">
+        <tr><th>会社名</th><td>幡本印刷株式会社</td></tr>
+        <tr><th>所在地</th><td>〒063-0830 札幌市西区発寒10条14丁目</td></tr>
+        <tr><th>電話番号</th><td>011-666-1111</td></tr>
+        <tr><th>FAX</th><td>011-666-1151</td></tr>
+        <tr><th>事業内容</th><td>各種印刷物の企画・デザイン・制作・印刷<br>デジタルサイネージ広告<br>動画制作<br>ブライダルペーパーアイテム「マニーフィコ」</td></tr>
+        <tr><th>営業時間</th><td>平日 9:00〜18:00</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- DEMO BANNER -->
+  <div class="demo-banner">
+    <p>※ これはリニューアルイメージのデモサイトです。実際のサイトではありません。</p>
+    <small>制作：OSHINOBI ／ info@oshinobi-co.com ／ https://oshinobi-co.com</small>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">幡本印刷株式会社</div>
+    <div class="footer-address">〒063-0830 札幌市西区発寒10条14丁目</div>
+    <div class="footer-tel">TEL 011-666-1111 ／ FAX 011-666-1151</div>
+    <div class="footer-copy">&copy; 2026 幡本印刷株式会社 All Rights Reserved.</div>
+  </footer>
+
+</body>
+</html>

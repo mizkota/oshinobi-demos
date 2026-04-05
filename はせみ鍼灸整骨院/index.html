@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>はせみ鍼灸整骨院 | 札幌市東区東苗穂 交通事故・むちうち・各種保険対応</title>
+<meta name="description" content="札幌市東区東苗穂のはせみ鍼灸整骨院。交通事故（自賠責）対応、鍼灸・整骨・マッサージ・往診。各種保険取扱。地域密着で安心の治療を提供します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #c75c00;
+  --primary-dark: #a04a00;
+  --accent: #e8a030;
+  --accent-light: #f5d89a;
+  --bg-cream: #fdf8f0;
+  --bg-white: #ffffff;
+  --bg-warm: #fff7eb;
+  --text-dark: #2c2016;
+  --text-body: #4a3d30;
+  --text-light: #7a6d60;
+  --border: #e8ddd0;
+  --shadow: 0 2px 16px rgba(120, 70, 20, 0.08);
+  --shadow-lg: 0 8px 32px rgba(120, 70, 20, 0.12);
+  --radius: 12px;
+  --radius-sm: 8px;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: var(--text-body);
+  background: var(--bg-cream);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== HEADER ===== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 8px rgba(120,70,20,0.06);
+  z-index: 1000;
+  border-bottom: 2px solid var(--accent-light);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.header-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.header-logo-name {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 0.05em;
+}
+
+.header-logo-sub {
+  font-size: 0.7rem;
+  color: var(--text-light);
+  letter-spacing: 0.02em;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-tel {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--primary);
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+}
+
+.header-tel svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--primary);
+}
+
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(199,92,0,0.3);
+}
+
+.btn-cta:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(199,92,0,0.4);
+}
+
+.btn-cta svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+/* ===== NAV ===== */
+.nav {
+  background: var(--bg-white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 72px;
+  z-index: 999;
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  overflow-x: auto;
+}
+
+.nav a {
+  display: block;
+  padding: 14px 18px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-body);
+  text-decoration: none;
+  white-space: nowrap;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s;
+}
+
+.nav a:hover {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+  background: var(--bg-warm);
+}
+
+/* ===== HERO ===== */
+.hero {
+  margin-top: 72px;
+  padding: 100px 24px 80px;
+  background: linear-gradient(135deg, #c75c00 0%, #e8a030 50%, #f5d89a 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.15) 0%, transparent 50%),
+              radial-gradient(circle at 70% 60%, rgba(255,255,255,0.1) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 6px 20px;
+  border-radius: 50px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.hero h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 8px rgba(120,60,0,0.2);
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.92);
+  margin-bottom: 32px;
+  line-height: 1.8;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 40px;
+  background: #fff;
+  color: var(--primary);
+  border-radius: 50px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+  transition: all 0.3s;
+}
+
+.hero-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+.hero-cta svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--primary);
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 80px 24px;
+}
+
+.section-alt {
+  background: var(--bg-white);
+}
+
+.section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.section-title-en {
+  display: block;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.section-desc {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin-bottom: 48px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== FEATURES ===== */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.feature-card {
+  background: var(--bg-white);
+  border-radius: var(--radius);
+  padding: 36px 28px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  transition: all 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.feature-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-icon svg {
+  width: 30px;
+  height: 30px;
+  fill: #fff;
+}
+
+.feature-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.feature-card p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* ===== MENU ===== */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.menu-card {
+  background: var(--bg-cream);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  border: 1px solid var(--border);
+  transition: all 0.3s;
+}
+
+.menu-card:hover {
+  box-shadow: var(--shadow);
+  border-color: var(--accent-light);
+}
+
+.menu-icon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  background: var(--bg-white);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+}
+
+.menu-icon svg {
+  width: 26px;
+  height: 26px;
+  fill: var(--primary);
+}
+
+.menu-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.menu-card p {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+.menu-card .menu-tag {
+  display: inline-block;
+  background: var(--accent-light);
+  color: var(--primary-dark);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 50px;
+  margin-bottom: 8px;
+}
+
+/* ===== ACCIDENT SECTION ===== */
+.accident {
+  background: linear-gradient(135deg, #fff7eb 0%, #fdf0e0 100%);
+  border: 2px solid var(--accent-light);
+  border-radius: var(--radius);
+  padding: 48px 40px;
+  margin-top: 20px;
+}
+
+.accident-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.accident-header-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.accident-header-icon svg {
+  width: 28px;
+  height: 28px;
+  fill: #fff;
+}
+
+.accident-header h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.5rem;
+  color: var(--primary-dark);
+}
+
+.accident-header p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.accident-points {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.accident-point {
+  background: var(--bg-white);
+  border-radius: var(--radius-sm);
+  padding: 24px 20px;
+  text-align: center;
+  border: 1px solid var(--border);
+}
+
+.accident-point .num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.accident-point h4 {
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.accident-point p {
+  font-size: 0.82rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.accident-note {
+  background: var(--bg-white);
+  border-radius: var(--radius-sm);
+  padding: 20px 24px;
+  font-size: 0.9rem;
+  color: var(--text-body);
+  border-left: 4px solid var(--primary);
+  line-height: 1.8;
+}
+
+/* ===== VOICE ===== */
+.voice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.voice-card {
+  background: var(--bg-white);
+  border-radius: var(--radius);
+  padding: 32px 24px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+.voice-stars {
+  color: var(--accent);
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  letter-spacing: 2px;
+}
+
+.voice-card p {
+  font-size: 0.9rem;
+  color: var(--text-body);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.voice-meta {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+/* ===== CTA BAND ===== */
+.cta-band {
+  padding: 60px 24px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  text-align: center;
+}
+
+.cta-band h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.6rem;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.cta-band p {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.95rem;
+  margin-bottom: 28px;
+}
+
+.cta-band .cta-tel {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  color: var(--primary);
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+  transition: all 0.3s;
+  margin-bottom: 12px;
+}
+
+.cta-band .cta-tel:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+.cta-band .cta-tel svg {
+  width: 28px;
+  height: 28px;
+  fill: var(--primary);
+}
+
+.cta-hours {
+  color: rgba(255,255,255,0.8);
+  font-size: 0.85rem;
+  margin-top: 12px;
+}
+
+/* ===== INFO TABLE ===== */
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.info-table th,
+.info-table td {
+  padding: 16px 24px;
+  text-align: left;
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.info-table th {
+  background: var(--bg-warm);
+  color: var(--text-dark);
+  font-weight: 700;
+  width: 160px;
+  white-space: nowrap;
+}
+
+.info-table td {
+  color: var(--text-body);
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+  font-size: 0.85rem;
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: 10px 14px;
+  text-align: center;
+  border: 1px solid var(--border);
+}
+
+.schedule-table thead th {
+  background: var(--primary);
+  color: #fff;
+  font-weight: 500;
+}
+
+.schedule-table tbody th {
+  background: var(--bg-warm);
+  color: var(--text-dark);
+  font-weight: 500;
+  text-align: left;
+}
+
+.schedule-table .open {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.schedule-table .closed {
+  color: #bbb;
+}
+
+/* ===== DEMO BANNER ===== */
+.demo-banner {
+  background: #1a1a2e;
+  color: #fff;
+  text-align: center;
+  padding: 20px 24px;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.demo-banner strong {
+  color: var(--accent);
+}
+
+.demo-banner a {
+  color: var(--accent-light);
+  text-decoration: underline;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #2c2016;
+  color: rgba(255,255,255,0.6);
+  padding: 40px 24px 24px;
+  text-align: center;
+}
+
+.footer-name {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 8px;
+}
+
+.footer-info {
+  font-size: 0.8rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.footer-copy {
+  font-size: 0.75rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 20px;
+}
+
+/* ===== MOBILE HAMBURGER ===== */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.mobile-menu-btn svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--text-dark);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .features-grid,
+  .accident-points {
+    grid-template-columns: 1fr;
+  }
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+  .voice-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .accident {
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-inner {
+    height: 60px;
+  }
+
+  .header-logo-name {
+    font-size: 1rem;
+  }
+
+  .header-tel {
+    display: none;
+  }
+
+  .btn-cta {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .nav {
+    top: 60px;
+  }
+
+  .nav-inner {
+    flex-direction: column;
+    align-items: stretch;
+    display: none;
+    background: var(--bg-white);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .nav-inner.open {
+    display: flex;
+  }
+
+  .nav a {
+    padding: 12px 24px;
+    border-bottom: 1px solid var(--border);
+    border-left: 3px solid transparent;
+  }
+
+  .nav a:hover {
+    border-left-color: var(--primary);
+    border-bottom-color: var(--border);
+  }
+
+  .hero {
+    margin-top: 60px;
+    padding: 60px 20px 50px;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-sub {
+    font-size: 0.95rem;
+  }
+
+  .section {
+    padding: 50px 16px;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+  }
+
+  .info-table th {
+    width: 100px;
+    padding: 12px 14px;
+    font-size: 0.82rem;
+  }
+
+  .info-table td {
+    padding: 12px 14px;
+    font-size: 0.82rem;
+  }
+
+  .cta-band .cta-tel {
+    font-size: 1.3rem;
+    padding: 14px 28px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="header-inner">
+    <div class="header-logo">
+      <span class="header-logo-name">はせみ鍼灸整骨院</span>
+      <span class="header-logo-sub">札幌市東区東苗穂 / 交通事故・各種保険対応</span>
+    </div>
+    <div class="header-right">
+      <a href="tel:011-785-3035" class="header-tel">
+        <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z"/></svg>
+        011-785-3035
+      </a>
+      <a href="tel:011-785-3035" class="btn-cta">
+        <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z"/></svg>
+        電話予約する
+      </a>
+      <button class="mobile-menu-btn" onclick="document.querySelector('.nav-inner').classList.toggle('open')" aria-label="メニュー">
+        <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== NAV ===== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#home">HOME</a>
+    <a href="#features">当院の特徴</a>
+    <a href="#menu">施術メニュー</a>
+    <a href="#accident">交通事故治療</a>
+    <a href="#voice">患者様の声</a>
+    <a href="#info">院概要</a>
+    <a href="#access">アクセス</a>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <span class="hero-badge">札幌市東区東苗穂 / 各種保険取扱</span>
+    <h1>痛みに寄り添い、<br>笑顔を取り戻す。</h1>
+    <p class="hero-sub">
+      交通事故・むちうち・腰痛・スポーツ障害 ――<br>
+      お身体のお悩み、どんなことでもお気軽にご相談ください。<br>
+      地域に根ざして15年、安心と信頼の治療をお届けします。
+    </p>
+    <a href="tel:011-785-3035" class="hero-cta">
+      <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z"/></svg>
+      011-785-3035 でご予約
+    </a>
+  </div>
+</section>
+
+<!-- ===== FEATURES ===== -->
+<section class="section" id="features">
+  <div class="section-inner">
+    <div class="section-title">
+      <span class="section-title-en">Features</span>
+      当院の特徴
+    </div>
+    <p class="section-desc">患者様とのコミュニケーションを大切にし、安心の医療を心がけています。</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+        </div>
+        <h3>交通事故治療に強い</h3>
+        <p>自賠責保険対応で自己負担金なし。むちうち・捻挫・打撲など、交通事故によるケガを専門的に治療いたします。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-8-2h4v2h-4V4zM4 20V8h16v12H4zm8-1.5c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2z"/></svg>
+        </div>
+        <h3>各種保険取扱</h3>
+        <p>国民健康保険・社会保険・共済保険・組合保険など幅広く対応。労災保険もお取り扱いしております。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-4h2v2h-2v-2zm0-2h2V7h-2v7z"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/><path d="M11 8h2v5h-2zm0 6h2v2h-2z"/></svg>
+        </div>
+        <h3>地域密着 15年以上の実績</h3>
+        <p>東苗穂で開院以来、地域の皆さまの健康をサポート。院長の丁寧なカウンセリングで安心の治療をお約束します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MENU ===== -->
+<section class="section section-alt" id="menu">
+  <div class="section-inner">
+    <div class="section-title">
+      <span class="section-title-en">Treatment Menu</span>
+      施術メニュー
+    </div>
+    <p class="section-desc">鍼灸・整骨・マッサージ・光線療法など、症状に合わせた最適な治療をご提供します。</p>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <div class="menu-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L4 7v10l8 5 8-5V7l-8-5zm0 2.18l6 3.75v7.14l-6 3.75-6-3.75V7.93l6-3.75z"/><path d="M12 8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>
+        </div>
+        <div>
+          <span class="menu-tag">保険適用</span>
+          <h3>鍼灸療法</h3>
+          <p>髪の毛ほどの細い鍼を使用。筋緊張の緩和、消炎鎮痛、血液循環の改善、冷え性等の体質改善に効果的です。初めての方も安心してお受けいただけます。</p>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16 8 8 0 010 16z"/><path d="M13 7h-2v5.41l3.29 3.3 1.42-1.42L13 11.59V7z"/></svg>
+        </div>
+        <div>
+          <span class="menu-tag">保険適用</span>
+          <h3>整骨療法（柔道整復）</h3>
+          <p>骨折・脱臼の応急処置、打撲・捻挫・挫傷（肉離れ）の治療。マッサージ・テーピング・アイシングに加え、リハビリや全身バランスの改善も行います。</p>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16 8 8 0 010 16z"/><path d="M12 6a6 6 0 100 12 6 6 0 000-12zm0 10a4 4 0 110-8 4 4 0 010 8z"/></svg>
+        </div>
+        <div>
+          <h3>光線療法（カーボン太陽灯）</h3>
+          <p>光線照射で体内温度を上げ、自然治癒力を高めます。鎮痛・消炎・殺菌・神経機能改善など多様な効果があります。</p>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-icon">
+          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/><path d="M12 6l-4 8h3v4l4-8h-3z"/></svg>
+        </div>
+        <div>
+          <span class="menu-tag">自己負担なし</span>
+          <h3>交通事故治療</h3>
+          <p>自賠責保険適用で自己負担金0円。むちうち・捻挫・打撲・挫傷など交通事故によるケガを専門的に治療します。</p>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>
+        </div>
+        <div>
+          <span class="menu-tag">往診対応</span>
+          <h3>訪問鍼灸・マッサージ</h3>
+          <p>寝たきりや歩行困難で来院できない方へ。ご自宅・老人ホーム・グループホームへ伺います。健康保険適用で自己負担340円~590円程度。</p>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-icon">
+          <svg viewBox="0 0 24 24"><path d="M13.49 5.48c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm-3.6 13.9l1-4.4 2.1 2v6h2v-7.5l-2.1-2 .6-3c1.3 1.5 3.3 2.5 5.5 2.5v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7"/></svg>
+        </div>
+        <div>
+          <h3>スポーツ障害治療</h3>
+          <p>スポーツ外傷・障害の治療からリハビリまで。テーピングやアイシング等も併用し、早期の競技復帰をサポートします。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ACCIDENT ===== -->
+<section class="section" id="accident">
+  <div class="section-inner">
+    <div class="section-title">
+      <span class="section-title-en">Traffic Accident</span>
+      交通事故治療
+    </div>
+    <p class="section-desc">交通事故に遭われたら、まずはお電話ください。自賠責保険で自己負担なしで治療が受けられます。</p>
+    <div class="accident">
+      <div class="accident-header">
+        <div class="accident-header-icon">
+          <svg viewBox="0 0 24 24"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+        </div>
+        <div>
+          <h2>交通事故に遭われたら</h2>
+          <p>整骨院・鍼灸院でも交通事故によるケガの治療が受けられます</p>
+        </div>
+      </div>
+      <div class="accident-points">
+        <div class="accident-point">
+          <span class="num">1</span>
+          <h4>警察・消防に連絡</h4>
+          <p>まずは落ち着いて警察・消防へ連絡。相手の連絡先・保険会社も確認しましょう。</p>
+        </div>
+        <div class="accident-point">
+          <span class="num">2</span>
+          <h4>病院で検査を受ける</h4>
+          <p>事故直後は症状がなくても数日後に現れることも。必ず病院で検査を受け、診断書をもらいましょう。</p>
+        </div>
+        <div class="accident-point">
+          <span class="num">3</span>
+          <h4>当院へご連絡</h4>
+          <p>保険会社に当院での通院を伝えるだけ。以降、自賠責保険で自己負担なしで治療を受けられます。</p>
+        </div>
+      </div>
+      <div class="accident-note">
+        <strong>自賠責保険の補償内容：</strong>慰謝料（原則1日あたり4,200円）、治療費（整骨院・鍼灸院での治療も対象）、通院交通費、休業補償、後遺障害など。わからないことがあればお気軽にご相談ください。
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VOICE ===== -->
+<section class="section section-alt" id="voice">
+  <div class="section-inner">
+    <div class="section-title">
+      <span class="section-title-en">Voice</span>
+      患者様の声
+    </div>
+    <p class="section-desc">たくさんの患者様にお喜びいただいております。</p>
+    <div class="voice-grid">
+      <div class="voice-card">
+        <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>交通事故でむちうちになり通院しました。自賠責保険の手続きも丁寧に教えてくださり、安心して治療に専念できました。今では痛みもすっかり良くなりました。</p>
+        <div class="voice-meta">40代女性 / 交通事故によるむちうち</div>
+      </div>
+      <div class="voice-card">
+        <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>長年の腰痛で悩んでいましたが、鍼灸治療を受けてから驚くほど楽になりました。院長先生がとても親身に話を聞いてくれるので、毎回安心して通っています。</p>
+        <div class="voice-meta">60代男性 / 慢性的な腰痛</div>
+      </div>
+      <div class="voice-card">
+        <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>母が歩行困難で往診をお願いしました。自宅まで来ていただけるのは本当に助かります。施術後は体が軽くなるようで、母もいつも楽しみにしています。</p>
+        <div class="voice-meta">70代女性のご家族 / 訪問鍼灸・リハビリ</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-band">
+  <h2>まずはお気軽にご相談ください</h2>
+  <p>お電話でのご予約・お問い合わせを承っております</p>
+  <a href="tel:011-785-3035" class="cta-tel">
+    <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z"/></svg>
+    011-785-3035
+  </a>
+  <p class="cta-hours">受付時間：月～土 9:00～12:00 / 月・水・金 15:30～19:00 / 火・木 17:00～19:00</p>
+</section>
+
+<!-- ===== INFO ===== -->
+<section class="section" id="info">
+  <div class="section-inner">
+    <div class="section-title">
+      <span class="section-title-en">Information</span>
+      院概要
+    </div>
+    <p class="section-desc"></p>
+    <table class="info-table">
+      <tr>
+        <th>院名</th>
+        <td>はせみ鍼灸整骨院</td>
+      </tr>
+      <tr>
+        <th>院長</th>
+        <td>長谷見 明生（はせみ あきお）</td>
+      </tr>
+      <tr>
+        <th>所在地</th>
+        <td>〒007-0804 札幌市東区東苗穂4条1丁目10-13</td>
+      </tr>
+      <tr>
+        <th>電話番号</th>
+        <td>011-785-3035（FAX兼用）</td>
+      </tr>
+      <tr>
+        <th>診療内容</th>
+        <td>鍼灸療法 / 整骨療法（柔道整復）/ 光線療法（カーボン太陽灯）/ マッサージ / 訪問鍼灸・リハビリ / 交通事故治療 / スポーツ障害治療</td>
+      </tr>
+      <tr>
+        <th>保険</th>
+        <td>各種保険取扱（国民健康保険・社会保険・共済保険・組合保険）/ 労災 / 自賠責（交通事故）</td>
+      </tr>
+      <tr>
+        <th>診療時間</th>
+        <td>
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th>受付</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>日・祝</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>9:00～12:00</th>
+                <td class="open">&#9675;</td>
+                <td class="open">&#9675;</td>
+                <td class="open">&#9675;</td>
+                <td class="open">&#9675;</td>
+                <td class="open">&#9675;</td>
+                <td class="open">&#9675;</td>
+                <td class="closed">&#10005;</td>
+              </tr>
+              <tr>
+                <th>15:30～19:00</th>
+                <td class="open">&#9675;</td>
+                <td class="closed">&#10005;</td>
+                <td class="open">&#9675;</td>
+                <td class="closed">&#10005;</td>
+                <td class="open">&#9675;</td>
+                <td class="closed">&#10005;</td>
+                <td class="closed">&#10005;</td>
+              </tr>
+              <tr>
+                <th>17:00～19:00</th>
+                <td class="open">&#9675;</td>
+                <td class="open">&#9675;</td>
+                <td class="open">&#9675;</td>
+                <td class="open">&#9675;</td>
+                <td class="open">&#9675;</td>
+                <td class="closed">&#10005;</td>
+                <td class="closed">&#10005;</td>
+              </tr>
+            </tbody>
+          </table>
+          <p style="font-size:0.82rem; color:var(--text-light); margin-top:8px;">※日曜・祝日は休診 / 混雑状況により早めに受付終了する場合があります</p>
+        </td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<!-- ===== ACCESS ===== -->
+<section class="section section-alt" id="access">
+  <div class="section-inner">
+    <div class="section-title">
+      <span class="section-title-en">Access</span>
+      アクセス
+    </div>
+    <p class="section-desc">〒007-0804 札幌市東区東苗穂4条1丁目10-13</p>
+    <div style="background:var(--bg-cream); border-radius:var(--radius); padding:40px; text-align:center; border:2px dashed var(--border);">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" style="margin-bottom:12px;">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#c75c00"/>
+      </svg>
+      <p style="color:var(--text-light); font-size:0.9rem;">実際のサイトではここにGoogle Mapを埋め込みます</p>
+      <p style="color:var(--text-light); font-size:0.85rem; margin-top:4px;">札幌市東区東苗穂4条1丁目10-13</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DEMO BANNER ===== -->
+<div class="demo-banner">
+  <strong>&#9888; これはデモサイトです</strong><br>
+  このページは <a href="https://oshinobi-co.com" target="_blank">OSHINOBI</a> がリニューアルイメージとして作成したデモです。実際の院の公式サイトではありません。<br>
+  制作のご相談：<a href="mailto:info@oshinobi-co.com">info@oshinobi-co.com</a>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <p class="footer-name">はせみ鍼灸整骨院</p>
+  <p class="footer-info">
+    〒007-0804 札幌市東区東苗穂4条1丁目10-13<br>
+    TEL・FAX：011-785-3035<br>
+    受付時間：月～土 9:00～12:00 / 月・水・金 15:30～19:00 / 火・木 17:00～19:00
+  </p>
+  <p class="footer-copy">&copy; 2026 はせみ鍼灸整骨院 All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

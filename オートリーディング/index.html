@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>オート・リーディング株式会社 | 札幌の自動車修理・板金塗装</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #0a1e3d;
+  --primary-light: #132d5e;
+  --accent: #c42032;
+  --accent-hover: #a01828;
+  --white: #ffffff;
+  --gray-50: #f8f9fa;
+  --gray-100: #f0f1f3;
+  --gray-200: #e2e4e8;
+  --gray-600: #6b7280;
+  --gray-700: #4a4f5c;
+  --gray-900: #1a1d24;
+  --gold: #d4a853;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.08);
+  --shadow-md: 0 4px 16px rgba(0,0,0,.1);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,.14);
+  --radius: 12px;
+  --transition: .3s ease;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:'Noto Sans JP',sans-serif;color:var(--gray-900);line-height:1.8;overflow-x:hidden}
+img{max-width:100%;height:auto}
+a{text-decoration:none;color:inherit}
+
+/* Header */
+.header{position:fixed;top:0;left:0;width:100%;background:rgba(10,30,61,.97);backdrop-filter:blur(10px);z-index:1000;box-shadow:0 2px 12px rgba(0,0,0,.2)}
+.header-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo-area{display:flex;align-items:center;gap:14px}
+.logo-area img{height:44px;width:auto}
+.logo-text{color:var(--white);font-size:13px;font-weight:700;line-height:1.3;letter-spacing:.02em}
+.logo-text span{display:block;font-size:10px;font-weight:400;color:var(--gold);letter-spacing:.08em}
+nav{display:flex;align-items:center;gap:6px}
+nav a{color:rgba(255,255,255,.85);font-size:13px;font-weight:500;padding:8px 14px;border-radius:6px;transition:var(--transition)}
+nav a:hover{color:var(--white);background:rgba(255,255,255,.1)}
+.nav-cta{background:var(--accent)!important;color:var(--white)!important;font-weight:700;padding:10px 20px!important;border-radius:8px!important}
+.nav-cta:hover{background:var(--accent-hover)!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
+.hamburger span{width:24px;height:2px;background:var(--white);border-radius:2px;transition:var(--transition)}
+
+/* Hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--primary) 0%,#0f2a52 50%,var(--primary-light) 100%);overflow:hidden;padding:100px 24px 80px}
+.hero::before{content:'';position:absolute;inset:0;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><circle cx="200" cy="600" r="300" fill="rgba(196,32,50,.06)"/><circle cx="1000" cy="200" r="400" fill="rgba(212,168,83,.04)"/></svg>') center/cover no-repeat}
+.hero-content{position:relative;text-align:center;max-width:900px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(212,168,83,.15);border:1px solid rgba(212,168,83,.3);color:var(--gold);font-size:13px;font-weight:700;padding:8px 20px;border-radius:50px;margin-bottom:28px;letter-spacing:.06em}
+.hero h1{font-family:'Noto Serif JP',serif;font-size:clamp(32px,5.5vw,60px);color:var(--white);line-height:1.3;margin-bottom:20px;letter-spacing:.02em}
+.hero h1 em{font-style:normal;color:var(--accent);position:relative}
+.hero-sub{color:rgba(255,255,255,.75);font-size:clamp(15px,2vw,18px);margin-bottom:40px;line-height:1.9}
+.hero-stats{display:flex;justify-content:center;gap:48px;margin-bottom:48px;flex-wrap:wrap}
+.hero-stat{text-align:center}
+.hero-stat .num{font-family:'Noto Serif JP',serif;font-size:clamp(36px,5vw,56px);color:var(--gold);font-weight:700;line-height:1}
+.hero-stat .num small{font-size:.45em;margin-left:2px}
+.hero-stat .label{color:rgba(255,255,255,.6);font-size:13px;margin-top:8px;letter-spacing:.04em}
+.hero-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:15px;padding:16px 36px;border-radius:10px;transition:var(--transition);cursor:pointer;border:none;font-family:inherit}
+.btn-primary{background:var(--accent);color:var(--white);box-shadow:0 4px 20px rgba(196,32,50,.35)}
+.btn-primary:hover{background:var(--accent-hover);transform:translateY(-2px);box-shadow:0 6px 28px rgba(196,32,50,.45)}
+.btn-outline{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,.3)}
+.btn-outline:hover{border-color:var(--white);background:rgba(255,255,255,.08)}
+
+/* Section common */
+section{padding:100px 24px}
+.section-inner{max-width:1100px;margin:0 auto}
+.section-label{display:inline-block;font-size:12px;font-weight:700;color:var(--accent);letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px}
+.section-title{font-family:'Noto Serif JP',serif;font-size:clamp(26px,3.5vw,38px);color:var(--primary);line-height:1.4;margin-bottom:16px}
+.section-desc{color:var(--gray-600);font-size:15px;max-width:640px;margin:0 auto 56px;text-align:center;line-height:1.9}
+.text-center{text-align:center}
+
+/* Strengths */
+.strengths{background:var(--gray-50)}
+.strengths-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.strength-card{background:var(--white);border-radius:var(--radius);padding:44px 32px;text-align:center;box-shadow:var(--shadow-sm);border:1px solid var(--gray-200);transition:var(--transition);position:relative;overflow:hidden}
+.strength-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--accent),var(--gold));opacity:0;transition:var(--transition)}
+.strength-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.strength-card:hover::before{opacity:1}
+.strength-icon{width:72px;height:72px;margin:0 auto 24px;background:linear-gradient(135deg,var(--primary),var(--primary-light));border-radius:16px;display:flex;align-items:center;justify-content:center}
+.strength-icon svg{width:36px;height:36px;fill:none;stroke:var(--gold);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.strength-card h3{font-size:19px;color:var(--primary);margin-bottom:12px;font-weight:700}
+.strength-card p{color:var(--gray-600);font-size:14px;line-height:1.85}
+
+/* Services */
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.service-card{background:var(--white);border-radius:var(--radius);padding:36px 24px;text-align:center;box-shadow:var(--shadow-sm);border:1px solid var(--gray-200);transition:var(--transition)}
+.service-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.service-icon{width:60px;height:60px;margin:0 auto 18px;background:var(--gray-50);border-radius:14px;display:flex;align-items:center;justify-content:center}
+.service-icon svg{width:30px;height:30px;fill:none;stroke:var(--primary);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.service-card h3{font-size:16px;color:var(--primary);margin-bottom:8px;font-weight:700}
+.service-card p{color:var(--gray-600);font-size:13px;line-height:1.8}
+.service-card .tag{display:inline-block;margin-top:12px;font-size:11px;font-weight:700;color:var(--accent);background:rgba(196,32,50,.08);padding:4px 12px;border-radius:20px}
+
+/* Voice */
+.voice{background:var(--gray-50)}
+.voice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.voice-card{background:var(--white);border-radius:var(--radius);padding:36px 28px;box-shadow:var(--shadow-sm);border:1px solid var(--gray-200);position:relative}
+.voice-card::before{content:'\201C';font-family:'Noto Serif JP',serif;font-size:64px;color:var(--accent);opacity:.15;position:absolute;top:16px;left:24px;line-height:1}
+.voice-stars{color:var(--gold);font-size:16px;margin-bottom:14px;letter-spacing:2px}
+.voice-card p{font-size:14px;color:var(--gray-700);line-height:1.9;margin-bottom:18px;position:relative;z-index:1}
+.voice-author{font-size:13px;color:var(--gray-600);font-weight:500;padding-top:14px;border-top:1px solid var(--gray-200)}
+
+/* CTA */
+.cta{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-light) 100%);text-align:center;position:relative;overflow:hidden}
+.cta::before{content:'';position:absolute;inset:0;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><circle cx="100" cy="350" r="200" fill="rgba(196,32,50,.08)"/><circle cx="1100" cy="50" r="250" fill="rgba(212,168,83,.06)"/></svg>') center/cover no-repeat}
+.cta .section-inner{position:relative}
+.cta h2{font-family:'Noto Serif JP',serif;font-size:clamp(24px,3.5vw,36px);color:var(--white);margin-bottom:16px}
+.cta p{color:rgba(255,255,255,.7);font-size:16px;margin-bottom:36px;line-height:1.8}
+.cta-features{display:flex;justify-content:center;gap:36px;margin-bottom:40px;flex-wrap:wrap}
+.cta-features span{color:var(--gold);font-size:14px;font-weight:700;display:flex;align-items:center;gap:6px}
+.cta-phone{font-family:'Noto Serif JP',serif;font-size:clamp(28px,4vw,42px);color:var(--white);font-weight:700;margin-top:24px}
+.cta-phone small{display:block;font-size:13px;font-weight:400;color:rgba(255,255,255,.5);font-family:'Noto Sans JP',sans-serif;margin-top:4px}
+
+/* Company */
+.company-table{width:100%;max-width:800px;margin:0 auto;border-collapse:collapse}
+.company-table th,.company-table td{padding:18px 24px;font-size:14px;text-align:left;border-bottom:1px solid var(--gray-200)}
+.company-table th{width:160px;background:var(--gray-50);font-weight:700;color:var(--primary);white-space:nowrap}
+.company-table td{color:var(--gray-700)}
+
+/* Demo Banner */
+.demo-banner{background:linear-gradient(135deg,#fff3cd,#ffeeba);text-align:center;padding:32px 24px;border:2px dashed #d4a853}
+.demo-banner p{font-size:14px;color:#856404;font-weight:700;max-width:700px;margin:0 auto;line-height:1.8}
+.demo-banner p span{font-size:12px;font-weight:400;display:block;margin-top:6px}
+
+/* Footer */
+.footer{background:var(--gray-900);color:rgba(255,255,255,.5);text-align:center;padding:40px 24px}
+.footer-logo{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:16px}
+.footer-logo img{height:32px}
+.footer-logo span{color:var(--white);font-size:14px;font-weight:700}
+.footer p{font-size:12px;line-height:1.8}
+
+/* Responsive */
+@media(max-width:1024px){
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  nav{display:none;position:fixed;top:72px;left:0;right:0;background:var(--primary);flex-direction:column;padding:20px;gap:4px;box-shadow:var(--shadow-lg)}
+  nav.active{display:flex}
+  .hamburger{display:flex}
+  .strengths-grid,.voice-grid{grid-template-columns:1fr}
+  .hero-stats{gap:28px}
+  .company-table th{width:120px}
+  .cta-features{flex-direction:column;align-items:center;gap:12px}
+}
+@media(max-width:480px){
+  .services-grid{grid-template-columns:1fr}
+  .company-table th,.company-table td{display:block;width:100%}
+  .company-table th{border-bottom:none;padding-bottom:4px}
+  .company-table td{padding-top:4px}
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="header-inner">
+    <a href="#" class="logo-area">
+      <img src="https://auto-leading.net/wp-content/uploads/2020/11/aulogo.png" alt="オート・リーディング">
+      <div class="logo-text">オート・リーディング<span>AUTO LEADING Co., Ltd.</span></div>
+    </a>
+    <div class="hamburger" onclick="document.querySelector('nav').classList.toggle('active')">
+      <span></span><span></span><span></span>
+    </div>
+    <nav>
+      <a href="#strengths">当社の強み</a>
+      <a href="#services">サービス</a>
+      <a href="#voice">お客様の声</a>
+      <a href="#company">会社概要</a>
+      <a href="#contact" class="nav-cta">無料お見積り</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg>
+      創業35年の信頼と実績
+    </div>
+    <h1>札幌自動車修理の<br><em>総合パイオニア</em></h1>
+    <p class="hero-sub">板金塗装・車検整備・保険修理まで、お車のお悩みをワンストップで解決。<br>カーディーラーにも負けない技術力で、安心と信頼をお届けします。</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="num">35<small>年</small></div>
+        <div class="label">創業年数</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num">40,000<small>台+</small></div>
+        <div class="label">修理実績</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num">100<small>台/月</small></div>
+        <div class="label">月間修理台数</div>
+      </div>
+    </div>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn btn-primary">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.86 19.86 0 01-8.63-3.07A19.5 19.5 0 013.12 10.81 19.86 19.86 0 01.05 2.18 2 2 0 012.05.18h3a2 2 0 012 1.72c.13.81.37 1.6.7 2.35a2 2 0 01-.45 2.11L5.91 7.74" viewBox="0 0 24 24"/></svg>
+        無料お見積り
+      </a>
+      <a href="#services" class="btn btn-outline">サービスを見る</a>
+    </div>
+  </div>
+</section>
+
+<!-- Strengths -->
+<section class="strengths" id="strengths">
+  <div class="section-inner text-center">
+    <div class="section-label">Our Strengths</div>
+    <h2 class="section-title">オート・リーディングが選ばれる3つの理由</h2>
+    <p class="section-desc">昭和58年の創業以来、札幌の皆さまのカーライフを支え続けてきた当社の強みをご紹介します。</p>
+    <div class="strengths-grid">
+      <div class="strength-card">
+        <div class="strength-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 01-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+        </div>
+        <h3>創業35年・4万台超の実績</h3>
+        <p>昭和58年の創業以来、4万台を超える修理実績。長年培った確かな技術と経験で、どんなお車のトラブルにも対応いたします。</p>
+      </div>
+      <div class="strength-card">
+        <div class="strength-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>ディーラー品質をお手頃価格で</h3>
+        <p>カーディーラーにも負けない高品質な施工を、リサイクル部品の活用で低価格に。お見積り無料・代車無料で安心です。</p>
+      </div>
+      <div class="strength-card">
+        <div class="strength-icon">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10,9 9,9 8,9"/></svg>
+        </div>
+        <h3>ワンストップ対応</h3>
+        <p>板金塗装から車検整備、保険修理、中古車販売まで、お車に関するあらゆるご相談をワンストップでお受けいたします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services">
+  <div class="section-inner text-center">
+    <div class="section-label">Services</div>
+    <h2 class="section-title">サービス一覧</h2>
+    <p class="section-desc">お車のことなら何でもお任せください。板金塗装から車検・整備まで幅広く対応いたします。</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 18v2M18 18v2M6 6V4M18 6V4"/><circle cx="8" cy="12" r="1.5"/><circle cx="16" cy="12" r="1.5"/><path d="M10 14h4"/></svg>
+        </div>
+        <h3>板金塗装</h3>
+        <p>キズ・ヘコミの修理から全塗装まで。熟練の職人が新車同様の仕上がりをお約束します。</p>
+        <span class="tag">お見積り無料</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3>車検・整備・点検</h3>
+        <p>法定車検から定期点検まで。安全で快適なカーライフをサポートいたします。</p>
+        <span class="tag">代車無料</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9,12 11,14 15,10"/></svg>
+        </div>
+        <h3>保険修理</h3>
+        <p>事故による損傷もお任せください。保険会社との交渉もサポートし、スムーズに修理を進めます。</p>
+        <span class="tag">保険対応</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h3>中古車販売</h3>
+        <p>整備士の目で厳選した高品質な中古車をご提供。ご購入後のメンテナンスもお任せください。</p>
+        <span class="tag">厳選車両</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+        </div>
+        <h3>カー用品販売・取付</h3>
+        <p>タイヤ・アルミホイール・オーディオなど各種カー用品の販売と取付を承ります。</p>
+        <span class="tag">取付対応</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+        </div>
+        <h3>エアロパーツ取付</h3>
+        <p>お車のドレスアップに。各種エアロパーツの取付をプロの技術で丁寧に施工いたします。</p>
+        <span class="tag">ドレスアップ</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 3.13-9 7 0 2.38 1.5 4.5 3.8 5.8L6 22l4.5-2.5C11 19.8 11.5 19.8 12 20c4.97 0 9-3.13 9-7s-4.03-7-9-7z"/></svg>
+        </div>
+        <h3>マフラー取付</h3>
+        <p>マフラー交換・取付もお任せください。車検対応品からスポーツマフラーまで幅広く対応。</p>
+        <span class="tag">車検対応</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg>
+        </div>
+        <h3>ガラスリペア</h3>
+        <p>フロントガラスの飛び石キズなど、小さなダメージも早めの修理で拡大を防ぎます。</p>
+        <span class="tag">早期修理推奨</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Voice -->
+<section class="voice" id="voice">
+  <div class="section-inner text-center">
+    <div class="section-label">Customer Voice</div>
+    <h2 class="section-title">お客様の声</h2>
+    <p class="section-desc">オート・リーディングをご利用いただいたお客様から、嬉しいお声をいただいています。</p>
+    <div class="voice-grid">
+      <div class="voice-card">
+        <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>バンパーの大きなヘコミ修理をお願いしました。ディーラーの半額以下で、仕上がりは新車同様。代車も無料で本当に助かりました。</p>
+        <div class="voice-author">札幌市東区 T.S. 様（40代・男性）</div>
+      </div>
+      <div class="voice-card">
+        <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>車検と一緒にオイル交換やタイヤ交換もまとめてお願いできるので便利です。スタッフの方の説明も丁寧で、安心してお任せしています。</p>
+        <div class="voice-author">札幌市北区 M.K. 様（50代・女性）</div>
+      </div>
+      <div class="voice-card">
+        <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>追突事故で大きな損傷を受けましたが、保険会社とのやりとりも全てサポートしていただき、本当にスムーズでした。仕上がりも完璧です。</p>
+        <div class="voice-author">江別市 A.N. 様（30代・男性）</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <div class="section-inner">
+    <h2>まずはお気軽にご相談ください</h2>
+    <p>お見積りは無料。代車のご用意もございます。<br>お車のキズ・ヘコミ・車検のことなら、お電話1本でOKです。</p>
+    <div class="cta-features">
+      <span>
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20,6 9,17 4,12"/></svg>
+        お見積り無料
+      </span>
+      <span>
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20,6 9,17 4,12"/></svg>
+        代車無料
+      </span>
+      <span>
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20,6 9,17 4,12"/></svg>
+        保険修理対応
+      </span>
+    </div>
+    <a href="tel:011-782-7070" class="btn btn-primary" style="font-size:18px;padding:18px 48px">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.86 19.86 0 01-8.63-3.07A19.5 19.5 0 013.12 10.81 19.86 19.86 0 01.05 2.18 2 2 0 012.05.18h3a2 2 0 012 1.72 12.05 12.05 0 00.7 2.81 2 2 0 01-.45 2.11L5.91 7.74a16 16 0 006.36 6.36l1.42-1.42a2 2 0 012.11-.45 12.05 12.05 0 002.81.7 2 2 0 011.72 2.05z"/></svg>
+      011-782-7070
+    </a>
+    <div class="cta-phone">
+      <small>営業時間 9:00〜18:00（日曜定休）</small>
+    </div>
+  </div>
+</section>
+
+<!-- Company -->
+<section id="company">
+  <div class="section-inner text-center">
+    <div class="section-label">Company</div>
+    <h2 class="section-title">会社概要</h2>
+    <p class="section-desc">創業以来、地域の皆さまに支えられ、信頼される自動車修理工場を目指しています。</p>
+    <table class="company-table">
+      <tr><th>会社名</th><td>オート・リーディング株式会社</td></tr>
+      <tr><th>代表者</th><td>萩原 敦</td></tr>
+      <tr><th>設立</th><td>昭和58年4月</td></tr>
+      <tr><th>所在地</th><td>〒007-0860 北海道札幌市東区丘珠町303番地2</td></tr>
+      <tr><th>電話番号</th><td>011-782-7070</td></tr>
+      <tr><th>メール</th><td>info@auto-leading.net</td></tr>
+      <tr><th>営業時間</th><td>9:00〜18:00</td></tr>
+      <tr><th>定休日</th><td>日曜日</td></tr>
+      <tr><th>資本金</th><td>300万円</td></tr>
+      <tr><th>事業内容</th><td>自動車板金塗装、車検・整備・点検、中古車販売、カー用品販売・取付、エアロパーツ取付、マフラー取付、ガラスリペア</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- Demo Banner -->
+<div class="demo-banner">
+  <p>
+    &#9888; これはリニューアルのご提案用デモページです。実際の店舗情報・お客様の声はサンプルです。
+    <span>制作：OSHINOBI Co. &#124; info@oshinobi-co.com &#124; https://oshinobi-co.com</span>
+  </p>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-logo">
+    <img src="https://auto-leading.net/wp-content/uploads/2020/11/aulogo.png" alt="オート・リーディング">
+    <span>オート・リーディング株式会社</span>
+  </div>
+  <p>〒007-0860 北海道札幌市東区丘珠町303番地2<br>TEL: 011-782-7070 &#124; 営業時間: 9:00〜18:00（日曜定休）</p>
+  <p style="margin-top:16px;font-size:11px">&copy; 2026 オート・リーディング株式会社 All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

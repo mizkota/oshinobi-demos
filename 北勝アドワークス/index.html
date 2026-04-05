@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>北勝アドワークス株式会社｜札幌の看板・サイン・印刷・デザイン</title>
+  <meta name="description" content="札幌市北区の看板・サイン制作、印刷、デザインなら北勝アドワークス。企画からデザイン・製作・施工まで一貫対応。不動産看板・病院看板・店舗サインなど実績多数。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ===== RESET ===== */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #e0e0e0;
+      background: #0a0a0a;
+      line-height: 1.9;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    img { max-width: 100%; height: auto; display: block; }
+    button { font-family: inherit; cursor: pointer; }
+
+    /* ===== VARIABLES ===== */
+    :root {
+      --primary: #111111;
+      --primary-dark: #000000;
+      --accent: #e53935;
+      --accent-dark: #c62828;
+      --accent-light: rgba(229,57,53,0.12);
+      --white: #ffffff;
+      --text: #e8e8e8;
+      --text-light: #b0b0b0;
+      --text-muted: #777;
+      --bg: #0a0a0a;
+      --bg-card: #151515;
+      --bg-card-hover: #1a1a1a;
+      --bg-section: #111111;
+      --border: #222;
+      --border-light: #1a1a1a;
+      --shadow: 0 4px 30px rgba(0,0,0,0.4);
+      --shadow-lg: 0 12px 50px rgba(0,0,0,0.5);
+      --radius: 12px;
+      --radius-sm: 8px;
+      --radius-xs: 4px;
+    }
+
+    /* ===== UTILITY ===== */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 80px 0; }
+    .section-label {
+      text-align: center;
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--accent);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 14px;
+      line-height: 1.4;
+    }
+    .section-subtitle {
+      text-align: center;
+      font-size: 0.92rem;
+      color: var(--text-light);
+      margin-bottom: 48px;
+      line-height: 1.8;
+    }
+    .bg-dark { background: var(--bg-section); }
+
+    /* ===== HEADER ===== */
+    .header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(10,10,10,0.95);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow 0.3s;
+    }
+    .header.scrolled { box-shadow: 0 2px 30px rgba(0,0,0,0.5); }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .logo-area img {
+      height: 40px;
+      width: auto;
+      filter: brightness(1.1);
+    }
+    .logo-text {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.3;
+    }
+    .logo-text small {
+      display: block;
+      font-size: 0.65rem;
+      font-weight: 400;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+    }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+    .nav-links a {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-light);
+      transition: color 0.2s;
+      letter-spacing: 0.02em;
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta {
+      background: var(--accent);
+      color: var(--white) !important;
+      padding: 8px 22px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.82rem !important;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .nav-cta:hover { background: var(--accent-dark); transform: translateY(-1px); }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+    .hamburger span {
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0d0d0d 100%);
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(229,57,53,0.08) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 200px;
+      background: linear-gradient(to top, var(--bg), transparent);
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 120px 24px 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 30px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(229,57,53,0.2);
+    }
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.35;
+      margin-bottom: 20px;
+    }
+    .hero h1 .accent { color: var(--accent); }
+    .hero-desc {
+      font-size: 1rem;
+      color: var(--text-light);
+      line-height: 1.9;
+      margin-bottom: 36px;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: var(--white);
+      padding: 14px 32px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      border: none;
+      transition: all 0.3s;
+      box-shadow: 0 4px 20px rgba(229,57,53,0.3);
+    }
+    .btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 6px 30px rgba(229,57,53,0.4); }
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--white);
+      padding: 14px 32px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: 1px solid #444;
+      transition: all 0.3s;
+    }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+    .hero-visual {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-logo-display {
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #1a1a1a, #222);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #2a2a2a;
+      box-shadow: 0 0 80px rgba(229,57,53,0.1);
+    }
+    .hero-logo-display img {
+      width: 200px;
+      filter: brightness(1.1);
+    }
+    .hero-stat-float {
+      position: absolute;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 14px 20px;
+      box-shadow: var(--shadow);
+    }
+    .hero-stat-float .stat-num {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .hero-stat-float .stat-label {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+    .stat-top { top: 20px; right: -10px; }
+    .stat-bottom { bottom: 30px; left: -10px; }
+
+    /* ===== STRENGTHS ===== */
+    .strengths-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .strength-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px 28px;
+      text-align: center;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .strength-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
+    .strength-card:hover { transform: translateY(-4px); border-color: #333; }
+    .strength-card:hover::before { transform: scaleX(1); }
+    .strength-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--accent-light);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin: 0 auto 18px;
+    }
+    .strength-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .strength-card p {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    /* ===== SERVICES ===== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .service-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px 30px;
+      transition: all 0.3s;
+      position: relative;
+    }
+    .service-card:hover { transform: translateY(-3px); border-color: var(--accent); }
+    .service-num {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: rgba(229,57,53,0.15);
+      position: absolute;
+      top: 16px;
+      right: 24px;
+    }
+    .service-icon {
+      font-size: 2rem;
+      margin-bottom: 14px;
+    }
+    .service-card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .service-card p {
+      font-size: 0.88rem;
+      color: var(--text-light);
+      line-height: 1.8;
+    }
+    .service-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .service-tags span {
+      background: rgba(229,57,53,0.08);
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid rgba(229,57,53,0.15);
+    }
+
+    /* ===== WORKS ===== */
+    .works-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .work-item {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+    }
+    .work-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+    .work-item:hover img { transform: scale(1.05); }
+    .work-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 20px;
+      background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+    }
+    .work-overlay .work-cat {
+      font-size: 0.7rem;
+      color: var(--accent);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .work-overlay .work-name {
+      font-size: 0.9rem;
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    /* ===== VOICE ===== */
+    .voice-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .voice-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 30px 24px;
+      position: relative;
+    }
+    .voice-stars {
+      color: #ffd54f;
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+      letter-spacing: 2px;
+    }
+    .voice-card blockquote {
+      font-size: 0.88rem;
+      color: var(--text-light);
+      line-height: 1.8;
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+    .voice-author {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .voice-author strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    /* ===== CTA ===== */
+    .cta-section {
+      background: linear-gradient(135deg, #1a0a0a 0%, #0a0a0a 50%, #0a0a1a 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(229,57,53,0.06), transparent 70%);
+      border-radius: 50%;
+    }
+    .cta-inner {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .cta-inner h2 {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--white);
+      margin-bottom: 16px;
+      line-height: 1.4;
+    }
+    .cta-inner p {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      margin-bottom: 32px;
+      line-height: 1.8;
+    }
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .btn-cta-tel {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--white);
+      color: var(--primary);
+      padding: 16px 36px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      border: none;
+      transition: all 0.3s;
+    }
+    .btn-cta-tel:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(255,255,255,0.15); }
+    .cta-note {
+      margin-top: 16px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* ===== COMPANY ===== */
+    .company-table {
+      max-width: 700px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .company-row {
+      display: flex;
+      border-bottom: 1px solid var(--border);
+      padding: 16px 0;
+    }
+    .company-row dt {
+      width: 160px;
+      flex-shrink: 0;
+      font-weight: 600;
+      font-size: 0.88rem;
+      color: var(--white);
+    }
+    .company-row dd {
+      font-size: 0.88rem;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+    .company-map {
+      margin-top: 40px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .company-map iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      filter: grayscale(0.8) invert(0.92) contrast(0.9);
+    }
+
+    /* ===== DEMO BANNER ===== */
+    .demo-banner {
+      background: linear-gradient(90deg, var(--accent), var(--accent-dark));
+      padding: 20px;
+      text-align: center;
+    }
+    .demo-banner p {
+      color: var(--white);
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+    .demo-banner a {
+      color: var(--white);
+      text-decoration: underline;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: #050505;
+      border-top: 1px solid var(--border);
+      padding: 48px 0 24px;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      margin-bottom: 32px;
+    }
+    .footer-brand img {
+      height: 36px;
+      margin-bottom: 12px;
+      filter: brightness(1.1);
+    }
+    .footer-brand p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .footer-nav h4 {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .footer-nav a {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      transition: color 0.2s;
+    }
+    .footer-nav a:hover { color: var(--accent); }
+    .footer-copy {
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
+    }
+
+    /* ===== MOBILE NAV ===== */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 70px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(10,10,10,0.98);
+      z-index: 999;
+      padding: 40px 24px;
+    }
+    .mobile-nav.active { display: flex; flex-direction: column; gap: 0; }
+    .mobile-nav a {
+      display: block;
+      padding: 16px 0;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; text-align: center; padding-top: 100px; }
+      .hero-visual { display: none; }
+      .hero h1 { font-size: 2rem; }
+      .hero-buttons { justify-content: center; }
+      .strengths-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .works-grid { grid-template-columns: repeat(2, 1fr); }
+      .voice-grid { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .section { padding: 56px 0; }
+      .section-title { font-size: 1.4rem; }
+      .hero h1 { font-size: 1.65rem; }
+      .company-row { flex-direction: column; gap: 4px; }
+      .company-row dt { width: auto; }
+    }
+    @media (max-width: 480px) {
+      .works-grid { grid-template-columns: 1fr; }
+      .cta-inner h2 { font-size: 1.4rem; }
+    }
+
+    /* ===== ANIMATION ===== */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="#" class="logo-area">
+        <img src="https://www.hokusho-ad.com/images/logo.png" alt="北勝アドワークス">
+        <div class="logo-text">
+          北勝アドワークス
+          <small>看板・サイン・印刷・デザイン</small>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="#strengths">強み</a>
+        <a href="#services">サービス</a>
+        <a href="#works">制作実績</a>
+        <a href="#voice">お客様の声</a>
+        <a href="#company">会社概要</a>
+        <a href="#contact" class="nav-cta">お問い合わせ</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#strengths" onclick="closeMobile()">強み</a>
+    <a href="#services" onclick="closeMobile()">サービス</a>
+    <a href="#works" onclick="closeMobile()">制作実績</a>
+    <a href="#voice" onclick="closeMobile()">お客様の声</a>
+    <a href="#company" onclick="closeMobile()">会社概要</a>
+    <a href="#contact" onclick="closeMobile()">お問い合わせ</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-badge">&#9670; 札幌の看板プロフェッショナル</div>
+        <h1>看板があるから、<br><span class="accent">大丈夫。</span></h1>
+        <p class="hero-desc">
+          企画・デザインから製作・施工・メンテナンスまで一貫対応。<br>
+          不動産・医療・店舗など多業種の看板制作で<br>
+          お客様のビジネスを「見える化」します。
+        </p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn-primary">&#9742; 無料相談する</a>
+          <a href="#works" class="btn-outline">制作実績を見る &#8594;</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-logo-display">
+          <img src="https://www.hokusho-ad.com/images/logo.png" alt="北勝アドワークス">
+        </div>
+        <div class="hero-stat-float stat-top">
+          <div class="stat-num">20+</div>
+          <div class="stat-label">年の実績</div>
+        </div>
+        <div class="hero-stat-float stat-bottom">
+          <div class="stat-num">1,000+</div>
+          <div class="stat-label">制作件数</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRENGTHS -->
+  <section class="section" id="strengths">
+    <div class="container">
+      <div class="section-label">Strengths</div>
+      <h2 class="section-title">北勝アドワークスが<br>選ばれる理由</h2>
+      <p class="section-subtitle">
+        看板・サイン制作のプロフェッショナルとして、<br>デザインから施工まですべてをワンストップでお届けします。
+      </p>
+      <div class="strengths-grid">
+        <div class="strength-card fade-up">
+          <div class="strength-icon">&#127912;</div>
+          <h3>企画からデザインまで<br>ワンストップ</h3>
+          <p>ヒアリングから企画・デザイン・製作・施工・アフターフォローまで自社一貫体制。中間マージンなしでコストダウンを実現。</p>
+        </div>
+        <div class="strength-card fade-up">
+          <div class="strength-icon">&#128736;</div>
+          <h3>多業種の看板制作<br>実績が豊富</h3>
+          <p>不動産、病院・クリニック、飲食店、商業施設など幅広い業種の看板制作で培ったノウハウで最適な提案を行います。</p>
+        </div>
+        <div class="strength-card fade-up">
+          <div class="strength-icon">&#128205;</div>
+          <h3>地域密着<br>迅速対応</h3>
+          <p>札幌を中心に北海道全域に対応。地域に根ざした対応力で、お急ぎの案件や細かなメンテナンスにも柔軟に対応します。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section bg-dark" id="services">
+    <div class="container">
+      <div class="section-label">Services</div>
+      <h2 class="section-title">サービス一覧</h2>
+      <p class="section-subtitle">
+        看板・サイン制作を軸に、印刷物やホームページ制作まで<br>トータルな広告ソリューションをご提供します。
+      </p>
+      <div class="services-grid">
+        <div class="service-card fade-up">
+          <div class="service-num">01</div>
+          <div class="service-icon">&#128681;</div>
+          <h3>屋外看板・サイン</h3>
+          <p>自立看板、壁面看板、突き出し看板、野立て看板など、あらゆるタイプの屋外看板を企画・デザイン・製作・施工いたします。</p>
+          <div class="service-tags">
+            <span>自立看板</span>
+            <span>壁面看板</span>
+            <span>突き出し看板</span>
+            <span>野立て看板</span>
+          </div>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-num">02</div>
+          <div class="service-icon">&#127970;</div>
+          <h3>不動産看板</h3>
+          <p>売地・売家・賃貸物件の看板を多数制作。視認性と訴求力を両立したデザインで、物件の集客をサポートします。</p>
+          <div class="service-tags">
+            <span>売地看板</span>
+            <span>賃貸看板</span>
+            <span>分譲看板</span>
+            <span>管理看板</span>
+          </div>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-num">03</div>
+          <div class="service-icon">&#127978;</div>
+          <h3>病院・クリニック看板</h3>
+          <p>医療機関にふさわしい清潔感と信頼感のあるデザイン。院名サイン、診療科目表示、案内サインなどをトータルでご提案。</p>
+          <div class="service-tags">
+            <span>院名サイン</span>
+            <span>診療科目表示</span>
+            <span>案内板</span>
+          </div>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-num">04</div>
+          <div class="service-icon">&#128196;</div>
+          <h3>印刷・デザイン</h3>
+          <p>チラシ、名刺、パンフレット、ポスターなど各種印刷物のデザイン・制作。看板との統一感あるブランディングを実現します。</p>
+          <div class="service-tags">
+            <span>チラシ</span>
+            <span>名刺</span>
+            <span>パンフレット</span>
+            <span>ポスター</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKS -->
+  <section class="section" id="works">
+    <div class="container">
+      <div class="section-label">Works</div>
+      <h2 class="section-title">制作実績</h2>
+      <p class="section-subtitle">
+        多業種・多ジャンルの看板制作実績の一部をご紹介します。
+      </p>
+      <div class="works-grid">
+        <div class="work-item fade-up">
+          <img src="https://www.hokusho-ad.com/works/estate_01.png" alt="不動産看板 実績1">
+          <div class="work-overlay">
+            <div class="work-cat">Real Estate</div>
+            <div class="work-name">不動産看板</div>
+          </div>
+        </div>
+        <div class="work-item fade-up">
+          <img src="https://www.hokusho-ad.com/works/hospital_01.png" alt="病院看板 実績">
+          <div class="work-overlay">
+            <div class="work-cat">Hospital</div>
+            <div class="work-name">病院・クリニック看板</div>
+          </div>
+        </div>
+        <div class="work-item fade-up">
+          <img src="https://www.hokusho-ad.com/works/estate_11.png" alt="不動産看板 実績2">
+          <div class="work-overlay">
+            <div class="work-cat">Real Estate</div>
+            <div class="work-name">不動産看板</div>
+          </div>
+        </div>
+        <div class="work-item fade-up">
+          <img src="https://www.hokusho-ad.com/works/other_01.gif" alt="その他看板 実績">
+          <div class="work-overlay">
+            <div class="work-cat">Other</div>
+            <div class="work-name">店舗サイン</div>
+          </div>
+        </div>
+        <div class="work-item fade-up">
+          <img src="https://www.hokusho-ad.com/works/topics_33.png" alt="トピックス実績">
+          <div class="work-overlay">
+            <div class="work-cat">Topics</div>
+            <div class="work-name">最新制作事例</div>
+          </div>
+        </div>
+        <div class="work-item fade-up">
+          <img src="https://www.hokusho-ad.com/works/estate_02.png" alt="不動産看板 実績3">
+          <div class="work-overlay">
+            <div class="work-cat">Real Estate</div>
+            <div class="work-name">不動産看板</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VOICE -->
+  <section class="section bg-dark" id="voice">
+    <div class="container">
+      <div class="section-label">Testimonials</div>
+      <h2 class="section-title">お客様の声</h2>
+      <p class="section-subtitle">
+        北勝アドワークスをご利用いただいたお客様からの評価です。
+      </p>
+      <div class="voice-grid">
+        <div class="voice-card fade-up">
+          <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>「デザインから施工まで一括で頼めるので、やり取りがスムーズで助かりました。仕上がりも大変満足しています。」</blockquote>
+          <div class="voice-author"><strong>不動産会社</strong> A社 様</div>
+        </div>
+        <div class="voice-card fade-up">
+          <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>「クリニックの開業に合わせて看板を依頼。清潔感がありつつ目を引くデザインで、患者さんにも好評です。」</blockquote>
+          <div class="voice-author"><strong>内科クリニック</strong> B医院 様</div>
+        </div>
+        <div class="voice-card fade-up">
+          <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>「急ぎの案件でしたが、迅速に対応していただけました。コスト面でも満足です。リピートで利用させてもらっています。」</blockquote>
+          <div class="voice-author"><strong>飲食店</strong> C店 様</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-section" id="contact">
+    <div class="container">
+      <div class="cta-inner">
+        <div class="section-label">Contact</div>
+        <h2>看板のことなら、<br>まずはお気軽にご相談ください</h2>
+        <p>お見積り無料。デザインラフのご提案からスタートできます。<br>お電話またはメールでお気軽にお問い合わせください。</p>
+        <div class="cta-buttons">
+          <a href="tel:011-792-5717" class="btn-cta-tel">&#9742; 011-792-5717</a>
+          <a href="#" class="btn-primary">&#9993; メールで問い合わせ</a>
+        </div>
+        <p class="cta-note">営業時間: 平日 9:00〜18:00</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPANY -->
+  <section class="section" id="company">
+    <div class="container">
+      <div class="section-label">Company</div>
+      <h2 class="section-title">会社概要</h2>
+      <p class="section-subtitle">北勝アドワークス株式会社の基本情報</p>
+      <dl class="company-table">
+        <div class="company-row">
+          <dt>会社名</dt>
+          <dd>北勝アドワークス株式会社</dd>
+        </div>
+        <div class="company-row">
+          <dt>所在地</dt>
+          <dd>〒001-0032<br>北海道札幌市北区北32条西5丁目3-28<br>SAKURA-N32 3F</dd>
+        </div>
+        <div class="company-row">
+          <dt>電話番号</dt>
+          <dd>011-792-5717</dd>
+        </div>
+        <div class="company-row">
+          <dt>事業内容</dt>
+          <dd>屋外看板の企画・デザイン・製作・施工<br>各種サイン制作<br>印刷物デザイン・制作<br>ホームページ制作</dd>
+        </div>
+        <div class="company-row">
+          <dt>対応エリア</dt>
+          <dd>札幌市を中心に北海道全域</dd>
+        </div>
+        <div class="company-row">
+          <dt>Webサイト</dt>
+          <dd><a href="https://www.hokusho-ad.com/" style="color:var(--accent);">https://www.hokusho-ad.com/</a></dd>
+        </div>
+      </dl>
+      <div class="company-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2913.5!2d141.3406!3d43.1005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z5YyX5rW36YGT5pyt5bmM5biC5YyX5Yy65YyXMzLmnaHopb81LTMtMjg!5e0!3m2!1sja!2sjp!4v1680000000000!5m2!1sja!2sjp" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMO BANNER -->
+  <div class="demo-banner">
+    <p>&#9888; これはリニューアルイメージのデモサイトです。正式サイトは <a href="https://www.hokusho-ad.com/">hokusho-ad.com</a> をご覧ください。制作：<a href="https://oshinobi-co.com">OSHINOBI</a></p>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="https://www.hokusho-ad.com/images/logo.png" alt="北勝アドワークス">
+          <p>看板・サイン・印刷・デザイン<br>企画から施工まで一貫対応<br>札幌市北区北32条西5丁目3-28 SAKURA-N32 3F</p>
+        </div>
+        <div class="footer-nav">
+          <h4>サービス</h4>
+          <a href="#services">屋外看板・サイン</a>
+          <a href="#services">不動産看板</a>
+          <a href="#services">病院・クリニック看板</a>
+          <a href="#services">印刷・デザイン</a>
+        </div>
+        <div class="footer-nav">
+          <h4>会社情報</h4>
+          <a href="#company">会社概要</a>
+          <a href="#works">制作実績</a>
+          <a href="#contact">お問い合わせ</a>
+        </div>
+      </div>
+      <div class="footer-copy">
+        &copy; 2026 北勝アドワークス株式会社 All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 30);
+    });
+
+    // Mobile menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    hamburger.addEventListener('click', () => {
+      mobileNav.classList.toggle('active');
+    });
+    function closeMobile() {
+      mobileNav.classList.remove('active');
+    }
+
+    // Scroll animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

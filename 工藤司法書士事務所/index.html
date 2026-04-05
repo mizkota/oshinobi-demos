@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>工藤将和司法書士・税理士・行政書士事務所｜札幌市白石区・白石駅直結</title>
+  <meta name="description" content="札幌市白石区、地下鉄白石駅直結。司法書士・税理士・行政書士の3資格で、不動産登記・相続・税務申告・許認可をワンストップ対応。初回相談無料。">
+  <meta property="og:title" content="工藤将和司法書士・税理士・行政書士事務所｜白石駅直結">
+  <meta property="og:description" content="3つの資格で、あなたの課題をワンストップ解決。不動産登記・相続・税務申告・許認可まで。初回相談無料。">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1b2a4a;
+      --primary-light: #2d4470;
+      --primary-dark: #0f1a30;
+      --accent: #8a9bb5;
+      --accent-light: #b8c6d8;
+      --accent-gold: #c5a55a;
+      --text: #2d2d2d;
+      --text-light: #666;
+      --bg: #f8f9fb;
+      --white: #ffffff;
+      --section-bg: #eef1f5;
+      --border: #d8dce5;
+      --gradient: linear-gradient(135deg, #1b2a4a 0%, #2d4470 50%, #3a5580 100%);
+      --silver-gradient: linear-gradient(135deg, #c0c8d4 0%, #e8ecf0 50%, #d0d8e0 100%);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.8;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: var(--white);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+    }
+
+    .header-top {
+      background: var(--primary);
+      color: rgba(255,255,255,0.85);
+      font-size: 0.78rem;
+      padding: 6px 0;
+      text-align: center;
+      letter-spacing: 0.05em;
+    }
+
+    .header-main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo { display: flex; flex-direction: column; }
+
+    .logo-sub {
+      font-size: 0.68rem;
+      color: var(--accent);
+      font-weight: 500;
+      letter-spacing: 0.15em;
+    }
+
+    .logo-main {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: 0.05em;
+    }
+
+    .header-contact {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .header-tel { text-align: right; }
+
+    .header-tel .number {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: 0.05em;
+    }
+
+    .header-tel .hours {
+      font-size: 0.7rem;
+      color: var(--text-light);
+    }
+
+    .btn-contact {
+      background: var(--primary);
+      color: white;
+      padding: 10px 24px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.85rem;
+      transition: all 0.3s;
+      letter-spacing: 0.05em;
+    }
+
+    .btn-contact:hover {
+      background: var(--primary-light);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(27,42,74,0.3);
+    }
+
+    /* ===== NAV ===== */
+    nav {
+      background: var(--primary);
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 999;
+      margin-top: 96px;
+    }
+
+    nav ul {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      list-style: none;
+      justify-content: center;
+    }
+
+    nav li a {
+      display: block;
+      color: rgba(255,255,255,0.9);
+      text-decoration: none;
+      padding: 12px 18px;
+      font-size: 0.82rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      transition: all 0.3s;
+      border-bottom: 2px solid transparent;
+    }
+
+    nav li a:hover {
+      color: white;
+      background: rgba(255,255,255,0.08);
+      border-bottom-color: var(--accent-gold);
+    }
+
+    /* ===== HAMBURGER ===== */
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--primary);
+      margin: 5px 0;
+      transition: 0.3s;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      margin-top: 140px;
+      background: var(--gradient);
+      position: relative;
+      overflow: hidden;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      width: 50%; height: 100%;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800"><circle cx="400" cy="400" r="350" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/><circle cx="400" cy="400" r="250" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/><circle cx="400" cy="400" r="150" fill="none" stroke="rgba(255,255,255,0.02)" stroke-width="1"/><path d="M200,400 Q400,100 600,400 Q400,700 200,400Z" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></svg>') center/contain no-repeat;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -2px; left: 0; right: 0;
+      height: 80px;
+      background: linear-gradient(to top, var(--bg), transparent);
+    }
+
+    .hero-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 40px;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .hero-text { flex: 1; }
+
+    .hero-image {
+      flex: 0 0 360px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-image img {
+      width: 340px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 20px;
+      border: 3px solid rgba(255,255,255,0.15);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(197,165,90,0.2);
+      border: 1px solid var(--accent-gold);
+      color: #e8d4a0;
+      padding: 6px 20px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-bottom: 24px;
+      letter-spacing: 0.1em;
+    }
+
+    .hero h1 {
+      font-family: 'Noto Serif JP', serif;
+      color: white;
+      font-size: 2.6rem;
+      font-weight: 700;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span { color: #e8d4a0; }
+
+    .hero-sub {
+      color: rgba(255,255,255,0.85);
+      font-size: 1.05rem;
+      line-height: 1.9;
+      max-width: 600px;
+      margin-bottom: 36px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-hero-primary {
+      background: var(--accent-gold);
+      color: white;
+      padding: 16px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.3s;
+      letter-spacing: 0.05em;
+    }
+
+    .btn-hero-primary:hover {
+      background: #b8943c;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(197,165,90,0.4);
+    }
+
+    .btn-hero-secondary {
+      background: transparent;
+      color: white;
+      padding: 16px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      border: 1px solid rgba(255,255,255,0.4);
+      transition: all 0.3s;
+    }
+
+    .btn-hero-secondary:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: white;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 50px;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .hero-stat { text-align: center; }
+
+    .hero-stat .num {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #e8d4a0;
+    }
+
+    .hero-stat .label {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.7);
+      margin-top: 4px;
+    }
+
+    /* ===== SECTION COMMON ===== */
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title .en {
+      font-size: 0.75rem;
+      color: var(--accent-gold);
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .section-title h2 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 2rem;
+      color: var(--primary);
+      margin-top: 8px;
+      font-weight: 700;
+    }
+
+    .section-title .line {
+      width: 40px;
+      height: 2px;
+      background: var(--accent-gold);
+      margin: 16px auto 0;
+    }
+
+    /* ===== FEATURES ===== */
+    .features {
+      padding: 80px 24px;
+      background: var(--white);
+    }
+
+    .features-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .feature-card {
+      background: var(--bg);
+      border-radius: 16px;
+      padding: 40px 30px;
+      text-align: center;
+      transition: all 0.3s;
+      border: 1px solid var(--border);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+      border-color: var(--accent-gold);
+    }
+
+    .feature-icon {
+      width: 64px;
+      height: 64px;
+      background: var(--gradient);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 1.8rem;
+    }
+
+    .feature-num {
+      font-size: 0.7rem;
+      color: var(--accent-gold);
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      margin-bottom: 8px;
+    }
+
+    .feature-card h3 {
+      font-size: 1.15rem;
+      color: var(--primary);
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .feature-card p {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      line-height: 1.8;
+    }
+
+    /* ===== SERVICES ===== */
+    .services {
+      padding: 80px 24px;
+      background: var(--section-bg);
+    }
+
+    .services-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      align-items: stretch;
+      transition: all 0.3s;
+      border: 1px solid var(--border);
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    }
+
+    .service-img {
+      flex: 0 0 160px;
+      overflow: hidden;
+    }
+
+    .service-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .service-card:hover .service-img img {
+      transform: scale(1.05);
+    }
+
+    .service-body {
+      padding: 24px;
+      flex: 1;
+    }
+
+    .service-category {
+      font-size: 0.7rem;
+      color: var(--accent-gold);
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      margin-bottom: 4px;
+    }
+
+    .service-body h3 {
+      font-size: 1.05rem;
+      color: var(--primary);
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .service-body p {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    /* ===== PROFILE ===== */
+    .profile {
+      padding: 80px 24px;
+      background: var(--white);
+    }
+
+    .profile-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      gap: 50px;
+      align-items: flex-start;
+    }
+
+    .profile-photo {
+      flex: 0 0 280px;
+    }
+
+    .profile-photo img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    }
+
+    .profile-info { flex: 1; }
+
+    .profile-info .role {
+      font-size: 0.8rem;
+      color: var(--accent-gold);
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      margin-bottom: 4px;
+    }
+
+    .profile-info h3 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.6rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .profile-info p {
+      font-size: 0.92rem;
+      color: var(--text-light);
+      line-height: 2;
+      margin-bottom: 16px;
+    }
+
+    .profile-qualifications {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    .profile-qualifications span {
+      background: var(--section-bg);
+      color: var(--primary);
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      border: 1px solid var(--border);
+    }
+
+    /* ===== VOICE ===== */
+    .voice {
+      padding: 80px 24px;
+      background: var(--section-bg);
+    }
+
+    .voice-grid {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .voice-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 30px;
+      border: 1px solid var(--border);
+    }
+
+    .voice-stars {
+      color: var(--accent-gold);
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+    }
+
+    .voice-card p {
+      font-size: 0.88rem;
+      color: var(--text);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .voice-author {
+      font-size: 0.78rem;
+      color: var(--text-light);
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+
+    /* ===== CTA ===== */
+    .cta {
+      padding: 80px 24px;
+      background: var(--gradient);
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-family: 'Noto Serif JP', serif;
+      color: white;
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+
+    .cta p {
+      color: rgba(255,255,255,0.85);
+      font-size: 1rem;
+      margin-bottom: 36px;
+      line-height: 1.8;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn-cta-tel {
+      background: var(--white);
+      color: var(--primary);
+      padding: 18px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+
+    .btn-cta-tel:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255,255,255,0.3);
+    }
+
+    .btn-cta-tel .small {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 400;
+      color: var(--text-light);
+      margin-top: 2px;
+    }
+
+    .btn-cta-form {
+      background: var(--accent-gold);
+      color: white;
+      padding: 18px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.3s;
+    }
+
+    .btn-cta-form:hover {
+      background: #b8943c;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(197,165,90,0.4);
+    }
+
+    /* ===== OVERVIEW ===== */
+    .overview {
+      padding: 80px 24px;
+      background: var(--white);
+    }
+
+    .overview-table {
+      max-width: 800px;
+      margin: 0 auto;
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .overview-table tr {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .overview-table th {
+      text-align: left;
+      padding: 16px 20px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--primary);
+      width: 160px;
+      background: var(--section-bg);
+      vertical-align: top;
+    }
+
+    .overview-table td {
+      padding: 16px 20px;
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    /* ===== MAP ===== */
+    .map-container {
+      max-width: 800px;
+      margin: 30px auto 0;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 350px;
+      border: none;
+    }
+
+    /* ===== DEMO BANNER ===== */
+    .demo-banner {
+      background: linear-gradient(135deg, #fff3cd 0%, #ffeaa0 100%);
+      border: 2px solid #e6c84a;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 24px 32px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .demo-banner h3 {
+      color: #856404;
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+
+    .demo-banner p {
+      color: #856404;
+      font-size: 0.85rem;
+      line-height: 1.7;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--primary-dark);
+      color: rgba(255,255,255,0.6);
+      padding: 40px 24px 20px;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+    }
+
+    .footer-logo {
+      font-family: 'Noto Serif JP', serif;
+      color: white;
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+    }
+
+    .footer-info p {
+      font-size: 0.8rem;
+      line-height: 1.8;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      font-size: 0.8rem;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover { color: white; }
+
+    .footer-copy {
+      text-align: center;
+      padding-top: 20px;
+      margin-top: 30px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.75rem;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 968px) {
+      .hero-content { flex-direction: column; padding: 60px 24px; }
+      .hero-image { flex: none; order: -1; }
+      .hero-image img { width: 260px; height: 300px; }
+      .hero h1 { font-size: 2rem; text-align: center; }
+      .hero-sub { text-align: center; margin: 0 auto 36px; }
+      .hero-buttons { justify-content: center; }
+      .hero-stats { justify-content: center; }
+      .hero-badge { display: block; text-align: center; }
+      .features-grid { grid-template-columns: 1fr; max-width: 500px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .profile-content { flex-direction: column; align-items: center; text-align: center; }
+      .profile-photo { flex: none; }
+      .profile-qualifications { justify-content: center; }
+      .voice-grid { grid-template-columns: 1fr; max-width: 500px; }
+      .footer-content { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+
+    @media (max-width: 768px) {
+      nav { display: none; }
+      nav.active { display: block; margin-top: 70px; }
+      nav ul { flex-direction: column; }
+      nav li a { padding: 14px 24px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+      .hamburger { display: block; }
+      .hero { margin-top: 70px; min-height: auto; }
+      .hero h1 { font-size: 1.6rem; }
+      .hero-stats { gap: 24px; flex-wrap: wrap; }
+      .header-tel { display: none; }
+      .btn-contact { padding: 8px 18px; font-size: 0.78rem; }
+      .section-title h2 { font-size: 1.5rem; }
+      .service-card { flex-direction: column; }
+      .service-img { flex: none; height: 180px; }
+      .cta h2 { font-size: 1.5rem; }
+      .overview-table th { width: 100px; padding: 12px; font-size: 0.8rem; }
+      .overview-table td { padding: 12px; font-size: 0.85rem; }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 1.35rem; }
+      .hero-image img { width: 200px; height: 240px; }
+      .hero-buttons { flex-direction: column; align-items: center; }
+      .hero-stat .num { font-size: 1.5rem; }
+      .cta-buttons { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="header-top">
+    地下鉄東西線 白石駅直結 ／ 初回相談無料 ／ 土日祝も予約で対応可
+  </div>
+  <div class="header-main">
+    <div class="logo">
+      <span class="logo-sub">司法書士・税理士・行政書士</span>
+      <span class="logo-main">工藤将和事務所</span>
+    </div>
+    <button class="hamburger" onclick="document.querySelector('nav').classList.toggle('active')">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="header-contact">
+      <div class="header-tel">
+        <div class="number">011-595-7555</div>
+        <div class="hours">受付 9:00〜17:30（土日祝 予約制）</div>
+      </div>
+      <a href="#contact" class="btn-contact">無料相談予約</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== NAV ===== -->
+<nav>
+  <ul>
+    <li><a href="#features">当事務所の強み</a></li>
+    <li><a href="#services">業務内容</a></li>
+    <li><a href="#profile">代表紹介</a></li>
+    <li><a href="#voice">お客様の声</a></li>
+    <li><a href="#overview">事務所概要</a></li>
+    <li><a href="#contact">お問い合わせ</a></li>
+  </ul>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <span class="hero-badge">司法書士 / 税理士 / 行政書士</span>
+      <h1><span>3つの資格</span>で、<br>あなたの課題を<br>ワンストップ解決。</h1>
+      <p class="hero-sub">不動産登記・相続手続・税務申告・許認可まで、<br>ひとつの窓口で完結。白石駅直結でアクセスも安心です。</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn-hero-primary">無料相談を予約する</a>
+        <a href="#services" class="btn-hero-secondary">業務内容を見る</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="num">3</div>
+          <div class="label">国家資格保有</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">0</div>
+          <div class="label">初回相談料（円）</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">駅直結</div>
+          <div class="label">白石駅からすぐ</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://www.m-kudo.net/_p/acre/8654/images/pc/51183103.jpg" alt="工藤将和司法書士・税理士・行政書士事務所">
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURES ===== -->
+<section class="features" id="features">
+  <div class="section-title">
+    <span class="en">OUR STRENGTHS</span>
+    <h2>当事務所が選ばれる理由</h2>
+    <div class="line"></div>
+  </div>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      </div>
+      <div class="feature-num">POINT 01</div>
+      <h3>3資格ワンストップ</h3>
+      <p>司法書士・税理士・行政書士が同一事務所に在籍。相続や会社設立に必要な登記・税務・許認可を、複数の事務所を回ることなく一括でご依頼いただけます。</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <div class="feature-num">POINT 02</div>
+      <h3>白石駅直結の好立地</h3>
+      <p>地下鉄東西線「白石駅」直結。雨の日も雪の日も濡れずにお越しいただけます。出張相談にも対応しておりますので、お気軽にご相談ください。</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </div>
+      <div class="feature-num">POINT 03</div>
+      <h3>親切・丁寧な対応</h3>
+      <p>お客さまごとにきちんとお時間をとり、ご納得いただけるまで丁寧にご説明いたします。土日祝も事前予約で対応可能です。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="services" id="services">
+  <div class="section-title">
+    <span class="en">SERVICES</span>
+    <h2>業務内容</h2>
+    <div class="line"></div>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-img">
+        <img src="https://www.m-kudo.net/_p/acre/8654/images/pc/616d8e47.jpg" alt="不動産登記">
+      </div>
+      <div class="service-body">
+        <span class="service-category">司法書士業務</span>
+        <h3>不動産登記</h3>
+        <p>売買・相続・贈与による名義変更、抵当権設定・抹消など、不動産に関する登記手続を代行いたします。</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-img">
+        <img src="https://www.m-kudo.net/_p/acre/8654/images/pc/3f6f0be9.jpg" alt="商業登記">
+      </div>
+      <div class="service-body">
+        <span class="service-category">司法書士業務</span>
+        <h3>商業登記</h3>
+        <p>会社設立、役員変更、本店移転、増資など、法人に関する各種登記を迅速に対応いたします。</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-img">
+        <img src="https://www.m-kudo.net/_p/acre/8654/images/pc/e3b22c77.jpg" alt="相続手続">
+      </div>
+      <div class="service-body">
+        <span class="service-category">司法書士業務</span>
+        <h3>相続手続</h3>
+        <p>不動産の相続登記から預貯金の名義変更まで、煩雑な相続手続をトータルでサポートいたします。</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-img">
+        <img src="https://www.m-kudo.net/_p/acre/8654/images/pc/8b1e9a62.jpg" alt="成年後見">
+      </div>
+      <div class="service-body">
+        <span class="service-category">司法書士業務</span>
+        <h3>成年後見</h3>
+        <p>法定後見・任意後見の申立てや契約書作成。ご家族の将来の安心を法的にサポートします。</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-img">
+        <img src="https://www.m-kudo.net/_p/acre/8654/images/pc/dae3f4fa.jpg" alt="遺言書作成">
+      </div>
+      <div class="service-body">
+        <span class="service-category">司法書士業務</span>
+        <h3>遺言書作成</h3>
+        <p>自筆証書遺言・公正証書遺言の作成を支援。遺言内容の検討から公証役場との調整までお任せください。</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-img">
+        <img src="https://www.m-kudo.net/_p/acre/8654/images/pc/535916ba.jpg" alt="相続税申告">
+      </div>
+      <div class="service-body">
+        <span class="service-category">税理士業務</span>
+        <h3>相続税申告・試算</h3>
+        <p>相続税の試算から申告書作成まで対応。司法書士業務と連携し、相続をワンストップで解決します。</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-img">
+        <img src="https://www.m-kudo.net/_p/acre/8654/images/pc/eb90256a.jpg" alt="贈与税申告">
+      </div>
+      <div class="service-body">
+        <span class="service-category">税理士業務</span>
+        <h3>贈与税申告・試算</h3>
+        <p>生前贈与の計画立案から贈与税申告まで。不動産の名義変更と合わせた一括対応が可能です。</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-img">
+        <img src="https://www.m-kudo.net/_p/acre/8654/images/pc/03ffb8ee.png" alt="所得税申告">
+      </div>
+      <div class="service-body">
+        <span class="service-category">税理士・行政書士業務</span>
+        <h3>所得税申告・許認可</h3>
+        <p>譲渡所得・不動産所得の確定申告、各種許認可申請まで。3資格の強みを活かしたトータルサポート。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROFILE ===== -->
+<section class="profile" id="profile">
+  <div class="section-title">
+    <span class="en">ABOUT US</span>
+    <h2>代表紹介</h2>
+    <div class="line"></div>
+  </div>
+  <div class="profile-content">
+    <div class="profile-photo">
+      <img src="https://www.m-kudo.net/_p/acre/8654/images/pc/7ae20513.jpg" alt="工藤将和・工藤美佳">
+    </div>
+    <div class="profile-info">
+      <div class="role">司法書士</div>
+      <h3>工藤 将和</h3>
+      <p>札幌市白石区を拠点に、地域の皆さまの法務・税務のお困りごとに寄り添ってまいりました。司法書士として不動産登記や相続手続を、税理士・行政書士の工藤美佳とともに税務申告や許認可までワンストップで対応いたします。</p>
+      <p>「どこに相談すればいいかわからない」というお声に応えるため、3つの国家資格を活かし、お客さまに何度も足を運んでいただく負担をなくすことを大切にしています。初回相談は無料ですので、どうぞお気軽にお問い合わせください。</p>
+      <div class="profile-qualifications">
+        <span>司法書士 ― 工藤将和</span>
+        <span>税理士 ― 工藤美佳</span>
+        <span>行政書士 ― 工藤美佳</span>
+      </div>
+
+      <p style="margin-top:24px; font-size:0.85rem;">
+        <strong>メディア掲載：</strong>相続専門メディア『相続の教科書』掲載（2025年）<br>
+        <strong>提携：</strong>M&A仲介会社「みつきコンサルティング」と提携
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VOICE ===== -->
+<section class="voice" id="voice">
+  <div class="section-title">
+    <span class="en">CLIENT VOICE</span>
+    <h2>お客様の声</h2>
+    <div class="line"></div>
+  </div>
+  <div class="voice-grid">
+    <div class="voice-card">
+      <div class="voice-stars">★★★★★</div>
+      <p>相続で不動産の名義変更と相続税の申告が必要でしたが、ひとつの事務所で全て対応していただけたので、本当に助かりました。</p>
+      <div class="voice-author">50代女性 ／ 相続手続・相続税申告</div>
+    </div>
+    <div class="voice-card">
+      <div class="voice-stars">★★★★★</div>
+      <p>白石駅直結で通いやすく、仕事帰りにも相談できました。難しい法律用語も丁寧に説明してくださり安心でした。</p>
+      <div class="voice-author">40代男性 ／ 不動産登記</div>
+    </div>
+    <div class="voice-card">
+      <div class="voice-stars">★★★★★</div>
+      <p>会社設立の登記から税務届出までまとめてお願いできたので、スピーディーに事業をスタートできました。</p>
+      <div class="voice-author">30代男性 ／ 商業登記・税務顧問</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta" id="contact">
+  <h2>まずはお気軽にご相談ください</h2>
+  <p>初回相談無料。お電話またはお問い合わせフォームにて承っております。<br>土日祝も事前予約で対応可能です。</p>
+  <div class="cta-buttons">
+    <a href="tel:011-595-7555" class="btn-cta-tel">
+      011-595-7555
+      <span class="small">受付 9:00〜17:30</span>
+    </a>
+    <a href="https://www.m-kudo.net/" class="btn-cta-form">お問い合わせフォームへ</a>
+  </div>
+</section>
+
+<!-- ===== OVERVIEW ===== -->
+<section class="overview" id="overview">
+  <div class="section-title">
+    <span class="en">OFFICE INFO</span>
+    <h2>事務所概要</h2>
+    <div class="line"></div>
+  </div>
+  <table class="overview-table">
+    <tr><th>事務所名</th><td>工藤将和司法書士・税理士・行政書士事務所</td></tr>
+    <tr><th>所属者</th><td>司法書士 工藤将和<br>税理士・行政書士 工藤美佳</td></tr>
+    <tr><th>所在地</th><td>〒003-0002<br>北海道札幌市白石区東札幌2条6丁目5-1</td></tr>
+    <tr><th>アクセス</th><td>札幌市営地下鉄 東西線「白石駅」直結</td></tr>
+    <tr><th>電話番号</th><td>011-595-7555</td></tr>
+    <tr><th>受付時間</th><td>午前9時〜午後5時30分（土日祝は予約制）</td></tr>
+    <tr><th>業務内容</th><td>不動産登記 / 商業登記 / 相続手続 / 成年後見 / 遺言書作成<br>相続税申告 / 贈与税申告 / 所得税申告 / 各種許認可</td></tr>
+  </table>
+
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2915.5!2d141.383!3d43.048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z5pyt5bmM5biC55m955-z5Yy65p2x5pyt5bmMMuadoTbkuIHnm641LTE!5e0!3m2!1sja!2sjp!4v1700000000000" allowfullscreen loading="lazy"></iframe>
+  </div>
+</section>
+
+<!-- ===== DEMO BANNER ===== -->
+<div class="demo-banner">
+  <h3>※ こちらはデモサイトです</h3>
+  <p>本ページは、工藤将和司法書士・税理士・行政書士事務所様へのご提案用に作成したリニューアルイメージです。<br>
+  実際の公開サイトではございません。内容・デザインはご要望に応じて自由に変更可能です。<br>
+  <strong>制作：OSHINOBI（info@oshinobi-co.com）</strong></p>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-info">
+      <div class="footer-logo">工藤将和司法書士・税理士・行政書士事務所</div>
+      <p>〒003-0002 北海道札幌市白石区東札幌2条6丁目5-1<br>
+      TEL: 011-595-7555 ／ 受付: 9:00〜17:30</p>
+    </div>
+    <div class="footer-links">
+      <a href="#features">当事務所の強み</a>
+      <a href="#services">業務内容</a>
+      <a href="#profile">代表紹介</a>
+      <a href="#voice">お客様の声</a>
+      <a href="#overview">事務所概要</a>
+      <a href="#contact">お問い合わせ</a>
+    </div>
+  </div>
+  <div class="footer-copy">&copy; 2026 工藤将和司法書士・税理士・行政書士事務所</div>
+</footer>
+
+</body>
+</html>

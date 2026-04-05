@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>職人ネットワーク札幌｜窓・ドア・サッシの修理交換なら</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #1565c0;
+  --primary-dark: #0d47a1;
+  --primary-light: #1e88e5;
+  --accent: #e65100;
+  --accent-dark: #bf360c;
+  --accent-light: #f57c00;
+  --white: #ffffff;
+  --gray-50: #f8f9fa;
+  --gray-100: #f0f2f5;
+  --gray-200: #e2e6ea;
+  --gray-300: #ccd1d9;
+  --gray-600: #6c757d;
+  --gray-800: #343a40;
+  --gray-900: #212529;
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.16);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: var(--gray-900);
+  line-height: 1.8;
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== HEADER ===== */
+.header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 8px rgba(0,0,0,0.08);
+  transition: var(--transition);
+}
+.header-inner {
+  max-width: 1200px; margin: 0 auto;
+  padding: 0 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 76px;
+}
+.logo {
+  display: flex; align-items: center; gap: 12px;
+  text-decoration: none; color: var(--primary);
+}
+.logo img {
+  width: 50px; height: 50px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+.logo-text {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.15rem; font-weight: 700;
+  line-height: 1.3;
+}
+.logo-text small {
+  display: block; font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.65rem; font-weight: 500; color: var(--gray-600);
+  letter-spacing: 0.05em;
+}
+.header-right { display: flex; align-items: center; gap: 20px; }
+.header-phone {
+  display: flex; align-items: center; gap: 8px;
+  color: var(--primary); text-decoration: none;
+  font-size: 1.3rem; font-weight: 900;
+  letter-spacing: 0.02em;
+}
+.header-phone svg { flex-shrink: 0; }
+.header-phone small { font-size: 0.7rem; font-weight: 400; color: var(--gray-600); display: block; }
+.btn-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: var(--white);
+  padding: 10px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700; font-size: 0.9rem;
+  transition: var(--transition);
+  box-shadow: 0 4px 12px rgba(230,81,0,0.3);
+  border: none; cursor: pointer;
+}
+.btn-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(230,81,0,0.4);
+}
+
+/* ===== NAV ===== */
+.nav {
+  background: var(--primary);
+  position: sticky; top: 76px; z-index: 999;
+}
+.nav-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; justify-content: center; gap: 0;
+  overflow-x: auto;
+}
+.nav a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  padding: 14px 20px;
+  font-size: 0.85rem; font-weight: 500;
+  white-space: nowrap;
+  transition: var(--transition);
+  position: relative;
+}
+.nav a::after {
+  content: ''; position: absolute;
+  bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 0; height: 3px;
+  background: var(--accent-light);
+  border-radius: 3px 3px 0 0;
+  transition: var(--transition);
+}
+.nav a:hover { color: var(--white); }
+.nav a:hover::after { width: 60%; }
+
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  min-height: 540px;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+  padding: 100px 24px 80px;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 40%, var(--primary-light) 100%);
+}
+.hero-bg img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0.2;
+  mix-blend-mode: luminosity;
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0; z-index: 1;
+  background:
+    radial-gradient(ellipse at 20% 80%, rgba(230,81,0,0.15) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 50%);
+}
+.hero::after {
+  content: ''; position: absolute; inset: 0; z-index: 1;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.hero-content {
+  position: relative; z-index: 2;
+  text-align: center; color: var(--white);
+  max-width: 800px;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 50px;
+  padding: 8px 20px;
+  font-size: 0.85rem; font-weight: 500;
+  margin-bottom: 24px;
+}
+.hero-badge svg { flex-shrink: 0; }
+.hero h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.4;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.2);
+}
+.hero h1 em {
+  font-style: normal;
+  color: var(--accent-light);
+}
+.hero p {
+  font-size: 1.05rem;
+  opacity: 0.9;
+  margin-bottom: 32px;
+}
+.hero-phone {
+  display: inline-flex; align-items: center; gap: 12px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: var(--radius);
+  padding: 16px 32px;
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1.8rem; font-weight: 900;
+  letter-spacing: 0.03em;
+  transition: var(--transition);
+  margin-bottom: 12px;
+}
+.hero-phone:hover { background: rgba(255,255,255,0.25); }
+.hero-phone svg { flex-shrink: 0; }
+.hero-phone-sub {
+  font-size: 0.85rem; opacity: 0.8; font-weight: 400;
+}
+.hero-buttons {
+  display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+  margin-top: 16px;
+}
+.btn-hero-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: var(--white);
+  padding: 14px 36px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700; font-size: 1rem;
+  transition: var(--transition);
+  box-shadow: 0 4px 16px rgba(230,81,0,0.4);
+}
+.btn-hero-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(230,81,0,0.5);
+}
+
+/* ===== SECTIONS COMMON ===== */
+.section { padding: 80px 0; }
+.section-gray { background: var(--gray-50); }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.section-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.section-header .en {
+  display: block;
+  font-size: 0.75rem; font-weight: 700;
+  color: var(--primary-light);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 8px;
+}
+.section-header h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--gray-900);
+  margin-bottom: 12px;
+}
+.section-header p {
+  color: var(--gray-600);
+  font-size: 0.95rem;
+  max-width: 600px; margin: 0 auto;
+}
+
+/* ===== STRENGTHS ===== */
+.strength-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+.strength-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 36px 28px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  border: 1px solid var(--gray-200);
+  text-align: center;
+}
+.strength-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-light);
+}
+.strength-icon {
+  width: 64px; height: 64px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px;
+  color: var(--white);
+}
+.strength-card h3 {
+  font-size: 1.1rem; font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--primary-dark);
+}
+.strength-card p {
+  font-size: 0.9rem;
+  color: var(--gray-600);
+  line-height: 1.7;
+}
+
+/* ===== SERVICES ===== */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+.service-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  border: 1px solid var(--gray-200);
+}
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+.service-card-img {
+  width: 100%; height: 200px;
+  object-fit: cover;
+  display: block;
+}
+.service-card-body {
+  padding: 24px;
+}
+.service-card h3 {
+  font-size: 1.05rem; font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--primary-dark);
+}
+.service-card p {
+  font-size: 0.88rem;
+  color: var(--gray-600);
+  line-height: 1.7;
+}
+
+/* ===== VOICE ===== */
+.voice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+.voice-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+}
+.voice-stars {
+  color: #f59e0b; font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+.voice-card blockquote {
+  font-size: 0.92rem;
+  color: var(--gray-800);
+  line-height: 1.8;
+  margin-bottom: 16px;
+  position: relative;
+  padding-left: 16px;
+  border-left: 3px solid var(--primary-light);
+}
+.voice-meta {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 0.82rem; color: var(--gray-600);
+}
+.voice-avatar {
+  width: 40px; height: 40px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: var(--white);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.9rem;
+}
+
+/* ===== CTA ===== */
+.cta-section {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  color: var(--white);
+  text-align: center;
+  padding: 64px 24px;
+}
+.cta-section h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  margin-bottom: 12px;
+}
+.cta-section p {
+  opacity: 0.9; margin-bottom: 28px;
+  font-size: 0.95rem;
+}
+.cta-phone {
+  display: inline-flex; align-items: center; gap: 12px;
+  color: var(--white); text-decoration: none;
+  font-weight: 900; font-size: 2rem;
+  letter-spacing: 0.02em;
+  transition: var(--transition);
+}
+.cta-phone .num { border-bottom: 2px solid rgba(255,255,255,0.4); }
+.cta-phone:hover .num { border-color: var(--white); }
+.cta-sub {
+  margin-top: 8px;
+  font-size: 0.85rem; opacity: 0.7;
+  margin-bottom: 20px;
+}
+.cta-buttons {
+  display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+}
+
+/* ===== COMPANY ===== */
+.company-table {
+  width: 100%; max-width: 800px; margin: 0 auto;
+  border-collapse: collapse;
+}
+.company-table th,
+.company-table td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid var(--gray-200);
+  font-size: 0.92rem;
+}
+.company-table th {
+  width: 160px;
+  color: var(--primary-dark);
+  font-weight: 700;
+  background: var(--gray-50);
+  white-space: nowrap;
+}
+
+/* ===== DEMO BANNER ===== */
+.demo-banner {
+  background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+  border: 2px dashed var(--accent);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  text-align: center;
+  font-size: 0.92rem;
+  color: var(--gray-800);
+  line-height: 1.8;
+}
+.demo-banner strong {
+  color: var(--accent-dark);
+  font-size: 1rem;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--gray-900);
+  color: rgba(255,255,255,0.7);
+  padding: 48px 24px 0;
+}
+.footer-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 40px;
+}
+.footer-brand .logo-text {
+  color: var(--white);
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+.footer-brand .logo-text small { color: rgba(255,255,255,0.5); }
+.footer-brand p {
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
+.footer-links h4 {
+  color: var(--white);
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+.footer-links a {
+  display: block;
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 4px 0;
+  transition: var(--transition);
+}
+.footer-links a:hover { color: var(--white); }
+.footer-copy {
+  max-width: 1200px; margin: 0 auto;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.78rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .header-inner { height: 64px; }
+  .header-phone .num-text { display: none; }
+  .btn-cta span { display: none; }
+  .btn-cta { padding: 10px 16px; }
+  .nav { top: 64px; }
+  .nav-inner { justify-content: flex-start; padding: 0 8px; }
+  .nav a { padding: 12px 14px; font-size: 0.8rem; }
+  .hero { min-height: 440px; padding: 80px 20px 60px; }
+  .hero-phone { font-size: 1.4rem; padding: 12px 24px; }
+  .section { padding: 56px 0; }
+  .strength-grid { grid-template-columns: 1fr; }
+  .service-grid { grid-template-columns: 1fr; }
+  .voice-grid { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+  .company-table th { width: 120px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <img src="https://syokunin-koubou.com/wp-content/uploads/logo.png" alt="職人ネットワーク札幌 ロゴ">
+      <div class="logo-text">
+        職人ネットワーク札幌
+        <small>株式会社サイトー</small>
+      </div>
+    </a>
+    <div class="header-right">
+      <a href="tel:0120040090" class="header-phone">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <div>
+          <small>フリーダイヤル</small>
+          <span class="num-text">0120-040-090</span>
+        </div>
+      </a>
+      <a href="#contact" class="btn-cta">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <span>お問い合わせ</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#strengths">当社の強み</a>
+    <a href="#service">サービス</a>
+    <a href="#voice">お客様の声</a>
+    <a href="#company">会社概要</a>
+    <a href="#contact">お問い合わせ</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="https://syokunin-koubou.com/wp-content/themes/syokunin-net/images/760_400_01.jpg" alt="ガラス修理">
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      札幌市全域 + 近郊エリア対応
+    </div>
+    <h1>窓・ドア・サッシのお困りごと、<br><em>即日対応。</em></h1>
+    <p>サッシ・ガラス・ドア・網戸・カーポート・シャッターなど、<br>住まいの開口部まわりのトラブルは職人ネットワーク札幌にお任せください。</p>
+    <a href="tel:0120040090" class="hero-phone">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      0120-040-090
+    </a>
+    <div class="hero-phone-sub">受付時間 9:00〜17:30（土日祝除く）</div>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn-hero-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        無料見積りを依頼する
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- STRENGTHS -->
+<section class="section section-gray" id="strengths">
+  <div class="container">
+    <div class="section-header">
+      <span class="en">Our Strengths</span>
+      <h2>職人ネットワーク札幌が選ばれる理由</h2>
+      <p>サッシ・ガラスの専門職人が直接対応するから、早い・安い・確実です。</p>
+    </div>
+    <div class="strength-grid">
+      <div class="strength-card">
+        <div class="strength-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>即日対応・スピード施工</h3>
+        <p>ガラスが割れた、鍵が壊れた等の緊急トラブルにも迅速対応。お電話一本で職人が駆けつけます。</p>
+      </div>
+      <div class="strength-card">
+        <div class="strength-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>経験豊富な専門職人</h3>
+        <p>サッシ・ガラス・ドアの専門知識を持つ熟練の職人が施工。確かな技術で仕上がりに差が出ます。</p>
+      </div>
+      <div class="strength-card">
+        <div class="strength-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        </div>
+        <h3>明朗会計・無料見積り</h3>
+        <p>作業前に必ずお見積りをご提示。追加費用なしの安心価格。PayPay・au PAYにも対応しています。</p>
+      </div>
+      <div class="strength-card">
+        <div class="strength-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>札幌全域＋近郊対応</h3>
+        <p>札幌市全10区はもちろん、江別市・石狩市・北広島市など近郊エリアもカバーしています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE -->
+<section class="section" id="service">
+  <div class="container">
+    <div class="section-header">
+      <span class="en">Service</span>
+      <h2>サービス一覧</h2>
+      <p>窓まわり・ドアまわりのあらゆるお悩みに対応いたします。</p>
+    </div>
+    <div class="service-grid">
+      <div class="service-card">
+        <img src="https://syokunin-koubou.com/wp-content/themes/syokunin-net/images/760_400_01.jpg" alt="ガラス修理・交換" class="service-card-img">
+        <div class="service-card-body">
+          <h3>ガラス修理・交換</h3>
+          <p>割れ替え、ペアガラス、防犯ガラス、結露対策の内窓など。断熱性能UPで光熱費削減にも。</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://syokunin-koubou.com/wp-content/themes/syokunin-net/images/760_400_03.jpg" alt="玄関ドア交換" class="service-card-img">
+        <div class="service-card-body">
+          <h3>玄関ドア交換・修理</h3>
+          <p>ドアの開閉不良、鍵交換、断熱ドアへのリフォームなど。カバー工法で最短1日施工も可能。</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://syokunin-koubou.com/wp-content/themes/syokunin-net/images/760_400_04.jpg" alt="玄関フード" class="service-card-img">
+        <div class="service-card-body">
+          <h3>サッシ交換・修理</h3>
+          <p>窓サッシの歪み、隙間風、戸車交換、クレセント修理など。断熱サッシへの交換もお任せ。</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-img" style="height:200px;background:linear-gradient(135deg,var(--primary),var(--primary-light));display:flex;align-items:center;justify-content:center;">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
+        </div>
+        <div class="service-card-body">
+          <h3>網戸の張替え・新設</h3>
+          <p>破れた網戸の張替え、ペット対応網戸、花粉対策フィルターなど各種ご用意しています。</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://syokunin-koubou.com/wp-content/themes/syokunin-net/images/760_400_12.jpg" alt="外壁リフォーム" class="service-card-img">
+        <div class="service-card-body">
+          <h3>玄関フード・風除室</h3>
+          <p>北海道の厳しい冬に欠かせない風除室。新設からリフォームまで、ご自宅に合った最適プランをご提案。</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-img" style="height:200px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));display:flex;align-items:center;justify-content:center;">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M12 4v16"/><path d="M2 12h8"/><path d="M14 12h8"/></svg>
+        </div>
+        <div class="service-card-body">
+          <h3>シャッター・カーポート</h3>
+          <p>車庫シャッターの修理・交換、カーポート・ガレージの設置。冬の雪対策もお気軽にご相談を。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VOICE -->
+<section class="section section-gray" id="voice">
+  <div class="container">
+    <div class="section-header">
+      <span class="en">Customer Voice</span>
+      <h2>お客様の声</h2>
+      <p>実際にご利用いただいたお客様からの嬉しいお言葉をご紹介します。</p>
+    </div>
+    <div class="voice-grid">
+      <div class="voice-card">
+        <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>子どもがボールをぶつけてガラスが割れてしまい、すぐに電話しました。当日中に来てくださり、あっという間に交換完了。対応の速さに驚きました。</blockquote>
+        <div class="voice-meta">
+          <div class="voice-avatar">K</div>
+          <div>K様 / 札幌市中央区 / ガラス交換</div>
+        </div>
+      </div>
+      <div class="voice-card">
+        <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>築30年の自宅の窓サッシが重くなり相談しました。戸車交換だけで済み、費用も安く抑えられました。見積り時にしっかり説明してくださったので安心でした。</blockquote>
+        <div class="voice-meta">
+          <div class="voice-avatar">S</div>
+          <div>S様 / 札幌市豊平区 / サッシ修理</div>
+        </div>
+      </div>
+      <div class="voice-card">
+        <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>玄関ドアを断熱タイプに交換してもらいました。冬場の玄関の冷え込みが劇的に改善。1日で工事が終わったのも助かりました。</blockquote>
+        <div class="voice-meta">
+          <div class="voice-avatar">T</div>
+          <div>T様 / 江別市 / 玄関ドア交換</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <h2>まずはお気軽にご相談ください</h2>
+  <p>お見積りは無料です。お電話またはメールでお問い合わせください。</p>
+  <a href="tel:0120040090" class="cta-phone">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    <span class="num">0120-040-090</span>
+  </a>
+  <div class="cta-sub">受付時間 9:00〜17:30（土日祝除く）</div>
+  <div class="cta-buttons">
+    <a href="#" class="btn-hero-primary">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      無料見積りを依頼する
+    </a>
+  </div>
+</section>
+
+<!-- COMPANY -->
+<section class="section section-gray" id="company">
+  <div class="container">
+    <div class="section-header">
+      <span class="en">Company</span>
+      <h2>会社概要</h2>
+    </div>
+    <table class="company-table">
+      <tr><th>会社名</th><td>株式会社サイトー（職人ネットワーク札幌）</td></tr>
+      <tr><th>所在地</th><td>〒060-0063 札幌市中央区南3条西12丁目320-20 札幌森ビル3 1F</td></tr>
+      <tr><th>電話番号</th><td>0120-040-090（フリーダイヤル）/ 011-211-5077</td></tr>
+      <tr><th>営業時間</th><td>9:00〜17:30</td></tr>
+      <tr><th>定休日</th><td>土曜・日曜・祝日</td></tr>
+      <tr><th>対応エリア</th><td>札幌市全区、江別市、石狩市、北広島市 ほか近郊</td></tr>
+      <tr><th>事業内容</th><td>サッシ修理・交換、ガラス修理・交換、玄関ドア修理・交換、網戸張替え、玄関フード・風除室、シャッター・カーポート</td></tr>
+      <tr><th>決済方法</th><td>現金、PayPay、au PAY</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- DEMO BANNER -->
+<section class="section">
+  <div class="container">
+    <div class="demo-banner">
+      <strong>※ 本ページはリニューアルのイメージサンプルです。</strong><br>
+      本番では実際のお写真・正式な情報を使用し、より完成度の高いサイトに仕上げます。<br>
+      お問い合わせフォームやGoogle Maps埋め込み、施工事例ギャラリーなども実装いたします。
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo-text">
+        職人ネットワーク札幌
+        <small>株式会社サイトー</small>
+      </div>
+      <p>〒060-0063<br>札幌市中央区南3条西12丁目320-20<br>札幌森ビル3 1F<br>TEL: 0120-040-090</p>
+    </div>
+    <div class="footer-links">
+      <h4>メニュー</h4>
+      <a href="#">HOME</a>
+      <a href="#strengths">当社の強み</a>
+      <a href="#service">サービス</a>
+      <a href="#voice">お客様の声</a>
+      <a href="#company">会社概要</a>
+      <a href="#contact">お問い合わせ</a>
+    </div>
+    <div class="footer-links">
+      <h4>サービス</h4>
+      <a href="#">ガラス修理・交換</a>
+      <a href="#">玄関ドア交換・修理</a>
+      <a href="#">サッシ交換・修理</a>
+      <a href="#">網戸の張替え</a>
+      <a href="#">玄関フード・風除室</a>
+      <a href="#">シャッター・カーポート</a>
+    </div>
+  </div>
+  <div class="footer-copy">
+    &copy; 2026 株式会社サイトー（職人ネットワーク札幌） All Rights Reserved.
+  </div>
+</footer>
+
+</body>
+</html>

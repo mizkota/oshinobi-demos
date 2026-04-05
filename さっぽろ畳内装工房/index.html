@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>さっぽろ畳内装工房株式会社｜札幌市の畳製造・内装工事</title>
+<meta name="description" content="札幌市北区新琴似のさっぽろ畳内装工房株式会社。畳の製造・表替え・裏返し、クロス・襖・障子・網戸の張替え、内装リフォームなど幅広く対応いたします。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --green-dark: #2d5016;
+  --green: #4a7c28;
+  --green-light: #6b9b3a;
+  --green-pale: #e8f0de;
+  --brown-dark: #3e2713;
+  --brown: #6b4226;
+  --brown-light: #8b6342;
+  --brown-pale: #f5ece3;
+  --cream: #faf7f2;
+  --gold: #b8963e;
+  --gold-light: #d4b65a;
+  --text: #333333;
+  --text-light: #666666;
+  --white: #ffffff;
+  --shadow: 0 2px 20px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.12);
+  --radius: 8px;
+  --transition: 0.3s ease;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: var(--text);
+  background: var(--cream);
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.serif { font-family: 'Noto Serif JP', serif; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--green); text-decoration: none; transition: var(--transition); }
+a:hover { color: var(--green-light); }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.section-title .en {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+.section-title h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.8rem;
+  color: var(--brown-dark);
+  position: relative;
+  display: inline-block;
+}
+.section-title h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: var(--gold);
+  margin: 12px auto 0;
+}
+
+/* ==================== HEADER ==================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 10px rgba(0,0,0,0.06);
+  transition: var(--transition);
+}
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+.header-logo img {
+  height: 45px;
+  width: auto;
+}
+.header-nav { display: flex; align-items: center; gap: 8px; }
+.header-nav a {
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text);
+  border-radius: 4px;
+  transition: var(--transition);
+}
+.header-nav a:hover { background: var(--green-pale); color: var(--green); }
+.header-nav .btn-contact {
+  background: var(--green);
+  color: var(--white);
+  border-radius: 30px;
+  padding: 8px 20px;
+}
+.header-nav .btn-contact:hover { background: var(--green-light); color: var(--white); }
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1100;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text);
+  transition: var(--transition);
+}
+
+/* ==================== HERO ==================== */
+.hero {
+  margin-top: 70px;
+  position: relative;
+  height: 70vh;
+  min-height: 450px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(45,80,22,0.65), rgba(62,39,19,0.55));
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: var(--white);
+  padding: 20px;
+}
+.hero-content h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  line-height: 1.4;
+}
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  text-shadow: 0 1px 5px rgba(0,0,0,0.3);
+}
+.hero-btn {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--white);
+  padding: 14px 40px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 4px 15px rgba(184,150,62,0.4);
+  transition: var(--transition);
+}
+.hero-btn:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  color: var(--white);
+}
+
+/* ==================== FEATURES ==================== */
+.features {
+  padding: 80px 0;
+  background: var(--white);
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.feature-card {
+  text-align: center;
+  padding: 40px 25px;
+  border-radius: var(--radius);
+  border: 1px solid var(--green-pale);
+  transition: var(--transition);
+}
+.feature-card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-4px);
+}
+.feature-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: var(--green-pale);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 1.8rem;
+}
+.feature-card h3 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.15rem;
+  color: var(--brown-dark);
+  margin-bottom: 12px;
+}
+.feature-card p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* ==================== SERVICES ==================== */
+.services {
+  padding: 80px 0;
+  background: var(--cream);
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+.service-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.service-card .card-img {
+  height: 200px;
+  overflow: hidden;
+}
+.service-card .card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+.service-card:hover .card-img img { transform: scale(1.05); }
+.service-card .card-body {
+  padding: 25px;
+}
+.service-card h3 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.15rem;
+  color: var(--brown-dark);
+  margin-bottom: 10px;
+}
+.service-card p {
+  font-size: 0.88rem;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* ==================== TESTIMONIALS ==================== */
+.testimonials {
+  padding: 80px 0;
+  background: var(--white);
+}
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+.testimonial-card {
+  background: var(--cream);
+  padding: 30px;
+  border-radius: var(--radius);
+  border-left: 3px solid var(--gold);
+}
+.testimonial-card .stars {
+  color: var(--gold);
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+.testimonial-card p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+.testimonial-card .author {
+  font-size: 0.8rem;
+  color: var(--brown-light);
+  font-weight: 500;
+}
+
+/* ==================== CTA ==================== */
+.cta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, var(--green-dark), var(--green));
+  text-align: center;
+  color: var(--white);
+}
+.cta h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+}
+.cta p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+.cta .tel {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 20px 0;
+  display: block;
+}
+.cta .tel a { color: var(--white); }
+.cta .tel a:hover { opacity: 0.8; }
+.cta-btn {
+  display: inline-block;
+  background: var(--white);
+  color: var(--green);
+  padding: 14px 40px;
+  border-radius: 50px;
+  font-weight: 700;
+  margin-top: 10px;
+  transition: var(--transition);
+}
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  color: var(--green);
+}
+
+/* ==================== COMPANY ==================== */
+.company {
+  padding: 80px 0;
+  background: var(--cream);
+}
+.company-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+.company table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.company th, .company td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e0d8cf;
+  font-size: 0.92rem;
+}
+.company th {
+  width: 120px;
+  color: var(--brown);
+  font-weight: 500;
+  white-space: nowrap;
+}
+.company-map {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.company-map iframe {
+  width: 100%;
+  height: 350px;
+  border: 0;
+}
+
+/* ==================== DEMO NOTICE ==================== */
+.demo-notice {
+  padding: 30px 0;
+  background: #fff3cd;
+  text-align: center;
+}
+.demo-notice p {
+  font-size: 0.85rem;
+  color: #856404;
+}
+.demo-notice strong { color: #664d03; }
+
+/* ==================== FOOTER ==================== */
+.footer {
+  background: var(--brown-dark);
+  color: rgba(255,255,255,0.8);
+  padding: 50px 0 25px;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 30px;
+}
+.footer-info h3 {
+  font-family: 'Noto Serif JP', serif;
+  color: var(--white);
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+.footer-info p {
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
+.footer-nav { display: flex; gap: 25px; }
+.footer-nav a {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.85rem;
+}
+.footer-nav a:hover { color: var(--white); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 20px;
+  text-align: center;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.5);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+  .header-nav { display: none; }
+  .header-nav.active {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100vh;
+    background: var(--white);
+    padding: 80px 30px 30px;
+    box-shadow: -5px 0 20px rgba(0,0,0,0.1);
+    z-index: 1050;
+    gap: 5px;
+  }
+  .header-nav.active a { font-size: 1rem; padding: 12px 16px; }
+  .hamburger { display: flex; }
+  .hamburger.active span:nth-child(1) { transform: rotate(45deg) translateY(7px); }
+  .hamburger.active span:nth-child(2) { opacity: 0; }
+  .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translateY(-7px); }
+
+  .hero { height: 55vh; min-height: 350px; }
+  .hero-content h2 { font-size: 1.6rem; }
+  .hero-content p { font-size: 0.95rem; }
+
+  .features-grid { grid-template-columns: 1fr; gap: 20px; }
+  .services-grid { grid-template-columns: 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+
+  .company-content { grid-template-columns: 1fr; }
+
+  .section-title h2 { font-size: 1.4rem; }
+  .cta h2 { font-size: 1.4rem; }
+  .cta .tel { font-size: 1.5rem; }
+
+  .footer-content { flex-direction: column; gap: 25px; }
+  .footer-nav { flex-wrap: wrap; gap: 15px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== HEADER ==================== -->
+<header class="header">
+  <div class="container">
+    <a href="#" class="header-logo">
+      <img src="https://www.sapporo-tatami.com/images/h_logo.png" alt="さっぽろ畳内装工房株式会社">
+    </a>
+    <nav class="header-nav" id="nav">
+      <a href="#features">選ばれる理由</a>
+      <a href="#services">サービス</a>
+      <a href="#testimonials">お客様の声</a>
+      <a href="#company">会社概要</a>
+      <a href="#cta" class="btn-contact">お問い合わせ</a>
+    </nav>
+    <div class="hamburger" id="hamburger" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="https://www.sapporo-tatami.com/images/main01.jpg" alt="さっぽろ畳内装工房">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h2 class="serif">心地よい畳の香りを<br>あなたに</h2>
+    <p>創業2003年 ― 札幌の暮らしに寄り添う畳と内装のプロフェッショナル</p>
+    <a href="#cta" class="hero-btn">無料お見積りはこちら</a>
+  </div>
+</section>
+
+<!-- ==================== FEATURES ==================== -->
+<section class="features" id="features">
+  <div class="container">
+    <div class="section-title">
+      <span class="en">Why Choose Us</span>
+      <h2>選ばれる3つの理由</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">&#127981;</div>
+        <h3>創業20年以上の信頼</h3>
+        <p>2003年の創業以来、札幌市を中心に数多くのお客様にご愛顧いただいております。確かな技術と経験で、安心の施工をお約束します。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#127912;</div>
+        <h3>和モダンまで幅広く対応</h3>
+        <p>伝統的な縁あり畳から、縁なし畳・カラー畳・フローリング用薄畳まで、お客様のライフスタイルに合わせた最適なご提案をいたします。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#128666;</div>
+        <h3>配送・設置まで一貫対応</h3>
+        <p>畳の製造から配送・設置まで自社一貫対応。クロスや襖の張替えも承り、お住まいの内装をトータルでサポートいたします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SERVICES ==================== -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-title">
+      <span class="en">Service</span>
+      <h2>サービス内容</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="card-img">
+          <img src="https://www.sapporo-tatami.com/images/service_img01.jpg" alt="新築・リフォーム">
+        </div>
+        <div class="card-body">
+          <h3>新畳 / 新築・リフォーム</h3>
+          <p>お客様のご希望に合わせて、伝統的な和室スタイルから和モダンまで幅広いテイストに合う畳をご提案。素材や色・デザインもお選びいただけます。</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="card-img">
+          <img src="https://www.sapporo-tatami.com/images/service_img02.jpg" alt="表替え・裏返し">
+        </div>
+        <div class="card-body">
+          <h3>表替え・裏返し</h3>
+          <p>畳は表と裏の両面を使用できます。まだ裏側がきれいなうちに裏返しをすれば、一枚の畳表を長く清潔にご使用いただけます。</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="card-img">
+          <img src="https://www.sapporo-tatami.com/images/service_img03.jpg" alt="クロス・襖・障子・網戸の張替え">
+        </div>
+        <div class="card-body">
+          <h3>クロス・襖・障子・網戸の張替え</h3>
+          <p>湿気やカビ、経年劣化でお困りの方へ。プロの技術で美しく仕上げます。まずはお気軽にご相談ください。</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="card-img">
+          <img src="https://www.sapporo-tatami.com/images/top_company_img.jpg" alt="内装リフォーム">
+        </div>
+        <div class="card-body">
+          <h3>内装設備の各種リフォーム</h3>
+          <p>畳に限らず、お住まいの内装に関わるリフォーム全般に対応。快適な住空間づくりをトータルでサポートいたします。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== TESTIMONIALS ==================== -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-title">
+      <span class="en">Voice</span>
+      <h2>お客様の声</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>「新しい畳の香りに家族全員が大喜びです。丁寧に相談に乗っていただき、和モダンな仕上がりに大満足しています。」</p>
+        <div class="author">-- 札幌市北区 S様</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>「襖と畳の同時張替えをお願いしました。見違えるほどきれいになり、費用も思ったより抑えられました。」</p>
+        <div class="author">-- 札幌市西区 M様</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>「フローリングに置き畳を導入。子どもが安心して遊べるスペースができました。提案力が素晴らしいです。」</p>
+        <div class="author">-- 江別市 T様</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CTA ==================== -->
+<section class="cta" id="cta">
+  <div class="container">
+    <h2 class="serif">畳・内装のことなら<br>お気軽にご相談ください</h2>
+    <p>お見積り無料 / 札幌市内全域・小樽・千歳・江別・恵庭・北広島対応</p>
+    <span class="tel"><a href="tel:011-769-8640">TEL. 011-769-8640</a></span>
+    <a href="https://www.sapporo-tatami.com/contact.html" class="cta-btn" target="_blank">メールでお問い合わせ</a>
+  </div>
+</section>
+
+<!-- ==================== COMPANY ==================== -->
+<section class="company" id="company">
+  <div class="container">
+    <div class="section-title">
+      <span class="en">Company</span>
+      <h2>会社概要</h2>
+    </div>
+    <div class="company-content">
+      <table>
+        <tr><th>会社名</th><td>さっぽろ畳内装工房株式会社</td></tr>
+        <tr><th>所在地</th><td>〒001-0902<br>北海道札幌市北区新琴似2条13丁目9-36</td></tr>
+        <tr><th>連絡先</th><td>TEL. 011-769-8640<br>FAX. 011-769-8641</td></tr>
+        <tr><th>設立</th><td>2003年</td></tr>
+        <tr><th>代表</th><td>瀬波 拓士</td></tr>
+        <tr><th>営業内容</th><td>畳製造/施工、表替え・裏返し、<br>クロス・襖・障子・網戸の張替え、<br>内装設備の各種リフォーム</td></tr>
+        <tr><th>対応エリア</th><td>札幌市内全域、小樽市、千歳市、<br>江別市、恵庭市、北広島市 他</td></tr>
+      </table>
+      <div class="company-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2912.488357547906!2d141.3075823!3d43.1152662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b2620143841a7%3A0xa9662858dc4122f4!2z44GV44Gj44G944KN55Wz5YaF6KOF5bel5oi_44ix!5e0!3m2!1sja!2sjp!4v1680207039730!5m2!1sja!2sjp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== DEMO NOTICE ==================== -->
+<section class="demo-notice">
+  <div class="container">
+    <p><strong>※ こちらはデモサイトです。</strong> 実際の公開サイトではありません。リニューアルのイメージとしてご覧ください。<br>制作: <a href="https://oshinobi-co.com" target="_blank" style="color:#664d03;text-decoration:underline;">OSHINOBI Co.</a></p>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-info">
+        <h3 class="serif">さっぽろ畳内装工房株式会社</h3>
+        <p>〒001-0902 北海道札幌市北区新琴似2条13丁目9-36<br>
+        TEL. 011-769-8640 / FAX. 011-769-8641</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="#features">選ばれる理由</a>
+        <a href="#services">サービス</a>
+        <a href="#testimonials">お客様の声</a>
+        <a href="#company">会社概要</a>
+        <a href="#cta">お問い合わせ</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 さっぽろ畳内装工房株式会社 All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleNav() {
+  document.getElementById('nav').classList.toggle('active');
+  document.getElementById('hamburger').classList.toggle('active');
+}
+document.querySelectorAll('.header-nav a').forEach(a => {
+  a.addEventListener('click', () => {
+    document.getElementById('nav').classList.remove('active');
+    document.getElementById('hamburger').classList.remove('active');
+  });
+});
+</script>
+</body>
+</html>
